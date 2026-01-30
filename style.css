@@ -53,3 +53,27 @@ h2 {
   color: #444;
   padding-left: 80px;
 }
+/* ===== WORK 背景与内容保护 ===== */
+
+#work {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 内容白底容器 */
+#work .work-item {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 64px 80px;
+  border-radius: 4px;
+}
+
+/* 每一条之间拉开距离 */
+#work .work-item + .work-item {
+  margin-top: 120px;
+}
+
+/* 编号更清晰 */
+#work .num {
+  color: #e5e5e5;
+}
