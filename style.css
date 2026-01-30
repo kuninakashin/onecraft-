@@ -1,6 +1,4 @@
-/* =========================
-   Base
-========================= */
+/* ================= Base ================= */
 
 * {
   margin: 0;
@@ -9,33 +7,21 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "PingFang SC", "Hiragino Sans", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Hiragino Sans", "Noto Sans JP", sans-serif;
   color: #111;
   line-height: 1.75;
-  background: #fff;
 }
 
-/* =========================
-   Layout Rules (ONECRAFT)
-========================= */
-
-.header,
-.section,
-.footer {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
-/* =========================
-   Header
-========================= */
+/* ================= Header ================= */
 
 .header {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -43,18 +29,17 @@ body {
   letter-spacing: 0.12em;
 }
 
-.header nav a {
+.nav a {
   margin-left: 32px;
   font-size: 12px;
-  color: #333;
+  color: #111;
+  text-decoration: none;
 }
 
-/* =========================
-   Hero
-========================= */
+/* ================= Hero ================= */
 
 .hero {
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 160px 64px 120px;
 }
@@ -62,109 +47,119 @@ body {
 .hero h1 {
   font-size: 40px;
   font-weight: 500;
-  max-width: 720px;
   margin-bottom: 24px;
 }
 
 .hero p {
   font-size: 15px;
   color: #555;
+  max-width: 640px;
 }
 
-/* =========================
-   Section
-========================= */
+/* ================= Section ================= */
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
-
-.section h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 32px;
-}
-
-.section p {
-  max-width: 640px;
-  font-size: 15px;
-  color: #333;
-}
-
-/* =========================
-   Service
-========================= */
 
 .gray {
   background: #f6f6f6;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
-.card h3 {
-  font-size: 16px;
+.section h2 {
+  font-size: 24px;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 48px;
 }
 
-.card p {
-  font-size: 14px;
-  color: #555;
+/* ================= Layout ================= */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
 }
 
-/* =========================
-   Footer
-========================= */
-
-.footer {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  font-size: 12px;
-  color: #777;
+.placeholder {
+  background: #ddd;
+  height: 260px;
 }
-/* =========================
-   Services (ONECRAFT)
-========================= */
 
-.services {
+/* ================= Service ================= */
+
+.service-list {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 48px;
   max-width: 720px;
 }
 
 .service-item h3 {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 
 .service-item p {
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
-  line-height: 1.8;
 }
-/* =========================
-   Contact
-========================= */
 
-#contact p {
-  max-width: 640px;
-  margin-bottom: 24px;
+/* ================= Flow ================= */
+
+.flow-steps {
+  display: flex;
+  gap: 48px;
 }
+
+.step span {
+  font-size: 12px;
+  color: #999;
+}
+
+.step p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* ================= Company ================= */
+
+.company-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 720px;
+}
+
+.company-table th {
+  text-align: left;
+  font-weight: normal;
+  width: 160px;
+  padding: 12px 0;
+  color: #666;
+}
+
+.company-table td {
+  padding: 12px 0;
+}
+
+/* ================= Contact ================= */
 
 .contact-mail a {
   font-size: 16px;
   color: #111;
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
 }
 
-.contact-mail a:hover {
-  border-bottom-color: #111;
+/* ================= Footer ================= */
+
+.footer {
+  padding: 64px;
+  font-size: 12px;
+  color: #777;
 }
