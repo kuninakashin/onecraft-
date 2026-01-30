@@ -82,3 +82,24 @@ h2 {
 #work .work-item:first-of-type {
   margin-top: 160px;
 }
+/* ===== WORK 文字保护层（必须） ===== */
+
+#work {
+  position: relative;
+}
+
+#work .work-item {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
+  padding: 80px;
+  margin: 0 auto 160px;
+}
+
+#work .num {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  font-size: 64px;
+  font-weight: 300;
+  color: #e5e5e5;
+}
