@@ -77,3 +77,8 @@ h2 {
 #work .num {
   color: #e5e5e5;
 }
+/* ===== WORK 第一个区块下移 ===== */
+
+#work .work-item:first-of-type {
+  margin-top: 160px;
+}
