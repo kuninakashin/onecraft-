@@ -153,3 +153,22 @@ body {
   color: #555;
   line-height: 1.8;
 }
+/* =========================
+   Contact
+========================= */
+
+#contact p {
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+
+.contact-mail a {
+  font-size: 16px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-mail a:hover {
+  border-bottom-color: #111;
+}
