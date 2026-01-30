@@ -108,3 +108,17 @@ h2 {
 #work .work-item:first-of-type {
   margin-top: 240px;
 }
+/* ===== WORK number style ===== */
+.work-item {
+  position: relative;
+}
+
+.work-item .num {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 72px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.08);
+  line-height: 1;
+}
