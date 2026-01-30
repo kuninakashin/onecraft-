@@ -103,3 +103,8 @@ h2 {
   font-weight: 300;
   color: #e5e5e5;
 }
+/* ===== WORK 第一个区块下移（关键修正） ===== */
+
+#work .work-item:first-of-type {
+  margin-top: 240px;
+}
