@@ -127,3 +127,60 @@ h2 {
   padding-top: 160px;
   padding-bottom: 160px;
 }
+/* ================= WORK SECTION ================= */
+
+#work {
+  padding: 120px 40px;
+}
+
+#work h2 {
+  font-size: 28px;
+  margin-bottom: 80px;
+}
+
+.work-item {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 160px;
+}
+
+.work-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.work-item.reverse .work-split {
+  direction: rtl;
+}
+
+.work-item.reverse .work-text {
+  direction: ltr;
+}
+
+.work-item .num {
+  font-size: 64px;
+  font-weight: 300;
+  color: #e5e5e5;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.work-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.work-item p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+}
+
+.work-image img {
+  width: 100%;
+  display: block;
+}
