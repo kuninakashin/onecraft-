@@ -237,3 +237,23 @@ h2 {
   color: #888;
   letter-spacing: 0.08em;
 }
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+.company-table th {
+  width: 140px;
+  text-align: left;
+  font-weight: 600;
+  padding: 14px 0;
+  vertical-align: top;
+  color: #111;
+}
+
+.company-table td {
+  padding: 14px 0;
+  color: #444;
+  line-height: 1.9;
+}
