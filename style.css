@@ -32,12 +32,12 @@ h2 {
 }
 
 .work-item .num {
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 300;
   color: #e5e5e5;
   position: absolute;
-  top: -40px;
-  left: 0;
+  top: -60px;
+  left: -40px;
 }
 
 .work-item h3 {
