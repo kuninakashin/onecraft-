@@ -257,3 +257,6 @@ h2 {
   color: #444;
   line-height: 1.9;
 }
+#company .num {
+  display: none;
+}
