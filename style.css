@@ -198,9 +198,10 @@ h2 {
     transform: translateY(0);
   }
 }
-.work-item {
+#work .work-item {
   position: relative;
   margin-bottom: 180px;
+}
 }
 /* ================= Company ================= */
 
