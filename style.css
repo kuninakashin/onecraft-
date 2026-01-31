@@ -293,3 +293,10 @@ h2 {
 #company .num {
   display: none;
 }
+.work-item:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.work-item:nth-of-type(3) {
+  animation-delay: 0.45s;
+}
