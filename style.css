@@ -7,7 +7,6 @@ body {
                "Yu Gothic", Meiryo, sans-serif;
   color: #111;
   letter-spacing: 0.02em;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -17,94 +16,67 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
 /* ================= Header ================= */
 
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 92px;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(0,0,0,0.06);
-}
-
-.logo {
-  margin-bottom: 10px;
+  text-align: center;
+  padding: 32px 0 24px;
+  background: #fff;
 }
 
 .logo img {
-  height: 44px;
+  height: 48px;
+  margin: 0 auto 16px;
 }
 
 .nav {
   display: flex;
-  gap: 36px;
+  justify-content: center;
+  gap: 48px;
 }
 
 .nav a {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  opacity: 0.85;
-}
-
-.nav a:hover {
-  opacity: 1;
+  font-size: 14px;
+  letter-spacing: 0.12em;
 }
 
 /* ================= Hero ================= */
 
 .hero {
-  padding: 240px 40px 200px;
+  padding: 160px 40px 140px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 38px;
-  /* ===== Logo ===== */
-
-.logo img {
-  height: 56px;
-  width: auto;
-  display: block;
-  margin: 0 auto 18px;
+  font-size: 32px;
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
-/* ================= About layout ================= */
+
+.hero p {
+  font-size: 14px;
+}
+
+.hero-sub {
+  margin-top: 16px;
+  letter-spacing: 0.2em;
+}
+
+/* ================= About ================= */
 
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 120px;
-  align-items: center;
   padding: 180px 80px;
+  align-items: center;
 }
 
-/* 左侧文字区域 */
 .about-text-area {
   position: relative;
-}
-
-/* 竖排「ご挨拶」 */
-.about-label {
-  position: absolute;
-  left: -60px;
-  top: 0;
 }
 
 .about-label {
@@ -112,11 +84,9 @@ img {
   left: -60px;
   top: 0;
   display: flex;
-  align-items: flex-start;
   gap: 12px;
 }
 
-/* 竖线 */
 .about-label::before {
   content: "";
   width: 1px;
@@ -125,34 +95,80 @@ img {
   opacity: 0.4;
 }
 
-/* 竖排文字 */
 .about-label span {
   writing-mode: vertical-rl;
   font-size: 14px;
   letter-spacing: 0.2em;
-  color: #111;
 }
 
-
-/* ABOUT 英文 */
 .about-en {
   font-size: 14px;
   letter-spacing: 0.2em;
   margin-bottom: 40px;
-  color: #111;
 }
 
-/* 正文 */
 .about-text {
   font-size: 15px;
   line-height: 2;
-  color: #333;
 }
 
-/* 右侧图片 */
 .about-image-area img {
-  width: 100%;
-  height: auto;
   border-radius: 24px;
-  display: block;
 }
+
+/* ================= Work ================= */
+
+.work-section {
+  padding: 160px 40px;
+}
+
+.work-section h2 {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.work-item {
+  max-width: 800px;
+  margin: 0 auto 120px;
+  position: relative;
+}
+
+.work-item .num {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 64px;
+  color: rgba(0,0,0,0.08);
+}
+
+/* ================= Company ================= */
+
+.section {
+  padding: 160px 40px;
+}
+
+.company-table {
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  padding: 16px 0;
+  text-align: left;
+}
+
+/* ================= Contact & Footer ================= */
+
+.contact {
+  text-align: center;
+}
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
