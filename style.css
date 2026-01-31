@@ -3,15 +3,15 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont,
-               "Hiragino Kaku Gothic ProN",
-               "Yu Gothic", Meiryo, sans-serif;
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", Meiryo, sans-serif;
   color: #111;
   line-height: 2;
 }
 
 img { max-width: 100%; display: block; }
 
-/* Header */
+/* ===== Header ===== */
 .header {
   border-bottom: 1px solid #eee;
 }
@@ -29,43 +29,47 @@ img { max-width: 100%; display: block; }
 }
 .nav a {
   text-decoration: none;
-  color: #111;
   font-size: 14px;
+  color: #111;
 }
 
-/* Hero */
+/* ===== Hero ===== */
 .hero {
-  padding: 140px 24px;
+  padding: 160px 24px;
   text-align: center;
 }
 .hero h1 {
   font-size: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-.hero-subtext {
+.hero-sub {
   font-size: 14px;
 }
 .hero-en {
   margin-top: 8px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }
 
-/* About */
+/* ===== About ===== */
 .about {
-  padding: 160px 24px;
-}
-.about-inner {
   max-width: 1200px;
   margin: auto;
+  padding: 160px 24px;
 }
 .about-head {
   display: flex;
   gap: 80px;
   margin-bottom: 80px;
 }
-.about-label {
-  border-right: 2px solid #111;
-  padding-right: 16px;
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.about-title .line {
+  width: 2px;
+  height: 40px;
+  background: #111;
 }
 .about-body {
   display: grid;
@@ -73,7 +77,7 @@ img { max-width: 100%; display: block; }
   gap: 80px;
 }
 
-/* Work */
+/* ===== Work ===== */
 .work {
   padding: 160px 24px;
 }
@@ -81,49 +85,62 @@ img { max-width: 100%; display: block; }
   max-width: 1100px;
   margin: 0 auto 160px;
 }
-.work-num {
+.work-block.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.work-block.split.reverse {
+  direction: rtl;
+}
+.work-block.split.reverse > * {
+  direction: ltr;
+}
+.num {
   font-size: 64px;
   color: #e5e5e5;
 }
 .work-images {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  margin-top: 40px;
 }
 .work-images.three {
   grid-template-columns: repeat(3, 1fr);
+}
+.work-images.four {
+  grid-template-columns: repeat(4, 1fr);
 }
 .img {
   background: #ddd;
   height: 160px;
 }
 
-/* Company */
+/* ===== Company ===== */
 .company {
-  padding: 160px 24px;
-}
-.company-inner {
   max-width: 900px;
   margin: auto;
+  padding: 160px 24px;
 }
 .company-head {
   display: flex;
-  gap: 32px;
   align-items: center;
+  gap: 16px;
   margin-bottom: 64px;
 }
-.company-head span {
-  border-right: 2px solid #111;
-  padding-right: 16px;
+.company-head .line {
+  width: 2px;
+  height: 40px;
+  background: #111;
 }
 .company-table th {
+  width: 160px;
   text-align: left;
   padding: 16px 0;
-  width: 160px;
 }
 
-/* Contact */
+/* ===== Contact ===== */
 .contact {
   background: #f7f7f7;
   padding: 160px 24px;
@@ -144,10 +161,10 @@ img { max-width: 100%; display: block; }
   margin-top: 8px;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 .footer {
-  text-align: center;
   padding: 40px;
+  text-align: center;
   font-size: 12px;
   color: #999;
 }
