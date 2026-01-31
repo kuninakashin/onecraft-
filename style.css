@@ -85,3 +85,54 @@ img {
   display: block;
   margin: 0 auto 18px;
 }
+/* ================= About layout ================= */
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: center;
+  padding: 180px 80px;
+}
+
+/* 左侧文字区域 */
+.about-text-area {
+  position: relative;
+}
+
+/* 竖排「ご挨拶」 */
+.about-label {
+  position: absolute;
+  left: -60px;
+  top: 0;
+}
+
+.about-label span {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #111;
+}
+
+/* ABOUT 英文 */
+.about-en {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+/* 正文 */
+.about-text {
+  font-size: 15px;
+  line-height: 2;
+  color: #333;
+}
+
+/* 右侧图片 */
+.about-image-area img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
