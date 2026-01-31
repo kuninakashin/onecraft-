@@ -77,3 +77,11 @@ img {
 
 .hero h1 {
   font-size: 38px;
+  /* ===== Logo ===== */
+
+.logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+  margin: 0 auto 18px;
+}
