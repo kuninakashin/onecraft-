@@ -107,12 +107,32 @@ img {
   top: 0;
 }
 
+.about-label {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* 竖线 */
+.about-label::before {
+  content: "";
+  width: 1px;
+  height: 80px;
+  background: #111;
+  opacity: 0.4;
+}
+
+/* 竖排文字 */
 .about-label span {
   writing-mode: vertical-rl;
   font-size: 14px;
   letter-spacing: 0.2em;
   color: #111;
 }
+
 
 /* ABOUT 英文 */
 .about-en {
