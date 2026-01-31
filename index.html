@@ -1,184 +1,246 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONECRAFT</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+/* ================= Base ================= */
 
-<body>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Hiragino Kaku Gothic ProN",
+               "Yu Gothic", Meiryo, sans-serif;
+  color: #111;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
 
-<!-- ================= Header ================= -->
-<header class="header">
-  <div class="logo">ONECRAFT</div>
-  <nav class="nav">
-    <a href="#about">ABOUT</a>
-    <a href="#work">WORK</a>
-    <a href="#flow">FLOW</a>
-    <a href="#company">COMPANY</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
-</header>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-<!-- ================= Hero ================= -->
-<section class="hero">
-  <h1>ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。</h1>
-  <p>今日も、このグッズとともに</p>
-  <p class="hero-sub">GOODS / ONE CRAFT</p>
-</section>
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-<!-- ================= About ================= -->
-<section id="about" class="section">
-  <h2>ABOUT</h2>
-  <p>
-    コンサートグッズ・アーティストグッズ・イベントグッズを中心に、
-    海外工場と直接取引を行い、オリジナルグッズ・ノベルティ・販促品の
-    完全オーダーメイド製作を行っております。<br><br>
+/* ================= Section ================= */
 
-    中国の深圳・東莞・義烏など主要生産拠点に自社・協力工場を構え、
-    中間業者を介さないことで「低価格・短納期・小ロット」を実現しています。
-  </p>
-</section>
+.section {
+  padding: 160px 40px;
+}
 
-<!-- ================= Work ================= -->
-<section id="work" class="section gray">
-  <h2>私たちの仕事</h2>
+.section.gray {
+  background: #f6f6f6;
+}
 
-  <!-- ===== 01 ===== -->
-  <div class="work-item work-split">
-    <span class="num">01</span>
+.section h2 {
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  margin-bottom: 120px;
+  text-align: center;
+}
 
-    <div class="work-text">
-      <h3>ワンクラフトのOEM生産の特徴</h3>
-      <p>
-        ライブ・コンサートグッズ、キャラクターグッズ、ノベルティなど、
-        完全オリジナルでのOEM生産に対応。<br><br>
-        中国工場との直接取引により、
-        高品質・低価格・短納期を実現しています。
-      </p>
-    </div>
+/* ================= Header ================= */
 
-    <div class="work-image">
-      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" alt="">
-    </div>
-  </div>
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
 
-  <!-- ===== 02 ===== -->
-  <div class="work-item work-split reverse">
-    <span class="num">02</span>
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
 
-    <div class="work-text">
-      <h3>低価格・短納期・小ロットの理由</h3>
-      <p>
-        商社・代理店を介さず、
-        工場と直接取引を行うことで中間コストを削減。<br><br>
-        小ロットからでも柔軟に対応できる体制を整えています。
-      </p>
-    </div>
+.nav a {
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
 
-    <div class="work-image">
-      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="">
-    </div>
-  </div>
+/* ================= Hero ================= */
 
-  <!-- ===== 03 ===== -->
-  <div class="work-item work-split">
-    <span class="num">03</span>
+.hero {
+  padding: 220px 40px 200px;
+  text-align: center;
+}
 
-    <div class="work-text">
-      <h3>デザインから納品までワンストップ</h3>
-      <p>
-        企画・デザイン提案、サンプル制作、
-        生産管理、検品、納品まで一貫対応。<br><br>
-        OEMが初めてのお客様も安心してご相談いただけます。
-      </p>
-    </div>
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+}
 
-    <div class="work-image">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="">
-    </div>
-  </div>
+.hero p {
+  font-size: 15px;
+  line-height: 2;
+  color: #666;
+}
 
-  <!-- ===== 04 ===== -->
-  <div class="work-item">
-    <span class="num">04</span>
+.hero-sub {
+  margin-top: 24px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: #999;
+}
 
-    <div class="work-text">
-      <h3>完全オリジナル・小ロット対応</h3>
-      <p>
-        コンサートグッズ・販促品・ノベルティまで、
-        お客様のご要望に合わせた完全オリジナル製作を行っています。
-      </p>
-    </div>
-  </div>
+/* ================= WORK ================= */
 
-</section>
+#work {
+  padding: 160px 40px;
+}
 
-<!-- ================= Flow ================= -->
-<section id="flow" class="section">
-  <h2>FLOW</h2>
+.work-item {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 160px;
+  background: rgba(255,255,255,0.95);
+  padding: 80px;
+  border-radius: 6px;
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.04),
+    0 1px 2px rgba(0,0,0,0.04);
+  transition: transform .4s ease, box-shadow .4s ease;
+  animation: fadeUp 0.8s ease both;
+}
 
-  <div class="flow-steps">
-    <div class="step">
-      <span>01</span>
-      <p>お問い合わせ・ご相談</p>
-    </div>
-    <div class="step">
-      <span>02</span>
-      <p>企画・仕様確認</p>
-    </div>
-    <div class="step">
-      <span>03</span>
-      <p>生産・納品</p>
-    </div>
-  </div>
-</section>
+.work-item:last-child {
+  margin-bottom: 0;
+}
 
-<!-- ================= Company ================= -->
-<section id="company" class="section">
-  <h2>会社情報</h2>
+.work-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.08),
+    0 4px 8px rgba(0,0,0,0.06);
+}
 
-  <div class="company-info">
-    <table class="company-table">
-      <tr>
-        <th>会社名</th>
-        <td>株式会社 ONECRAFT</td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>
-          イベント・コンサート・スポーツ関連商品の<br>
-          企画・制作・貿易
-        </td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>東京都（※後日正式住所掲載）</td>
-      </tr>
-      <tr>
-        <th>メール</th>
-        <td>
-          <a href="mailto:contact@onecraft.jp">contact@onecraft.jp</a>
-        </td>
-      </tr>
-    </table>
-  </div>
-</section>
+.work-item .num {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 72px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: rgba(0,0,0,0.06);
+  line-height: 1;
+}
 
-<!-- ================= Contact ================= -->
-<section id="contact" class="section">
-  <h2>CONTACT</h2>
-  <p>お問い合わせは下記メールアドレスよりお願いいたします。</p>
-  <p class="contact-mail">
-    <a href="mailto:contact@onecraft.jp">contact@onecraft.jp</a>
-  </p>
-</section>
+.work-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
 
-<!-- ================= Footer ================= -->
-<footer class="footer">
-  © ONECRAFT
-</footer>
+.work-item p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+}
 
-</body>
-</html>
+/* split layout */
+
+.work-item.work-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.work-item.work-split.reverse {
+  direction: rtl;
+}
+
+.work-item.work-split.reverse * {
+  direction: ltr;
+}
+
+.work-image img {
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* ================= Flow ================= */
+
+.flow-steps {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.step span {
+  display: block;
+  font-size: 32px;
+  color: #ccc;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.step p {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= Company ================= */
+
+.company-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th {
+  width: 160px;
+  text-align: left;
+  font-weight: 600;
+  padding: 16px 0;
+  vertical-align: top;
+}
+
+.company-table td {
+  padding: 16px 0;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* ================= Contact ================= */
+
+.contact-mail {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+/* ================= Footer ================= */
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ================= Animation ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
