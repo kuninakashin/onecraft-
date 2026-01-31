@@ -222,3 +222,9 @@ h2 {
   line-height: 2;
   color: #555;
 }
+.hero-sub {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 0.08em;
+}
