@@ -198,3 +198,11 @@ h2 {
     transform: translateY(0);
   }
 }
+.work-item {
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.work-item:last-child {
+  margin-bottom: 0;
+}
