@@ -1,171 +1,137 @@
+/* ================= Base ================= */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Hiragino Kaku Gothic ProN",
                "Yu Gothic", Meiryo, sans-serif;
   color: #111;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
 }
 
-section {
-  padding: 120px 40px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-h2 {
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= Section ================= */
+
+.section {
+  padding: 160px 40px;
+}
+
+.section.gray {
+  background: #f6f6f6;
+}
+
+.section h2 {
   font-size: 28px;
-  margin-bottom: 80px;
-}
-/* ================= WORK SECTION ================= */
-
-#work {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-#work h2 {
-  font-size: 28px;
-  margin-bottom: 80px;
-}
-
-.work-item {
-  position: relative;
-  max-width: 800px;
+  letter-spacing: 0.08em;
   margin-bottom: 120px;
+  text-align: center;
 }
 
-.work-item .num {
-  font-size: 72px;
-  font-weight: 300;
-  color: #e5e5e5;
-  position: absolute;
-  top: -60px;
-  left: -40px;
+/* ================= Header ================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
 }
 
-.work-item h3 {
-  font-size: 20px;
+.logo {
   font-weight: 600;
-  margin-bottom: 20px;
-  padding-left: 80px;
+  letter-spacing: 0.12em;
 }
 
-.work-item p {
+.nav a {
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+/* ================= Hero ================= */
+
+.hero {
+  padding: 220px 40px 200px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+}
+
+.hero p {
   font-size: 15px;
-  line-height: 1.9;
-  color: #444;
-  padding-left: 80px;
+  line-height: 2;
+  color: #666;
 }
-/* ===== WORK 背景与内容保护 ===== */
+
+.hero-sub {
+  margin-top: 24px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: #999;
+}
+
+/* ================= WORK ================= */
 
 #work {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-}
-
-/* 内容白底容器 */
-#work .work-item {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 64px 80px;
-  border-radius: 4px;
-}
-
-/* 每一条之间拉开距离 */
-#work .work-item + .work-item {
-  margin-top: 120px;
-}
-
-/* 编号更清晰 */
-#work .num {
-  color: #e5e5e5;
-}
-/* ===== WORK 第一个区块下移 ===== */
-
-#work .work-item:first-of-type {
-  margin-top: 160px;
-}
-/* ===== WORK 文字保护层（必须） ===== */
-
-#work {
-  position: relative;
-}
-
-#work .work-item {
-  background: rgba(255, 255, 255, 0.9);
-  max-width: 900px;
-  padding: 80px;
-  margin: 0 auto 160px;
-}
-
-#work .num {
-  position: absolute;
-  top: -48px;
-  left: 0;
-  font-size: 64px;
-  font-weight: 300;
-  color: #e5e5e5;
-}
-/* ===== WORK 第一个区块下移（关键修正） ===== */
-
-#work .work-item:first-of-type {
-  margin-top: 240px;
-}
-/* ===== WORK number style ===== */
-.work-item {
-  position: relative;
-}
-
-.work-item .num {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  font-size: 72px;
-  font-weight: 300;
-  color: rgba(0,0,0,0.08);
-  line-height: 1;
-}
-/* ===== WORK spacing ===== */
-#work {
-  padding-top: 160px;
-  padding-bottom: 160px;
-}
-/* ================= WORK SECTION ================= */
-
-#work {
-  padding: 120px 40px;
-}
-
-#work h2 {
-  font-size: 28px;
-  margin-bottom: 80px;
+  padding: 160px 40px;
 }
 
 .work-item {
   position: relative;
   max-width: 1100px;
   margin: 0 auto 160px;
+  background: rgba(255,255,255,0.95);
+  padding: 80px;
+  border-radius: 6px;
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.04),
+    0 1px 2px rgba(0,0,0,0.04);
+  transition: transform .4s ease, box-shadow .4s ease;
+  animation: fadeUp 0.8s ease both;
 }
 
-.work-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.work-item:last-child {
+  margin-bottom: 0;
 }
 
-.work-item.reverse .work-split {
-  direction: rtl;
-}
-
-.work-item.reverse .work-text {
-  direction: ltr;
+.work-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.08),
+    0 4px 8px rgba(0,0,0,0.06);
 }
 
 .work-item .num {
-  font-size: 64px;
-  font-weight: 300;
-  color: #e5e5e5;
   position: absolute;
   top: -40px;
   left: 0;
+  font-size: 72px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: rgba(0,0,0,0.06);
+  line-height: 1;
 }
 
 .work-item h3 {
@@ -180,127 +146,7 @@ h2 {
   color: #444;
 }
 
-.work-image img {
-  width: 100%;
-  display: block;
-}
-.work-item {
-  <!-- ================= Company ================= -->
-<section id="company" class="section">
-  <h2>会社情報</h2>
-
-  <div class="company-info">
-    <table class="company-table">
-      <tr>
-        <th>会社名</th>
-        <td>株式会社 ONECRAFT</td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>
-          イベント・コンサート・スポーツ関連商品の<br>
-          企画・制作・貿易
-        </td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>東京都（※後日正式住所掲載）</td>
-      </tr>
-      <tr>
-        <th>メール</th>
-        <td>
-          <a href="mailto:contact@onecraft.jp">
-            contact@onecraft.jp
-          </a>
-        </td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#work .work-item {
-  position: relative;
-  margin-bottom: 120px;
-}
-
-/* ================= Company ================= */
-
-.company-info {
-  max-width: 800px;
-  margin-top: 40px;
-  font-size: 15px;
-  line-height: 2;
-  color: #444;
-}
-
-.work-item:last-child {
-  margin-bottom: 0;
-}
-.hero {
-  padding-top: 180px;
-  padding-bottom: 180px;
-}
-
-.hero h1 {
-  font-size: 36px;
-  letter-spacing: 0.06em;
-  margin-bottom: 32px;
-}
-
-.hero p {
-  font-size: 16px;
-  line-height: 2;
-  color: #555;
-}
-.hero-sub {
-  margin-top: 16px;
-  font-size: 14px;
-  color: #888;
-  letter-spacing: 0.08em;
-}
-.company-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 40px;
-}
-
-.company-table th {
-  width: 140px;
-  text-align: left;
-  font-weight: 600;
-  padding: 14px 0;
-  vertical-align: top;
-  color: #111;
-}
-
-.company-table td {
-  padding: 14px 0;
-  color: #444;
-  line-height: 1.9;
-}
-#company .num {
-  display: none;
-}
-.work-item:nth-of-type(2) {
-  animation-delay: 0.3s;
-}
-
-.work-item:nth-of-type(3) {
-  animation-delay: 0.45s;
-}
-/* ================= Work split layout ================= */
+/* split layout */
 
 .work-item.work-split {
   display: grid;
@@ -313,13 +159,88 @@ h2 {
   direction: rtl;
 }
 
-.work-item.work-split.reverse .work-text,
-.work-item.work-split.reverse .work-image {
+.work-item.work-split.reverse * {
   direction: ltr;
 }
 
-.work-item.work-split .work-image img {
-  width: 100%;
-  height: auto;
+.work-image img {
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* ================= Flow ================= */
+
+.flow-steps {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.step span {
   display: block;
+  font-size: 32px;
+  color: #ccc;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.step p {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= Company ================= */
+
+.company-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th {
+  width: 160px;
+  text-align: left;
+  font-weight: 600;
+  padding: 16px 0;
+  vertical-align: top;
+}
+
+.company-table td {
+  padding: 16px 0;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* ================= Contact ================= */
+
+.contact-mail {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+/* ================= Footer ================= */
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ================= Animation ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
