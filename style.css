@@ -396,3 +396,23 @@ img { max-width: 100%; display: block; }
   }
 
 }
+/* ===== Company Title Bar Mobile Fix ===== */
+@media (max-width: 768px) {
+
+  .company-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .company-head .jp {
+    writing-mode: horizontal-tb;  /* 手机端取消竖排 */
+    margin-left: 0;
+  }
+
+  .company-head .line {
+    width: 24px;
+    height: 1px;
+    background: #111;
+  }
+}
