@@ -312,3 +312,42 @@ img { max-width: 100%; display: block; }
   max-width: 240px;
   height: auto;
 }
+/* ===== Company Mobile Fix ===== */
+@media (max-width: 768px) {
+
+  .company {
+    padding: 80px 24px;
+  }
+
+  .company-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .company-lead {
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .company-table {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .company-table th {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .company-logo {
+    position: static;      /* 关键：取消 PC 的“定点” */
+    margin: 0 auto;        /* 居中 */
+    text-align: center;
+  }
+
+  .company-logo img {
+    width: 160px;          /* 手机缩小一点 */
+    height: auto;
+  }
+}
