@@ -295,7 +295,6 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
 }
 
 .company-left {
