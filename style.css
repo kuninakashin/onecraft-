@@ -119,9 +119,10 @@ img { max-width: 100%; display: block; }
 
 /* ===== Company ===== */
 .company {
-  max-width: 900px;
-  margin: auto;
-  padding: 160px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 0 140px;
+  position: relative;
 }
 .company-head {
   display: flex;
