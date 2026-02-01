@@ -291,3 +291,25 @@ img { max-width: 100%; display: block; }
   margin-top: 12px;
   margin-left: 8px;
 }
+.company-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.company-left {
+  width: 65%;
+}
+
+.company-logo {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.company-logo img {
+  max-width: 240px;
+  height: auto;
+}
