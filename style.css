@@ -168,3 +168,71 @@ img { max-width: 100%; display: block; }
   font-size: 12px;
   color: #999;
 }
+/* ===============================
+   Responsive（Mobile）
+================================ */
+@media (max-width: 768px) {
+
+  /* Header */
+  .nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 96px 16px;
+  }
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.7;
+  }
+
+  /* About */
+  .about {
+    padding: 96px 16px;
+  }
+  .about-head {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Work */
+  .work {
+    padding: 96px 16px;
+  }
+  .work-block {
+    margin-bottom: 96px;
+  }
+  .work-block.split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .num {
+    font-size: 40px;
+  }
+
+  .work-images.three,
+  .work-images.four {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Company */
+  .company {
+    padding: 96px 16px;
+  }
+  .company-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 96px 16px;
+  }
+}
