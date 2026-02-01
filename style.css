@@ -1,326 +1,214 @@
-/* === Global Font（全站统一，PC + Mobile）=== */
+/* =====================================
+   Global Reset / Base
+===================================== */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
+  margin: 0;
+  padding: 0;
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
   letter-spacing: 0.02em;
-}
-/* === Global Font (柔和・日系・不改字号) === */
-body {
-  font-family:
-    "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    "YuGothic",
-    "Noto Sans JP",
-    "Noto Sans CJK JP",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic", Meiryo, sans-serif;
   color: #111;
   line-height: 2;
+  background: #fff;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-/* ===== Header ===== */
+/* =====================================
+   Typography System（最终定稿）
+===================================== */
+
+/* 标题 */
+h1, h2, h3,
+.section-title,
+.company-head h2,
+.contact-title {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* 正文 */
+p,
+.company-lead,
+.company-table th,
+.company-table td,
+.form-row label {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Header Navigation */
+.nav a {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+/* =====================================
+   Header
+===================================== */
 .header {
   border-bottom: 1px solid #eee;
 }
+
 .header-inner {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 24px;
   text-align: center;
 }
+
 .nav {
   margin-top: 16px;
   display: flex;
   justify-content: center;
   gap: 32px;
 }
-.nav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #111;
-}
 
-/* ===== Hero ===== */
+/* =====================================
+   Hero
+===================================== */
 .hero {
   padding: 160px 24px;
   text-align: center;
 }
+
 .hero h1 {
   font-size: 32px;
   margin-bottom: 32px;
 }
+
 .hero-sub {
   font-size: 14px;
-}
-.hero-en {
-  margin-top: 8px;
   letter-spacing: 0.15em;
 }
 
-/* ===== About ===== */
+/* =====================================
+   About
+===================================== */
 .about {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 160px 24px;
 }
+
 .about-head {
   display: flex;
   gap: 80px;
   margin-bottom: 80px;
 }
+
 .about-title {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .about-title .line {
   width: 2px;
   height: 40px;
   background: #111;
 }
+
 .about-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
 
-/* ===== Work ===== */
+/* =====================================
+   Work
+===================================== */
 .work {
   padding: 160px 24px;
 }
+
 .work-block {
   max-width: 1100px;
   margin: 0 auto 160px;
 }
+
 .work-block.split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 .work-block.split.reverse {
   direction: rtl;
 }
+
 .work-block.split.reverse > * {
   direction: ltr;
 }
+
 .num {
   font-size: 64px;
   color: #e5e5e5;
 }
-.work-images {
-  display: grid;
-  gap: 16px;
-  margin-top: 40px;
-}
-.work-images.three {
-  grid-template-columns: repeat(3, 1fr);
-}
-.work-images.four {
-  grid-template-columns: repeat(4, 1fr);
-}
-.img {
-  background: #ddd;
-  height: 160px;
+
+.work p {
+  font-size: 15px;
+  max-width: 520px;
 }
 
-/* ===== Company ===== */
+/* =====================================
+   Company
+===================================== */
 .company {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 120px 0 140px;
-  position: relative;
+  padding: 120px 24px 140px;
 }
+
 .company-head {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 64px;
 }
+
 .company-head .line {
   width: 2px;
   height: 40px;
   background: #111;
 }
+
+.company-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.company-left {
+  width: 65%;
+}
+
+.company-lead {
+  max-width: 520px;
+  font-size: 14px;
+  margin: 32px 0 48px;
+}
+
 .company-table th {
   width: 160px;
   text-align: left;
   padding: 16px 0;
 }
 
-/* ===== Contact ===== */
-.contact {
-  background: #f7f7f7;
-  padding: 160px 24px;
-  text-align: center;
-}
-.contact-form {
-  max-width: 600px;
-  margin: 64px auto 0;
-  text-align: left;
-}
-.contact-form label {
-  display: block;
-  margin-top: 24px;
-}
-.contact-form input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-}
-
-/* ===== Footer ===== */
-.footer {
-  padding: 40px;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}
-/* ===============================
-   Responsive（Mobile）
-================================ */
-@media (max-width: 768px) {
-
-  /* Header */
-  .nav {
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 96px 16px;
-  }
-  .hero h1 {
-    font-size: 22px;
-    line-height: 1.7;
-  }
-
-  /* About */
-  .about {
-    padding: 96px 16px;
-  }
-  .about-head {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .about-body {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* Work */
-  .work {
-    padding: 96px 16px;
-  }
-  .work-block {
-    margin-bottom: 96px;
-  }
-  .work-block.split {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .num {
-    font-size: 40px;
-  }
-
-  .work-images.three,
-  .work-images.four {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Company */
-  .company {
-    padding: 96px 16px;
-  }
-  .company-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  /* Contact */
-  .contact {
-    padding: 96px 16px;
-  }
-}
-/* ===== Fine tuning ===== */
-
-/* Work 标题层级 */
-.work h2 {
-  font-size: 24px;
-  margin: 16px 0 24px;
-}
-
-/* Work 正文 */
-.work p {
-  font-size: 15px;
-  line-height: 2;
-  max-width: 520px;
-}
-
-/* 图片轻微圆角（高级感） */
-.work-image img,
-.work-images img {
-  border-radius: 4px;
-}
-.company-lead {
-  max-width: 520px;
-  font-size: 14px;
-  line-height: 2;
-  color: #222;
-  margin: 32px 0 48px;
-}
-.company-label {
-  position: absolute;
-  left: -58px;
-  top: 0;
-  writing-mode: vertical-rl;
-  font-size: 13px;
-  letter-spacing: 0.2em;
-}
-.company-logo {
-  margin-top: 12px;
-  margin-left: 8px;
-}
-.company-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.company-content {
-  width: 65%;
-}
-
-.company-logo {
-  width: 30%;
-  margin-top: 12px;
-  margin-left: 8px;
-}
-.company-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.company-left {
-  width: 65%;
+.company-table td {
+  padding: 16px 0;
 }
 
 .company-logo {
@@ -332,216 +220,11 @@ img { max-width: 100%; display: block; }
 
 .company-logo img {
   max-width: 240px;
-  height: auto;
-}
-/* ===== Company Mobile Fix ===== */
-@media (max-width: 768px) {
-
-  .company {
-    padding: 80px 24px;
-  }
-
-  .company-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .company-lead {
-    max-width: 100%;
-    margin-bottom: 48px;
-  }
-
-  .company-table {
-    width: 100%;
-    margin-bottom: 48px;
-  }
-
-  .company-table th {
-    width: 120px;
-    font-size: 13px;
-  }
-
-  .company-logo {
-    position: static;      /* 关键：取消 PC 的“定点” */
-    margin: 0 auto;        /* 居中 */
-    text-align: center;
-  }
-
-  .company-logo img {
-    width: 160px;          /* 手机缩小一点 */
-    height: auto;
-  }
-}
-/* ===== Company Table Mobile Two-Line Style ===== */
-@media (max-width: 768px) {
-
-  .company-table,
-  .company-table tbody,
-  .company-table tr {
-    display: block;
-    width: 100%;
-  }
-
-  .company-table tr {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  .company-table th {
-    display: block;
-    width: 100%;
-    padding: 0 0 6px 0;
-    font-size: 12px;
-    font-weight: 500;
-    color: #777;
-    letter-spacing: 0.08em;
-  }
-
-  .company-table td {
-    display: block;
-    width: 100%;
-    padding: 0;
-    font-size: 15px;
-    font-weight: 400;
-    color: #111;
-    line-height: 1.6;
-  }
-}
-@media (max-width: 768px) {
-
-  .company-table tr:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-}
-/* ===== Company Title Bar Mobile Fix ===== */
-@media (max-width: 768px) {
-
-  .company-head {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .company-head .jp {
-    writing-mode: horizontal-tb;  /* 手机端取消竖排 */
-    margin-left: 0;
-  }
-
-  .company-head .line {
-    width: 24px;
-    height: 1px;
-    background: #111;
-  }
-}
-/* ===== Contact ===== */
-.contact {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 120px 20px;
-  text-align: center;
 }
 
-.contact-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.contact-lead {
-  font-size: 14px;
-  line-height: 1.9;
-  margin-bottom: 60px;
-}
-
-.contact-form {
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 28px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.required {
-  font-size: 11px;
-  background: #1b5fa7;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-left: 6px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 14px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #1b5fa7;
-}
-
-.form-privacy {
-  margin: 40px 0 24px;
-  font-size: 13px;
-}
-
-.form-privacy a {
-  text-decoration: underline;
-}
-
-.form-note {
-  font-size: 12px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.submit-btn {
-  display: block;
-  width: 220px;
-  margin: 0 auto;
-  padding: 14px 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background: #1b5fa7;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-}
-
-.submit-btn:hover {
-  opacity: 0.9;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-  .contact {
-    padding: 80px 16px;
-  }
-
-  .contact-title {
-    font-size: 22px;
-  }
-}
-/* ===== Contact ===== */
+/* =====================================
+   Contact
+===================================== */
 .contact {
   max-width: 720px;
   margin: 0 auto;
@@ -551,18 +234,14 @@ img { max-width: 100%; display: block; }
 
 .contact-title {
   font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
   margin-bottom: 28px;
 }
 
 .contact-lead {
   font-size: 14px;
-  line-height: 2;
   margin-bottom: 80px;
 }
 
-/* form */
 .contact-form {
   text-align: left;
 }
@@ -574,7 +253,6 @@ img { max-width: 100%; display: block; }
 .form-row label {
   display: block;
   font-size: 14px;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -587,22 +265,21 @@ img { max-width: 100%; display: block; }
   margin-left: 8px;
 }
 
-/* input & textarea */
 .form-row input,
 .form-row textarea {
   width: 100%;
-  font-size: 14px;
   padding: 14px 16px;
+  font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  background: #fff;
 }
 
-/* ⭐ お問い合わせ内容：固定高度 */
+/* textarea 固定高度（最终） */
 .form-row textarea {
-  height: 220px;          /* ← 原站风固定大框 */
-  resize: none;           /* ← 禁止拖拽改变大小 */
-  line-height: 1.8;
+  height: 260px;
+  min-height: 260px;
+  resize: none;
+  line-height: 1.9;
 }
 
 .form-row input:focus,
@@ -611,25 +288,18 @@ img { max-width: 100%; display: block; }
   border-color: #1b5fa7;
 }
 
-/* privacy */
 .form-privacy {
   margin: 60px 0 32px;
   font-size: 13px;
-}
-
-.form-privacy label {
-  cursor: pointer;
 }
 
 .form-note {
   font-size: 12px;
   color: #555;
   text-align: center;
-  line-height: 1.8;
   margin-bottom: 40px;
 }
 
-/* button */
 .submit-btn {
   display: block;
   width: 240px;
@@ -645,12 +315,83 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
 }
 
-.submit-btn:hover {
-  opacity: 0.9;
+/* =====================================
+   Footer
+===================================== */
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
 }
 
-/* ===== Mobile ===== */
+/* =====================================
+   Responsive（Mobile）
+===================================== */
 @media (max-width: 768px) {
+
+  .nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 96px 16px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.7;
+  }
+
+  .about {
+    padding: 96px 16px;
+  }
+
+  .about-head {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .work {
+    padding: 96px 16px;
+  }
+
+  .work-block {
+    margin-bottom: 96px;
+  }
+
+  .work-block.split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .num {
+    font-size: 40px;
+  }
+
+  .company {
+    padding: 96px 16px;
+  }
+
+  .company-inner {
+    flex-direction: column;
+  }
+
+  .company-left,
+  .company-logo {
+    width: 100%;
+  }
+
+  .company-logo {
+    margin-top: 48px;
+  }
+
   .contact {
     padding: 100px 16px 120px;
   }
@@ -665,48 +406,6 @@ img { max-width: 100%; display: block; }
 
   .form-row textarea {
     height: 180px;
+    min-height: 180px;
   }
-}
-/* === Contact textarea 强制大尺寸（PC / 手机一致） === */
-.form-row textarea {
-  height: 260px !important;
-  min-height: 260px !important;
-  resize: none;
-  line-height: 1.9;
-}
-/* === Header Navigation 字体（和截图一致）=== */
-.nav a {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 600;   /* 关键 */
-  letter-spacing: 0.04em;
-}
-
-/* === Global Typography (ONECRAFT) === */
-html, body {
-  font-family: "Noto Serif JP", serif;
-  color: #111;
-}
-
-/* 正文（最柔和） */
-p,
-.company-lead,
-.company-table td,
-.company-table th,
-.form-row label {
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-/* 标题（稍微有力量） */
-h1, h2, h3,
-.section-title,
-.company-head h2 {
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-/* Header / Navigation（和你截图一模一样那种感觉） */
-.nav a {
-  font-weight: 600;
-  letter-spacing: 0.04em;
 }
