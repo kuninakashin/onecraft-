@@ -681,10 +681,35 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
 }
 /* === FORCE FONT (PC & Mobile 最终覆盖) === */
-html, body,
-body * {
-  font-family: "Noto Serif JP", serif !important;
-}
 body {
   background: red !important;
+}
+/* === Global Typography (ONECRAFT) === */
+html, body {
+  font-family: "Noto Serif JP", serif;
+  color: #111;
+}
+
+/* 正文（最柔和） */
+p,
+.company-lead,
+.company-table td,
+.company-table th,
+.form-row label {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* 标题（稍微有力量） */
+h1, h2, h3,
+.section-title,
+.company-head h2 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Header / Navigation（和你截图一模一样那种感觉） */
+.nav a {
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
