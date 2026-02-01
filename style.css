@@ -351,3 +351,39 @@ img { max-width: 100%; display: block; }
     height: auto;
   }
 }
+/* ===== Company Table Mobile Two-Line Style ===== */
+@media (max-width: 768px) {
+
+  .company-table,
+  .company-table tbody,
+  .company-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .company-table tr {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .company-table th {
+    display: block;
+    width: 100%;
+    padding: 0 0 6px 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #777;
+    letter-spacing: 0.08em;
+  }
+
+  .company-table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.6;
+  }
+}
