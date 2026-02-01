@@ -387,3 +387,12 @@ img { max-width: 100%; display: block; }
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+
+  .company-table tr:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+}
