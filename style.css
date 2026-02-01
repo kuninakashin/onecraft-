@@ -272,3 +272,7 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
   letter-spacing: 0.2em;
 }
+.company-logo {
+  margin-top: 12px;
+  margin-left: 8px;
+}
