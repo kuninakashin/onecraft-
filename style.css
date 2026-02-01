@@ -313,3 +313,6 @@ img { max-width: 100%; display: block; }
   max-width: 240px;
   height: auto;
 }
+.company-logo {
+  outline: 3px solid red;
+}
