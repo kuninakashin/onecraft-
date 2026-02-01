@@ -645,3 +645,10 @@ img { max-width: 100%; display: block; }
     height: 180px;
   }
 }
+/* === Contact textarea 强制大尺寸（PC / 手机一致） === */
+.form-row textarea {
+  height: 260px !important;
+  min-height: 260px !important;
+  resize: none;
+  line-height: 1.9;
+}
