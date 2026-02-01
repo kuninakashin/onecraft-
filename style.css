@@ -264,3 +264,11 @@ img { max-width: 100%; display: block; }
   color: #222;
   margin: 32px 0 48px;
 }
+.company-label {
+  position: absolute;
+  left: -58px;
+  top: 0;
+  writing-mode: vertical-rl;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
