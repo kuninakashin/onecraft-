@@ -519,3 +519,129 @@ img { max-width: 100%; display: block; }
     font-size: 22px;
   }
 }
+/* ===== Contact ===== */
+.contact {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 140px 20px 160px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+}
+
+.contact-lead {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 80px;
+}
+
+/* form */
+.contact-form {
+  text-align: left;
+}
+
+.form-row {
+  margin-bottom: 36px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.required {
+  font-size: 11px;
+  background: #1b5fa7;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+/* input & textarea */
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* ⭐ お問い合わせ内容：固定高度 */
+.form-row textarea {
+  height: 220px;          /* ← 原站风固定大框 */
+  resize: none;           /* ← 禁止拖拽改变大小 */
+  line-height: 1.8;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #1b5fa7;
+}
+
+/* privacy */
+.form-privacy {
+  margin: 60px 0 32px;
+  font-size: 13px;
+}
+
+.form-privacy label {
+  cursor: pointer;
+}
+
+.form-note {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* button */
+.submit-btn {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #fff;
+  background: #1b5fa7;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .contact {
+    padding: 100px 16px 120px;
+  }
+
+  .contact-title {
+    font-size: 22px;
+  }
+
+  .contact-lead {
+    margin-bottom: 60px;
+  }
+
+  .form-row textarea {
+    height: 180px;
+  }
+}
