@@ -668,3 +668,9 @@ img { max-width: 100%; display: block; }
   resize: none;
   line-height: 1.9;
 }
+/* === Header Navigation 字体（和截图一致）=== */
+.nav a {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;   /* 关键 */
+  letter-spacing: 0.04em;
+}
