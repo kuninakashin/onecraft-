@@ -681,9 +681,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
 }
 /* === FORCE FONT (PC & Mobile 最终覆盖) === */
-body {
-  background: red !important;
-}
+
 /* === Global Typography (ONECRAFT) === */
 html, body {
   font-family: "Noto Serif JP", serif;
