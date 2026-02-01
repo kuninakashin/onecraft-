@@ -680,7 +680,6 @@ img { max-width: 100%; display: block; }
   font-weight: 600;   /* 关键 */
   letter-spacing: 0.04em;
 }
-/* === FORCE FONT (PC & Mobile 最终覆盖) === */
 
 /* === Global Typography (ONECRAFT) === */
 html, body {
