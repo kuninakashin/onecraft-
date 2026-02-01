@@ -236,3 +236,23 @@ img { max-width: 100%; display: block; }
     padding: 96px 16px;
   }
 }
+/* ===== Fine tuning ===== */
+
+/* Work 标题层级 */
+.work h2 {
+  font-size: 24px;
+  margin: 16px 0 24px;
+}
+
+/* Work 正文 */
+.work p {
+  font-size: 15px;
+  line-height: 2;
+  max-width: 520px;
+}
+
+/* 图片轻微圆角（高级感） */
+.work-image img,
+.work-images img {
+  border-radius: 4px;
+}
