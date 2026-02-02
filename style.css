@@ -121,92 +121,75 @@ p,
   gap: 80px;
 }
 
-/* =====================================
-   Work
+//* =====================================
+   Company（示范图完全对应・最终）
 ===================================== */
-.work {
+.company {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 160px 24px;
 }
 
-.work-block {
-  max-width: 1100px;
-  margin: 0 auto 160px;
+.company > .company-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.work-block.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.company-content {
+  flex: 1;
+  max-width: 760px;
+  margin-left: 120px;
 }
 
-.work-block.split.reverse {
-  direction: rtl;
+.company-head {
+  margin-bottom: 80px;
 }
 
-.work-block.split.reverse > * {
-  direction: ltr;
+.company-head h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
-.num {
-  font-size: 64px;
-  color: #e5e5e5;
-}
-
-.work p {
+.company-lead {
   font-size: 15px;
-  max-width: 520px;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  margin-bottom: 60px;
 }
 
-<section class="company">
-  <div class="company-inner">
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
 
-    <!-- 左侧：文字内容，一定要包这一层 -->
-    <div class="company-content">
-      <div class="company-head">
-        <h2>これからも、この仕事とともに</h2>
-      </div>
+.company-table th {
+  text-align: left;
+  font-weight: 500;
+  padding: 22px 20px 22px 0;
+  white-space: nowrap;
+  border-bottom: 1px solid #222;
+  vertical-align: top;
+}
 
-      <p class="company-lead">
-        弊社は海外自社工場を設置し、さらに100社以上の工場と提携しており、
-        中間業者を一切排除し、材料の調達から生産・検品まで一貫して行っております。
-      </p>
+.company-table td {
+  padding: 22px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.9;
+}
 
-      <table class="company-table">
-        <tr>
-          <th>会社名</th>
-          <td>株式会社ワンクラフト</td>
-        </tr>
-        <tr>
-          <th>代表</th>
-          <td>国仲 聡</td>
-        </tr>
-        <tr>
-          <th>創業</th>
-          <td>2021年6月8日</td>
-        </tr>
-        <tr>
-          <th>資本金</th>
-          <td>300万円</td>
-        </tr>
-        <tr>
-          <th>所在地</th>
-          <td>〒125-0061 東京都葛飾区亀有3-11-10 エミネンス亀有ビル2階</td>
-        </tr>
-        <tr>
-          <th>電話番号</th>
-          <td>TEL 03-6231-2696　FAX 03-6231-2697</td>
-        </tr>
-      </table>
-    </div>
+.company-logo {
+  flex-shrink: 0;
+  margin-top: 60px;
+}
 
-    <!-- 右侧：Logo -->
-    <div class="company-logo">
-      <img src="logo.png" alt="onecraft">
-    </div>
+.company-logo img {
+  width: 220px;
+}
 
-  </div>
-</section>
 
 /* =====================================
    Contact
