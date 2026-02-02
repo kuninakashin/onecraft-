@@ -258,13 +258,30 @@
 
 </section>
 <script>
-  const form = document.querySelector(".contact-form");
+  const form = document.getElementById("contactForm");
   const success = document.querySelector(".form-success");
 
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      form.style.display = "none";
-      success.style.display = "block";
-    }, 800);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // ⭐ 阻止跳转到 Formspree 页面
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        success.style.display = "block";
+        form.reset();
+      } else {
+        alert("送信に失敗しました。時間をおいて再度お試しください。");
+      }
+    }).catch(() => {
+      alert("通信エラーが発生しました。");
+    });
   });
 </script>
