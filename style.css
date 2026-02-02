@@ -1,56 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
   color: #111;
-  background: #fff;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
-/* ============ header ============ */
+/* ---------- header ---------- */
 .header {
   border-bottom: 1px solid #eee;
 }
-
 .header-inner {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px 40px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-
 .nav a {
-  margin-left: 30px;
+  margin-left: 28px;
   font-size: 14px;
   text-decoration: none;
   color: #111;
 }
 
-/* ============ hero ============ */
+/* ---------- hero ---------- */
 .hero {
   position: relative;
 }
-
-.hero-image {
+.hero-img {
   height: 80vh;
-  background: #ccc;
+  background: #ddd;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
-.hero-image h1 {
+.hero-img h1 {
   color: #fff;
   font-size: 42px;
   letter-spacing: 4px;
 }
-
 .side-text {
   position: absolute;
   top: 50%;
@@ -58,114 +52,93 @@ body {
   font-size: 12px;
   color: #777;
 }
-
 .side-text.left { left: 10px; }
 .side-text.right { right: 10px; }
 
-/* ============ section base ============ */
+/* ---------- section ---------- */
 .section {
-  padding: 120px 0;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 120px 40px;
 }
 
-.section-number {
+/* ---------- number dot ---------- */
+.number-dot {
   font-size: 48px;
-  color: #ddd;
+  font-weight: 300;
   margin-bottom: 20px;
 }
+.dot-gray   { color: #dcdcdc; }
+.dot-blue   { color: #b9cfe5; }
+.dot-green  { color: #c8d8c8; }
+.dot-orange { color: #e6d2c1; }
 
-.section-title {
-  font-size: 26px;
-  margin-bottom: 30px;
-}
-
-.section-text {
-  max-width: 700px;
-  font-size: 14px;
-}
-
-/* ============ about ============ */
-.about-inner {
-  display: flex;
+/* ---------- about ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
 }
-
-.about-image {
-  flex: 1;
-  background: #ddd;
-  height: 400px;
+.img-about {
+  height: 420px;
 }
 
-/* ============ gallery ============ */
-.work-gallery,
-.image-row,
-.product-row {
+/* ---------- images ---------- */
+.img-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 40px;
 }
+.col-4 { grid-template-columns: repeat(4, 1fr); }
+.col-3 { grid-template-columns: repeat(3, 1fr); }
 
-.work-item,
-.img-box,
-.product {
-  height: 180px;
+.img-box {
   background: #ddd;
+  aspect-ratio: 4 / 3;
 }
 
-/* ============ sample boxes ============ */
-.sample-boxes {
+/* ---------- samples ---------- */
+.sample-grid {
   display: flex;
   gap: 40px;
   margin-top: 60px;
 }
-
-.sample {
+.sample-box {
   flex: 1;
   border: 2px dashed #ccc;
   padding: 40px;
   text-align: center;
 }
 
-/* ============ company ============ */
-.company-table {
+/* ---------- company ---------- */
+.company table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 60px;
 }
-
-.company-table th,
-.company-table td {
+.company th,
+.company td {
   border-bottom: 1px solid #eee;
-  padding: 15px 10px;
-  text-align: left;
+  padding: 14px 10px;
 }
 
-/* ============ contact ============ */
+/* ---------- contact ---------- */
 .contact {
   background: #f7f7f7;
-  padding: 120px 40px;
 }
-
-.contact-form {
+.contact form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
 }
-
-.contact-form input,
-.contact-form textarea {
+.contact input,
+.contact textarea {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
 }
-
-.contact-form button {
+.contact button {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   background: #1e5a9a;
   color: #fff;
   border: none;
-  font-size: 16px;
 }
