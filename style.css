@@ -264,65 +264,70 @@ section {
 
 
 
-/* ===============================
-   CONTACT
-=============================== */
-.contact-title {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
+<!-- ===== Contact ===== -->
+<section id="contact" class="contact">
+  <h2 class="contact-title">お問い合わせ</h2>
 
-.contact-lead {
-  font-size: 15px;
-  line-height: 2;
-  margin-bottom: 60px;
-}
+  <p class="contact-lead">
+    弊社へのお問い合わせはこちらよりお願い致します。<br>
+    2営業日以内にご返信させて頂きます。
+  </p>
 
-.contact-form {
-  max-width: 600px;
-}
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/xgozzdwk?redirect=false"
+    method="POST"
+  >
+    <!-- 🔑 成功后跳转到你自己的感谢页面 -->
+    <input
+      type="hidden"
+      name="_next"
+      value="https://kuninakashin.github.io/onecraft-/thanks.html"
+    >
 
-.form-row {
-  margin-bottom: 30px;
-}
+    <input type="hidden" name="_subject" value="ONECRAFT お問い合わせ">
+    <input type="hidden" name="_template" value="table">
 
-.form-row label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
+    <div class="form-row">
+      <label>お名前 <span class="required">必須</span></label>
+      <input type="text" name="name" required>
+    </div>
 
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 12px;
-  font-family: inherit;
-  font-size: 14px;
-  border: 1px solid #ccc;
-}
+    <div class="form-row">
+      <label>会社名</label>
+      <input type="text" name="company">
+    </div>
 
-textarea {
-  height: 160px;
-}
+    <div class="form-row">
+      <label>メールアドレス <span class="required">必須</span></label>
+      <input type="email" name="email" required>
+    </div>
 
-.required {
-  font-size: 11px;
-  margin-left: 6px;
-}
+    <div class="form-row">
+      <label>電話番号</label>
+      <input type="tel" name="tel">
+    </div>
 
-.form-privacy {
-  margin: 30px 0;
-  font-size: 13px;
-}
+    <div class="form-row">
+      <label>お問い合わせ内容 <span class="required">必須</span></label>
+      <textarea name="message" required></textarea>
+    </div>
 
-.submit-btn {
-  padding: 14px 40px;
-  border: 1px solid #111;
-  background: none;
-  font-family: inherit;
-  font-size: 14px;
-  cursor: pointer;
-}
+    <div class="form-privacy">
+      <label>
+        <input type="checkbox" name="privacy" required>
+        プライバシーポリシーに同意する
+      </label>
+    </div>
+
+    <p class="form-note">
+      入力確認画面や自動返信メールはございません。<br>
+      内容をご確認の上、送信してください。
+    </p>
+
+    <button type="submit" class="submit-btn">送信</button>
+  </form>
+</section>
 
 /* ===============================
    THANKS
