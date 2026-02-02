@@ -184,127 +184,84 @@ section {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* ===============================
-   COMPANY
-================================ */
+/* =========================
+   COMPANY INFO
+   ========================= */
 
 .company {
-  padding: 120px 0;
-  background: #fff;
-}
-
-.company-head {
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  display: flex;
-  align-items: flex-start;
-  gap: 80px;
-}
-
-.company-head .jp {
-  writing-mode: vertical-rl;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  color: #000;
-  position: relative;
-  padding-right: 16px;
-}
-
-.company-head .jp::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #000;
-}
-
-.company-head h2 {
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  margin-bottom: 24px;
-}
-
-.company-lead {
-  font-size: 15px;
-  line-height: 2;
-  color: #222;
-  max-width: 720px;
-}
-
-/* ===== TABLE ===== */
-
-.company-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 120px auto 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+               "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  color: #111;
 }
 
 .company-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 80px;
-  font-size: 15px;
 }
 
-.company-table th,
-.company-table td {
-  padding: 24px 0;
-  vertical-align: top;
-}
-
-.company-table th {
-  width: 160px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-align: left;
-  border-bottom: 1px solid #000;
-}
-
-.company-table td {
-  padding-left: 40px;
-  line-height: 1.9;
+.company-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: start;
+  padding: 22px 0;
   border-bottom: 1px solid #ddd;
 }
 
-/* ===== LOGO ===== */
-
-.company-logo {
-  margin-top: 80px;
-  text-align: right;
+.company-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #111;
+  position: relative;
 }
 
-.company-logo img {
-  max-width: 220px;
-  opacity: 0.9;
+.company-label::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #111;
+  margin-top: 10px;
 }
 
-/* ===== RESPONSIVE ===== */
+.company-value {
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: #111;
+}
+
+/* 地址 / 电话多行时更好看 */
+.company-value span {
+  display: block;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 768px) {
-  .company-head {
-    flex-direction: column;
-    gap: 40px;
+  .company {
+    margin-top: 80px;
+    padding: 0 20px;
   }
 
-  .company-head .jp {
-    writing-mode: horizontal-tb;
-    padding-right: 0;
+  .company-row {
+    grid-template-columns: 1fr;
+    padding: 18px 0;
   }
 
-  .company-head .jp::after {
-    display: none;
+  .company-label {
+    margin-bottom: 10px;
   }
 
-  .company-table th {
-    width: 120px;
-  }
-
-  .company-table td {
-    padding-left: 20px;
+  .company-label::after {
+    width: 32px;
   }
 }
+
 
 
 /* ===============================
