@@ -1,0 +1,398 @@
+/* =====================================
+   Global Reset / Base
+===================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #111;
+  line-height: 2;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================================
+   Typography System（最终定稿）
+===================================== */
+
+/* 标题 */
+h1, h2, h3,
+.section-title,
+.company-head h2,
+.contact-title {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* 正文 */
+p,
+.company-lead,
+.company-table th,
+.company-table td,
+.form-row label {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Header Navigation */
+.nav a {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+/* =====================================
+   Header
+===================================== */
+.header {
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.nav {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* =====================================
+   Hero
+===================================== */
+.hero {
+  padding: 160px 24px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.hero-sub {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+}
+
+/* =====================================
+   About
+===================================== */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 160px 24px;
+}
+
+.about-head {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-title .line {
+  width: 2px;
+  height: 40px;
+  background: #111;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* =====================================
+   Work
+===================================== */
+.work {
+  padding: 160px 24px;
+}
+
+.work-block {
+  max-width: 1100px;
+  margin: 0 auto 160px;
+}
+
+.work-block.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.work-block.split.reverse {
+  direction: rtl;
+}
+
+.work-block.split.reverse > * {
+  direction: ltr;
+}
+
+.num {
+  font-size: 64px;
+  color: #e5e5e5;
+}
+
+.work p {
+  font-size: 15px;
+  max-width: 520px;
+}
+
+/* ===== Company Font Reset (match reference style) ===== */
+
+body {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
+  color: #111;
+}
+
+/* 公司说明正文 */
+.company-lead {
+  font-size: 15px;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+
+/* 表格整体 */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 60px;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
+/* 左侧项目名 */
+.company-table th {
+  text-align: left;
+  font-weight: 500;
+  padding: 22px 20px 22px 0;
+  white-space: nowrap;
+  border-bottom: 1px solid #222;
+  vertical-align: top;
+}
+
+/* 右侧内容 */
+.company-table td {
+  padding: 22px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.9;
+}
+
+/* 电话番号那一行的字距微调 */
+.company-table td,
+.company-table th {
+  font-feature-settings: "palt";
+}
+
+/* =====================================
+   Contact
+===================================== */
+.contact {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 140px 20px 160px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+
+.contact-lead {
+  font-size: 14px;
+  margin-bottom: 80px;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.form-row {
+  margin-bottom: 36px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.required {
+  font-size: 11px;
+  background: #1b5fa7;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* textarea 固定高度（最终） */
+.form-row textarea {
+  height: 260px;
+  min-height: 260px;
+  resize: none;
+  line-height: 1.9;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #1b5fa7;
+}
+
+.form-privacy {
+  margin: 60px 0 32px;
+  font-size: 13px;
+}
+
+.form-note {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.submit-btn {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #fff;
+  background: #1b5fa7;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* =====================================
+   Footer
+===================================== */
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+/* =====================================
+   Responsive（Mobile）
+===================================== */
+@media (max-width: 768px) {
+
+  .nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 96px 16px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.7;
+  }
+
+  .about {
+    padding: 96px 16px;
+  }
+
+  .about-head {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .work {
+    padding: 96px 16px;
+  }
+
+  .work-block {
+    margin-bottom: 96px;
+  }
+
+  .work-block.split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .num {
+    font-size: 40px;
+  }
+
+  .company {
+    padding: 96px 16px;
+  }
+
+  .company-inner {
+    flex-direction: column;
+  }
+
+  .company-left,
+  .company-logo {
+    width: 100%;
+  }
+
+  .company-logo {
+    margin-top: 48px;
+  }
+
+  .contact {
+    padding: 100px 16px 120px;
+  }
+
+  .contact-title {
+    font-size: 22px;
+  }
+
+  .contact-lead {
+    margin-bottom: 60px;
+  }
+
+  .form-row textarea {
+    height: 180px;
+    min-height: 180px;
+  }
+}
