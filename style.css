@@ -8,7 +8,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #111;
@@ -24,8 +24,6 @@ img {
 /* =====================================
    Typography System（最终定稿）
 ===================================== */
-
-/* 标题 */
 h1, h2, h3,
 .section-title,
 .company-head h2,
@@ -34,7 +32,6 @@ h1, h2, h3,
   letter-spacing: 0.04em;
 }
 
-/* 正文 */
 p,
 .company-lead,
 .company-table th,
@@ -42,15 +39,6 @@ p,
 .form-row label {
   font-weight: 400;
   letter-spacing: 0.02em;
-}
-
-/* Header Navigation */
-.nav a {
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
 }
 
 /* =====================================
@@ -72,6 +60,14 @@ p,
   display: flex;
   justify-content: center;
   gap: 32px;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #111;
 }
 
 /* =====================================
@@ -162,11 +158,37 @@ p,
   max-width: 520px;
 }
 
-/* ===== Company Font Reset (match reference style) ===== */
+/* =====================================
+   Company（示范图完全对应・最终）
+===================================== */
+.company {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 160px 24px;
+}
 
-body {
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
-  color: #111;
+.company-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* 左侧内容整体偏右（关键） */
+.company-content {
+  flex: 1;
+  max-width: 760px;
+  margin-left: 120px;
+}
+
+/* 标题区 */
+.company-head {
+  margin-bottom: 80px;
+}
+
+.company-head h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 /* 公司说明正文 */
@@ -174,19 +196,17 @@ body {
   font-size: 15px;
   line-height: 2.1;
   letter-spacing: 0.04em;
-  font-weight: 400;
+  margin-bottom: 60px;
 }
 
-/* 表格整体 */
+/* 表格 */
 .company-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 60px;
   font-size: 15px;
   letter-spacing: 0.05em;
 }
 
-/* 左侧项目名 */
 .company-table th {
   text-align: left;
   font-weight: 500;
@@ -196,17 +216,20 @@ body {
   vertical-align: top;
 }
 
-/* 右侧内容 */
 .company-table td {
   padding: 22px 0;
   border-bottom: 1px solid #ddd;
   line-height: 1.9;
 }
 
-/* 电话番号那一行的字距微调 */
-.company-table td,
-.company-table th {
-  font-feature-settings: "palt";
+/* 右侧 Logo */
+.company-logo {
+  flex-shrink: 0;
+  margin-top: 60px;
+}
+
+.company-logo img {
+  width: 220px;
 }
 
 /* =====================================
@@ -261,30 +284,10 @@ body {
   border-radius: 6px;
 }
 
-/* textarea 固定高度（最终） */
 .form-row textarea {
   height: 260px;
-  min-height: 260px;
   resize: none;
   line-height: 1.9;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: #1b5fa7;
-}
-
-.form-privacy {
-  margin: 60px 0 32px;
-  font-size: 13px;
-}
-
-.form-note {
-  font-size: 12px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 40px;
 }
 
 .submit-btn {
@@ -316,11 +319,6 @@ body {
    Responsive（Mobile）
 ===================================== */
 @media (max-width: 768px) {
-
-  .nav {
-    gap: 16px;
-    flex-wrap: wrap;
-  }
 
   .hero {
     padding: 96px 16px;
@@ -370,9 +368,9 @@ body {
     flex-direction: column;
   }
 
-  .company-left,
-  .company-logo {
-    width: 100%;
+  .company-content {
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .company-logo {
@@ -393,6 +391,5 @@ body {
 
   .form-row textarea {
     height: 180px;
-    min-height: 180px;
   }
 }
