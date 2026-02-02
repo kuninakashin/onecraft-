@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <title>ONE CRAFT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 字体：最接近截图的日文企业官网组合 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,9 +12,7 @@
 <!-- ================= HEADER ================= -->
 <header class="header">
   <div class="header-inner">
-    <div class="logo">
-      <img src="logo.png" alt="onecraft">
-    </div>
+    <div class="logo">onecraft</div>
 
     <nav class="nav">
       <a href="#greeting">ご挨拶</a>
@@ -30,7 +22,7 @@
       <a href="#contact">お問い合わせ</a>
     </nav>
 
-    <div class="menu-btn">
+    <div class="menu">
       <span></span><span></span><span></span>
     </div>
   </div>
@@ -38,42 +30,38 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="hero-bg">
+  <div class="hero-img">
     <h1>GOODS / ONE CRAFT</h1>
   </div>
 
-  <div class="vertical-text left">
+  <div class="side-text left">
     ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
   </div>
-  <div class="vertical-text right">
+  <div class="side-text right">
     今日も、このグッズとともに
   </div>
 </section>
 
 <!-- ================= GREETING ================= -->
 <section class="section greeting" id="greeting">
-  <div class="section-head">
-    <span class="jp-title">ご挨拶</span>
-  </div>
-
-  <div class="greeting-text">
-    <p>
-      コンサートグッズ・アーティストグッズ・イベントグッズならワンクラフトにお任せください。
-      極短納期・高品質を提供しております。ぜひ一度お立ち寄りくださいませ。
-    </p>
-  </div>
+  <div class="section-label">ご挨拶</div>
+  <p class="lead-text">
+    コンサートグッズ・アーティストグッズ・イベントグッズならワンクラフトにお任せください。
+    極短納期・高品質を提供しております。ぜひ一度お立ち寄りくださいませ。
+  </p>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="section about">
-  <div class="about-wrap">
-
+  <div class="about-grid">
     <div class="about-text">
       <h2>ABOUT</h2>
       <p>
-        コンサートグッズ・アーティストグッズ・イベントグッズをメインに事業を展開し海外工場と直接取引。
-        当社では、お客様のご要望に応じて、オリジナルグッズやノベルティ、販促品など、
-        様々な商品をオーダーメイドで完全オリジナル製作の業務を行なっております。
+        コンサートグッズ・アーティストグッズ・イベントグッズを
+        メインに事業を展開し海外工場と直接取引。
+        当社では、お客様のご要望に応じて、オリジナルグッズやノベルティ、
+        販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
+        業務を行なっております。
       </p>
 
       <p>
@@ -88,60 +76,64 @@
       </p>
     </div>
 
-    <div class="about-image">
-      <img src="about.jpg" alt="">
-    </div>
-
+    <!-- 图片位置 -->
+    <div class="img-box img-about"></div>
   </div>
 </section>
 
 <!-- ================= SECTION 01 ================= -->
 <section class="section work" id="work">
   <div class="number-dot dot-gray">01</div>
-  <h2 class="work-title">ワンクラフトのOEM生産の特徴</h2>
+  <h2>ワンクラフトのOEM生産の特徴</h2>
 
-  <p class="work-text">
+  <p>
     当社では、お客様のご要望に応じて、オリジナルグッズ
     （ライブコンサートグッズ・キャラクターグッズ）やノベルティ、
-    販促品など、様々な商品をオーダーメイドで完全オリジナル製作の業務を行なっております。
+    販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
+    業務を行なっております。
   </p>
 
-  <div class="photo-row four">
-    <img src="img01.jpg">
-    <img src="img02.jpg">
-    <img src="img03.jpg">
-    <img src="img04.jpg">
+  <!-- 图片：4列 -->
+  <div class="img-row col-4">
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
   </div>
 </section>
 
 <!-- ================= SECTION 02 ================= -->
 <section class="section work">
   <div class="number-dot dot-blue">02</div>
-  <h2 class="work-title">低価格、短納期、小ロットから対応できるその理由とは……</h2>
+  <h2>低価格、短納期、小ロットから対応できるその理由とは……</h2>
 
-  <p class="work-text">
-    通常ノベルティ業者の場合、多くの代理店や商社、貿易会社などを経由することにより、
+  <p>
+    通常ノベルティ業者の場合、多くの代理店や商社、
+    貿易会社などを経由することにより、
     中間コストが大きく発生してしまいます。
   </p>
 
-  <div class="photo-row three">
-    <img src="img05.jpg">
-    <img src="img06.jpg">
-    <img src="img07.jpg">
+  <!-- 图片：3列 -->
+  <div class="img-row col-3">
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
   </div>
 </section>
 
 <!-- ================= SECTION 03 ================= -->
 <section class="section work">
   <div class="number-dot dot-green">03</div>
-  <h2 class="work-title">厳密な品質・検品管理システム</h2>
+  <h2>厳密な品質・検品管理システム</h2>
 
-  <p class="work-text">
-    品質で安全なモノづくり。素材調達からサンプル試作、生産まで、
+  <p>
+    品質で安全なモノづくり。
+    素材調達からサンプル試作、生産まで、
     全てをメイドインジャパンの品質でご提供しています。
   </p>
 
-  <div class="sample-wrap">
+  <!-- 虚线框 -->
+  <div class="sample-grid">
     <div class="sample-box">工場サンプル</div>
     <div class="sample-box">校正サンプル</div>
     <div class="sample-box">量産サンプル</div>
@@ -151,21 +143,22 @@
 <!-- ================= SECTION 04 ================= -->
 <section class="section work">
   <div class="number-dot dot-orange">04</div>
-  <h2 class="work-title">他社との違い・小ロットから低価格で完全オリジナル製作</h2>
+  <h2>他社との違い・小ロットから低価格で完全オリジナル製作</h2>
 
-  <div class="photo-row four">
-    <img src="bag01.jpg">
-    <img src="bag02.jpg">
-    <img src="bag03.jpg">
-    <img src="bag04.jpg">
+  <!-- 图片：4列 -->
+  <div class="img-row col-4">
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
   </div>
 </section>
 
 <!-- ================= COMPANY ================= -->
 <section class="section company" id="company">
-  <h2 class="company-title">これからも、この仕事とともに</h2>
+  <h2>これからも、この仕事とともに</h2>
 
-  <table class="company-table">
+  <table>
     <tr><th>会社名</th><td>株式会社ワンクラフト</td></tr>
     <tr><th>代表</th><td>国仲 聡</td></tr>
     <tr><th>創業</th><td>2021年6月8日</td></tr>
@@ -179,18 +172,18 @@
 <section class="section contact" id="contact">
   <h2>お問い合わせ</h2>
 
-  <form class="contact-form">
-    <input type="text" placeholder="お名前">
-    <input type="text" placeholder="会社名">
-    <input type="email" placeholder="メールアドレス">
-    <input type="text" placeholder="電話番号">
+  <form>
+    <input placeholder="お名前">
+    <input placeholder="会社名">
+    <input placeholder="メールアドレス">
+    <input placeholder="電話番号">
     <textarea placeholder="お問い合わせ内容"></textarea>
 
-    <label class="agree">
+    <label>
       <input type="checkbox"> プライバシーポリシーに同意する
     </label>
 
-    <button type="submit">送信</button>
+    <button>送信</button>
   </form>
 </section>
 
