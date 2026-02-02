@@ -208,55 +208,45 @@
   method="POST"
 >
 
-    <div class="form-row">
-      <label>お名前 <span class="required">必須</span></label>
-      <input type="text" required>
-    </div>
+  <div class="form-row">
+    <label>お名前 <span class="required">必須</span></label>
+    <input type="text" name="name" required>
+  </div>
 
-    <div class="form-row">
-      <label>会社名</label>
-      <input type="text">
-    </div>
+  <div class="form-row">
+    <label>会社名</label>
+    <input type="text" name="company">
+  </div>
 
-    <div class="form-row">
-  <label>お名前 <span class="required">必須</span></label>
-  <input type="text" name="name" required>
-</div>
+  <div class="form-row">
+    <label>メールアドレス <span class="required">必須</span></label>
+    <input type="email" name="email" required>
+  </div>
 
-<div class="form-row">
-  <label>会社名</label>
-  <input type="text" name="company">
-</div>
+  <div class="form-row">
+    <label>電話番号</label>
+    <input type="tel" name="tel">
+  </div>
 
-<div class="form-row">
-  <label>メールアドレス <span class="required">必須</span></label>
-  <input type="email" name="email" required>
-</div>
+  <div class="form-row">
+    <label>お問い合わせ内容 <span class="required">必須</span></label>
+    <textarea name="message" required></textarea>
+  </div>
 
-<div class="form-row">
-  <label>電話番号</label>
-  <input type="tel" name="phone">
-</div>
+  <div class="form-privacy">
+    <label>
+      <input type="checkbox" name="privacy" required>
+      プライバシーポリシーに同意する
+    </label>
+  </div>
 
-<div class="form-row">
-  <label>お問い合わせ内容 <span class="required">必須</span></label>
-  <textarea name="message" required></textarea>
-</div>
+  <p class="form-note">
+    入力確認画面や自動返信メールはございません。<br>
+    内容をご確認の上、送信してください。
+  </p>
 
-    <div class="form-privacy">
-      <label>
-        <input type="checkbox" required>
-        プライバシーポリシーに同意する
-        <span class="required">必須</span>
-      </label>
-    </div>
+  <button type="submit" class="submit-btn">送信</button>
 
-    <p class="form-note">
-      入力確認画面や自動返信メールはございません。<br>
-      ご入力内容を確認の上、送信ボタンを押して下さい。
-    </p>
+</form>
 
-    <button type="submit" class="submit-btn">送信</button>
-
-  </form>
 </section>
