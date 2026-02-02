@@ -256,3 +256,14 @@
 </form>
 
 </section>
+<script>
+  const form = document.querySelector(".contact-form");
+  const success = document.querySelector(".form-success");
+
+  form.addEventListener("submit", function () {
+    setTimeout(() => {
+      form.style.display = "none";
+      success.style.display = "block";
+    }, 800);
+  });
+</script>
