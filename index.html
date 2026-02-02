@@ -172,10 +172,8 @@
     2営業日以内にご返信させて頂きます。
   </p>
 
-  <form
-    id="contactForm"
-    class="contact-form"
-  >
+  <form id="contactForm" class="contact-form">
+    <!-- Formspree 设置 -->
     <input type="hidden" name="_subject" value="ONECRAFT お問い合わせ">
     <input type="hidden" name="_template" value="table">
 
@@ -206,7 +204,7 @@
 
     <div class="form-privacy">
       <label>
-        <input type="checkbox" required>
+        <input type="checkbox" name="privacy" required>
         プライバシーポリシーに同意する
       </label>
     </div>
@@ -219,7 +217,8 @@
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const formData = new FormData(this);
+  const form = this;
+  const formData = new FormData(form);
 
   fetch("https://formspree.io/f/xgozzdwk", {
     method: "POST",
@@ -227,16 +226,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     headers: {
       "Accept": "application/json"
     }
-  }).then(response => {
+  })
+  .then(response => {
     if (response.ok) {
+      // 成功后跳转到你自己的 thanks.html
       window.location.href = "thanks.html";
     } else {
-      alert("送信に失敗しました。");
+      alert("送信に失敗しました。もう一度お試しください。");
     }
+  })
+  .catch(error => {
+    console.error(error);
+    alert("通信エラーが発生しました。");
   });
 });
 </script>
-
-
-</body>
-</html>
