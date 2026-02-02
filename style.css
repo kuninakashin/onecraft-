@@ -42,6 +42,17 @@ p,
 }
 
 /* =====================================
+   Common Center Container（关键）
+===================================== */
+section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* =====================================
    Header
 ===================================== */
 .header {
@@ -92,8 +103,6 @@ p,
    About
 ===================================== */
 .about {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 160px 24px;
 }
 
@@ -121,12 +130,47 @@ p,
   gap: 80px;
 }
 
-//* =====================================
+/* =====================================
+   Work
+===================================== */
+.work {
+  padding: 160px 24px;
+}
+
+.work-block {
+  max-width: 1100px;
+  margin: 0 auto 160px;
+}
+
+.work-block.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.work-block.split.reverse {
+  direction: rtl;
+}
+
+.work-block.split.reverse > * {
+  direction: ltr;
+}
+
+.num {
+  font-size: 64px;
+  color: #e5e5e5;
+}
+
+.work p {
+  font-size: 15px;
+  max-width: 520px;
+}
+
+/* =====================================
    Company（示范图完全对应・最终）
 ===================================== */
 .company {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 160px 24px;
 }
 
@@ -189,7 +233,6 @@ p,
 .company-logo img {
   width: 220px;
 }
-
 
 /* =====================================
    Contact
@@ -279,6 +322,11 @@ p,
 ===================================== */
 @media (max-width: 768px) {
 
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .hero {
     padding: 96px 16px;
   }
@@ -352,4 +400,3 @@ p,
     height: 180px;
   }
 }
-
