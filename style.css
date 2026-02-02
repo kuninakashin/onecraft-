@@ -162,64 +162,51 @@ p,
   max-width: 520px;
 }
 
-/* =====================================
-   Company
-===================================== */
-.company {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 120px 24px 140px;
+/* ===== Company Font Reset (match reference style) ===== */
+
+body {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
+  color: #111;
 }
 
-.company-head {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 64px;
-}
-
-.company-head .line {
-  width: 2px;
-  height: 40px;
-  background: #111;
-}
-
-.company-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 64px;
-}
-
-.company-left {
-  width: 65%;
-}
-
+/* 公司说明正文 */
 .company-lead {
-  max-width: 520px;
-  font-size: 14px;
-  margin: 32px 0 48px;
+  font-size: 15px;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  font-weight: 400;
 }
 
+/* 表格整体 */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 60px;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
+/* 左侧项目名 */
 .company-table th {
-  width: 160px;
   text-align: left;
-  padding: 16px 0;
+  font-weight: 500;
+  padding: 22px 20px 22px 0;
+  white-space: nowrap;
+  border-bottom: 1px solid #222;
+  vertical-align: top;
 }
 
+/* 右侧内容 */
 .company-table td {
-  padding: 16px 0;
+  padding: 22px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.9;
 }
 
-.company-logo {
-  width: 35%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.company-logo img {
-  max-width: 240px;
+/* 电话番号那一行的字距微调 */
+.company-table td,
+.company-table th {
+  font-feature-settings: "palt";
 }
 
 /* =====================================
