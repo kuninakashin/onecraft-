@@ -171,36 +171,55 @@
     2営業日以内にご返信させて頂きます。
   </p>
 
-  <form class="contact-form" action="https://formspree.io/f/xgozzdwk" method="POST">
-    <input type="hidden" name="_redirect" value="https://kuninakashin.github.io/onecraft-/thanks.html">
+ <form
+  class="contact-form"
+  action="https://formspree.io/f/xgozzdwk"
+  method="POST"
+>
+  <input type="hidden" name="_redirect" value="https://kuninakashin.github.io/onecraft-/thanks.html">
+  <input type="hidden" name="_subject" value="ONECRAFT お問い合わせ">
+  <input type="hidden" name="_template" value="table">
 
-    <div class="form-row">
-      <label>お名前 <span class="required">必須</span></label>
-      <input type="text" name="name" required>
-    </div>
+  <div class="form-row">
+    <label>お名前 <span class="required">必須</span></label>
+    <input type="text" name="name" required>
+  </div>
 
-    <div class="form-row">
-      <label>会社名</label>
-      <input type="text" name="company">
-    </div>
+  <div class="form-row">
+    <label>会社名</label>
+    <input type="text" name="company">
+  </div>
 
-    <div class="form-row">
-      <label>メールアドレス <span class="required">必須</span></label>
-      <input type="email" name="email" required>
-    </div>
+  <div class="form-row">
+    <label>メールアドレス <span class="required">必須</span></label>
+    <input type="email" name="email" required>
+  </div>
 
-    <div class="form-row">
-      <label>電話番号</label>
-      <input type="tel" name="tel">
-    </div>
+  <div class="form-row">
+    <label>電話番号</label>
+    <input type="tel" name="tel">
+  </div>
 
-    <div class="form-row">
-      <label>お問い合わせ内容 <span class="required">必須</span></label>
-      <textarea name="message" required></textarea>
-    </div>
+  <div class="form-row">
+    <label>お問い合わせ内容 <span class="required">必須</span></label>
+    <textarea name="message" required></textarea>
+  </div>
 
-    <button type="submit" class="submit-btn">送信</button>
-  </form>
+  <div class="form-privacy">
+    <label>
+      <input type="checkbox" name="privacy" required>
+      プライバシーポリシーに同意する
+    </label>
+  </div>
+
+  <p class="form-note">
+    入力確認画面や自動返信メールはございません。<br>
+    内容をご確認の上、送信してください。
+  </p>
+
+  <button type="submit" class="submit-btn">送信</button>
+</form>
+
 </section>
 
 </body>
