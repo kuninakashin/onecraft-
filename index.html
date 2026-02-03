@@ -323,3 +323,8 @@ async function handleSubmit() {
 
 </body>
 </html>
+<script>
+  if (location.hash) {
+    history.replaceState(null, "", location.pathname);
+  }
+</script>
