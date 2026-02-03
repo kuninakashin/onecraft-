@@ -125,16 +125,20 @@ body {
 
 /* ===== company ===== */
 
-.company table {
-  width: 100%;
-  border-collapse: collapse;
+/* ===== company layout ===== */
+.company-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 60px;
+  align-items: start;
 }
-.company th,
-.company td {
-  padding: 14px 10px;
-  border-bottom: 1px solid #eee;
 
-  /* ===== company head ===== */
+/* 左侧信息 */
+.company-info {
+  min-width: 0;
+}
+
+/* 标题行 */
 .company-head {
   display: flex;
   align-items: flex-start;
@@ -142,7 +146,7 @@ body {
   margin-bottom: 60px;
 }
 
-/* 左侧竖排标签 */
+/* 会社情報 竖排标签 */
 .company-label {
   writing-mode: vertical-rl;
   font-size: 14px;
@@ -150,9 +154,9 @@ body {
   color: #111;
   padding-right: 14px;
   position: relative;
+  flex-shrink: 0;
 }
 
-/* 竖线 */
 .company-label::after {
   content: "";
   position: absolute;
@@ -163,42 +167,23 @@ body {
   background: #111;
 }
 
-/* 主标题 */
-.company-head h2 {
-  font-size: 26px;
-  font-weight: 600;
-  margin: 0;
-}
-/* ===== company layout ===== */
-.company-wrap {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 60px;
-  align-items: start;
-}
-
-/* 左侧信息 */
-.company-info h2 {
-  margin-bottom: 40px;
-}
-
 /* 右侧 logo 占位 */
 .ph-logo {
   width: 100%;
   height: 180px;
-  background: #eee;          /* 占位用 */
+  background: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 可选：让 logo 看起来更“贴” */
 .ph-logo::after {
   content: "LOGO";
   font-size: 12px;
   color: #aaa;
   letter-spacing: 2px;
 }
+
 /* ===== contact ===== */
 .contact {
   background: #f6f6f6;
