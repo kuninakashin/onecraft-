@@ -1,29 +1,45 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>ONE CRAFT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+/* ===== 左右竖排滚动文字 ===== */
+.side-fixed {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 32px;
+  overflow: hidden;
+  z-index: 20;
 
-<body>
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  color: rgba(0,0,0,0.45);
+}
 
-<body>
+/* 左边 */
+.side-fixed.left {
+  left: 12px;
+}
 
-  <!-- 左侧竖排滚动 -->
-  <div class="side-fixed left">
-    <div class="side-scroll">
-      ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
-    </div>
-  </div>
+/* 右边 */
+.side-fixed.right {
+  right: 12px;
+}
 
-  <!-- 右侧竖排滚动 -->
-  <div class="side-fixed right">
-    <div class="side-scroll">
-      今日も、このグッズとともに
-    </div>
-  </div>
+/* 实际滚动的文字 */
+.side-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: sideScroll 18s linear infinite;
+}
+
+/* 上下滚动动画 */
+@keyframes sideScroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 
 <!-- ========== HEADER ========== -->
 <header class="header">
