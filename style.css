@@ -210,3 +210,35 @@ body {
   resize: vertical;    /* 允许用户自己再拉高 */
   line-height: 1.8;
 }
+/* ===== work section layout ===== */
+.work-wrap {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* 左侧竖排标题 */
+.work-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 竖线 */
+.work-vertical i {
+  display: block;
+  width: 1px;
+  height: 120px;
+  background: #111;
+}
+
+/* 右侧内容 */
+.work-main {
+  position: relative;
+}
