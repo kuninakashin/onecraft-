@@ -314,3 +314,25 @@ html {
 .header .nav a:hover {
   opacity: 0.6;
 }
+/* ===== Greeting Section (Tuned) ===== */
+.section.greeting {
+  padding: 80px 0;
+}
+
+.section.greeting .section-head .jp {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;        
+  letter-spacing: 0.08em;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.section.greeting .greeting-text {
+  max-width: 860px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #333;
+}
