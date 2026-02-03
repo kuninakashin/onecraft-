@@ -355,13 +355,13 @@ html {
   color: #222;
 }
 /* ===============================
-   Unified Typography (Greeting Style)
-   =============================== */
+   Global Body Text (High-end)
+   与「ご挨拶」正文完全统一
+================================ */
 
-/* ① 统一正文文字（ABOUT / WORK / COMPANY / CONTACT） */
 .section p,
-.section td,
-.section li {
+.section li,
+.section td {
   font-family:
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
@@ -369,55 +369,10 @@ html {
     "Noto Sans JP",
     Arial,
     sans-serif;
+
   font-size: 15px;
   font-weight: 400;
-  line-height: 2.1;
-  letter-spacing: 0.04em;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
   color: #111;
-}
-
-/* ② ご挨拶 标题（已用这个，不再放大） */
-.section.greeting .section-head .jp {
-  font-size: 20px;      /* 比现在稍小 */
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-/* ③ ABOUT / 01-04 的「黑色标题文字」统一 */
-.section h2,
-.section.work h2,
-.company h2 {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: #111;
-}
-
-/* ④ WORK 区块里 01-04 下面的说明文字 */
-.section.work p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2.1;
-  letter-spacing: 0.04em;
-}
-
-/* ⑤ 公司信息表格文字（公司名 / 地址 / 电话） */
-.company table td,
-.company table th {
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 2;
-}
-
-/* ❗ 数字 01 / 02 / 03 / 04 完全不动 */
-.num {
-  all: unset;
 }
