@@ -303,12 +303,12 @@ html {
     Arial,
     sans-serif;
 
-  font-size: 14px;        /* ⬅ 比刚才小一点 */
-  font-weight: 600;       /* ⬅ 明显更稳，但不厚重 */
-  letter-spacing: 0.06em; /* ⬅ 收紧一点，更高级 */
+  font-size: 14px;        
+  font-weight: 600;       
+  letter-spacing: 0.06em; 
 
   text-decoration: none;
-  padding: 0 12px;        /* ⬅ 横向也稍微收一点 */
+  padding: 0 12px;        
 }
 
 .header .nav a:hover {
