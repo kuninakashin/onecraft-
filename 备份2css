@@ -2,15 +2,14 @@
 body {
   margin: 0;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
+    "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    "YuGothic",
-    Meiryo,
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
     sans-serif;
   color: #111;
-  line-height: 1.9;
+  line-height: 2.05;
 }
 
 /* ===== 左侧贯穿竖排 ===== */
@@ -353,4 +352,108 @@ html {
   line-height: 2.1;
   letter-spacing: 0.05em;
   color: #222;
+}
+/* ===============================
+   Global Body Text (High-end)
+   与「ご挨拶」正文完全统一
+================================ */
+
+.section p,
+.section li,
+.section td {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: #111;
+}
+/* ===============================
+   Unified Section Headings
+   与「ご挨拶」标题完全一致
+   不影响 01 / 02 / 03 / 04
+================================ */
+
+.section h2,
+.work-main h2,
+.about-wrap h2,
+.company-head h2 {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #111;
+
+  margin-bottom: 18px;
+}
+/* ===============================
+   Unified Section Titles
+   与「ご挨拶」标题体系完全一致
+================================ */
+
+/* ご挨拶 */
+.section.greeting .section-head .jp,
+
+/* WORK 左侧竖排标题 */
+.work-vertical span,
+
+/* ABOUT / WORK / COMPANY 中央标题 */
+.work-main h2,
+.about-wrap h2,
+.company-head h2 {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111;
+}
+/* ===============================
+   Global Body Text – FINAL
+   全站正文与「ご挨拶」完全一致
+   （不影响标题 / 数字）
+================================ */
+
+p,
+.section p,
+.about-wrap p,
+.work-main p,
+.company-wrap p,
+.company-info p,
+.contact p,
+li,
+td {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.05;
+  letter-spacing: 0.04em;
+  color: #111;
 }
