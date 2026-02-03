@@ -322,17 +322,19 @@ async function handleSubmit() {
 </script>
   
   <script>
-  // 关闭浏览器自动滚动恢复
+  // 禁止浏览器自动恢复滚动位置
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
 
-  // 页面加载完成后，清 hash 并回到顶部
-  window.addEventListener('load', function () {
-    if (location.hash) {
-      history.replaceState(null, '', location.pathname);
-    }
-    window.scrollTo(0, 0);
+  // 在浏览器完成一切布局后，强制回到顶部
+  window.addEventListener('pageshow', function () {
+    setTimeout(function () {
+      if (location.hash) {
+        history.replaceState(null, '', location.pathname);
+      }
+      window.scrollTo(0, 0);
+    }, 0);
   });
 </script>
   
