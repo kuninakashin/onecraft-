@@ -401,3 +401,31 @@ html {
 
   margin-bottom: 18px;
 }
+/* ===============================
+   Unified Section Titles
+   与「ご挨拶」标题体系完全一致
+================================ */
+
+/* ご挨拶 */
+.section.greeting .section-head .jp,
+
+/* WORK 左侧竖排标题 */
+.work-vertical span,
+
+/* ABOUT / WORK / COMPANY 中央标题 */
+.work-main h2,
+.about-wrap h2,
+.company-head h2 {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111;
+}
