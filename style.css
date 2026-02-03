@@ -376,3 +376,28 @@ html {
   letter-spacing: 0.03em;
   color: #111;
 }
+/* ===============================
+   Unified Section Headings
+   与「ご挨拶」标题完全一致
+   不影响 01 / 02 / 03 / 04
+================================ */
+
+.section h2,
+.work-main h2,
+.about-wrap h2,
+.company-head h2 {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #111;
+
+  margin-bottom: 18px;
+}
