@@ -295,30 +295,3 @@
   </form>
 </section>
 <script>
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    if (response.ok) {
-      window.location.href =
-        "https://kuninakashin.github.io/onecraft-/thanks.html";
-    } else {
-      alert("送信に失敗しました。もう一度お試しください。");
-    }
-  } catch (error) {
-    alert("通信エラーが発生しました。時間をおいて再度お試しください。");
-  }
-});
-</script>
