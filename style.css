@@ -13,18 +13,6 @@ body {
   line-height: 1.9;
 }
 
-/* ===== 左侧贯穿竖排 ===== */
-.side-fixed {
-  position: fixed;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-size: 12px;
-  color: #666;
-  z-index: 10;
-}
-
 /* ===== header ===== */
 .header {
   border-bottom: 1px solid #eee;
@@ -40,6 +28,8 @@ body {
 .nav a {
   margin-left: 28px;
   font-size: 14px;
+  color: #111;
+  text-decoration: none;
 }
 
 /* ===== hero ===== */
@@ -58,24 +48,15 @@ body {
   font-size: 42px;
   letter-spacing: 4px;
 }
-.hero-vertical {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-size: 12px;
-  color: #666;
-}
 
-/* ===== section ===== */
+/* ===== section 通用 ===== */
 .section {
   width: 1200px;
   margin: auto;
   padding: 120px 0;
 }
 
-/* ===== number ===== */
+/* ===== 数字 01 02 03 04 ===== */
 .num {
   font-size: 48px;
   font-weight: 300;
@@ -96,7 +77,7 @@ body {
   height: 420px;
 }
 
-/* ===== images ===== */
+/* ===== 图片占位 ===== */
 .img-row {
   display: grid;
   gap: 20px;
@@ -110,7 +91,7 @@ body {
   aspect-ratio: 4 / 3;
 }
 
-/* ===== samples ===== */
+/* ===== sample ===== */
 .sample-row {
   display: flex;
   gap: 40px;
@@ -123,9 +104,45 @@ body {
   text-align: center;
 }
 
-/* ===== company ===== */
+/* =================================================
+   WORK / 私たちの仕事（01 左侧竖排 + 竖线）
+================================================= */
 
-/* ===== company layout ===== */
+/* 整体布局 */
+.work-wrap {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* 左侧竖排标题 */
+.work-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 竖线 */
+.work-vertical i {
+  display: block;
+  width: 1px;
+  height: 120px;
+  background: #111;
+}
+
+/* 右侧内容 */
+.work-main {
+  min-width: 0;
+}
+
+/* ===== company ===== */
 .company-wrap {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
@@ -133,12 +150,10 @@ body {
   align-items: start;
 }
 
-/* 左侧信息 */
 .company-info {
   min-width: 0;
 }
 
-/* 标题行 */
 .company-head {
   display: flex;
   align-items: flex-start;
@@ -146,7 +161,7 @@ body {
   margin-bottom: 60px;
 }
 
-/* 会社情報 竖排标签 */
+/* 会社情報 竖排 */
 .company-label {
   writing-mode: vertical-rl;
   font-size: 14px;
@@ -156,7 +171,6 @@ body {
   position: relative;
   flex-shrink: 0;
 }
-
 .company-label::after {
   content: "";
   position: absolute;
@@ -167,7 +181,7 @@ body {
   background: #111;
 }
 
-/* 右侧 logo 占位 */
+/* logo 占位 */
 .ph-logo {
   width: 100%;
   height: 180px;
@@ -176,7 +190,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .ph-logo::after {
   content: "LOGO";
   font-size: 12px;
@@ -204,10 +217,10 @@ body {
   color: #fff;
   border: none;
 }
-/* お問い合わせ内容（只放大这个框） */
+
+/* お問い合わせ内容 */
 .textarea-message {
-  min-height: 220px;   /* ← 核心：高度 */
-  resize: vertical;    /* 允许用户自己再拉高 */
+  min-height: 220px;
+  resize: vertical;
   line-height: 1.8;
 }
-
