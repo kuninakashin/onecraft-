@@ -196,46 +196,71 @@
 <section class="section contact">
   <h2>お問い合わせ</h2>
 
-  <form>
-    <input placeholder="お名前">
-    <input placeholder="会社名">
-    <input placeholder="メールアドレス">
-    <input placeholder="電話番号">
-    <textarea placeholder="お問い合わせ内容"></textarea>
+<form
+  action="https://formspree.io/f/xgozzdwk"
+  method="POST"
+>
 
-    <label class="agree">
-      <input type="checkbox"> プライバシーポリシーに同意する
-    </label>
+  <input
+    type="text"
+    name="name"
+    placeholder="お名前"
+    required
+  >
 
-    <button>送信</button>
-  </form>
+  <input
+    type="text"
+    name="company"
+    placeholder="会社名"
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="メールアドレス"
+    required
+  >
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="電話番号"
+  >
+
+  <textarea
+    name="message"
+    class="textarea-message"
+    placeholder="お問い合わせ内容"
+    required
+  ></textarea>
+
+  <!-- 邮件主题 -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="ONE CRAFT お問い合わせ"
+  >
+
+  <!-- 成功后跳转 -->
+  <input
+    type="hidden"
+    name="_redirect"
+    value="thanks.html"
+  >
+
+  <!-- 防垃圾 -->
+  <input
+    type="text"
+    name="_gotcha"
+    style="display:none"
+  >
+
+  <label class="agree">
+    <input type="checkbox" required>
+    プライバシーポリシーに同意する
+  </label>
+
+  <button type="submit">送信</button>
+
+</form>
 </section>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const form = this;
-  const formData = new FormData(form);
-
-  fetch("https://formspree.io/f/xgozzdwk", {
-    method: "POST",
-    body: formData,
-    headers: {
-      "Accept": "application/json"
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      // 成功后跳转到你自己的 thanks.html
-      window.location.href = "thanks.html";
-    } else {
-      alert("送信に失敗しました。もう一度お試しください。");
-    }
-  })
-  .catch(error => {
-    console.error(error);
-    alert("通信エラーが発生しました。");
-  });
-});
-</script>
