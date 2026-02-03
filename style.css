@@ -224,3 +224,48 @@ body {
   resize: vertical;
   line-height: 1.8;
 }
+/* =================================================
+   左右贯穿竖排滚动文字（只此一处）
+================================================= */
+
+/* 左右公共 */
+.side-fixed {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 32px;
+  overflow: hidden;
+  z-index: 20;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  color: rgba(0,0,0,0.45);
+}
+
+/* 左侧 */
+.side-fixed.left {
+  left: 12px;
+}
+
+/* 右侧 */
+.side-fixed.right {
+  right: 12px;
+}
+
+/* 滚动本体 */
+.side-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: sideScroll 22s linear infinite;
+}
+
+/* 动画 */
+@keyframes sideScroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
