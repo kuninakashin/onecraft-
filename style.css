@@ -245,3 +245,35 @@ body {
 .work-main {
   min-width: 0;
 }
+/* ===============================
+   side vertical scroll text
+================================ */
+
+.side-fixed {
+  position: fixed;
+  right: 24px;
+  top: 0;
+  height: 100vh;
+  width: 32px;
+  overflow: hidden;
+  z-index: 10;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(0,0,0,0.45);
+}
+
+.side-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: sideScroll 22s linear infinite;
+}
+
+@keyframes sideScroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
