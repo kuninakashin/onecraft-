@@ -277,3 +277,38 @@ body {
     transform: translateY(-100%);
   }
 }
+/* ===============================
+   右侧竖排滚动文字
+================================ */
+
+.side-fixed {
+  position: fixed;
+  right: 24px;
+  top: 0;
+  height: 100vh;
+  width: 32px;
+  overflow: hidden;
+  z-index: 999;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(0,0,0,0.45);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.side-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: sideScroll 22s linear infinite;
+}
+
+/* 滚动动画 */
+@keyframes sideScroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
