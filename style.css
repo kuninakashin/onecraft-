@@ -242,3 +242,6 @@ body {
 .work-main {
   position: relative;
 }
+.work-main {
+  min-width: 0;
+}
