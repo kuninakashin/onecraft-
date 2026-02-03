@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ONE CRAFT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ========== 左侧贯穿竖排 ========== -->
+<div class="side-fixed">
+  ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">onecraft</div>
+    <nav class="nav">
+      <a>ご挨拶</a>
+      <a>私たちの仕事</a>
+      <a>お知らせ</a>
+      <a>会社情報</a>
+      <a>お問い合わせ</a>
+    </nav>
+    <div class="menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-ph">
+    <h1>GOODS / ONE CRAFT</h1>
+  </div>
+
+  <div class="hero-vertical right">
+    今日も、このグッズとともに
+  </div>
+</section>
+
+<!-- ========== ご挨拶 ========== -->
+<section class="section greeting">
+  <div class="section-head">
+    <span class="jp">ご挨拶</span>
+  </div>
+
+  <div class="greeting-text">
+    コンサートグッズ・アーティストグッズ・イベントグッズならワンクラフトにお任せください。
+    極短納期・高品質を提供しております。ぜひ一度お立ち寄りくださいませ。
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="section about">
+  <div class="about-wrap">
+
+    <div class="about-text">
+      <h2>ABOUT</h2>
+
+      <p>
+        コンサートグッズ・アーティストグッズ・イベントグッズを
+        メインに事業を展開し海外工場と直接取引。
+        当社では、お客様のご要望に応じて、オリジナルグッズやノベルティ、
+        販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
+        業務を行なっております。
+      </p>
+
+      <p>
+        製造は中国自社工場や協力工場と直接取引をしているので激安です。
+        中国のものづくりの三大拠点である深圳や東莞等の広東省、
+        義烏や南通等の浙江省・江蘇省と高密や即墨等の山東省に構えています。
+      </p>
+
+      <p>
+        細かな仕様のご要望から小ロット生産の対応まで、
+        自社工場ならではのオリジナルを行なっております。
+      </p>
+    </div>
+
+    <!-- 右侧照片位置 -->
+    <div class="ph about-ph"></div>
+
+  </div>
+</section>
+
+<!-- ========== 01 ========== -->
+<section class="section work">
+  <div class="num dot-gray">01</div>
+  <h2>ワンクラフトのOEM生産の特徴</h2>
+
+  <p>
+    当社では、お客様のご要望に応じて、オリジナルグッズ
+    （ライブコンサートグッズ・キャラクターグッズ）やノベルティ、
+    販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
+    業務を行なっております。
+  </p>
+
+  <div class="img-row col-4">
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+  </div>
+</section>
+
+<!-- ========== 02 ========== -->
+<section class="section work">
+  <div class="num dot-blue">02</div>
+  <h2>低価格、短納期、小ロットから対応できるその理由とは……</h2>
+
+  <p>
+    通常ノベルティ業者の場合、多くの代理店や商社、
+    貿易会社などを経由することにより、
+    中間コストが大きく発生してしまいます。
+  </p>
+
+  <div class="img-row col-3">
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+  </div>
+</section>
+
+<!-- ========== 03 ========== -->
+<section class="section work">
+  <div class="num dot-green">03</div>
+  <h2>厳密な品質・検品管理システム</h2>
+
+  <p>
+    品質で安全なモノづくり。
+    素材調達からサンプル試作、生産まで、
+    全てをメイドインジャパンの品質でご提供しています。
+  </p>
+
+  <div class="sample-row">
+    <div class="sample">工場サンプル</div>
+    <div class="sample">校正サンプル</div>
+    <div class="sample">量産サンプル</div>
+  </div>
+</section>
+
+<!-- ========== 04 ========== -->
+<section class="section work">
+  <div class="num dot-orange">04</div>
+  <h2>他社との違い・小ロットから低価格で完全オリジナル製作</h2>
+
+  <div class="img-row col-4">
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+  </div>
+</section>
+
+<!-- ========== COMPANY ========== -->
+<section class="section company">
+  <h2>これからも、この仕事とともに</h2>
+
+  <table>
+    <tr><th>会社名</th><td>株式会社ワンクラフト</td></tr>
+    <tr><th>代表</th><td>国仲 聡</td></tr>
+    <tr><th>創業</th><td>2021年6月8日</td></tr>
+    <tr><th>資本金</th><td>300万円</td></tr>
+    <tr><th>所在地</th><td>〒125-0061 東京都葛飾区亀有3-11-10 エミネンス亀有ビル2階</td></tr>
+    <tr><th>電話番号</th><td>03-6231-2696</td></tr>
+  </table>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="section contact">
+  <h2>お問い合わせ</h2>
+
+  <form>
+    <input placeholder="お名前">
+    <input placeholder="会社名">
+    <input placeholder="メールアドレス">
+    <input placeholder="電話番号">
+    <textarea placeholder="お問い合わせ内容"></textarea>
+
+    <label class="agree">
+      <input type="checkbox"> プライバシーポリシーに同意する
+    </label>
+
+    <button>送信</button>
+  </form>
+</section>
+
+</body>
+</html>
