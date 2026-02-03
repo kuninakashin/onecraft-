@@ -289,3 +289,6 @@ body {
 .work-main {
   min-width: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
