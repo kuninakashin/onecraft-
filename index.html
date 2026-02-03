@@ -260,11 +260,8 @@
 <section class="section contact">
   <h2>お問い合わせ</h2>
 
-  <form
-  action="https://formspree.io/f/xgozzdwk"
-  method="POST"
-  onsubmit="handleSubmit(event)"
->
+  <form id="contact-form">
+
 
     <input type="text" name="name" placeholder="お名前" required>
     <input type="text" name="company" placeholder="会社名">
@@ -290,7 +287,7 @@
       プライバシーポリシーに同意する
     </label>
 
-    <button type="submit">送信</button>
+<button type="button" onclick="handleSubmit()">送信</button>
 
   </form>
 </section>
