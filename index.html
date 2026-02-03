@@ -260,71 +260,40 @@
 <section class="section contact">
   <h2>お問い合わせ</h2>
 
-<form
-  action="https://formspree.io/f/xgozzdwk"
-  method="POST"
->
-
-  <input
-    type="text"
-    name="name"
-    placeholder="お名前"
-    required
+  <form
+    action="https://formspree.io/f/xgozzdwk"
+    method="POST"
   >
 
-  <input
-    type="text"
-    name="company"
-    placeholder="会社名"
-  >
+    <input type="text" name="name" placeholder="お名前" required>
+    <input type="text" name="company" placeholder="会社名">
+    <input type="email" name="email" placeholder="メールアドレス" required>
+    <input type="tel" name="phone" placeholder="電話番号">
 
-  <input
-    type="email"
-    name="email"
-    placeholder="メールアドレス"
-    required
-  >
+    <textarea
+      name="message"
+      class="textarea-message"
+      placeholder="お問い合わせ内容"
+      required
+    ></textarea>
 
-  <input
-    type="tel"
-    name="phone"
-    placeholder="電話番号"
-  >
+    <input type="hidden" name="_subject" value="ONE CRAFT お問い合わせ">
 
-  <textarea
-    name="message"
-    class="textarea-message"
-    placeholder="お問い合わせ内容"
-    required
-  ></textarea>
+    <!-- ✅ 关键修正 -->
+    <input
+      type="hidden"
+      name="_redirect"
+      value="https://kuninakashin.github.io/onecraft-/thanks.html"
+    >
 
-  <!-- 邮件主题 -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="ONE CRAFT お問い合わせ"
-  >
+    <input type="text" name="_gotcha" style="display:none">
 
-  <!-- 成功后跳转 -->
-  <input
-    type="hidden"
-    name="_redirect"
-    value="thanks.html"
-  >
+    <label class="agree">
+      <input type="checkbox" required>
+      プライバシーポリシーに同意する
+    </label>
 
-  <!-- 防垃圾 -->
-  <input
-    type="text"
-    name="_gotcha"
-    style="display:none"
-  >
+    <button type="submit">送信</button>
 
-  <label class="agree">
-    <input type="checkbox" required>
-    プライバシーポリシーに同意する
-  </label>
-
-  <button type="submit">送信</button>
-
-</form>
+  </form>
 </section>
