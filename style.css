@@ -1,14 +1,20 @@
-/* ===== base ===== */
+/* ===== 基础 ===== */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    Meiryo,
+    sans-serif;
   color: #111;
   line-height: 1.9;
 }
 
-/* ===== 左侧竖排（静止） ===== */
-.side-fixed-left {
+/* ===== 左侧贯穿竖排 ===== */
+.side-fixed {
   position: fixed;
   left: 8px;
   top: 50%;
@@ -17,32 +23,6 @@ body {
   font-size: 12px;
   color: #666;
   z-index: 10;
-}
-
-/* ===== 右侧竖排（滚动） ===== */
-.side-fixed-right {
-  position: fixed;
-  right: 24px;
-  top: 0;
-  height: 100vh;
-  width: 32px;
-  overflow: hidden;
-  z-index: 10;
-
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  color: rgba(0,0,0,0.45);
-}
-
-.side-scroll {
-  display: inline-block;
-  white-space: nowrap;
-  animation: sideScroll 22s linear infinite;
-}
-
-@keyframes sideScroll {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
 }
 
 /* ===== header ===== */
@@ -55,15 +35,17 @@ body {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav a {
   margin-left: 28px;
   font-size: 14px;
-  text-decoration: none;
-  color: #111;
 }
 
 /* ===== hero ===== */
+.hero {
+  position: relative;
+}
 .hero-ph {
   height: 80vh;
   background: #ddd;
@@ -76,6 +58,15 @@ body {
   font-size: 42px;
   letter-spacing: 4px;
 }
+.hero-vertical {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  color: #666;
+}
 
 /* ===== section ===== */
 .section {
@@ -84,34 +75,25 @@ body {
   padding: 120px 0;
 }
 
-/* ===== numbers ===== */
+/* ===== number ===== */
 .num {
   font-size: 48px;
   font-weight: 300;
+  margin-bottom: 20px;
 }
-.dot-gray { color: #d8d8d8; }
-.dot-blue { color: #c3d3e6; }
-.dot-green { color: #cfdccc; }
+.dot-gray   { color: #d8d8d8; }
+.dot-blue   { color: #c3d3e6; }
+.dot-green  { color: #cfdccc; }
 .dot-orange { color: #e6d4c5; }
 
-/* ===== work layout ===== */
-.work-wrap {
+/* ===== about ===== */
+.about-wrap {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
 }
-
-.work-vertical {
-  writing-mode: vertical-rl;
-  letter-spacing: 0.2em;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.work-vertical i {
-  width: 1px;
-  height: 120px;
-  background: #111;
+.about-ph {
+  height: 420px;
 }
 
 /* ===== images ===== */
@@ -132,6 +114,7 @@ body {
 .sample-row {
   display: flex;
   gap: 40px;
+  margin-top: 60px;
 }
 .sample {
   flex: 1;
@@ -140,9 +123,73 @@ body {
   text-align: center;
 }
 
+/* ===== company ===== */
+
+/* ===== company layout ===== */
+.company-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* 左侧信息 */
+.company-info {
+  min-width: 0;
+}
+
+/* 标题行 */
+.company-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* 会社情報 竖排标签 */
+.company-label {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #111;
+  padding-right: 14px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.company-label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #111;
+}
+
+/* 右侧 logo 占位 */
+.ph-logo {
+  width: 100%;
+  height: 180px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ph-logo::after {
+  content: "LOGO";
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
 /* ===== contact ===== */
 .contact {
   background: #f6f6f6;
+}
+.contact form {
+  max-width: 600px;
 }
 .contact input,
 .contact textarea {
@@ -150,12 +197,17 @@ body {
   padding: 12px;
   margin-bottom: 20px;
 }
-.contact textarea {
-  min-height: 200px;
-}
 .contact button {
+  width: 100%;
   padding: 14px;
   background: #1e5a9a;
   color: #fff;
   border: none;
 }
+/* お問い合わせ内容（只放大这个框） */
+.textarea-message {
+  min-height: 220px;   /* ← 核心：高度 */
+  resize: vertical;    /* 允许用户自己再拉高 */
+  line-height: 1.8;
+}
+
