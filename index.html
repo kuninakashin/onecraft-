@@ -179,7 +179,10 @@
     <input placeholder="会社名">
     <input placeholder="メールアドレス">
     <input placeholder="電話番号">
-    <textarea placeholder="お問い合わせ内容"></textarea>
+    <div class="form-row">
+      <label>お問い合わせ内容 <span class="required">必須</span></label>
+      <textarea name="message" required></textarea>
+    </div>
 
     <label class="agree">
       <input type="checkbox"> プライバシーポリシーに同意する
