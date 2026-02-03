@@ -263,10 +263,11 @@ body {
   align-items: flex-start;
 }
 
-/* 左侧竖排标题 */
+/* 左侧竖排标题（强制竖排版） */
 .work-vertical {
-  writing-mode: vertical-rl;     /* 核心：竖排 */
-  text-orientation: mixed;
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+
   font-size: 14px;
   letter-spacing: 0.2em;
   color: #111;
