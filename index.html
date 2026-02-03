@@ -170,27 +170,81 @@
   </table>
 </section>
 
-<!-- ========== CONTACT ========== -->
-<section class="section contact">
-  <h2>お問い合わせ</h2>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <h2 class="contact-title">お問い合わせ</h2>
 
-  <form>
-    <input placeholder="お名前">
-    <input placeholder="会社名">
-    <input placeholder="メールアドレス">
-    <input placeholder="電話番号">
+  <p class="contact-lead">
+    弊社へのお問い合わせはこちらよりお願い致します。<br>
+    2営業日以内にご返信させて頂きます。
+  </p>
+
+  <form id="contactForm" class="contact-form">
+    <!-- Formspree 设置 -->
+    <input type="hidden" name="_subject" value="ONECRAFT お問い合わせ">
+    <input type="hidden" name="_template" value="table">
+
+    <div class="form-row">
+      <label>お名前 <span class="required">必須</span></label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-row">
+      <label>会社名</label>
+      <input type="text" name="company">
+    </div>
+
+    <div class="form-row">
+      <label>メールアドレス <span class="required">必須</span></label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-row">
+      <label>電話番号</label>
+      <input type="tel" name="tel">
+    </div>
+
     <div class="form-row">
       <label>お問い合わせ内容 <span class="required">必須</span></label>
       <textarea name="message" required></textarea>
     </div>
 
-    <label class="agree">
-      <input type="checkbox"> プライバシーポリシーに同意する
-    </label>
+    <div class="form-privacy">
+      <label>
+        <input type="checkbox" name="privacy" required>
+        プライバシーポリシーに同意する
+      </label>
+    </div>
 
-    <button>送信</button>
+    <button type="submit" class="submit-btn">送信</button>
   </form>
 </section>
 
-</body>
-</html>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/xgozzdwk", {
+    method: "POST",
+    body: formData,
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // 成功后跳转到你自己的 thanks.html
+      window.location.href = "thanks.html";
+    } else {
+      alert("送信に失敗しました。もう一度お試しください。");
+    }
+  })
+  .catch(error => {
+    console.error(error);
+    alert("通信エラーが発生しました。");
+  });
+});
+</script>
