@@ -292,7 +292,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
-/* ========== Header Navigation ========== */
+/* ========== Header Navigation (Tuned) ========== */
 .header .nav a {
   color: #111;
   font-family:
@@ -302,11 +302,13 @@ html {
     "Noto Sans JP",
     Arial,
     sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+
+  font-size: 14px;        /* ⬅ 比刚才小一点 */
+  font-weight: 600;       /* ⬅ 明显更稳，但不厚重 */
+  letter-spacing: 0.06em; /* ⬅ 收紧一点，更高级 */
+
   text-decoration: none;
-  padding: 0 14px;
+  padding: 0 12px;        /* ⬅ 横向也稍微收一点 */
 }
 
 .header .nav a:hover {
