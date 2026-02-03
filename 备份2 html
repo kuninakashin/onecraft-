@@ -9,10 +9,20 @@
 
 <body>
 
-<!-- ========== 左侧贯穿竖排 ========== -->
-<div class="side-fixed">
-  ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
+<!-- ========== 左侧竖排滚动 ========== -->
+<div class="side-fixed left">
+  <div class="side-scroll">
+    ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
+  </div>
 </div>
+
+<!-- ========== 右侧竖排滚动 ========== -->
+<div class="side-fixed right">
+  <div class="side-scroll">
+    今日も、このグッズとともに
+  </div>
+</div>
+
 
 <!-- ========== HEADER ========== -->
 <header class="header">
@@ -37,9 +47,7 @@
     <h1>GOODS / ONE CRAFT</h1>
   </div>
 
-  <div class="hero-vertical right">
-    今日も、このグッズとともに
-  </div>
+
 </section>
 
 <!-- ========== ご挨拶 ========== -->
@@ -89,21 +97,41 @@
 
 <!-- ========== 01 ========== -->
 <section class="section work">
-  <div class="num dot-gray">01</div>
-  <h2>ワンクラフトのOEM生産の特徴</h2>
 
-  <p>
-    当社では、お客様のご要望に応じて、オリジナルグッズ
-    （ライブコンサートグッズ・キャラクターグッズ）やノベルティ、
-    販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
-    業務を行なっております。
-  </p>
+  <div class="work-wrap">
 
-  <div class="img-row col-4">
-    <div class="ph"></div>
-    <div class="ph"></div>
-    <div class="ph"></div>
-    <div class="ph"></div>
+    <!-- 左侧：竖排标题 + 竖线 -->
+    <div class="work-vertical">
+      <span>私たちの仕事</span>
+      <i></i>
+    </div>
+
+    <!-- 右侧：01 内容 -->
+    <div class="work-main">
+      <div class="num dot-gray">01</div>
+
+      <h2>ワンクラフトのOEM生産の特徴</h2>
+
+      <p>
+        当社では、お客様のご要望に応じて、オリジナルグッズ
+        （ライブコンサートグッズ・キャラクターグッズ）やノベルティ、
+        販促品など、様々な商品をオーダーメイドで完全オリジナル製作の
+        業務を行なっております。
+      </p>
+
+      <p>
+        製造は中国自社工場や協力工場と直接取引をしているため、
+        中間業者を介さず、低価格での生産が可能です。
+      </p>
+
+      <div class="img-row col-4">
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -118,12 +146,24 @@
     中間コストが大きく発生してしまいます。
   </p>
 
+  <p>
+    当社では、中国自社工場と直接取引を行い、
+    生産管理・品質管理を自社で行うことで、
+    無駄なコストを徹底的に削減しています。
+  </p>
+
+  <p>
+    小ロット・短納期の案件にも柔軟に対応できる体制を整え、
+    お客様のビジネスをスピーディにサポートいたします。
+  </p>
+
   <div class="img-row col-3">
     <div class="ph"></div>
     <div class="ph"></div>
     <div class="ph"></div>
   </div>
 </section>
+
 
 <!-- ========== 03 ========== -->
 <section class="section work">
@@ -133,7 +173,13 @@
   <p>
     品質で安全なモノづくり。
     素材調達からサンプル試作、生産まで、
-    全てをメイドインジャパンの品質でご提供しています。
+    全てを日本基準の品質管理体制でご提供しています。
+  </p>
+
+  <p>
+    中国各地の提携工場と常に連携を取り、
+    自社検品所にて全数検品・梱包を行っています。
+    問題が発生した場合も、早期発見・迅速対応を徹底しています。
   </p>
 
   <div class="sample-row">
@@ -143,10 +189,27 @@
   </div>
 </section>
 
+
 <!-- ========== 04 ========== -->
 <section class="section work">
   <div class="num dot-orange">04</div>
   <h2>他社との違い・小ロットから低価格で完全オリジナル製作</h2>
+
+  <p>
+    既製品への名入れだけでなく、
+    デザイン・素材選定の段階から
+    完全オリジナルでの製作が可能です。
+  </p>
+
+  <p>
+    在庫型業者や中間業者を介さないため、
+    小ロット・短納期・低価格を同時に実現しています。
+  </p>
+
+  <p>
+    トートバッグ、アパレル、雑貨など、
+    幅広い商品ラインナップに対応しております。
+  </p>
 
   <div class="img-row col-4">
     <div class="ph"></div>
@@ -155,6 +218,7 @@
     <div class="ph"></div>
   </div>
 </section>
+
 
 <!-- ========== COMPANY ========== -->
 <section class="section company">
