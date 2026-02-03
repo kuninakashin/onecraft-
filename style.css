@@ -124,6 +124,41 @@ body {
 }
 
 /* ===== company ===== */
+/* ===== company head ===== */
+.company-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* 左侧竖排标签 */
+.company-label {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #111;
+  padding-right: 14px;
+  position: relative;
+}
+
+/* 竖线 */
+.company-label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #111;
+}
+
+/* 主标题 */
+.company-head h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+}
 .company table {
   width: 100%;
   border-collapse: collapse;
