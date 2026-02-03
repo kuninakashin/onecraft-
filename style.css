@@ -154,3 +154,9 @@ body {
   color: #fff;
   border: none;
 }
+/* お問い合わせ内容（只放大这个框） */
+.textarea-message {
+  min-height: 220px;   /* ← 核心：高度 */
+  resize: vertical;    /* 允许用户自己再拉高 */
+  line-height: 1.8;
+}
