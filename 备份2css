@@ -457,3 +457,26 @@ td {
   letter-spacing: 0.04em;
   color: #111;
 }
+/* ===============================
+   FORCE Global Text Unification
+   强制统一所有正文（不碰标题 / 数字）
+================================ */
+
+/* 所有 section 内的纯文本容器 */
+.section,
+.section div,
+.section span {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.05;
+  letter-spacing: 0.04em;
+  color: #111;
+}
