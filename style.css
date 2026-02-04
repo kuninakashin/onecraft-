@@ -955,12 +955,20 @@ td {
   padding: 140px 0;
 }
 
+/* ===============================
+   GREETING – FINAL PIXEL MATCH
+================================ */
+
+.section.greeting {
+  padding: 140px 0;
+}
+
 .greeting-wrap {
   max-width: 1200px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 120px 120px 1fr;
-  column-gap: 40px;
+  grid-template-columns: 160px 120px 1fr; /* 👈 核心：左列加宽 */
+  column-gap: 48px;                      /* 👈 参考图的呼吸感 */
   align-items: start;
 }
