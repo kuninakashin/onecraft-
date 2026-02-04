@@ -1032,3 +1032,11 @@ td {
 .company-label {
   font-weight: 700;
 }
+/* ===============================
+   COMPANY – 会社情報 强制粗体
+   （命中真正显示文字的 span）
+================================ */
+
+.company-label span {
+  font-weight: 700;
+}
