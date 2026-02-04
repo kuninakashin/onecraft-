@@ -990,3 +990,53 @@ td {
 .greeting-head .jp {
   font-weight: 700;
 }
+/* ===============================
+   GREETING TITLE – FINAL MATCH
+   ご挨拶：竖排 + 粗体 + 右竖线
+================================ */
+
+.greeting-head {
+  writing-mode: vertical-rl;   /* 竖排 */
+  text-orientation: mixed;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;                   /* 字和竖线的距离 */
+
+  margin-top: -2px;            /* 微调与正文首行对齐 */
+}
+
+.greeting-head .jp {
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;            /* 和 ABOUT 一样粗 */
+  letter-spacing: 0.28em;      /* 日式竖排关键 */
+  color: #111;
+}
+
+/* 右侧竖线 */
+.greeting-head i {
+  display: block;
+  width: 1px;
+  height: 88px;                /* 和你图里的比例一致 */
+  background: #111;
+}
+/* 会社情報：字重提升（与 ご挨拶 / ABOUT 统一） */
+.company-label {
+  font-weight: 700;
+}
+/* ===============================
+   COMPANY – 会社情報 强制粗体
+   （命中真正显示文字的 span）
+================================ */
+
+.company-label span {
+  font-weight: 700;
+}
