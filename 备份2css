@@ -1229,3 +1229,53 @@ td {
   margin: 0;
   line-height: 1.4;
 }
+/* =========================
+   SIMPLE ITEM LIST (STEP 1)
+   ========================= */
+
+.simple-item-list {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.simple-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.simple-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* =========================
+   SIMPLE ITEM LIST TITLE
+   ========================= */
+
+.simple-item-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.simple-item-title .line {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #111;
+  margin: 0 auto 24px;
+}
+
+/* 商品リスト标题 = ご挨拶 */
+.simple-item-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.simple-item-title p {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #666;
+}
