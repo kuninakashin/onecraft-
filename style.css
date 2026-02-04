@@ -1,4 +1,6 @@
-/* ===== 基础 ===== */
+/* ===============================
+   Base
+================================ */
 body {
   margin: 0;
   font-family:
@@ -12,36 +14,45 @@ body {
   line-height: 2.05;
 }
 
-/* ===== 左侧贯穿竖排 ===== */
-.side-fixed {
-  position: fixed;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-size: 12px;
-  color: #666;
-  z-index: 10;
+/* ===============================
+   Section Base（⚠️关键修正）
+   不再锁死 1200px
+================================ */
+.section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
 }
 
-/* ===== header ===== */
+/* ===============================
+   Header
+================================ */
 .header {
   border-bottom: 1px solid #eee;
 }
 .header-inner {
-  width: 1200px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav a {
+.header .nav a {
   margin-left: 28px;
   font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #111;
+  text-decoration: none;
+}
+.header .nav a:hover {
+  opacity: 0.6;
 }
 
-/* ===== hero ===== */
+/* ===============================
+   Hero
+================================ */
 .hero {
   position: relative;
 }
@@ -67,14 +78,9 @@ body {
   color: #666;
 }
 
-/* ===== section ===== */
-.section {
-  width: 1200px;
-  margin: auto;
-  padding: 120px 0;
-}
-
-/* ===== number ===== */
+/* ===============================
+   Number
+================================ */
 .num {
   font-size: 48px;
   font-weight: 300;
@@ -85,8 +91,12 @@ body {
 .dot-green  { color: #cfdccc; }
 .dot-orange { color: #e6d4c5; }
 
-/* ===== about ===== */
+/* ===============================
+   About
+================================ */
 .about-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -95,7 +105,9 @@ body {
   height: 420px;
 }
 
-/* ===== images ===== */
+/* ===============================
+   Images
+================================ */
 .img-row {
   display: grid;
   gap: 20px;
@@ -103,59 +115,66 @@ body {
 }
 .col-4 { grid-template-columns: repeat(4, 1fr); }
 .col-3 { grid-template-columns: repeat(3, 1fr); }
-
 .ph {
   background: #ddd;
   aspect-ratio: 4 / 3;
 }
 
-/* ===== samples ===== */
-.sample-row {
-  display: flex;
-  gap: 40px;
-  margin-top: 60px;
-}
-.sample {
-  flex: 1;
-  border: 2px dashed #ccc;
-  padding: 40px;
-  text-align: center;
-}
-
-/* ===== company ===== */
-
-/* ===== company layout ===== */
-.company-wrap {
+/* ===============================
+   Work
+================================ */
+.work-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: 80px 1fr;
   gap: 60px;
-  align-items: start;
 }
-
-/* 左侧信息 */
-.company-info {
+.work-vertical {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.work-vertical i {
+  width: 1px;
+  height: 120px;
+  background: #111;
+}
+.work-main {
   min-width: 0;
 }
 
-/* 标题行 */
+/* ===============================
+   Company（PC 居中舞台）
+================================ */
+.section.company {
+  display: flex;
+  justify-content: center;
+}
+.company-wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 100px;
+  align-items: center;
+}
 .company-head {
   display: flex;
-  align-items: flex-start;
   gap: 40px;
   margin-bottom: 60px;
 }
-
-/* 会社情報 竖排标签 */
 .company-label {
   writing-mode: vertical-rl;
   font-size: 14px;
-  letter-spacing: 4px;
-  color: #111;
-  padding-right: 14px;
+  letter-spacing: 0.3em;
   position: relative;
-  flex-shrink: 0;
+  padding-right: 14px;
 }
-
 .company-label::after {
   content: "";
   position: absolute;
@@ -165,10 +184,7 @@ body {
   height: 100%;
   background: #111;
 }
-
-/* 右侧 logo 占位 */
 .ph-logo {
-  width: 100%;
   height: 180px;
   background: #eee;
   display: flex;
@@ -176,25 +192,26 @@ body {
   justify-content: center;
 }
 
-.ph-logo::after {
-  content: "LOGO";
-  font-size: 12px;
-  color: #aaa;
-  letter-spacing: 2px;
+/* ===============================
+   Contact（PC 居中）
+================================ */
+.section.contact {
+  display: flex;
+  justify-content: center;
 }
-
-/* ===== contact ===== */
-.contact {
-  background: #f6f6f6;
-}
-.contact form {
-  max-width: 600px;
+.section.contact form {
+  width: 100%;
+  max-width: 720px;
 }
 .contact input,
 .contact textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
+}
+.textarea-message {
+  min-height: 220px;
+  resize: vertical;
 }
 .contact button {
   width: 100%;
@@ -203,364 +220,36 @@ body {
   color: #fff;
   border: none;
 }
-/* お問い合わせ内容（只放大这个框） */
-.textarea-message {
-  min-height: 220px;   /* ← 核心：高度 */
-  resize: vertical;    /* 允许用户自己再拉高 */
-  line-height: 1.8;
-}
+
 /* ===============================
-   左右竖排 · 上下滚动文字
-   （在原 CSS 基础上追加）
+   Typography（统一）
 ================================ */
-
-/* 覆盖静态 side-fixed 为滚动容器 */
-.side-fixed {
-  top: 0;
-  transform: none;
-  height: 100vh;
-  width: 32px;
-  overflow: hidden;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 12px;
-  color: rgba(0,0,0,0.45);
-  z-index: 20;
-}
-
-/* 左右位置区分 */
-.side-fixed.left {
-  left: 12px;
-}
-
-.side-fixed.right {
-  right: 12px;
-  left: auto;
-}
-
-/* 实际滚动的文字 */
-.side-scroll {
-  display: inline-block;
-  white-space: nowrap;
-  animation: sideScroll 18s linear infinite;
-}
-
-/* 上下滚动动画 */
-@keyframes sideScroll {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-/* ===== work section layout ===== */
-.work-wrap {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-/* 左侧竖排标题（强制竖排版） */
-.work-vertical {
-  writing-mode: vertical-rl !important;
-  text-orientation: mixed !important;
-
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  color: #111;
-
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* 右侧那条竖线 */
-.work-vertical i {
-  display: block;
-  width: 1px;
-  height: 120px;
-  background: #111;
-}
-
-/* 右侧内容 */
-.work-main {
-  min-width: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* ========== Header Navigation (Tuned) ========== */
-.header .nav a {
-  color: #111;
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 14px;        
-  font-weight: 600;       
-  letter-spacing: 0.06em; 
-
-  text-decoration: none;
-  padding: 0 12px;        
-}
-
-.header .nav a:hover {
-  opacity: 0.6;
-}
-/* ===== Greeting Section (Tuned) ===== */
-.section.greeting {
-  padding: 80px 0;
-}
-
-.section.greeting .section-head .jp {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;        
-  letter-spacing: 0.08em;
-  color: #111;
-  margin-bottom: 24px;
-}
-
-.section.greeting .greeting-text {
-  max-width: 860px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: #333;
-}
-/* ===== Greeting Section – FINAL OVERRIDE ===== */
-.section.greeting .section-head .jp {
-  display: block;
-  font-size: 18px;        /* 👈 从 22px → 18px */
-  font-weight: 700;       /* 👈 稍微降一点，更耐看 */
-  letter-spacing: 0.1em;  /* 👈 紧一点，更克制 */
-  color: #111;
-  margin-bottom: 22px;    /* 👈 间距也一起收 */
-}
-
-.section.greeting .greeting-text {
-  max-width: 880px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2.1;
-  letter-spacing: 0.05em;
-  color: #222;
-}
-/* ===============================
-   Global Body Text (High-end)
-   与「ご挨拶」正文完全统一
-================================ */
-
 .section p,
 .section li,
 .section td {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
   font-size: 15px;
-  font-weight: 400;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
-  color: #111;
-}
-/* ===============================
-   Unified Section Headings
-   与「ご挨拶」标题完全一致
-   不影响 01 / 02 / 03 / 04
-================================ */
-
-.section h2,
-.work-main h2,
-.about-wrap h2,
-.company-head h2 {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #111;
-
-  margin-bottom: 18px;
-}
-/* ===============================
-   Unified Section Titles
-   与「ご挨拶」标题体系完全一致
-================================ */
-
-/* ご挨拶 */
-.section.greeting .section-head .jp,
-
-/* WORK 左侧竖排标题 */
-.work-vertical span,
-
-/* ABOUT / WORK / COMPANY 中央标题 */
-.work-main h2,
-.about-wrap h2,
-.company-head h2 {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #111;
-}
-/* ===============================
-   Global Body Text – FINAL
-   全站正文与「ご挨拶」完全一致
-   （不影响标题 / 数字）
-================================ */
-
-p,
-.section p,
-.about-wrap p,
-.work-main p,
-.company-wrap p,
-.company-info p,
-.contact p,
-li,
-td {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 15px;
-  font-weight: 400;
   line-height: 2.05;
   letter-spacing: 0.04em;
-  color: #111;
-}
-/* ===============================
-   FORCE Global Text Unification
-   强制统一所有正文（不碰标题 / 数字）
-================================ */
-
-/* 所有 section 内的纯文本容器 */
-.section,
-.section div,
-.section span {
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2.05;
-  letter-spacing: 0.04em;
-  color: #111;
-}
-/* ===============================
-   Paragraph Rhythm – Magazine Style
-   段落节奏统一（不改字体）
-================================ */
-
-/* 所有正文段落的基础间距 */
-.section p {
-  margin-bottom: 1.6em;
-}
-
-/* 连续段落，稍微收一点，更像杂志 */
-.section p + p {
-  margin-top: 0;
-}
-
-/* 最后一段不要拖太长 */
-.section p:last-child {
-  margin-bottom: 0;
 }
 
 /* ===============================
-   PC Centered Stage (FINAL)
-================================ */
-@media (min-width: 1024px) {
-
-  /* ===== 会社情報 ===== */
-  .section.company {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .section.company .company-wrap {
-    width: 100%;
-    max-width: 1080px;   /* 👈 关键：舞台宽度 */
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 100px;
-    align-items: center;
-  }
-
-  /* ===== お問い合わせ ===== */
-  .section.contact {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .section.contact > * {
-    width: 100%;
-    max-width: 720px;    /* 👈 和参考图一致的表单宽度 */
-    margin: 0 auto;
-  }
-}
-/* ===============================
-   Mobile Reset (IMPORTANT)
-   修复手机端左偏问题
+   Mobile
 ================================ */
 @media (max-width: 1023px) {
 
-  /* 会社情報 */
-  .section.company {
-    display: block;
-  }
-
-  .section.company .company-wrap {
-    max-width: 100%;
-    margin: 0;
+  .about-wrap,
+  .work-wrap,
+  .company-wrap {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  /* お問い合わせ */
+  .section.company,
   .section.contact {
     display: block;
   }
 
-  .section.contact > * {
+  .section.contact form {
     max-width: 100%;
-    margin: 0;
   }
 }
