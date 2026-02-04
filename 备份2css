@@ -924,3 +924,69 @@ td {
   }
 
 }
+/* ===============================
+   SP FINAL – MATCH WORK(01) TEXT
+   ご挨拶 / ABOUT → 完全对齐 01
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 01 的正文是标准 */
+  .work-main p {
+    font-size: 14px;
+    line-height: 2.05;
+    letter-spacing: 0.03em;
+  }
+
+  /* ご挨拶 / ABOUT 强制跟随 01 */
+  .greeting-text p,
+  .about-wrap p {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+}
+/* ===============================
+   GREETING – Pixel Match Layout
+================================ */
+
+.section.greeting {
+  padding: 140px 0;
+}
+
+/* ===============================
+   GREETING – FINAL PIXEL MATCH
+================================ */
+
+.section.greeting {
+  padding: 140px 0;
+}
+
+.greeting-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 160px 120px 1fr; /* 👈 核心：左列加宽 */
+  column-gap: 48px;                      /* 👈 参考图的呼吸感 */
+  align-items: start;
+}
+/* ===============================
+   BODY TEXT – MATCH WORK 01
+   ご挨拶 / ABOUT / COMPANY → 01
+================================ */
+
+.section.greeting .greeting-text,
+.section.about p,
+.section.company p {
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 2.15;
+  letter-spacing: 0.02em;
+  color: #333;
+}
+/* ご挨拶 标题字重 = ABOUT */
+.greeting-head .jp {
+  font-weight: 700;
+}
