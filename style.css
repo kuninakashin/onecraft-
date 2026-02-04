@@ -679,3 +679,47 @@ td {
 .ph-logo {
   height: 180px;       /* 比现在略矮 */
 }
+/* ===============================
+   COMPANY – FINAL TUNING
+   （Pixel-match）
+================================ */
+
+/* 整体再向中轴靠 */
+.company-wrap {
+  max-width: 1040px;              /* 再收一档 */
+  grid-template-columns: 1fr 240px;
+  gap: 64px;
+  padding-left: 80px;             /* 👈 关键：明显往中 */
+}
+
+/* 左侧文字区宽度 */
+.company-info {
+  max-width: 620px;
+}
+
+/* 主标题 */
+.company-head h2 {
+  font-size: 18px;                /* 原 20 → 18 */
+  letter-spacing: 0.06em;
+}
+
+/* 表格文字整体缩一号 */
+.company-info table {
+  font-size: 13px;
+}
+
+.company-info th,
+.company-info td {
+  padding: 18px 0;                /* 行距也一起收 */
+}
+
+/* 左侧竖排「会社情報」 */
+.company-label {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+}
+
+/* LOGO 再轻一点 */
+.ph-logo {
+  height: 170px;
+}
