@@ -1,4 +1,19 @@
+/* ===== 基础 ===== */
+body {
+  margin: 0;
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+  color: #111;
+  line-height: 2.05;
+}
 
+/* ===== 左侧贯穿竖排 ===== */
+.side-fixed {
   position: fixed;
   left: 8px;
   top: 50%;
@@ -1053,4 +1068,88 @@ td {
 /* 分隔线 */
 .company-info tr {
   border-bottom: 1px solid #e8e8e8;
+}
+/* ===============================
+   NEWS SECTION
+   （Match ABOUT / WORK tone）
+================================ */
+
+.section.news {
+  padding: 160px 0;
+}
+
+.news-head {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.news-head h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.news-head i {
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #111;
+  margin: 0 auto;
+}
+
+/* grid */
+.news-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* card */
+.news-card {
+  font-size: 13.5px;
+  line-height: 2.1;
+}
+
+.news-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #eee;
+  margin-bottom: 20px;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* meta */
+.news-date {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.news-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.news-text {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.news-more {
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #111;
+  padding: 6px 16px;
+  display: inline-block;
 }
