@@ -658,3 +658,131 @@ td {
 .contact button:hover {
   opacity: 0.8;
 }
+/* ===============================
+   COMPANY – Centered & Compact
+================================ */
+
+/* ① 整个公司信息区，左右同时往中间收 */
+.company-wrap {
+  max-width: 1100px;   /* 原来 1200 */
+  margin: 0 auto;
+  grid-template-columns: 1fr 260px; /* logo 区变窄 */
+  gap: 80px;           /* 原来 120，收紧 */
+}
+
+/* ② 左侧文字区本身再限制宽度 */
+.company-info {
+  max-width: 680px;    /* 控制文字不要拉太长 */
+}
+
+/* ③ logo 稍微缩一点，看起来更靠中 */
+.ph-logo {
+  height: 180px;       /* 比现在略矮 */
+}
+/* ===============================
+   COMPANY – FINAL TUNING
+   （Pixel-match）
+================================ */
+
+/* 整体再向中轴靠 */
+.company-wrap {
+  max-width: 1040px;              /* 再收一档 */
+  grid-template-columns: 1fr 240px;
+  gap: 64px;
+  padding-left: 80px;             /* 👈 关键：明显往中 */
+}
+
+/* 左侧文字区宽度 */
+.company-info {
+  max-width: 620px;
+}
+
+/* 主标题 */
+.company-head h2 {
+  font-size: 18px;                /* 原 20 → 18 */
+  letter-spacing: 0.06em;
+}
+
+/* 表格文字整体缩一号 */
+.company-info table {
+  font-size: 13px;
+}
+
+.company-info th,
+.company-info td {
+  padding: 18px 0;                /* 行距也一起收 */
+}
+
+/* 左侧竖排「会社情報」 */
+.company-label {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+}
+
+/* LOGO 再轻一点 */
+.ph-logo {
+  height: 170px;
+}
+/* ===============================
+   COMPANY – FINAL MASTER
+   （Design-grade Match）
+================================ */
+
+/* 整体：强制靠中 */
+.company-wrap {
+  max-width: 980px;                 /* 👈 关键：再缩 */
+  margin: 0 auto;
+  grid-template-columns: 1fr 220px; /* logo 再靠近 */
+  gap: 48px;                        /* 间距明显收紧 */
+  padding-left: 120px;              /* 👈 中轴强推 */
+}
+
+/* 左侧文字块本体 */
+.company-info {
+  max-width: 560px;
+}
+
+/* 左侧竖排「会社情報」 */
+.company-label {
+  font-size: 12px;                  /* 👈 设计稿级 */
+  letter-spacing: 0.32em;
+  padding-right: 14px;
+}
+
+.company-label::after {
+  width: 1px;
+}
+
+/* 主标题 */
+.company-head h2 {
+  font-size: 17px;                  /* 👈 比网页常用更小 */
+  font-weight: 700;
+  letter-spacing: 0.04em;           /* 👈 印刷感 */
+  margin-top: -2px;                 /* 微调对齐竖排 */
+}
+
+/* 表格整体（这是“高级感核心”） */
+.company-info table {
+  font-size: 12.5px;                /* 👈 非常关键 */
+  letter-spacing: 0.02em;
+}
+
+.company-info th {
+  width: 100px;
+  font-weight: 400;
+}
+
+.company-info th,
+.company-info td {
+  padding: 16px 0;                  /* 行距克制 */
+}
+
+/* 分隔线 */
+.company-info tr {
+  border-bottom: 1px solid #ededed;
+}
+
+/* LOGO */
+.ph-logo {
+  height: 160px;
+}
