@@ -986,3 +986,7 @@ td {
   letter-spacing: 0.02em;
   color: #333;
 }
+/* ご挨拶 标题字重 = ABOUT */
+.greeting-head .jp {
+  font-weight: 700;
+}
