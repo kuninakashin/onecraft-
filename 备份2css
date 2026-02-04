@@ -1,19 +1,4 @@
-/* ===== 基础 ===== */
-body {
-  margin: 0;
-  font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-  color: #111;
-  line-height: 2.05;
-}
 
-/* ===== 左侧贯穿竖排 ===== */
-.side-fixed {
   position: fixed;
   left: 8px;
   top: 50%;
@@ -1039,4 +1024,33 @@ td {
 
 .company-label span {
   font-weight: 700;
+}
+/* ===============================
+   COMPANY INFO – COMPACT VERSION
+   更紧凑 / 字体更小
+================================ */
+
+/* 表格整体 */
+.company-info table {
+  font-size: 12.5px;        /* 👈 比现在小一号 */
+  line-height: 1.9;         /* 👈 更像参考图 */
+}
+
+/* 每一行 */
+.company-info th,
+.company-info td {
+  padding: 14px 0;          /* 👈 原来太松，这里收紧 */
+  vertical-align: top;
+}
+
+/* 左侧项目名 */
+.company-info th {
+  width: 90px;              /* 👈 更紧凑 */
+  font-weight: 400;
+  color: #111;
+}
+
+/* 分隔线 */
+.company-info tr {
+  border-bottom: 1px solid #e8e8e8;
 }
