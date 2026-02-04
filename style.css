@@ -1279,3 +1279,6 @@ td {
   letter-spacing: 0.2em;
   color: #666;
 }
+.item-list h2 {
+  font-weight: 800;
+}
