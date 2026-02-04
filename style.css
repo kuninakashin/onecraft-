@@ -1229,3 +1229,24 @@ td {
   margin: 0;
   line-height: 1.4;
 }
+/* =========================
+   SIMPLE ITEM LIST (STEP 1)
+   ========================= */
+
+.simple-item-list {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.simple-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.simple-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
