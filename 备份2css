@@ -844,3 +844,83 @@ td {
 .section.work .sample-row {
   margin-top: 56px;
 }
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  height: 26px;
+}
+
+.header .logo span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+/* ===============================
+   SP Typography Unification
+   （Fix Greeting / About mismatch）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 所有正文统一 */
+  .section p,
+  .greeting-text,
+  .about-wrap p,
+  .work-main p {
+    font-size: 14px;
+    line-height: 2.05;
+    letter-spacing: 0.03em;
+    color: #111;
+  }
+
+}
+/* ===============================
+   SP FORCE Typography Match
+   ご挨拶 = ABOUT = 完全一致
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* ご挨拶 正文 */
+  .greeting-text {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* ABOUT 正文（强制对齐） */
+  .about-wrap p {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+}
+/* ===============================
+   SP FINAL BASE TYPOGRAPHY
+   （这是手机端的“总指挥”）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 手机端：所有正文统一基准 */
+  p {
+    font-family:
+      "Helvetica Neue",
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      "Noto Sans JP",
+      Arial,
+      sans-serif;
+
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+    color: #111;
+  }
+
+}
