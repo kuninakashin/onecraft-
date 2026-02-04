@@ -501,45 +501,6 @@ td {
 }
 
 /* ===============================
-   PC 強制居中（最终版）
-================================ */
-
-@media (min-width: 1024px) {
-
-  /* ===== 会社情報 + LOGO ===== */
-  .section.company {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .section.company .company-wrap {
-    width: 100%;
-    max-width: 1100px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 80px;
-    align-items: center;
-  }
-
-  /* ===== お問い合わせ ===== */
-  .section.contact {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .section.contact > * {
-    width: 100%;
-    max-width: 640px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
-/* ===============================
    PC Centered Stage (FINAL)
 ================================ */
 @media (min-width: 1024px) {
