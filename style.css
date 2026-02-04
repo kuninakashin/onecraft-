@@ -573,3 +573,39 @@ td {
     margin-right: auto !important;
   }
 }
+/* ===============================
+   PC Centered Stage (FINAL)
+================================ */
+@media (min-width: 1024px) {
+
+  /* ===== 会社情報 ===== */
+  .section.company {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section.company .company-wrap {
+    width: 100%;
+    max-width: 1080px;   /* 👈 关键：舞台宽度 */
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 100px;
+    align-items: center;
+  }
+
+  /* ===== お問い合わせ ===== */
+  .section.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section.contact > * {
+    width: 100%;
+    max-width: 720px;    /* 👈 和参考图一致的表单宽度 */
+    margin: 0 auto;
+  }
+}
