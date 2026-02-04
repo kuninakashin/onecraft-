@@ -1206,3 +1206,26 @@ td {
   color: #555;
   letter-spacing: 0.05em;
 }
+/* ===============================
+   FOOTER (MUSUBI style)
+================================ */
+
+.site-footer {
+  padding: 40px 0 48px;
+  background: #e5e5e5; /* 如果你图片是浅灰 */
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* ✅ 居中关键 */
+}
+
+.footer-copy {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
