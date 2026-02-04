@@ -647,3 +647,17 @@ td {
     justify-content: center;
   }
 }
+/* ===============================
+   PC：お問い合わせ 居中
+================================ */
+@media (min-width: 1024px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 700px;
+  }
+}
