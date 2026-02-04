@@ -723,3 +723,66 @@ td {
 .ph-logo {
   height: 170px;
 }
+/* ===============================
+   COMPANY – FINAL MASTER
+   （Design-grade Match）
+================================ */
+
+/* 整体：强制靠中 */
+.company-wrap {
+  max-width: 980px;                 /* 👈 关键：再缩 */
+  margin: 0 auto;
+  grid-template-columns: 1fr 220px; /* logo 再靠近 */
+  gap: 48px;                        /* 间距明显收紧 */
+  padding-left: 120px;              /* 👈 中轴强推 */
+}
+
+/* 左侧文字块本体 */
+.company-info {
+  max-width: 560px;
+}
+
+/* 左侧竖排「会社情報」 */
+.company-label {
+  font-size: 12px;                  /* 👈 设计稿级 */
+  letter-spacing: 0.32em;
+  padding-right: 14px;
+}
+
+.company-label::after {
+  width: 1px;
+}
+
+/* 主标题 */
+.company-head h2 {
+  font-size: 17px;                  /* 👈 比网页常用更小 */
+  font-weight: 700;
+  letter-spacing: 0.04em;           /* 👈 印刷感 */
+  margin-top: -2px;                 /* 微调对齐竖排 */
+}
+
+/* 表格整体（这是“高级感核心”） */
+.company-info table {
+  font-size: 12.5px;                /* 👈 非常关键 */
+  letter-spacing: 0.02em;
+}
+
+.company-info th {
+  width: 100px;
+  font-weight: 400;
+}
+
+.company-info th,
+.company-info td {
+  padding: 16px 0;                  /* 行距克制 */
+}
+
+/* 分隔线 */
+.company-info tr {
+  border-bottom: 1px solid #ededed;
+}
+
+/* LOGO */
+.ph-logo {
+  height: 160px;
+}
