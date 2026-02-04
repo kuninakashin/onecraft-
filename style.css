@@ -844,17 +844,18 @@ td {
 .section.work .sample-row {
   margin-top: 56px;
 }
-/* ===============================
-   Header Logo (Image)
-================================ */
-
 .header .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .header .logo img {
-  height: 28px;          /* 👈 关键：高级感高度 */
-  width: auto;
-  display: block;
+  height: 26px;
+}
+
+.header .logo span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
