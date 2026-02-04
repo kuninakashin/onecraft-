@@ -480,3 +480,22 @@ td {
   letter-spacing: 0.04em;
   color: #111;
 }
+/* ===============================
+   Paragraph Rhythm – Magazine Style
+   段落节奏统一（不改字体）
+================================ */
+
+/* 所有正文段落的基础间距 */
+.section p {
+  margin-bottom: 1.6em;
+}
+
+/* 连续段落，稍微收一点，更像杂志 */
+.section p + p {
+  margin-top: 0;
+}
+
+/* 最后一段不要拖太长 */
+.section p:last-child {
+  margin-bottom: 0;
+}
