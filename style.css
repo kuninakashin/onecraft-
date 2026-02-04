@@ -1028,3 +1028,7 @@ td {
   height: 88px;                /* 和你图里的比例一致 */
   background: #111;
 }
+/* 会社情報：字重提升（与 ご挨拶 / ABOUT 统一） */
+.company-label {
+  font-weight: 700;
+}
