@@ -56,13 +56,23 @@
 
 <!-- ========== ご挨拶 ========== -->
 <section class="section greeting" id="greeting">
-  <div class="section-head">
-    <span class="jp">ご挨拶</span>
-  </div>
+  <div class="greeting-wrap">
 
-  <div class="greeting-text">
-    コンサートグッズ・アーティストグッズ・イベントグッズならワンクラフトにお任せください。
-    極短納期・高品質を提供しております。ぜひ一度お立ち寄りくださいませ。
+    <!-- 左侧：空出竖排通道（给 side-fixed 对齐用） -->
+    <div class="greeting-spacer"></div>
+
+    <!-- 中间：竖排标题 -->
+    <div class="greeting-head">
+      <span class="jp">ご挨拶</span>
+      <i></i>
+    </div>
+
+    <!-- 右侧：正文 -->
+    <div class="greeting-text">
+      コンサートグッズ・アーティストグッズ・イベントグッズならワンクラフトにお任せください。
+      極短納期・高品質を提供しております。ぜひ一度お立ち寄りくださいませ。
+    </div>
+
   </div>
 </section>
 
