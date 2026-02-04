@@ -900,3 +900,27 @@ td {
   }
 
 }
+/* ===============================
+   SP FINAL BASE TYPOGRAPHY
+   （这是手机端的“总指挥”）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 手机端：所有正文统一基准 */
+  p {
+    font-family:
+      "Helvetica Neue",
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      "Noto Sans JP",
+      Arial,
+      sans-serif;
+
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+    color: #111;
+  }
+
+}
