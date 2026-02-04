@@ -499,41 +499,7 @@ td {
 .section p:last-child {
   margin-bottom: 0;
 }
-/* ===============================
-   Company Section – Centered Layout
-================================ */
 
-/* 整个会社情報区域居中 */
-.section.company {
-  display: flex;
-  justify-content: center;
-}
-
-/* 内容容器居中且限制宽度 */
-.company-wrap {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 80px;
-  align-items: center;
-}
-/* ===============================
-   Contact Section – Centered
-================================ */
-
-.section.contact {
-  display: flex;
-  justify-content: center;
-}
-
-.section.contact form {
-  width: 100%;
-  max-width: 640px;
-  margin: 0 auto;
-}
 /* ===============================
    PC 強制居中（最终版）
 ================================ */
