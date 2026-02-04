@@ -1153,3 +1153,79 @@ td {
   padding: 6px 16px;
   display: inline-block;
 }
+/* ===============================
+   HEADER SNS
+================================ */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin-left: auto;        /* 把 nav 推到右侧 */
+}
+
+.header-sns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 32px;        /* 和导航留一点呼吸 */
+}
+
+.header-sns svg {
+  width: 20px;
+  height: 20px;
+  fill: #111;
+  transition: opacity 0.3s ease;
+}
+
+.header-sns a:hover svg {
+  opacity: 0.5;
+}
+/* ===============================
+   FOOTER CREDIT
+================================ */
+
+.footer-credit {
+  background: #e6e6e6;          /* 👈 和截图一致的浅灰 */
+  padding: 60px 0 50px;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 48px;                 /* 👈 控制视觉重量 */
+  margin-bottom: 16px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.05em;
+}
+/* ===============================
+   FOOTER (MUSUBI style)
+================================ */
+
+.site-footer {
+  padding: 40px 0 48px;
+  background: #e5e5e5; /* 如果你图片是浅灰 */
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* ✅ 居中关键 */
+}
+
+.footer-copy {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
