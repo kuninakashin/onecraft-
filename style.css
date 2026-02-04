@@ -924,3 +924,26 @@ td {
   }
 
 }
+/* ===============================
+   SP FINAL – MATCH WORK(01) TEXT
+   ご挨拶 / ABOUT → 完全对齐 01
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 01 的正文是标准 */
+  .work-main p {
+    font-size: 14px;
+    line-height: 2.05;
+    letter-spacing: 0.03em;
+  }
+
+  /* ご挨拶 / ABOUT 强制跟随 01 */
+  .greeting-text p,
+  .about-wrap p {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+}
