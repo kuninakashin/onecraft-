@@ -586,3 +586,75 @@ td {
   height: 200px;
   background: #f0f0f0;
 }
+/* ===============================
+   CONTACT – Final (Match Screenshot)
+================================ */
+
+.section.contact {
+  background: #f7f7f7;
+  padding: 160px 0;
+}
+
+/* 白色卡片 */
+.section.contact form {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 100px 120px 120px;
+  box-sizing: border-box;
+}
+
+/* 标题 */
+.section.contact h2 {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  margin-bottom: 40px;
+}
+
+/* 说明文字（你 HTML 里已有） */
+.section.contact p {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 80px;
+}
+
+/* 输入框统一 */
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  font-size: 14px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
+}
+
+/* textarea 单独高度 */
+.textarea-message {
+  min-height: 220px;
+}
+
+/* checkbox */
+.contact .agree {
+  display: block;
+  font-size: 13px;
+  margin: 40px 0;
+}
+
+/* 提交按钮 */
+.contact button {
+  width: 100%;
+  padding: 18px 0;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  border: none;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  opacity: 0.8;
+}
