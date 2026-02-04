@@ -859,3 +859,22 @@ td {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
+/* ===============================
+   SP Typography Unification
+   （Fix Greeting / About mismatch）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 所有正文统一 */
+  .section p,
+  .greeting-text,
+  .about-wrap p,
+  .work-main p {
+    font-size: 14px;
+    line-height: 2.05;
+    letter-spacing: 0.03em;
+    color: #111;
+  }
+
+}
