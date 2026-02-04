@@ -878,3 +878,25 @@ td {
   }
 
 }
+/* ===============================
+   SP FORCE Typography Match
+   ご挨拶 = ABOUT = 完全一致
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* ご挨拶 正文 */
+  .greeting-text {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* ABOUT 正文（强制对齐） */
+  .about-wrap p {
+    font-size: 14px !important;
+    line-height: 2.05 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+}
