@@ -947,3 +947,20 @@ td {
   }
 
 }
+/* ===============================
+   GREETING – Pixel Match Layout
+================================ */
+
+.section.greeting {
+  padding: 140px 0;
+}
+
+.greeting-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 120px 120px 1fr;
+  column-gap: 40px;
+  align-items: start;
+}
