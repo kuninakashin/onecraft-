@@ -786,3 +786,61 @@ td {
 .ph-logo {
   height: 160px;
 }
+/* ===============================
+   WORK 01–04 – Typography MASTER
+   （Magazine / Design-grade）
+================================ */
+
+/* ===== 数字 01 / 02 / 03 / 04 ===== */
+.section.work .num {
+  font-size: 64px;
+  font-weight: 300;
+  color: #e3e3e3;        /* 极淡灰 */
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+/* ===== 主标题 ===== */
+.section.work h2 {
+  font-size: 19px;       /* 👈 关键：比网页标题小 */
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+/* ===== 正文段落 ===== */
+.section.work p {
+  font-size: 13.5px;     /* 👈 非网页尺寸 */
+  font-weight: 400;
+  line-height: 2.15;     /* 杂志感行距 */
+  letter-spacing: 0.02em;
+  color: #333;           /* 非纯黑 */
+  margin-bottom: 1.8em;
+}
+
+/* ===== 最后一段不要拖 ===== */
+.section.work p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== 左侧竖排标题（私たちの仕事） ===== */
+.work-vertical span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #111;
+}
+
+/* 竖线 */
+.work-vertical i {
+  height: 140px;
+  background: #111;
+}
+
+/* ===== 图片下方整体留白 ===== */
+.section.work .img-row,
+.section.work .sample-row {
+  margin-top: 56px;
+}
