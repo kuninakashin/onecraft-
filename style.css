@@ -637,3 +637,13 @@ td {
     margin: 0;
   }
 }
+/* ===============================
+   PC：会社情報 居中
+================================ */
+@media (min-width: 1024px) {
+  .company-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
