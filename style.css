@@ -658,3 +658,24 @@ td {
 .contact button:hover {
   opacity: 0.8;
 }
+/* ===============================
+   COMPANY – Centered & Compact
+================================ */
+
+/* ① 整个公司信息区，左右同时往中间收 */
+.company-wrap {
+  max-width: 1100px;   /* 原来 1200 */
+  margin: 0 auto;
+  grid-template-columns: 1fr 260px; /* logo 区变窄 */
+  gap: 80px;           /* 原来 120，收紧 */
+}
+
+/* ② 左侧文字区本身再限制宽度 */
+.company-info {
+  max-width: 680px;    /* 控制文字不要拉太长 */
+}
+
+/* ③ logo 稍微缩一点，看起来更靠中 */
+.ph-logo {
+  height: 180px;       /* 比现在略矮 */
+}
