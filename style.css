@@ -1183,3 +1183,26 @@ td {
 .header-sns a:hover svg {
   opacity: 0.5;
 }
+/* ===============================
+   FOOTER CREDIT
+================================ */
+
+.footer-credit {
+  background: #e6e6e6;          /* 👈 和截图一致的浅灰 */
+  padding: 60px 0 50px;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 48px;                 /* 👈 控制视觉重量 */
+  margin-bottom: 16px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.05em;
+}
