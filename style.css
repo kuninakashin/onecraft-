@@ -783,3 +783,86 @@ body {
     display: none !important;
   }
 }
+/* ===============================
+   SP HEADER – FINAL
+   手机端头部重构（不影响PC）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* header 本体 */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* header 内部布局 */
+  .header-inner {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* logo */
+  .header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header .logo img {
+    height: 22px;
+  }
+
+  .header .logo span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* PC 导航在手机隐藏 */
+  .nav {
+    display: none !important;
+  }
+
+  /* SNS 在手机隐藏（下一步单独做） */
+  .header-sns {
+    display: none !important;
+  }
+
+  /* 汉堡菜单 */
+  .menu {
+    display: block;
+    width: 24px;
+    height: 18px;
+    position: relative;
+  }
+
+  .menu span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #111;
+  }
+
+  .menu span:nth-child(1) {
+    top: 0;
+  }
+
+  .menu span:nth-child(2) {
+    top: 8px;
+  }
+
+  .menu span:nth-child(3) {
+    bottom: 0;
+  }
+}
