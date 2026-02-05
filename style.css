@@ -838,11 +838,15 @@ body {
     display: none !important;
   }
 
-  /* 汉堡菜单 */
+ /* ===============================
+   Mobile hamburger FIX (FINAL)
+=============================== */
+@media screen and (max-width: 768px) {
+
   .menu {
     display: block;
     width: 24px;
-    height: 18px;
+    height: 20px;              /* ← 比 18px 大 */
     position: relative;
   }
 
@@ -855,14 +859,15 @@ body {
   }
 
   .menu span:nth-child(1) {
-    top: 0;
+    top: 2px;
   }
 
   .menu span:nth-child(2) {
-    top: 8px;
+    top: 9px;
   }
 
   .menu span:nth-child(3) {
-    bottom: 0;
+    top: 16px;                /* ← 不用 bottom */
   }
+
 }
