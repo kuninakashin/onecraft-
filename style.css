@@ -673,3 +673,50 @@ body {
 .footer-credit {
   background-color: #f7f7f7;
 }
+/* ===============================
+   SP HEADER (Mobile First)
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* header 整体 */
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px;   /* 👈 手机呼吸感 */
+  }
+
+  /* LOGO */
+  .header .logo img {
+    height: 22px;        /* 👈 手机缩一点 */
+  }
+
+  .header .logo span {
+    font-size: 14px;
+  }
+
+  /* 隐藏横向导航（手机不用） */
+  .nav {
+    display: none;
+  }
+
+  /* SNS 暂时隐藏（下一步再决定） */
+  .header-sns {
+    display: none;
+  }
+
+  /* 汉堡按钮 */
+  .menu {
+    display: block;
+  }
+
+  .menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    margin: 5px 0;
+  }
+}
