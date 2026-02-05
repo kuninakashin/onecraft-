@@ -643,3 +643,33 @@ body {
   font-weight: 500;
   color: #444;
 }
+/* ===============================
+   GLOBAL BACKGROUND UNIFICATION
+   全站底色统一
+================================ */
+
+/* 页面整体底色 */
+html,
+body {
+  background-color: #f7f7f7;
+}
+
+/* section 默认透明，露出统一底色 */
+.section {
+  background-color: transparent;
+}
+
+/* CONTACT：外灰 + 内白（保留高级层次） */
+.section.contact {
+  background-color: #f7f7f7;
+}
+
+/* CONTACT 白色卡片（你现在已经是对的） */
+.section.contact form {
+  background-color: #ffffff;
+}
+
+/* FOOTER 统一到底色，不再单独一块灰 */
+.footer-credit {
+  background-color: #f7f7f7;
+}
