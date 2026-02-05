@@ -53,25 +53,32 @@ body {
 /* ===============================
    HEADER
 ================================ */
+
 .header {
   border-bottom: 1px solid #eee;
 }
 
+/* 三段式：logo | nav | sns */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
+/* LOGO */
 .header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.header .logo img { height: 26px; }
+.header .logo img {
+  height: 26px;
+}
 
 .header .logo span {
   font-size: 16px;
@@ -79,12 +86,18 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* ===============================
+   NAV（图一：文字导航）
+================================ */
+
 .nav {
-  margin-left: auto;
+  display: flex;
+  justify-content: center;   /* 👈 核心：在中间区域居中 */
+  align-items: center;
 }
 
 .nav a {
-  margin-left: 28px;
+  margin: 0 18px;            /* 左右对称，视觉更稳 */
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -92,21 +105,37 @@ body {
   text-decoration: none;
 }
 
-.nav a:hover { opacity: 0.6; }
+.nav a:hover {
+  opacity: 0.6;
+}
+
+/* ⚠️ 如果你之前有这个，一定要删掉
+.nav {
+  margin-left: auto;
+}
+*/
+
+/* ===============================
+   SNS（图二：位置保持不动）
+================================ */
 
 .header-sns {
   display: flex;
+  align-items: center;
   gap: 20px;
-  margin-left: 32px;
 }
 
 .header-sns svg {
   width: 20px;
   height: 20px;
   fill: #111;
+  transition: opacity 0.3s ease;
 }
 
-.header-sns a:hover svg { opacity: 0.5; }
+.header-sns a:hover svg {
+  opacity: 0.5;
+}
+
 
 /* ===============================
    HERO
@@ -535,4 +564,112 @@ body {
     padding-left: 0;
   }
 
+}
+/* ===============================
+   WORK 01–04 正文（厚实 / 圆润版）
+================================ */
+
+.section.work p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;   /* 👈 关键 */
+  color: #444;
+}
+/* ===============================
+   COMPANY INFO（与 WORK 01–04 同质感）
+   厚实 / 圆润 / 安心
+================================ */
+
+.section.company th,
+.section.company td {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;        /* 与 01–04 一致 */
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;         /* 👈 圆润感核心 */
+  color: #444;
+}
+/* ===============================
+   GREETING / ABOUT
+   与 WORK 01–04 同体系（圆润版）
+================================ */
+
+/* ご挨拶 正文 */
+.section.greeting .greeting-text {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;        /* 与 01–04 对齐 */
+  line-height: 2.15;        /* 稍微温和一点 */
+  letter-spacing: 0.015em;
+  font-weight: 500;         /* 👈 圆润感核心 */
+  color: #444;
+}
+
+/* ABOUT 正文 */
+.section.about p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;
+  line-height: 2.15;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
+/* ===============================
+   GLOBAL BACKGROUND UNIFICATION
+   全站底色统一
+================================ */
+
+/* 页面整体底色 */
+html,
+body {
+  background-color: #f7f7f7;
+}
+
+/* section 默认透明，露出统一底色 */
+.section {
+  background-color: transparent;
+}
+
+/* CONTACT：外灰 + 内白（保留高级层次） */
+.section.contact {
+  background-color: #f7f7f7;
+}
+
+/* CONTACT 白色卡片（你现在已经是对的） */
+.section.contact form {
+  background-color: #ffffff;
+}
+
+/* FOOTER 统一到底色，不再单独一块灰 */
+.footer-credit {
+  background-color: #f7f7f7;
 }
