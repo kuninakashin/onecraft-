@@ -53,25 +53,32 @@ body {
 /* ===============================
    HEADER
 ================================ */
+
 .header {
   border-bottom: 1px solid #eee;
 }
 
+/* 三段式：logo | nav | sns */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
+/* LOGO */
 .header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.header .logo img { height: 26px; }
+.header .logo img {
+  height: 26px;
+}
 
 .header .logo span {
   font-size: 16px;
@@ -79,12 +86,18 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* ===============================
+   NAV（图一：文字导航）
+================================ */
+
 .nav {
-  margin-left: auto;
+  display: flex;
+  justify-content: center;   /* 👈 核心：在中间区域居中 */
+  align-items: center;
 }
 
 .nav a {
-  margin-left: 28px;
+  margin: 0 18px;            /* 左右对称，视觉更稳 */
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -92,21 +105,37 @@ body {
   text-decoration: none;
 }
 
-.nav a:hover { opacity: 0.6; }
+.nav a:hover {
+  opacity: 0.6;
+}
+
+/* ⚠️ 如果你之前有这个，一定要删掉
+.nav {
+  margin-left: auto;
+}
+*/
+
+/* ===============================
+   SNS（图二：位置保持不动）
+================================ */
 
 .header-sns {
   display: flex;
+  align-items: center;
   gap: 20px;
-  margin-left: 32px;
 }
 
 .header-sns svg {
   width: 20px;
   height: 20px;
   fill: #111;
+  transition: opacity 0.3s ease;
 }
 
-.header-sns a:hover svg { opacity: 0.5; }
+.header-sns a:hover svg {
+  opacity: 0.5;
+}
+
 
 /* ===============================
    HERO
