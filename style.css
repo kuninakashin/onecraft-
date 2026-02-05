@@ -778,3 +778,8 @@ body {
   }
 
 }
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
