@@ -565,3 +565,22 @@ body {
   }
 
 }
+/* ===============================
+   WORK 01–04 正文（厚实 / 圆润版）
+================================ */
+
+.section.work p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;   /* 👈 关键 */
+  color: #444;
+}
