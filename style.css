@@ -720,3 +720,61 @@ body {
     margin: 5px 0;
   }
 }
+/* ===============================
+   SP HARD RESET (FINAL)
+   手机端强制重排结构
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 🔥 1. 所有 fixed / absolute 装饰彻底移除 */
+  .side-fixed,
+  .side-scroll,
+  .hero-vertical {
+    display: none !important;
+    position: static !important;
+  }
+
+  /* 🔥 2. Hero 区块强制变成普通块 */
+  .hero,
+  .hero-ph {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 240px;
+  }
+
+  /* 🔥 3. 所有 section 统一成手机节奏 */
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 64px 16px !important;
+    margin: 0 !important;
+  }
+
+  /* 🔥 4. Greeting：竖排 → 横排 */
+  .greeting-head {
+    writing-mode: horizontal-tb !important;
+    text-orientation: initial !important;
+    display: block !important;
+    margin-bottom: 24px;
+  }
+
+  .greeting-head i {
+    display: none;
+  }
+
+  /* 🔥 5. 强制单列布局（防止塌） */
+  .greeting-wrap,
+  .about-wrap,
+  .company-wrap,
+  .work-wrap {
+    display: block !important;
+  }
+
+  /* 🔥 6. 防止滚动时宽度跳变 */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+}
