@@ -772,7 +772,16 @@ body {
   .news-grid {
     display: block !important;
   }
+@media screen and (max-width: 768px) {
 
+  /* ABOUT 图片跟随正文留边 */
+  .about-ph {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+}
   /* 防止横向溢出 */
   html,
   body {
