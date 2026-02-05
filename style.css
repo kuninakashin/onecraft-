@@ -722,11 +722,11 @@ body {
 }
 /* ===============================
    SP HARD RESET (FINAL)
-   手机端强制重排结构
+   手机端最终稳定版（留白已修正）
 ================================ */
 @media screen and (max-width: 768px) {
 
-  /* 🔥 1. 所有 fixed / absolute 装饰彻底移除 */
+  /* 装饰性固定元素移除 */
   .side-fixed,
   .side-scroll,
   .hero-vertical {
@@ -734,7 +734,7 @@ body {
     position: static !important;
   }
 
-  /* 🔥 2. Hero 区块强制变成普通块 */
+  /* Hero 正常化 */
   .hero,
   .hero-ph {
     position: static !important;
@@ -743,15 +743,16 @@ body {
     min-height: 240px;
   }
 
-  /* 🔥 3. 所有 section 统一成手机节奏 */
+  /* 🔥 核心：手机端 section 统一留边（已调好） */
   .section {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 64px 16px !important;
+    padding: 80px 24px !important;   /* ← 关键修改点 */
     margin: 0 !important;
+    box-sizing: border-box;
   }
 
-  /* 🔥 4. Greeting：竖排 → 横排 */
+  /* Greeting：竖排 → 横排 */
   .greeting-head {
     writing-mode: horizontal-tb !important;
     text-orientation: initial !important;
@@ -763,19 +764,22 @@ body {
     display: none;
   }
 
-  /* 🔥 5. 强制单列布局（防止塌） */
+  /* 强制单列，防止 grid 挤压 */
   .greeting-wrap,
   .about-wrap,
   .company-wrap,
-  .work-wrap {
+  .work-wrap,
+  .news-grid {
     display: block !important;
   }
 
-  /* 🔥 6. 防止滚动时宽度跳变 */
-  html, body {
+  /* 防止横向溢出 */
+  html,
+  body {
     width: 100%;
     overflow-x: hidden;
   }
+}
 
 }
 @media screen and (max-width: 768px) {
