@@ -605,3 +605,41 @@ body {
   font-weight: 500;         /* 👈 圆润感核心 */
   color: #444;
 }
+/* ===============================
+   GREETING / ABOUT
+   与 WORK 01–04 同体系（圆润版）
+================================ */
+
+/* ご挨拶 正文 */
+.section.greeting .greeting-text {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;        /* 与 01–04 对齐 */
+  line-height: 2.15;        /* 稍微温和一点 */
+  letter-spacing: 0.015em;
+  font-weight: 500;         /* 👈 圆润感核心 */
+  color: #444;
+}
+
+/* ABOUT 正文 */
+.section.about p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13.5px;
+  line-height: 2.15;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
