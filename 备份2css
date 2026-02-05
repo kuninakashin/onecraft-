@@ -673,3 +673,216 @@ body {
 .footer-credit {
   background-color: #f7f7f7;
 }
+/* ===============================
+   SP HEADER (Mobile First)
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* header 整体 */
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px;   /* 👈 手机呼吸感 */
+  }
+
+  /* LOGO */
+  .header .logo img {
+    height: 22px;        /* 👈 手机缩一点 */
+  }
+
+  .header .logo span {
+    font-size: 14px;
+  }
+
+  /* 隐藏横向导航（手机不用） */
+  .nav {
+    display: none;
+  }
+
+  /* SNS 暂时隐藏（下一步再决定） */
+  .header-sns {
+    display: none;
+  }
+
+  /* 汉堡按钮 */
+  .menu {
+    display: block;
+  }
+
+  .menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    margin: 5px 0;
+  }
+}
+/* ===============================
+   SP HARD RESET (FINAL)
+   手机端强制重排结构
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 🔥 1. 所有 fixed / absolute 装饰彻底移除 */
+  .side-fixed,
+  .side-scroll,
+  .hero-vertical {
+    display: none !important;
+    position: static !important;
+  }
+
+  /* 🔥 2. Hero 区块强制变成普通块 */
+  .hero,
+  .hero-ph {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 240px;
+  }
+
+  /* 🔥 3. 所有 section 统一成手机节奏 */
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 64px 16px !important;
+    margin: 0 !important;
+  }
+
+  /* 🔥 4. Greeting：竖排 → 横排 */
+  .greeting-head {
+    writing-mode: horizontal-tb !important;
+    text-orientation: initial !important;
+    display: block !important;
+    margin-bottom: 24px;
+  }
+
+  .greeting-head i {
+    display: none;
+  }
+
+  /* 🔥 5. 强制单列布局（防止塌） */
+  .greeting-wrap,
+  .about-wrap,
+  .company-wrap,
+  .work-wrap {
+    display: block !important;
+  }
+
+  /* 🔥 6. 防止滚动时宽度跳变 */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+/* ===============================
+   SP HEADER – FINAL
+   手机端头部重构（不影响PC）
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* header 本体 */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* header 内部布局 */
+  .header-inner {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* logo */
+  .header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header .logo img {
+    height: 22px;
+  }
+
+  .header .logo span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* PC 导航在手机隐藏 */
+  .nav {
+    display: none !important;
+  }
+
+  /* SNS 在手机隐藏（下一步单独做） */
+  .header-sns {
+    display: none !important;
+  }
+
+ /* ===============================
+   Mobile hamburger FIX (FINAL)
+=============================== */
+@media screen and (max-width: 768px) {
+
+  .menu {
+    display: block;
+    width: 24px;
+    height: 20px;              /* ← 比 18px 大 */
+    position: relative;
+  }
+
+  .menu span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #111;
+  }
+
+  .menu span:nth-child(1) {
+    top: 2px;
+  }
+
+  .menu span:nth-child(2) {
+    top: 9px;
+  }
+
+  .menu span:nth-child(3) {
+    top: 16px;                /* ← 不用 bottom */
+  }
+
+}
+/* ===============================
+   Mobile header padding fix
+=============================== */
+@media screen and (max-width: 768px) {
+
+  .header-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .menu {
+    margin-right: 4px; /* 防止贴边 */
+  }
+
+}
