@@ -914,3 +914,15 @@ body {
   }
 
 }
+/* ===============================
+   CONTACT FORM – SP OVERFLOW FIX
+================================ */
+@media screen and (max-width: 768px) {
+
+  .section.contact form {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* 🔥 关键 */
+  }
+
+}
