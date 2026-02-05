@@ -899,3 +899,18 @@ body {
   }
 
 }
+/* ===============================
+   CONTACT FORM – SP WIDTH FIX
+================================ */
+@media screen and (max-width: 768px) {
+
+  .section.contact form {
+    padding: 48px 24px 56px;   /* ← 关键：手机端减小内边距 */
+  }
+
+  .section.contact input,
+  .section.contact textarea {
+    width: 100%;
+  }
+
+}
