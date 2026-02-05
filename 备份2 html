@@ -10,14 +10,14 @@
 <body>
 
 <!-- ========== 左侧竖排滚动 ========== -->
-<div class="side-fixed left">
+<div class="side-fixed left pc-only">
   <div class="side-scroll">
     ノベルティ・オリジナルグッズ製作はワンクラフトにお任せください。
   </div>
 </div>
 
 <!-- ========== 右侧竖排滚动 ========== -->
-<div class="side-fixed right">
+<div class="side-fixed right pc-only">
   <div class="side-scroll">
     今日も、このグッズとともに
   </div>
@@ -29,7 +29,7 @@
   <div class="header-inner">
    <div class="logo">
   <img src="images/logo-mark.png" alt="onecraft logo">
-  <span>onecraft</span>
+  <span>OneCraft Inc.</span>
 </div>
     <nav class="nav">
   <a href="#greeting">ご挨拶</a>
@@ -478,7 +478,7 @@ async function handleSubmit() {
 
     <!-- COPY -->
     <p class="footer-copy">
-      © 2021-2026 株式会社ONE CRAFT
+      © since2021 株式会社ワンクラフト
     </p>
 
   </div>
