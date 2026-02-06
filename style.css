@@ -962,6 +962,28 @@ body {
     max-width: 100%;
     box-sizing: border-box;
   }
+
+  /* 1️⃣ 强制汉堡可点击并置顶 */
+  .hamburger {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* 2️⃣ 防止 header/遮罩盖住点击 */
+  header,
+  .header,
+  .site-header {
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* 3️⃣ 确保 nav 不是 display:none（否则 JS 加类也看不到） */
+  .site-nav {
+    display: block !important;
+  }
+
+}
 /* 手机菜单容器（默认隐藏） */
 .site-nav {
   position: fixed;
