@@ -755,62 +755,82 @@ body {
   }
 }
 /* ===============================
-   SP FINAL HARD RESET（终极修正）
-   只修手机，不动 PC
+   🔥 Mobile 完整兜底修正
 ================================ */
 @media screen and (max-width: 768px) {
 
-  /* 1️⃣ 全站防止横向被撑爆 */
+  /* 防止整体横向溢出 */
   html, body {
     width: 100%;
     overflow-x: hidden;
   }
 
-  /* 2️⃣ 所有 section 统一为「真正手机宽度」 */
+  /* 所有大区块强制回到手机宽度 */
+  section,
   .section,
   .hero,
   .hero-ph,
+  .company-wrap,
+  .about-wrap,
+  .news-grid,
   .simple-item-list,
-  .news-grid,
-  .company-wrap,
-  .about-wrap,
-  .work-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box;
-  }
-
-  /* 3️⃣ 干掉所有“PC 用偏移” */
-  .company-wrap {
-    padding-left: 0 !important;
-  }
-
-  /* 4️⃣ 干掉手机不该存在的竖排/编号/装饰 */
-  .side-fixed,
-  .work-vertical,
-  .greeting-head,
-  .section.work .num {
-    display: none !important;
-  }
-
-  /* 5️⃣ 强制所有 grid / 两栏 → 单栏 */
-  .greeting-wrap,
-  .about-wrap,
-  .company-wrap,
   .work-wrap,
-  .news-grid,
-  .simple-item-grid,
-  .img-row {
-    display: block !important;
+  .work-item,
+  .contact-wrap,
+  footer {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
   }
 
-  /* 6️⃣ 图片块防止溢出 */
-  img,
-  .ph {
+  /* ❌ 禁止手机端使用 vh 高度（裁切元凶） */
+  section,
+  .section,
+  .hero,
+  .hero-ph {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* 图片一律不准超出 */
+  img {
     max-width: 100%;
     height: auto;
+    display: block;
+  }
+
+  /* Grid / 横排 → 单列 */
+  .news-grid,
+  .simple-item-list,
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* 01 / 02 那种大号背景数字 */
+  .num,
+  .number,
+  .section-number {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 16px;
+    opacity: 0.15;
+  }
+
+  /* 表格（公司信息）防止挤爆 */
+  table {
+    width: 100%;
+    display: block;
+  }
+  tr {
+    display: block;
+    margin-bottom: 16px;
+  }
+  th, td {
+    display: block;
+    width: 100%;
   }
 }
