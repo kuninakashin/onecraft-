@@ -495,10 +495,20 @@ async function handleSubmit() {
   <script>
   const menuBtn = document.querySelector('.menu');
   const spMenu = document.getElementById('spMenu');
+  const spLinks = spMenu.querySelectorAll('a');
 
+  // 打开 / 关闭菜单
   menuBtn.addEventListener('click', () => {
     spMenu.classList.toggle('is-open');
   });
+
+  // 点击菜单里的链接：先关闭菜单，再跳转
+  spLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      spMenu.classList.remove('is-open');
+    });
+  });
 </script>
+
 </body>
 </html>
