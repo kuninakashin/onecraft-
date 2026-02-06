@@ -978,34 +978,33 @@ body {
     z-index: 1001;
   }
 
-  /* 3️⃣ 确保 nav 不是 display:none（否则 JS 加类也看不到） */
+@media screen and (max-width: 767px) {
+
+  /* ===== 手机导航抽屉 ===== */
   .site-nav {
-    display: block !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 80px 24px 24px;
+    transition: right 0.3s ease;
+    z-index: 999;
   }
 
-}
-/* 手机菜单容器（默认隐藏） */
-.site-nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  transition: right 0.3s ease;
-  z-index: 999;
-  padding: 80px 24px 24px;
-}
+  .site-nav.is-open {
+    right: 0;
+  }
 
-/* 展开状态 */
-.site-nav.is-open {
-  right: 0;
-}
+  /* ✅ 菜单纵向排列（只在手机） */
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
-/* 菜单纵向排列 */
-.site-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 }
