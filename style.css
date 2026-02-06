@@ -699,3 +699,15 @@ body {
     box-sizing: border-box;
   }
 }
+@media screen and (max-width: 768px) {
+  .section,
+  .hero,
+  .hero-ph,
+  .simple-item-list,
+  .news-grid,
+  .company-wrap,
+  .about-wrap {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
