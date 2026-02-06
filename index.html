@@ -492,5 +492,13 @@ async function handleSubmit() {
 
   </div>
 </footer>
+  <script>
+  const menuBtn = document.querySelector('.menu');
+  const spMenu = document.getElementById('spMenu');
+
+  menuBtn.addEventListener('click', () => {
+    spMenu.classList.toggle('is-open');
+  });
+</script>
 </body>
 </html>
