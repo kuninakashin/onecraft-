@@ -29,7 +29,7 @@
   <div class="header-inner">
    <div class="logo">
   <img src="images/logo-mark.png" alt="onecraft logo">
-  <span>onecraft inc.</span>
+  <span>OneCraft Inc.</span>
 </div>
     <nav class="nav">
   <a href="#greeting">ご挨拶</a>
@@ -66,16 +66,7 @@
     </div>
   </div>
 </header>
-<!-- ========== SP MENU ========== -->
-<div class="sp-menu" id="spMenu">
-  <ul>
-    <li><a href="#greeting">ご挨拶</a></li>
-    <li><a href="#work">私たちの仕事</a></li>
-    <li><a href="#news">お知らせ</a></li>
-    <li><a href="#company">会社情報</a></li>
-    <li><a href="#contact">お問い合わせ</a></li>
-  </ul>
-</div>
+
 <!-- ========== HERO ========== -->
 <section class="hero">
   <div class="hero-ph">
@@ -305,6 +296,13 @@
     2.生産中は弊社中国人スタッフが直接工場と連絡を取り合い、生産管理を行います。途中で問題が発生した場合も、早期発見・早期対応により納期を遵守させていただきます。
     3.現地の各工場とは、動画チャットで常に連絡を取り合い、商品現物を見せ合いながら意思疎通を行います。製造手順・仕様について正確に情報共有しております。
  <p>
+※サンプル製造の際で発生した問題により、解決のため工期を延長していただく場合もございます。
+  <p>
+※サンプル製造の際で発生した問題の解決が難しい場合、仕様変更をさせていただく場合もございます。
+  <p>
+※サンプル製造時、お客様の要求を実現するためにコストアップする場合もございます。
+  <p>
+※短納期をご希望のお客様には。サンプル作成作業の短縮・簡略化を行います。
 
   </p>
 
@@ -485,23 +483,5 @@ async function handleSubmit() {
 
   </div>
 </footer>
-  <script>
-  const menuBtn = document.querySelector('.menu');
-  const spMenu = document.getElementById('spMenu');
-  const spLinks = spMenu.querySelectorAll('a');
-
-  // 打开 / 关闭菜单
-  menuBtn.addEventListener('click', () => {
-    spMenu.classList.toggle('is-open');
-  });
-
-  // 点击菜单里的链接：先关闭菜单，再跳转
-  spLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      spMenu.classList.remove('is-open');
-    });
-  });
-</script>
-
 </body>
 </html>
