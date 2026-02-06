@@ -710,24 +710,7 @@ body {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-}
-@media screen and (max-width: 768px) {
-
-  /* 🔥 一刀切：所有结构容器 */
-  body,
-  .section,
-  .hero,
-  .hero-ph,
-  .simple-item-list,
-  .news,
-  .company,
-  .contact {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box;
-  }
+    }
 
   /* 🔥 所有 wrap 类，强制清零左偏移 */
   .greeting-wrap,
@@ -757,33 +740,6 @@ body {
 /* ===============================
    🔥 Mobile 完整兜底修正
 ================================ */
-@media screen and (max-width: 768px) {
-
-  /* 防止整体横向溢出 */
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* 所有大区块强制回到手机宽度 */
-  section,
-  .section,
-  .hero,
-  .hero-ph,
-  .company-wrap,
-  .about-wrap,
-  .news-grid,
-  .simple-item-list,
-  .work-wrap,
-  .work-item,
-  .contact-wrap,
-  footer {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    transform: none !important;
-  }
 
   /* ❌ 禁止手机端使用 vh 高度（裁切元凶） */
   section,
