@@ -995,3 +995,11 @@ ul:has(a[href="#greeting"]) {
     pointer-events: none !important;
   }
 }
+/* ===== PC 彻底清除 SP 菜单内容（最终收尾） ===== */
+@media screen and (min-width: 768px) {
+  #spMenu,
+  #spMenu * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
