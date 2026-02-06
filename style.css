@@ -951,7 +951,9 @@ body {
     max-width: 100%;
     box-sizing: border-box;
   }
-
+body {
+  overflow-x: hidden;
+}
   /* 外层容器防止撑破 */
   .contact,
   .contact form,
@@ -960,7 +962,5 @@ body {
     max-width: 100%;
     box-sizing: border-box;
   }
-
-}
 
 }
