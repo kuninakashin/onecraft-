@@ -926,3 +926,18 @@ body {
   }
 
 }
+/* ===============================
+   CONTACT INPUT – SP OVERFLOW FINAL FIX
+================================ */
+@media screen and (max-width: 768px) {
+
+  .section.contact input,
+  .section.contact textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;   /* 🔥 关键中的关键 */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
