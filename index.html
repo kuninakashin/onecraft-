@@ -492,5 +492,21 @@ async function handleSubmit() {
 
   </div>
 </footer>
+  <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const spMenu = document.getElementById('spMenu');
+
+  if (menuBtn && spMenu) {
+    menuBtn.addEventListener('click', () => {
+      spMenu.classList.toggle('is-open');
+    });
+
+    spMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        spMenu.classList.remove('is-open');
+      });
+    });
+  }
+</script>
 </body>
 </html>
