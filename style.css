@@ -576,8 +576,29 @@ body {
   .header-sns {
     display: none !important;
   }
+  /* 🔥 修正 company 在手机端整体右偏 */
+  .company-wrap {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-  .menu {
+  /* 🔥 所有竖排标题在 SP 彻底重置 */
+  .company-label,
+  .work-vertical {
+    writing-mode: horizontal-tb !important;
+    padding: 0 !important;
+    margin: 0 0 24px 0 !important;
+    width: auto !important;
+  }
+
+  .company-label::after,
+  .work-vertical i {
+    display: none !important;
+  }
+
+   .menu {
     display: block;
     width: 24px;
     height: 20px;
