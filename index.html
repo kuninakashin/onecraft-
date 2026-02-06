@@ -484,14 +484,16 @@ async function handleSubmit() {
   </div>
 </footer>
   <script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.site-nav');
+  const hamburger = document.querySelector('button');
+  const nav = document.querySelector('nav');
 
   if (hamburger && nav) {
     hamburger.addEventListener('click', () => {
       nav.classList.toggle('is-open');
+      console.log('clicked');
     });
   }
 </script>
+
 </body>
 </html>
