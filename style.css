@@ -712,24 +712,6 @@ body {
   }
     }
 
-  /* 🔥 所有 wrap 类，强制清零左偏移 */
-  .greeting-wrap,
-  .about-wrap,
-  .company-wrap,
-  .work-wrap {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    transform: none !important;
-  }
-
-  /* 🔥 grid / flex 残留全部干掉 */
-  .greeting-wrap,
-  .about-wrap,
-  .company-wrap,
-  .work-wrap,
-  .news-grid {
-    display: block !important;
-  }
 
   /* 🔥 彻底禁止横向溢出 */
   html,
