@@ -983,3 +983,7 @@ body {
 body > ul {
   display: none !important;
 }
+/* 🔥 临时强制隐藏：所有非 sp-menu / 非 header 的锚点列表 */
+ul:has(a[href="#greeting"]) {
+  display: none !important;
+}
