@@ -979,4 +979,7 @@ body {
     display: none !important;
   }
 }
-
+/* 强制隐藏误留下来的旧菜单 */
+body > ul {
+  display: none !important;
+}
