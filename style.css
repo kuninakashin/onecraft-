@@ -754,3 +754,63 @@ body {
     overflow-x: hidden !important;
   }
 }
+/* ===============================
+   SP FINAL HARD RESET（终极修正）
+   只修手机，不动 PC
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 1️⃣ 全站防止横向被撑爆 */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 2️⃣ 所有 section 统一为「真正手机宽度」 */
+  .section,
+  .hero,
+  .hero-ph,
+  .simple-item-list,
+  .news-grid,
+  .company-wrap,
+  .about-wrap,
+  .work-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box;
+  }
+
+  /* 3️⃣ 干掉所有“PC 用偏移” */
+  .company-wrap {
+    padding-left: 0 !important;
+  }
+
+  /* 4️⃣ 干掉手机不该存在的竖排/编号/装饰 */
+  .side-fixed,
+  .work-vertical,
+  .greeting-head,
+  .section.work .num {
+    display: none !important;
+  }
+
+  /* 5️⃣ 强制所有 grid / 两栏 → 单栏 */
+  .greeting-wrap,
+  .about-wrap,
+  .company-wrap,
+  .work-wrap,
+  .news-grid,
+  .simple-item-grid,
+  .img-row {
+    display: block !important;
+  }
+
+  /* 6️⃣ 图片块防止溢出 */
+  img,
+  .ph {
+    max-width: 100%;
+    height: auto;
+  }
+}
