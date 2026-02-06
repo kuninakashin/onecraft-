@@ -470,7 +470,14 @@ body {
   height: 160px;
   background: #f0f0f0;
 }
-
+/* SP：about 图片右侧留白（不动文字） */
+.about-ph img,
+.about-ph {
+  width: calc(100% - 48px);
+  margin-left: 24px;
+  margin-right: 24px;
+  box-sizing: border-box;
+}
 /* ===============================
    CONTACT
 ================================ */
