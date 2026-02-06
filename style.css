@@ -937,4 +937,30 @@ body {
 ================================ */
 @media screen and (max-width: 767px) {
 
+  /* 表单整体不允许超出屏幕 */
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 所有输入框锁死宽度 */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* 外层容器防止撑破 */
+  .contact,
+  .contact form,
+  .contact div,
+  .contact p {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
 }
