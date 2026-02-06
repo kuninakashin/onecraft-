@@ -705,6 +705,13 @@ body {
 .ph-logo {
   align-self: flex-start;
 }
+/* ===== SP about 图片留白修正 ===== */
+.about-ph {
+  margin: 24px 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
 }
 /* ===== SP company 保持 PC 结构 ===== */
 .company-wrap {
