@@ -593,10 +593,23 @@ body {
     width: auto !important;
   }
 
-  .company-label::after,
-  .work-vertical i {
-    display: none !important;
-  }
+ /* 🔥 SP：会社情報 标题 + 竖线（安全版） */
+.company-label {
+  writing-mode: horizontal-tb !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 0 !important;
+}
+
+.company-label::before {
+  content: "";
+  width: 1px;
+  height: 24px;
+  background: #111;
+  display: inline-block;
+}
 
    .menu {
     display: block;
