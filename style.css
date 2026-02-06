@@ -676,7 +676,37 @@ body {
   body {
     overflow-x: hidden;
   }
-}/* ===== SP company 保持 PC 结构 ===== */
+   /* ===== SP company 保持 PC 布局 ===== */
+.company-wrap {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 24px;
+  padding-left: 0;
+}
+
+/* 会社情報 + 竖线：保持右侧 */
+.company-label {
+  writing-mode: vertical-rl;
+  padding-right: 12px;
+  position: relative;
+}
+
+.company-label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #111;
+}
+
+/* logo 固定在右侧，不掉下去 */
+.ph-logo {
+  align-self: flex-start;
+}
+}
+/* ===== SP company 保持 PC 结构 ===== */
 .company-wrap {
   display: grid;
   grid-template-columns: 1fr 160px;
