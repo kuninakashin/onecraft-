@@ -926,3 +926,9 @@ body {
   }
 
 }
+/* ===== PC 左侧紫色目录文字：隐藏 ===== */
+@media screen and (min-width: 1024px) {
+  ul {
+    display: none;
+  }
+}
