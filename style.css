@@ -684,3 +684,18 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+/* ===============================
+   SP 横向歪斜 最终止血
+================================ */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
