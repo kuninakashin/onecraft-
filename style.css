@@ -987,3 +987,11 @@ body > ul {
 ul:has(a[href="#greeting"]) {
   display: none !important;
 }
+/* ===== PC 完全禁用 SP 菜单（最终兜底） ===== */
+@media screen and (min-width: 768px) {
+  .sp-menu {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
