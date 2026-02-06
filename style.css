@@ -941,3 +941,42 @@ body {
   }
 
 }
+/* =========================
+   SP MENU (Hamburger)
+========================= */
+.sp-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sp-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sp-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.sp-menu li {
+  margin: 20px 0;
+}
+
+.sp-menu a {
+  font-size: 20px;
+  color: #111;
+  text-decoration: none;
+}
