@@ -640,7 +640,6 @@ body {
   /* layout reset */
   .greeting-wrap,
   .about-wrap,
-  .company-wrap,
   .work-wrap,
   .news-grid {
     display: block;
@@ -677,6 +676,32 @@ body {
   body {
     overflow-x: hidden;
   }
+}/* ===== SP company 保持 PC 结构 ===== */
+.company-wrap {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 24px;
+  padding-left: 0;
+}
+
+.company-label {
+  writing-mode: vertical-rl;
+  padding-right: 12px;
+  position: relative;
+}
+
+.company-label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #111;
+}
+
+.ph-logo {
+  height: 120px;
 }
 /* ===============================
    SP MENU (overlay)
