@@ -324,9 +324,10 @@ body {
 .img-row {
   display: grid;
   gap: 20px;
-  margin: 56px auto 0;   /* 上 56px，左右居中 */
-  max-width: 900px;      /* 👈 控制整体大小 */
+  margin: 56px auto 0;
+  max-width: 450px; /* 👈 从 900 → 450 */
 }
+
 
 
 .col-4 { grid-template-columns: repeat(4, 1fr); }
