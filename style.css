@@ -19,19 +19,6 @@ body {
   letter-spacing: 0.04em;
   color: #111;
 }
-/* ===== header link reset ===== */
-header a {
-  color: #111;
-  text-decoration: none;
-}
-
-header a:visited {
-  color: #111;
-}
-
-header a:hover {
-  opacity: 0.6;
-}
 
 /* ===============================
    SIDE VERTICAL SCROLL
@@ -687,30 +674,136 @@ body {
   background-color: #f7f7f7;
 }
 /* ===============================
-   MOBILE (<=768px) FINAL
+   SP HEADER (Mobile First)
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* header 整体 */
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px;   /* 👈 手机呼吸感 */
+  }
+
+  /* LOGO */
+  .header .logo img {
+    height: 22px;        /* 👈 手机缩一点 */
+  }
+
+  .header .logo span {
+    font-size: 14px;
+  }
+
+  /* 隐藏横向导航（手机不用） */
+  .nav {
+    display: none;
+  }
+
+  /* SNS 暂时隐藏（下一步再决定） */
+  .header-sns {
+    display: none;
+  }
+
+  /* 汉堡按钮 */
+  .menu {
+    display: block;
+  }
+
+  .menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    margin: 5px 0;
+  }
+}
+/* ===============================
+   SP HARD RESET (FINAL)
+   手机端最终稳定版（留白已修正）
 ================================ */
 @media screen and (max-width: 768px) {
 
-  /* ==== 全局防横向滚动 ==== */
+  /* 装饰性固定元素移除 */
+  .side-fixed,
+  .side-scroll,
+  .hero-vertical {
+    display: none !important;
+    position: static !important;
+  }
+
+  /* Hero 正常化 */
+  .hero,
+  .hero-ph {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 240px;
+  }
+
+  /* 🔥 核心：手机端 section 统一留边（已调好） */
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 80px 24px !important;   /* ← 关键修改点 */
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Greeting：竖排 → 横排 */
+  .greeting-head {
+    writing-mode: horizontal-tb !important;
+    text-orientation: initial !important;
+    display: block !important;
+    margin-bottom: 24px;
+  }
+
+  .greeting-head i {
+    display: none;
+  }
+
+  /* 强制单列，防止 grid 挤压 */
+  .greeting-wrap,
+  .about-wrap,
+  .company-wrap,
+  .work-wrap,
+  .news-grid {
+    display: block !important;
+  }
+@media screen and (max-width: 768px) {
+
+  /* ABOUT 图片跟随正文留边 */
+  .about-ph {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+}
+  /* 防止横向溢出 */
   html,
   body {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
   }
+}
 
-  * {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-
-  /* ==== 杀掉右侧竖排 ==== */
-  .side-fixed,
-  .side-scroll {
+}
+@media screen and (max-width: 768px) {
+  .pc-only {
     display: none !important;
   }
+}
+/* ===============================
+   SP HEADER – FINAL
+   手机端头部重构（不影响PC）
+================================ */
 
-  /* ==== Header ==== */
+@media screen and (max-width: 768px) {
+
+  /* header 本体 */
   .header {
     position: sticky;
     top: 0;
@@ -719,41 +812,55 @@ body {
     border-bottom: 1px solid #eee;
   }
 
+  /* header 内部布局 */
   .header-inner {
+    width: 100%;
     height: 56px;
     padding: 0 16px;
+    box-sizing: border-box;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  /* Logo */
+  /* logo */
+  .header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .header .logo img {
     height: 22px;
   }
 
   .header .logo span {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
+    letter-spacing: 0.04em;
   }
 
-  /* PC 导航隐藏 */
+  /* PC 导航在手机隐藏 */
   .nav {
     display: none !important;
   }
 
-  /* SNS 隐藏 */
+  /* SNS 在手机隐藏（下一步单独做） */
   .header-sns {
     display: none !important;
   }
 
-  /* ==== 汉堡 ==== */
+ /* ===============================
+   Mobile hamburger FIX (FINAL)
+=============================== */
+@media screen and (max-width: 768px) {
+
   .menu {
     display: block;
     width: 24px;
-    height: 18px;
+    height: 20px;              /* ← 比 18px 大 */
     position: relative;
-    cursor: pointer;
   }
 
   .menu span {
@@ -764,85 +871,58 @@ body {
     background: #111;
   }
 
-  .menu span:nth-child(1) { top: 0; }
-  .menu span:nth-child(2) { top: 8px; }
-  .menu span:nth-child(3) { top: 16px; }
-
-  /* ==== Section 基本整理 ==== */
-  .section {
-    padding: 80px 24px;
+  .menu span:nth-child(1) {
+    top: 2px;
   }
 
-  /* Grid → 单列 */
-  .greeting-wrap,
-  .about-wrap,
-  .company-wrap,
-  .work-wrap,
-  .news-grid {
-    display: block;
+  .menu span:nth-child(2) {
+    top: 9px;
   }
 
-  /* Greeting 竖排 → 横排 */
-  .greeting-head {
-    writing-mode: horizontal-tb;
-    display: block;
-    margin-bottom: 24px;
+  .menu span:nth-child(3) {
+    top: 16px;                /* ← 不用 bottom */
   }
 
-  .greeting-head i {
-    display: none;
-  }
-
-  /* Contact */
-  .section.contact form {
-    padding: 48px 24px;
-    width: 100%;
-  }
 }
 /* ===============================
-   MOBILE FIX – FINAL (NO HAMBURGER)
+   Mobile header padding fix
+=============================== */
+@media screen and (max-width: 768px) {
+
+  .header-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .menu {
+    margin-right: 4px; /* 防止贴边 */
+  }
+
+}
+/* ===============================
+   CONTACT FORM – SP WIDTH FIX
 ================================ */
 @media screen and (max-width: 768px) {
 
-  /* 禁止横向滚动 */
-  html, body {
+  .section.contact form {
+    padding: 48px 24px 56px;   /* ← 关键：手机端减小内边距 */
+  }
+
+  .section.contact input,
+  .section.contact textarea {
     width: 100%;
-    overflow-x: hidden;
   }
 
-  /* header */
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-  }
-
-  /* logo */
-  .logo {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  /* 顶部横向导航：手机直接隐藏 */
-  .nav {
-    display: none !important;
-  }
-
-  /* 🔥 关键：杀掉右侧竖排 */
-  .side-fixed {
-    display: none !important;
-  }
-
-  /* 所有 writing-mode 的东西一并清掉 */
-  * {
-    max-width: 100vw;
-  }
-
-  [style*="writing-mode"] {
-    display: none !important;
-  }
 }
-body {
-  background: red !important;
+/* ===============================
+   CONTACT FORM – SP OVERFLOW FIX
+================================ */
+@media screen and (max-width: 768px) {
+
+  .section.contact form {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* 🔥 关键 */
+  }
+
 }
