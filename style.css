@@ -142,7 +142,7 @@ body {
 ================================ */
 .hero-ph {
   height: 80vh;
-  background: url("./images/hero.jpg") center / cover no-repeat;
+  background: url("./images/logo-mark.png") center / contain no-repeat #eee;
   display: flex;
   align-items: center;
   justify-content: center;
