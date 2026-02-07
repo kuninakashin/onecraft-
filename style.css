@@ -720,75 +720,7 @@ body {
     margin: 5px 0;
   }
 }
-/* ===============================
-   SP HARD RESET (FINAL)
-   手机端最终稳定版（留白已修正）
-================================ */
-@media screen and (max-width: 768px) {
 
-  /* 装饰性固定元素移除 */
-  .side-fixed,
-  .side-scroll,
-  .hero-vertical {
-    display: none !important;
-    position: static !important;
-  }
-
-  /* Hero 正常化 */
-  .hero,
-  .hero-ph {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 240px;
-  }
-
-  /* 🔥 核心：手机端 section 统一留边（已调好） */
-  .section {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 80px 24px !important;   /* ← 关键修改点 */
-    margin: 0 !important;
-    box-sizing: border-box;
-  }
-
-  /* Greeting：竖排 → 横排 */
-  .greeting-head {
-    writing-mode: horizontal-tb !important;
-    text-orientation: initial !important;
-    display: block !important;
-    margin-bottom: 24px;
-  }
-
-  .greeting-head i {
-    display: none;
-  }
-
-  /* 强制单列，防止 grid 挤压 */
-  .greeting-wrap,
-  .about-wrap,
-  .company-wrap,
-  .work-wrap,
-  .news-grid {
-    display: block !important;
-  }
-@media screen and (max-width: 768px) {
-
-  /* ABOUT 图片跟随正文留边 */
-  .about-ph {
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-}
-  /* 防止横向溢出 */
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-}
 
 }
 @media screen and (max-width: 768px) {
