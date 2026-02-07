@@ -1027,7 +1027,14 @@ body {
     overflow-x: hidden;
   }
 
-  nav {
+  .site-nav {
     display: none;
+  }
+}
+
+/* ===== mobile side-fixed kill ===== */
+@media (max-width: 768px) {
+  .side-fixed {
+    display: none !important;
   }
 }
