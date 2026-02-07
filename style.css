@@ -320,12 +320,13 @@ body {
   color: #333;
 }
 
-/* images */
 .img-row {
   display: grid;
   gap: 20px;
-  margin-top: 56px;
+  margin: 56px auto 0;   /* 上 56px，左右居中 */
+  max-width: 900px;      /* 👈 控制整体大小 */
 }
+
 
 .col-4 { grid-template-columns: repeat(4, 1fr); }
 .col-3 { grid-template-columns: repeat(3, 1fr); }
