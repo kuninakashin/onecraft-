@@ -926,3 +926,63 @@ body {
   }
 
 }
+@media screen and (max-width: 767px) {
+
+  /* 联系表单整体容器 */
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;   /* 👈 关键：左右收回来 */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* 每一个输入框 */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+@media screen and (max-width: 767px) {
+
+  /* 表单外层 */
+  .contact-form {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  /* 所有输入框 */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+/* ===============================
+   CONTACT – SP FINAL FIX（唯一正确版）
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 表单本体（id 命中） */
+  #contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 48px 16px 56px;   /* 左右一定 ≤ section 的 24px */
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  /* 所有输入框 */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
