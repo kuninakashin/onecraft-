@@ -320,6 +320,7 @@ body {
   color: #333;
 }
 
+/* images */
 .img-row {
   display: grid;
   gap: 20px;
