@@ -963,3 +963,26 @@ body {
   }
 
 }
+/* ===============================
+   CONTACT – SP FINAL FIX（唯一正确版）
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 表单本体（id 命中） */
+  #contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 48px 16px 56px;   /* 左右一定 ≤ section 的 24px */
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  /* 所有输入框 */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
