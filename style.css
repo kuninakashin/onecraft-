@@ -945,3 +945,21 @@ body {
   }
 
 }
+@media screen and (max-width: 767px) {
+
+  /* 表单外层 */
+  .contact-form {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  /* 所有输入框 */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
