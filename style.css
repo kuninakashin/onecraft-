@@ -926,3 +926,22 @@ body {
   }
 
 }
+@media screen and (max-width: 767px) {
+
+  /* 联系表单整体容器 */
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;   /* 👈 关键：左右收回来 */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* 每一个输入框 */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
