@@ -291,7 +291,7 @@ body {
   display: block;
 }
 .about-image {
-  max-height: 500px;   /* 👈 关键：控制整体高度 */
+  max-height: 450px;   /* 👈 关键：控制整体高度 */
   overflow: hidden;    /* 👈 超出部分直接裁掉 */
 }
 /* ===============================
@@ -346,7 +346,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 
-  max-width: 700px;   /* ✅ 控制“整排”宽度 */
+  max-width: 750px;   /* ✅ 控制“整排”宽度 */
   margin: 40px auto 0;
 }
 .img-row img {
