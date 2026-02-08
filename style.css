@@ -430,7 +430,7 @@ body {
 .company-head {
   display: flex;
   gap: 48px;
-  margin-bottom: 80px;
+  margin-bottom: 32px; /* ← 原来 80px，收紧 */
 }
 
 .company-label {
