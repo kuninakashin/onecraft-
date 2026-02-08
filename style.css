@@ -288,7 +288,7 @@ body {
    ABOUT IMAGE SIZE CONTROL
 ================================ */
 .section.about .simple-item img {
-  max-height: 460px;        /* 👈 核心：控制“存在感” */
+  max-height: 480px;        /* 👈 核心：控制“存在感” */
   width: 100%;
   object-fit: cover;
 }
