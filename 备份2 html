@@ -28,8 +28,8 @@
 <header class="header">
   <div class="header-inner">
    <div class="logo">
-  <img src="images/logo-mark.png" alt="onecraft logo">
-  <span>OneCraft Inc.</span>
+   <img src="./images/logo.png" alt="onecraft logo">
+  <span>onecraft inc.</span>
 </div>
     <nav class="nav">
   <a href="#greeting">ご挨拶</a>
@@ -211,23 +211,30 @@
     </article>
 
     <!-- card 2 -->
-    <article class="news-card">
+   <article class="news-card">
        <div class="simple-item">
-   <img src="./images/11.jpg" alt="">
+    <img src="./images/11.jpg" alt="">
 </div>
-      <span class="news-date">2026年1月1日</span>
-      <h3 class="news-title">2026年！明けましておめでとうございます！</h3>
+      <span class="news-date">2026年1月21日-23日</span>
+      <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）</h3>
       <p class="news-text">
-        本年も変わらぬご愛顧のほど、よろしくお願い申し上げます…
+        いつもご愛顧いただき誠にありがとうございます。
       </p>
-      <a href="#" class="news-more">Read More</a>
+      <a
+  href="https://www.livent-expo.jp/hub/ja-jp/search/2026/directory/directory-details.株式会社ワンクラフト.org-774169cd-d0a2-4fe6-88cf-067ee8bfd770.html#/"
+  class="news-more"
+  target="_blank"
+  rel="noopener"
+>
+  Read More
+</a>
     </article>
 
     <!-- card 3 -->
     <article class="news-card">
        <div class="simple-item">
     <img src="./images/11.jpg" alt="">
-</div>>
+</div>
       <span class="news-date">2025年12月21日</span>
       <h3 class="news-title">年末年始の営業について</h3>
       <p class="news-text">
@@ -421,7 +428,7 @@
     </div>
 
     <!-- 右侧 -->
-    <img src="./images/logo-mark.png">
+     <img src="./images/logo.png">
 
   </div>
 
@@ -435,8 +442,11 @@
 
 
     <input type="text" name="name" placeholder="お名前" required>
+    
     <input type="text" name="company" placeholder="会社名">
+    
     <input type="email" name="email" placeholder="メールアドレス" required>
+    
     <input type="tel" name="phone" placeholder="電話番号">
 
     <textarea
@@ -515,7 +525,7 @@ async function handleSubmit() {
 
     <!-- LOGO -->
     <div class="footer-logo">
-      <img src="images/musubi-logo.png" alt="MUSUBI">
+        <img src="./images/logo.png">
     </div>
 
     <!-- COPY -->
