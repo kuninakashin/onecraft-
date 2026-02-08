@@ -175,7 +175,7 @@
 
     <!-- 右侧照片位置 -->
      <div class="simple-item">
- <img src="./images/logo-mark.png">
+    <img src="./images/11.jpg" alt="">
 </div>
 
   </div>
@@ -193,7 +193,7 @@
     <!-- card 1 -->
     <article class="news-card">
        <div class="simple-item">
- <img src="./images/logo-mark.png">
+    <img src="./images/11.jpg" alt="">
 </div>
       <span class="news-date">2026年1月21日-23日</span>
       <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）</h3>
@@ -213,7 +213,7 @@
     <!-- card 2 -->
     <article class="news-card">
        <div class="simple-item">
-  <img src="./images/logo-mark.png">
+   <img src="./images/11.jpg" alt="">
 </div>
       <span class="news-date">2026年1月1日</span>
       <h3 class="news-title">2026年！明けましておめでとうございます！</h3>
@@ -226,7 +226,7 @@
     <!-- card 3 -->
     <article class="news-card">
        <div class="simple-item">
- <img src="./images/logo-mark.png">
+    <img src="./images/11.jpg" alt="">
 </div>>
       <span class="news-date">2025年12月21日</span>
       <h3 class="news-title">年末年始の営業について</h3>
