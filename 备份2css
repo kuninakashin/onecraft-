@@ -269,9 +269,30 @@ body {
   gap: 60px;
 }
 
-.about-ph {
-  height: 420px;
-  background: #ddd;
+
+/* ===== ABOUT ===== */
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;   /* 👈 改这里 */
+}
+
+.about-image {
+  padding: 24px 0;   /* 👈 关键：让右图比文字略高 */
+  box-sizing: border-box;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-image {
+  max-height: 420px;    /* 👈 建议从 420 开始 */
+  overflow: hidden;
 }
 
 /* ===============================
@@ -326,7 +347,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 
-  max-width: 700px;   /* ✅ 控制“整排”宽度 */
+  max-width: 750px;   /* ✅ 控制“整排”宽度 */
   margin: 40px auto 0;
 }
 .img-row img {
@@ -410,6 +431,35 @@ body {
 }
 
 /* ===============================
+   NEWS
+================================ */
+
+/* 三个卡片 */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* 图的外框 */
+.news-thumb {
+  width: 100%;
+  height: 200px;          /* ✅ 控制图高度（关键） */
+  background: #f2f2f2;    /* 图没加载时也好看 */
+  overflow: hidden;
+}
+
+/* 图片本身 */
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* ✅ 裁切但不变形 */
+  display: block;
+}
+.news-grid {
+  max-width: 960px;   /* 👈 从现在的全屏 → 收紧 */
+  margin: 0 auto;
+}/* ===============================
    COMPANY
 ================================ */
 .section.company {
