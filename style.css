@@ -326,7 +326,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 
-  max-width: 800px;   /* ✅ 控制“整排”宽度 */
+  max-width: 650px;   /* ✅ 控制“整排”宽度 */
   margin: 40px auto 0;
 }
 .img-row img {
