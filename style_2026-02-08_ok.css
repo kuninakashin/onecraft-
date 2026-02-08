@@ -1,398 +1,617 @@
-/* =====================================
-   Global Reset / Base
-===================================== */
-* {
-  box-sizing: border-box;
+/* ===============================
+   BASE / GLOBAL
+================================ */
+html {
+  scroll-behavior: smooth;
+  background-color: #f7f7f7;
 }
 
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family:
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+  font-size: 15px;
+  line-height: 2.05;
+  letter-spacing: 0.04em;
   color: #111;
-  line-height: 2;
-  background: #fff;
+  background-color: #f7f7f7;
 }
 
-img {
-  max-width: 100%;
+/* ===============================
+   SIDE VERTICAL SCROLL (PC ONLY)
+================================ */
+.pc-only {
   display: block;
 }
 
-/* =====================================
-   Typography System（最终定稿）
-===================================== */
-
-/* 标题 */
-h1, h2, h3,
-.section-title,
-.company-head h2,
-.contact-title {
-  font-weight: 600;
-  letter-spacing: 0.04em;
+.side-fixed {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 32px;
+  overflow: hidden;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  color: rgba(0,0,0,0.45);
+  z-index: 20;
 }
 
-/* 正文 */
-p,
-.company-lead,
-.company-table th,
-.company-table td,
-.form-row label {
-  font-weight: 400;
-  letter-spacing: 0.02em;
+.side-fixed.left { left: 12px; }
+.side-fixed.right { right: 12px; }
+
+.side-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: sideScroll 18s linear infinite;
 }
 
-/* Header Navigation */
-.nav a {
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
+@keyframes sideScroll {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(-100%); }
 }
 
-/* =====================================
-   Header
-===================================== */
+/* ===============================
+   HEADER (PC)
+================================ */
 .header {
+  background: #fff;
   border-bottom: 1px solid #eee;
 }
 
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
-  text-align: center;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
 }
 
+/* LOGO */
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  height: 26px;
+}
+
+.header .logo span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* NAV */
 .nav {
-  margin-top: 16px;
   display: flex;
   justify-content: center;
-  gap: 32px;
+  align-items: center;
 }
 
-/* =====================================
-   Hero
-===================================== */
-.hero {
-  padding: 160px 24px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 32px;
-}
-
-.hero-sub {
+.nav a {
+  margin: 0 18px;
   font-size: 14px;
-  letter-spacing: 0.15em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #111;
+  text-decoration: none;
 }
 
-/* =====================================
-   About
-===================================== */
-.about {
+.nav a:hover {
+  opacity: 0.6;
+}
+
+/* SNS */
+.header-sns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-sns svg {
+  width: 20px;
+  height: 20px;
+  fill: #111;
+  transition: opacity 0.3s ease;
+}
+
+.header-sns a:hover svg {
+  opacity: 0.5;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero-ph {
+  height: 80vh;
+  background: url("./images/logo-mark.png") center / contain no-repeat #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-ph h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+/* ===============================
+   SECTION BASE
+================================ */
+.section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 160px 24px;
+  padding: 140px 0;
+  background: transparent;
 }
 
-.about-head {
+.section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 24px;
+}
+
+.section p {
+  margin-bottom: 1.6em;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===============================
+   GREETING
+================================ */
+.section.greeting {
+  padding: 140px 0;
+}
+
+.greeting-wrap {
+  display: grid;
+  grid-template-columns: 160px 120px 1fr;
+  gap: 48px;
+}
+
+.greeting-head {
+  writing-mode: vertical-rl;
   display: flex;
-  gap: 80px;
+  align-items: center;
+  gap: 12px;
+}
+
+.greeting-head .jp {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
+
+.greeting-head i {
+  width: 1px;
+  height: 88px;
+  background: #111;
+}
+
+.section.greeting .greeting-text {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 13.5px;
+  line-height: 2.15;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===============================
+   SIMPLE ITEM LIST
+================================ */
+.simple-item-list {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.simple-item-title {
+  text-align: center;
   margin-bottom: 80px;
 }
 
-.about-title {
+.simple-item-title .line {
+  width: 80px;
+  height: 1px;
+  background: #111;
+  margin: 0 auto 24px;
+}
+
+.simple-item-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.simple-item-title p {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #666;
+}
+
+.simple-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.simple-item img {
+  width: 100%;
+  display: block;
+}
+
+/* ===============================
+   ABOUT
+================================ */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.section.about p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 13.5px;
+  line-height: 2.15;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===============================
+   WORK (01–04)
+================================ */
+.work-wrap {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 60px;
+}
+
+.work-vertical {
+  writing-mode: vertical-rl;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.about-title .line {
-  width: 2px;
-  height: 40px;
+.work-vertical span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+}
+
+.work-vertical i {
+  width: 1px;
+  height: 140px;
   background: #111;
 }
 
-.about-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-}
-
-/* =====================================
-   Work
-===================================== */
-.work {
-  padding: 160px 24px;
-}
-
-.work-block {
-  max-width: 1100px;
-  margin: 0 auto 160px;
-}
-
-.work-block.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.work-block.split.reverse {
-  direction: rtl;
-}
-
-.work-block.split.reverse > * {
-  direction: ltr;
-}
-
-.num {
+.section.work .num {
   font-size: 64px;
-  color: #e5e5e5;
+  font-weight: 300;
+  color: #e3e3e3;
+  margin-bottom: 24px;
 }
 
-.work p {
-  font-size: 15px;
-  max-width: 520px;
+.section.work h2 {
+  font-size: 19px;
+  margin-bottom: 32px;
 }
 
-/* ===== Company Font Reset (match reference style) ===== */
-
-body {
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
-  color: #111;
-}
-
-/* 公司说明正文 */
-.company-lead {
-  font-size: 15px;
+.section.work p {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 13.5px;
   line-height: 2.1;
-  letter-spacing: 0.04em;
-  font-weight: 400;
-}
-
-/* 表格整体 */
-.company-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 60px;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-}
-
-/* 左侧项目名 */
-.company-table th {
-  text-align: left;
+  letter-spacing: 0.015em;
   font-weight: 500;
-  padding: 22px 20px 22px 0;
-  white-space: nowrap;
-  border-bottom: 1px solid #222;
-  vertical-align: top;
+  color: #444;
 }
 
-/* 右侧内容 */
-.company-table td {
-  padding: 22px 0;
-  border-bottom: 1px solid #ddd;
-  line-height: 1.9;
+/* images */
+.img-row {
+  display: grid;
+  gap: 16px;
+  max-width: 750px;
+  margin: 40px auto 0;
 }
 
-/* 电话番号那一行的字距微调 */
-.company-table td,
-.company-table th {
-  font-feature-settings: "palt";
+.col-4 { grid-template-columns: repeat(4, 1fr); }
+.col-3 { grid-template-columns: repeat(3, 1fr); }
+
+.img-row img {
+  width: 100%;
+  display: block;
 }
 
-/* =====================================
-   Contact
-===================================== */
-.contact {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 140px 20px 160px;
+/* ===============================
+   NEWS
+================================ */
+.section.news {
+  padding: 160px 0;
+}
+
+.news-head {
   text-align: center;
-}
-
-.contact-title {
-  font-size: 28px;
-  margin-bottom: 28px;
-}
-
-.contact-lead {
-  font-size: 14px;
   margin-bottom: 80px;
 }
 
-.contact-form {
-  text-align: left;
+.news-head h2 {
+  font-size: 20px;
+  letter-spacing: 0.08em;
 }
 
-.form-row {
-  margin-bottom: 36px;
+.news-head i {
+  width: 120px;
+  height: 1px;
+  background: #111;
+  margin: 16px auto 0;
 }
 
-.form-row label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 10px;
+.news-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-.required {
-  font-size: 11px;
-  background: #1b5fa7;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-left: 8px;
+.news-card {
+  font-size: 13.5px;
+  line-height: 2.1;
 }
 
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 14px 16px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-/* textarea 固定高度（最终） */
-.form-row textarea {
-  height: 260px;
-  min-height: 260px;
-  resize: none;
-  line-height: 1.9;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: #1b5fa7;
-}
-
-.form-privacy {
-  margin: 60px 0 32px;
-  font-size: 13px;
-}
-
-.form-note {
+.news-date {
   font-size: 12px;
-  color: #555;
+  color: #666;
+}
+
+.news-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.news-more {
+  font-size: 12px;
+  border: 1px solid #111;
+  padding: 6px 16px;
+  text-decoration: none;
+}
+
+/* ===============================
+   COMPANY
+================================ */
+.section.company {
+  padding: 160px 0;
+}
+
+.company-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 48px;
+  padding-left: 120px;
+}
+
+.company-head {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.company-label {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  padding-right: 14px;
+  position: relative;
+}
+
+.company-label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #111;
+}
+
+.section.company th,
+.section.company td {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 13.5px;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.section.contact {
+  background: #f7f7f7;
+}
+
+.section.contact form {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 100px 120px 120px;
+}
+
+.section.contact h2 {
   text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.12em;
   margin-bottom: 40px;
 }
 
-.submit-btn {
-  display: block;
-  width: 240px;
-  margin: 0 auto;
-  padding: 14px 0;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
+}
+
+.textarea-message {
+  min-height: 220px;
+}
+
+.contact .agree {
+  font-size: 13px;
+  margin: 40px 0;
+}
+
+.contact button {
+  width: 100%;
+  padding: 18px 0;
+  background: #111;
   color: #fff;
-  background: #1b5fa7;
+  font-size: 14px;
+  letter-spacing: 0.15em;
   border: none;
-  border-radius: 999px;
   cursor: pointer;
 }
 
-/* =====================================
-   Footer
-===================================== */
-.footer {
-  padding: 40px;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
+.contact button:hover {
+  opacity: 0.8;
 }
 
-/* =====================================
-   Responsive（Mobile）
-===================================== */
-@media (max-width: 768px) {
+/* ===============================
+   FOOTER
+================================ */
+.footer-credit {
+  background: #f7f7f7;
+  padding: 60px 0 50px;
+  text-align: center;
+}
 
-  .nav {
-    gap: 16px;
-    flex-wrap: wrap;
+.footer-logo img {
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+/* ===============================
+   SP (FINAL / ONLY ONE)
+================================ */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 14px;
   }
 
-  .hero {
-    padding: 96px 16px;
+  .pc-only {
+    display: none !important;
   }
 
-  .hero h1 {
-    font-size: 22px;
-    line-height: 1.7;
+  .section {
+    padding: 100px 24px;
   }
 
-  .about {
-    padding: 96px 16px;
+  /* HEADER */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
-  .about-head {
-    flex-direction: column;
-    gap: 24px;
+  .header-inner {
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .about-body {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .nav,
+  .header-sns {
+    display: none !important;
   }
 
-  .work {
-    padding: 96px 16px;
+  .menu {
+    width: 24px;
+    height: 20px;
+    position: relative;
   }
 
-  .work-block {
-    margin-bottom: 96px;
-  }
-
-  .work-block.split {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .num {
-    font-size: 40px;
-  }
-
-  .company {
-    padding: 96px 16px;
-  }
-
-  .company-inner {
-    flex-direction: column;
-  }
-
-  .company-left,
-  .company-logo {
+  .menu span {
+    position: absolute;
+    left: 0;
     width: 100%;
+    height: 2px;
+    background: #111;
   }
 
-  .company-logo {
-    margin-top: 48px;
+  .menu span:nth-child(1) { top: 2px; }
+  .menu span:nth-child(2) { top: 9px; }
+  .menu span:nth-child(3) { top: 16px; }
+
+  /* GRID RESET */
+  .greeting-wrap,
+  .about-wrap,
+  .company-wrap,
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
   }
 
-  .contact {
-    padding: 100px 16px 120px;
-  }
-
-  .contact-title {
-    font-size: 22px;
-  }
-
-  .contact-lead {
-    margin-bottom: 60px;
-  }
-
-  .form-row textarea {
-    height: 180px;
-    min-height: 180px;
+  /* CONTACT */
+  #contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 48px 16px 56px;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
