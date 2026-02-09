@@ -780,7 +780,14 @@ body {
   font-weight: 500;
 }
 @media screen and (max-width: 767px) {
+  /* 关掉 PC 左侧竖排 */
   .work-vertical {
     display: none;
   }
+
+  /* 打开手机用的竖排标题 */
+  .sp-vertical-label {
+    display: flex;
+  }
 }
+
