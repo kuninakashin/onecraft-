@@ -739,3 +739,13 @@ body {
   color: #444;
   font-weight: 500;
 }
+/* ===============================
+   COMPANY INFO – LINE SPACING TUNE
+   （仅收紧行距，不影响结构）
+================================ */
+
+.company-info th,
+.company-info td {
+  padding: 10px 0;     /* 原本视觉等效约 16px → 收紧 */
+  line-height: 1.9;    /* 信息块专用行距 */
+}
