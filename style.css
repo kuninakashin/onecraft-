@@ -667,3 +667,18 @@ body {
 .section.work:first-of-type {
   padding-top: 140px;
 }
+/* ===============================
+   GLOBAL BACKGROUND – OPTION 2
+   模块浮在浅灰底上
+================================ */
+
+/* 页面整体底色 */
+html,
+body {
+  background-color: #f2f2f2;
+}
+
+/* 所有 section 本身不再有底色 */
+.section {
+  background-color: transparent;
+}
