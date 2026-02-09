@@ -698,7 +698,10 @@ body {
 /* ===============================
    WORK 01–04 SPACING TIGHTEN
 ================================ */
-
+/* PC 上隐藏手机用的“私たちの仕事” */
+.sp-vertical-label {
+  display: none;
+}
 /* 每个 work 模块自身的上下间距 */
 .section.work {
   padding-top: 100px;   /* 原来是 140px */
