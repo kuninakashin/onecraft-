@@ -592,7 +592,18 @@ body {
   .section {
     padding: 100px 24px;
   }
+/* ===============================
+   WORK – SP RESET (01–04)
+   关闭 PC 左侧竖结构
+================================ */
 
+.work-wrap {
+  display: block;        /* 取消 grid */
+}
+
+.work-vertical {
+  display: none;         /* 直接隐藏竖标题 */
+}
   /* HEADER */
   .header {
     position: sticky;
