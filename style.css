@@ -705,3 +705,17 @@ body {
 .section.contact {
   padding-top: 90px;
 }
+/* ===============================
+   SECTION SPACING ADJUST
+   GREETING / CATEGORY
+================================ */
+
+/* ご挨拶 下方收紧 */
+.section.greeting {
+  padding-bottom: 100px;   /* 原 140px */
+}
+
+/* Category（simple-item-list）上方收紧 */
+.simple-item-list {
+  margin-top: 80px;        /* 原 120px */
+}
