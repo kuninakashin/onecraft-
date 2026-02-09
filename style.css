@@ -682,3 +682,26 @@ body {
 .section {
   background-color: transparent;
 }
+/* ===============================
+   SECTION SPACING ADJUST
+   ABOUT / NEWS / COMPANY / CONTACT
+================================ */
+
+/* ABOUT 与 NEWS 稍微收紧 */
+.section.about {
+  padding-bottom: 100px;   /* 原 140px */
+}
+
+.section.news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* 会社情報 与 お問い合わせ 再收紧一点 */
+.section.company {
+  padding-bottom: 90px;
+}
+
+.section.contact {
+  padding-top: 90px;
+}
