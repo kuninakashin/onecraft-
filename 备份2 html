@@ -29,7 +29,7 @@
   <div class="header-inner">
    <div class="logo">
    <img src="./images/logo.png" alt="onecraft logo">
-  <span>onecraft inc.</span>
+  <span>OneCraft Inc.</span>
 </div>
     <nav class="nav">
   <a href="#greeting">ご挨拶</a>
@@ -108,27 +108,27 @@
 
   <div class="simple-item-grid">
     <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/shirt1.jpg">
 </div>
 
     <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/shirt2.jpg">
 </div>
 
     <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/shirt3.jpg">
 </div>
 
     <div class="simple-item">
- <img src="./images/logo-mark.png">
+ <img src="./images/hoodie1.jpg">
 </div>
 
     <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/hoodie2.jpg">
 </div>
 
     <div class="simple-item">
- <img src="./images/logo-mark.png">
+ <img src="./images/totebag2.jpg">
 </div>
 
   </div>
@@ -175,7 +175,7 @@
 
     <!-- 右侧照片位置 -->
      <div class="simple-item">
-    <img src="./images/11.jpg" alt="">
+    <img src="./images/about.jpg" alt="">
 </div>
 
   </div>
@@ -193,10 +193,10 @@
     <!-- card 1 -->
     <article class="news-card">
        <div class="simple-item">
-    <img src="./images/11.jpg" alt="">
+    <img src="./images/live2027.png" alt="">
 </div>
-      <span class="news-date">2026年1月21日-23日</span>
-      <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）</h3>
+      <span class="news-date">2027年1月27日-29日</span>
+      <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）2027</h3>
       <p class="news-text">
         いつもご愛顧いただき誠にありがとうございます。
       </p>
@@ -213,10 +213,10 @@
     <!-- card 2 -->
    <article class="news-card">
        <div class="simple-item">
-    <img src="./images/11.jpg" alt="">
+    <img src="./images/live2026.png" alt="">
 </div>
       <span class="news-date">2026年1月21日-23日</span>
-      <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）</h3>
+      <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）2026</h3>
       <p class="news-text">
         いつもご愛顧いただき誠にありがとうございます。
       </p>
@@ -233,7 +233,7 @@
     <!-- card 3 -->
     <article class="news-card">
        <div class="simple-item">
-    <img src="./images/11.jpg" alt="">
+    <img src="./images/calendar2026.jpg" alt="">
 </div>
       <span class="news-date">2025年12月21日</span>
       <h3 class="news-title">年末年始の営業について</h3>
@@ -304,13 +304,13 @@
 
   <div class="img-row col-3">
      <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/business1.jpg">
 </div>
      <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/business2.jpg">
 </div>
      <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/business4.jpg">
 </div>
   </div>
 </section>
@@ -339,18 +339,16 @@
 ※短納期をご希望のお客様には。サンプル作成作業の短縮・簡略化を行います。
 
   </p>
-
-  <div class="img-row col-3">
+<div class="img-row col-3">
     <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/0401.png">
 </div>
      <div class="simple-item">
-  <img src="./images/logo-mark.png">
+  <img src="./images/0402.png">
 </div>
     <div class="simple-item">
- <img src="./images/logo-mark.png">
-</div>
-  </div>
+ <img src="./images/0403.png">
+    </div>
 </section>
 
 
@@ -372,21 +370,6 @@
 
   </p>
 
-  <div class="img-row col-4">
-    <div class="simple-item">
-  <img src="./images/logo-mark.png">
-</div>
-       <div class="simple-item">
-  <img src="./images/logo-mark.png">
-</div>
-   <div class="simple-item">
- <img src="./images/logo-mark.png">
-</div>
-
-     <div class="simple-item">
-  <img src="./images/logo-mark.png">
-</div>
-  </div>
 </section>
 
 
@@ -428,7 +411,7 @@
     </div>
 
     <!-- 右侧 -->
-     <img src="./images/logo.png">
+     <img src="./images/business5.jpg">
 
   </div>
 
@@ -525,7 +508,7 @@ async function handleSubmit() {
 
     <!-- LOGO -->
     <div class="footer-logo">
-        <img src="./images/logo.png">
+        <img src="./images/logoname.png">
     </div>
 
     <!-- COPY -->
