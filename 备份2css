@@ -653,3 +653,69 @@ body {
     display: block;
   }
 }
+/* ===============================
+   WORK 01–04 SPACING TIGHTEN
+================================ */
+
+/* 每个 work 模块自身的上下间距 */
+.section.work {
+  padding-top: 100px;   /* 原来是 140px */
+  padding-bottom: 100px;
+}
+
+/* 第一个 01 保持原来的上边距 */
+.section.work:first-of-type {
+  padding-top: 140px;
+}
+/* ===============================
+   GLOBAL BACKGROUND – OPTION 2
+   模块浮在浅灰底上
+================================ */
+
+/* 页面整体底色 */
+html,
+body {
+  background-color: #f2f2f2;
+}
+
+/* 所有 section 本身不再有底色 */
+.section {
+  background-color: transparent;
+}
+/* ===============================
+   SECTION SPACING ADJUST
+   ABOUT / NEWS / COMPANY / CONTACT
+================================ */
+
+/* ABOUT 与 NEWS 稍微收紧 */
+.section.about {
+  padding-bottom: 100px;   /* 原 140px */
+}
+
+.section.news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* 会社情報 与 お問い合わせ 再收紧一点 */
+.section.company {
+  padding-bottom: 90px;
+}
+
+.section.contact {
+  padding-top: 90px;
+}
+/* ===============================
+   SECTION SPACING ADJUST
+   GREETING / CATEGORY
+================================ */
+
+/* ご挨拶 下方收紧 */
+.section.greeting {
+  padding-bottom: 100px;   /* 原 140px */
+}
+
+/* Category（simple-item-list）上方收紧 */
+.simple-item-list {
+  margin-top: 80px;        /* 原 120px */
+}
