@@ -653,3 +653,17 @@ body {
     display: block;
   }
 }
+/* ===============================
+   WORK 01–04 SPACING TIGHTEN
+================================ */
+
+/* 每个 work 模块自身的上下间距 */
+.section.work {
+  padding-top: 100px;   /* 原来是 140px */
+  padding-bottom: 100px;
+}
+
+/* 第一个 01 保持原来的上边距 */
+.section.work:first-of-type {
+  padding-top: 140px;
+}
