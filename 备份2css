@@ -129,6 +129,18 @@ body {
 }
 
 /* ===============================
+   HEADER STICKY
+================================ */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+/* ===============================
    HERO
 ================================ */
 /* ===============================
@@ -562,7 +574,12 @@ body {
 /* ===============================
    SP (FINAL / ONLY ONE)
 ================================ */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {  
+   /* CATEGORY LABEL – SP */
+  .simple-item .item-label {
+    margin-top: 10px;
+    font-size: 12.5px;
+  }
 
   body {
     font-size: 14px;
@@ -647,12 +664,26 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+     .header {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  }
   .section.company img {
     max-width: 180px;
     margin: 32px auto 0;
     display: block;
   }
+
+/* ===============================
+   COMPANY INFO – LINE SPACING TUNE
+   （仅收紧行距，不影响结构）
+================================ */
+
+.company-info th,
+.company-info td {
+  padding: 10px 0;     /* 原本视觉等效约 16px → 收紧 */
+  line-height: 1.9;    /* 信息块专用行距 */
 }
+   
 /* ===============================
    WORK 01–04 SPACING TIGHTEN
 ================================ */
@@ -718,4 +749,19 @@ body {
 /* Category（simple-item-list）上方收紧 */
 .simple-item-list {
   margin-top: 80px;        /* 原 120px */
+}
+/* ===============================
+   CATEGORY ITEM LABEL
+================================ */
+
+.simple-item {
+  text-align: center;
+}
+
+.simple-item .item-label {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #444;
+  font-weight: 500;
 }
