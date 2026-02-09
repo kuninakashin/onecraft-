@@ -108,28 +108,34 @@
 
   <div class="simple-item-grid">
     <div class="simple-item">
-  <img src="./images/shirt1.jpg">
+  <img src="./images/totebag.jpg">
+  <p class="item-label">バッグ・ポーチ</p>
 </div>
+
+    <div class="simple-item">
+  <img src="./images/pc.jpg">
+       <p class="item-label">生活雑貨・PC スマートフォン関連</p>
+    </div>
 
     <div class="simple-item">
   <img src="./images/shirt2.jpg">
-</div>
-
-    <div class="simple-item">
-  <img src="./images/shirt3.png">
-</div>
+      <p class="item-label">アパレル</p>
+    </div>
 
     <div class="simple-item">
  <img src="./images/keyring.jpg">
+ <p class="item-label">小物・アクセリア</p>
 </div>
 
     <div class="simple-item">
   <img src="./images/hoodie2.jpg">
-</div>
+       <p class="item-label">パーカー</p>
+    </div>
 
     <div class="simple-item">
- <img src="./images/totebag2.jpg">
-</div>
+ <img src="./images/towel.jpg">
+       <p class="item-label">タオル</p>
+    </div>
 
   </div>
 
@@ -165,9 +171,6 @@
         製造は中国自社工場や協力工場と直接取引をしているので激安です。
         中国のものづくりの三大拠点である深圳や東莞等の広東省、
         義烏や南通等の浙江省・江蘇省と高密や即墨等の山東省に構えています。
-      </p>
-
-      <p>
         細かな仕様のご要望から小ロット生産の対応まで、
         自社工場ならではのオリジナルを行なっております。
       </p>
@@ -411,7 +414,7 @@
     </div>
 
     <!-- 右侧 -->
-     <img src="./images/business5.jpg">
+     <img src="./images/logoname.png">
 
   </div>
 
@@ -505,11 +508,6 @@ async function handleSubmit() {
 <!-- ========== FOOTER CREDIT ========== -->
 <footer class="footer-credit">
   <div class="footer-inner">
-
-    <!-- LOGO -->
-    <div class="footer-logo">
-        <img src="./images/logoname.png">
-    </div>
 
     <!-- COPY -->
     <p class="footer-copy">
