@@ -719,3 +719,18 @@ body {
 .simple-item-list {
   margin-top: 80px;        /* 原 120px */
 }
+/* ===============================
+   CATEGORY ITEM LABEL
+================================ */
+
+.simple-item {
+  text-align: center;
+}
+
+.simple-item .item-label {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #444;
+  font-weight: 500;
+}
