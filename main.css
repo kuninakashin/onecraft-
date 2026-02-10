@@ -786,71 +786,72 @@ body {
 }
    
 
-/* ===============================
+/* ======================================
    WORK TITLE – FINAL FIX (PC / SP)
-   ⭐ 最终定版
-================================ */
+   绑定在内容流中，不再漂移
+====================================== */
 
-/* ---------- PC ---------- */
+/* ===== PC ===== */
 @media screen and (min-width: 769px) {
 
-  /* 左侧竖排（唯一允许的标题） */
+  /* 左侧竖排（唯一标题） */
   .work-vertical {
     display: flex;
   }
 
-  /* 禁止手机用标题 */
+  /* 禁用手机标题 */
   .sp-vertical-label {
-    display: none !important;
+    display: none;
   }
 
-  /* 禁止任何横向标题 */
+  /* 禁止横向 h2 作为区块标题 */
   .section.work > h2 {
-    display: none !important;
+    display: none;
   }
 }
 
 
-/* ---------- SP / 手机 ---------- */
+/* ===== SP / 手机 ===== */
 @media screen and (max-width: 768px) {
 
-  /* 取消 PC grid 结构 */
+  /* 取消 grid */
   .work-wrap {
     display: block;
   }
 
-  /* 禁用 PC 左侧竖排 */
+  /* 隐藏 PC 左侧竖排 */
   .work-vertical {
     display: none;
   }
 
-  /* 数字 01 上方的竖排标题 */
+  /* ✅ 手机竖排标题：跟着 01 走 */
   .sp-vertical-label {
-    position: static;            /* ⭐ 不再漂浮 */
-    display: inline-flex;
-    flex-direction: row-reverse; /* ⭐ 线在右，字在左 */
-    align-items: flex-start;     /* ⭐ 从文字顶部对齐 */
-    gap: 10px;
+    display: flex;
+    flex-direction: row-reverse; /* 线在右 */
+    align-items: flex-start;
+    gap: 8px;
 
     writing-mode: vertical-rl;
+
+    margin-bottom: 16px; /* 和 01 的距离 */
+    margin-left: auto;   /* 推到右侧 */
+    width: fit-content;
 
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.32em;
     color: #111;
-
-    margin-bottom: 24px;         /* ⭐ 和 01 拉开距离 */
   }
 
   .sp-vertical-line {
     width: 1px;
-    height: 96px;
+    height: 80px;
     background: #111;
     display: block;
   }
 
-  /* 禁止横向标题 */
+  /* 禁止任何横向“私たちの仕事” */
   .section.work > h2 {
-    display: none !important;
+    display: none;
   }
 }
