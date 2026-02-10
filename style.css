@@ -821,54 +821,49 @@ body {
 }
    
 /* ===============================
-   WORK 01–04 SPACING TIGHTEN
+   WORK 01–04 SPACING
 ================================ */
-/* PC 上隐藏手机用的“私たちの仕事” */
-.sp-vertical-label {
-  display: block;
-}
 
-/* 每个 work 模块自身的上下间距 */
+/* 每个 work 模块间距 */
 .section.work {
-  padding-top: 100px;   /* 原来是 140px */
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
-/* 第一个 01 保持原来的上边距 */
+/* 第一个 work 保持原来更大的上边距 */
 .section.work:first-of-type {
   padding-top: 140px;
 }
+
 /* ===============================
-   GLOBAL BACKGROUND – OPTION 2
-   模块浮在浅灰底上
+   GLOBAL BACKGROUND
 ================================ */
 
-/* 页面整体底色 */
 html,
 body {
   background-color: #f2f2f2;
 }
 
-/* 所有 section 本身不再有底色 */
 .section {
   background-color: transparent;
 }
+
 /* ===============================
-   SECTION SPACING ADJUST
-   ABOUT / NEWS / COMPANY / CONTACT
+   OTHER SECTION SPACING
 ================================ */
 
-/* ABOUT 与 NEWS 稍微收紧 */
-.section.about {
-  padding-bottom: 100px;   /* 原 140px */
-}
-
-.section.news {
-  padding-top: 100px;
+.section.greeting {
   padding-bottom: 100px;
 }
 
-/* 会社情報 与 お問い合わせ 再收紧一点 */
+.section.about {
+  padding-bottom: 100px;
+}
+
+.section.news {
+  padding: 100px 0;
+}
+
 .section.company {
   padding-bottom: 90px;
 }
@@ -876,22 +871,9 @@ body {
 .section.contact {
   padding-top: 90px;
 }
-/* ===============================
-   SECTION SPACING ADJUST
-   GREETING / CATEGORY
-================================ */
 
-/* ご挨拶 下方收紧 */
-.section.greeting {
-  padding-bottom: 100px;   /* 原 140px */
-}
-
-/* Category（simple-item-list）上方收紧 */
-.simple-item-list {
-  margin-top: 80px;        /* 原 120px */
-}
 /* ===============================
-   CATEGORY ITEM LABEL
+   CATEGORY ITEM
 ================================ */
 
 .simple-item {
@@ -905,73 +887,70 @@ body {
   color: #444;
   font-weight: 500;
 }
-@media screen and (max-width: 767px) {
-  /* 关掉 PC 左侧竖排 */
-  .work-vertical {
-    display: none;
-  }
 
-  /* 打开手机用的竖排标题 */
-  .sp-vertical-label {
-    display: flex;
-  }
-}
-/* 🚑 强制修复：只让 img-row 里的图片等比 */
+/* ===============================
+   IMAGE SAFETY
+================================ */
+
 .img-row img {
   width: 100%;
-  max-width: none;
   height: auto;
 }
 
-/* 🚫 防止其他 img 被拉成背景 */
 section img {
   max-width: 100%;
   height: auto;
 }
+
 /* ===============================
-   WORK – SP FINAL FIX
+   WORK – SP RIGHT VERTICAL LABEL
+   （01 上方，右侧）
 ================================ */
 
 @media screen and (max-width: 768px) {
 
-  /* 🔥 手机端：彻底禁止侧边竖排 */
+  /* PC 左侧竖排彻底关闭 */
   .work-vertical {
     display: none !important;
   }
 
-  /* 🔥 禁止任何旧的 sp 竖排残留 */
-  .sp-vertical-label,
-  .sp-vertical-text,
-  .sp-vertical-line {
-    display: none !important;
-  }
+  /* 手机右侧竖排标题 */
+  .sp-vertical-label {
+    position: absolute;
+    right: 16px;
+    top: 140px;              /* ⭐ 在 01 上方 */
+    z-index: 20;
 
-  /* ✅ 只允许 01 上方这一套 */
-  .sp-work-label {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 24px;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 8px;
+
+    writing-mode: vertical-rl;
   }
 
-  .sp-work-text {
-    writing-mode: vertical-rl;
+  .sp-vertical-text {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.32em;
     color: #111;
-    margin-bottom: 10px;
   }
 
-  .sp-work-line {
+  .sp-vertical-line {
     width: 1px;
-    height: 80px;
+    height: 96px;
     background: #111;
   }
 }
+
 /* ===============================
-   ANCHOR OFFSET（修复导航跳转需刷新两次）
+   ANCHOR OFFSET FIX
+   （导航点击不再需要刷新两次）
 ================================ */
+
+html {
+  scroll-behavior: auto;
+}
 
 #greeting,
 #work,
@@ -980,16 +959,7 @@ section img {
 #contact {
   scroll-margin-top: 100px;
 }
-/* ===============================
-   ANCHOR FIX（防止需刷新两次）
-================================ */
 
-/* 关闭锚点的 smooth 行为 */
-html {
-  scroll-behavior: auto;
-}
-
-/* 用 offset 占位法处理固定 header */
 #greeting::before,
 #work::before,
 #news::before,
@@ -997,8 +967,7 @@ html {
 #contact::before {
   content: "";
   display: block;
-  height: 100px;      /* = header 高度 */
+  height: 100px;
   margin-top: -100px;
   visibility: hidden;
-  pointer-events: none;
 }
