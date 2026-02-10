@@ -954,3 +954,25 @@ section img {
 #contact {
   scroll-margin-top: 100px;
 }
+/* ===============================
+   ANCHOR FIX（防止需刷新两次）
+================================ */
+
+/* 关闭锚点的 smooth 行为 */
+html {
+  scroll-behavior: auto;
+}
+
+/* 用 offset 占位法处理固定 header */
+#greeting::before,
+#work::before,
+#news::before,
+#company::before,
+#contact::before {
+  content: "";
+  display: block;
+  height: 100px;      /* = header 高度 */
+  margin-top: -100px;
+  visibility: hidden;
+  pointer-events: none;
+}
