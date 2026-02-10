@@ -262,7 +262,13 @@
     </div>
 
     <!-- 右侧：01 内容 -->
-    <div class="work-main">
+     <div class="work-main">
+       <!-- 手机端：右侧竖排标题 -->
+  <div class="sp-vertical-label">
+    <span class="sp-vertical-text">私たちの仕事</span>
+    <span class="sp-vertical-line"></span>
+  </div>
+   
       <div class="num dot-gray">01</div>
 
       <h2>ワンクラフトのOEM生産の特徴</h2>
