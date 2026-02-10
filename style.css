@@ -242,13 +242,6 @@ body {
   margin-top: 28px;
 }
 
-/* ===============================
-   GREETING
-================================ */
-.section.greeting {
-  padding: 140px 0;
-}
-
 .greeting-wrap {
   display: grid;
   grid-template-columns: 160px 120px 1fr;
