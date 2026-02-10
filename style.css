@@ -234,7 +234,9 @@ body {
 
 /* 标题 ↔ 正文 */
 .section.work h2 {
-   /* 正文 → 图片（和正文同一左边线） */
+  margin-bottom: 32px;
+}
+
 .img-row {
   max-width: 1100px;      /* ⚠️ 先用 1100，不对我再帮你改 */
   margin-left: 0;
