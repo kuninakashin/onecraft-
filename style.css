@@ -643,6 +643,31 @@ body {
   .section {
     padding: 100px 24px;
   }
+   /* ===============================
+   SP：私たちの仕事（手机端标题修复）
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* 横向的「私たちの仕事」 */
+  .section.work > h2 {
+    display: block;
+    color: #111;                 /* 黑色 */
+    font-weight: 700;            /* 加粗 */
+    font-size: 18px;             /* 稍微稳一点 */
+    letter-spacing: 0.08em;
+
+    font-family:
+      "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN",
+      "Noto Sans JP",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+
+    margin-bottom: 16px;         /* 和 01 拉近 */
+  }
+
+}
 /* ===============================
    WORK – SP RESET (01–04)
    关闭 PC 左侧竖结构
