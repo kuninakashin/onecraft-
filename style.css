@@ -196,17 +196,17 @@ body {
 /* ご挨拶 */
 .section.greeting {
   padding-top: 100px;    /* 原 140 */
-  padding-bottom: 80px;  /* 原 100 */
+  padding-bottom: 56px;  /* 原 100 */
 }
 
 /* ABOUT */
 .section.about {
   padding-top: 64px;     /* 原 80 */
-  padding-bottom: 80px;  /* 原 100 */
+  padding-bottom: 56px;  /* 原 100 */
 }
 .section.work {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
 }
 
 .section.work:first-of-type {
@@ -214,15 +214,15 @@ body {
 }
 .section.news {
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
 }
 .section.company {
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
 }
 .section.contact {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
 }
 /* ===============================
    GREETING
