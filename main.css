@@ -81,7 +81,7 @@ body {
 }
 
 .header .logo img {
-  height: 32px;
+  height: 26px;
 }
 
 .header .logo span {
@@ -129,31 +129,11 @@ body {
 }
 
 /* ===============================
-   HEADER STICKY
-================================ */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-}
-
-/* ===============================
    HERO
-================================ */
-/* ===============================
-   HERO – MAIN VISUAL
 ================================ */
 .hero-ph {
   height: 80vh;
-  min-height: 520px;                 /* 👈 防止屏幕高时太扁 */
-  background-image: url("./images/top.jpg");
-  background-size: cover;            /* 👈 关键：铺满不变形 */
-  background-position: center center;
-  background-repeat: no-repeat;
-
+  background: url("./images/logo-mark.png") center / contain no-repeat #eee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +151,7 @@ body {
 .section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 0;
+  padding: 140px 0;
   background: transparent;
 }
 
@@ -189,50 +169,13 @@ body {
 .section p:last-child {
   margin-bottom: 0;
 }
-/* ===============================
-   SECTION SPACING – FINAL TUNE
-================================ */
 
-/* ご挨拶 */
+/* ===============================
+   GREETING
+================================ */
 .section.greeting {
-  padding-top: 100px;    /* 原 140 */
-  padding-bottom: 56px;  /* 原 100 */
+  padding: 140px 0;
 }
-
-/* ABOUT */
-.section.about {
-  padding-top: 64px;     /* 原 80 */
-  padding-bottom: 56px;  /* 原 100 */
-}
-.section.work {
-  padding-top: 64px;
-  padding-bottom: 80px;
-}
-
-.section.work:first-of-type {
-  padding-top: 120px;
-}
-.section.news {
-  padding-top: 100px;
-  padding-bottom: 56px;
-}
-.section.company {
-  padding-top: 100px;
-  padding-bottom: 56px;
-}
-.section.contact {
-  padding-top: 80px;
-  padding-bottom: 56px;
-}
-/* ===============================
-   WORK 01–04 – FINAL TIGHT CONTROL
-================================ */
-/* 01–04 数字 ↔ 标题 */
-.section.work .num {
-  margin-bottom: 8px;
-}
-
-/* 标题 ↔ 正文 */
 
 .greeting-wrap {
   display: grid;
@@ -341,14 +284,7 @@ body {
   font-weight: 500;
   color: #444;
 }
-/* ===============================
-   ABOUT IMAGE SIZE CONTROL
-================================ */
-.section.about .simple-item img {
-  max-height: 480px;        /* 👈 核心：控制“存在感” */
-  width: 100%;
-  object-fit: cover;
-}
+
 /* ===============================
    WORK (01–04)
 ================================ */
@@ -384,13 +320,19 @@ body {
   margin-bottom: 24px;
 }
 
-.work-main h2 {
+.section.work h2 {
   font-size: 19px;
   margin-bottom: 32px;
 }
 
 .section.work p {
-  font-family: ...;
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-size: 13.5px;
   line-height: 2.1;
   letter-spacing: 0.015em;
@@ -399,48 +341,20 @@ body {
 }
 
 /* images */
-
-/* ===============================
-   IMAGES – FINAL (ONLY ONE)
-================================ */
-
-/* WORK 01–04 images – FINAL MATCH */
-.section.work .img-row {
+.img-row {
   display: grid;
-  gap: 20px;
-
-  max-width: 820px;   /* ⭐ 关键：剪到和参考版一模一样的存在感 */
-  margin: 32px 0 0;  /* 左对齐，不居中 */
+  gap: 16px;
+  max-width: 750px;
+  margin: 40px auto 0;
 }
 
-.section.work .img-row.col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.section.work .img-row.col-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.section.work .img-row img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.img-row.col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.img-row.col-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
+.col-4 { grid-template-columns: repeat(4, 1fr); }
+.col-3 { grid-template-columns: repeat(3, 1fr); }
 
 .img-row img {
   width: 100%;
-  height: auto;
   display: block;
 }
-
 
 /* ===============================
    NEWS
@@ -516,7 +430,7 @@ body {
 .company-head {
   display: flex;
   gap: 48px;
-  margin-bottom: 32px; /* ← 原来 80px，收紧 */
+  margin-bottom: 80px;
 }
 
 .company-label {
@@ -552,19 +466,11 @@ body {
   letter-spacing: 0.015em;
   font-weight: 500;
   color: #444;
-
-  padding: 22px 0;   /* 👈 就加这一行 */
 }
 
 /* ===============================
    CONTACT
 ================================ */
-/* PC：隐藏 work 区域里的横向标题 */
-@media screen and (min-width: 769px) {
-  .section.work > h2 {
-    display: none;
-  }
-}
 .section.contact {
   background: #f7f7f7;
 }
@@ -639,12 +545,7 @@ body {
 /* ===============================
    SP (FINAL / ONLY ONE)
 ================================ */
-@media screen and (max-width: 768px) {  
-   /* CATEGORY LABEL – SP */
-  .simple-item .item-label {
-    margin-top: 10px;
-    font-size: 12.5px;
-  }
+@media screen and (max-width: 768px) {
 
   body {
     font-size: 14px;
@@ -657,43 +558,7 @@ body {
   .section {
     padding: 100px 24px;
   }
-   /* ===============================
-   SP：私たちの仕事（手机端标题修复）
-================================ */
-@media screen and (max-width: 768px) {
 
-  /* 横向的「私たちの仕事」 */
-  .section.work > h2 {
-    display: block;
-    color: #111;                 /* 黑色 */
-    font-weight: 700;            /* 加粗 */
-    font-size: 18px;             /* 稍微稳一点 */
-    letter-spacing: 0.08em;
-
-    font-family:
-      "Hiragino Sans",
-      "Hiragino Kaku Gothic ProN",
-      "Noto Sans JP",
-      -apple-system,
-      BlinkMacSystemFont,
-      sans-serif;
-
-    margin-bottom: 16px;         /* 和 01 拉近 */
-  }
-
-}
-/* ===============================
-   WORK – SP RESET (01–04)
-   关闭 PC 左侧竖结构
-================================ */
-
-.work-wrap {
-  display: block;        /* 取消 grid */
-}
-
-.work-vertical {
-  display: none;         /* 直接隐藏竖标题 */
-}
   /* HEADER */
   .header {
     position: sticky;
@@ -748,110 +613,5 @@ body {
     padding: 48px 16px 56px;
     margin: 0;
     box-sizing: border-box;
-  }
-}
-/* ===============================
-   COMPANY ALIGN FIX（精准对齐主标题）
-================================ */
-
-.company-info table {
-  margin-left: 76px; /* 👈 关键数值 */
-}
-.section.company img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  margin-top: 24px;
-}
-
-@media screen and (max-width: 768px) {
-     .header {
-    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-  }
-  .section.company img {
-    max-width: 180px;
-    margin: 32px auto 0;
-    display: block;
-  }
-
-/* ===============================
-   COMPANY INFO – LINE SPACING TUNE
-   （仅收紧行距，不影响结构）
-================================ */
-
-.company-info th,
-.company-info td {
-  padding: 10px 0;     /* 原本视觉等效约 16px → 收紧 */
-  line-height: 1.9;    /* 信息块专用行距 */
-}
-   
-
-/* ======================================
-   WORK TITLE – FINAL FIX (PC / SP)
-   绑定在内容流中，不再漂移
-====================================== */
-
-/* ===== PC ===== */
-@media screen and (min-width: 769px) {
-
-  /* 左侧竖排（唯一标题） */
-  .work-vertical {
-    display: flex;
-  }
-
-  /* 禁用手机标题 */
-  .sp-vertical-label {
-    display: none;
-  }
-
-  /* 禁止横向 h2 作为区块标题 */
-  .section.work > h2 {
-    display: none;
-  }
-}
-
-
-/* ===== SP / 手机 ===== */
-@media screen and (max-width: 768px) {
-
-  /* 取消 grid */
-  .work-wrap {
-    display: block;
-  }
-
-  /* 隐藏 PC 左侧竖排 */
-  .work-vertical {
-    display: none;
-  }
-
-  /* ✅ 手机竖排标题：跟着 01 走 */
-  .sp-vertical-label {
-    display: flex;
-    flex-direction: row-reverse; /* 线在右 */
-    align-items: flex-start;
-    gap: 8px;
-
-    writing-mode: vertical-rl;
-
-    margin-bottom: 16px; /* 和 01 的距离 */
-    margin-left: auto;   /* 推到右侧 */
-    width: fit-content;
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    color: #111;
-  }
-
-  .sp-vertical-line {
-    width: 1px;
-    height: 80px;
-    background: #111;
-    display: block;
-  }
-
-  /* 禁止任何横向“私たちの仕事” */
-  .section.work > h2 {
-    display: none;
   }
 }
