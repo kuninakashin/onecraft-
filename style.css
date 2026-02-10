@@ -241,6 +241,17 @@ body {
 .img-row {
   margin-top: 28px;
 }
+.img-row {
+  display: flex;
+  justify-content: flex-start; /* ← 关键：左对齐 */
+  margin-left: 0;
+  padding-left: 24px;          /* ← 和 section 的左右 padding 对齐 */
+  padding-right: 24px;
+}
+.img-row img {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .greeting-wrap {
   display: grid;
