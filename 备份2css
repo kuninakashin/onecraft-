@@ -234,23 +234,7 @@ body {
 
 /* 标题 ↔ 正文 */
 .section.work h2 {
-  margin-bottom: 20px;
-}
-
-/* 正文 ↔ 图片 */
-.img-row {
-  margin-top: 28px;
-}
-.img-row {
-  display: flex;
-  justify-content: flex-start; /* ← 关键：左对齐 */
-  margin-left: 0;
-  padding-left: 24px;          /* ← 和 section 的左右 padding 对齐 */
-  padding-right: 24px;
-}
-.img-row img {
-  margin-left: 0;
-  margin-right: 0;
+  margin-bottom: 32px;
 }
 
 .greeting-wrap {
@@ -424,20 +408,48 @@ body {
 }
 
 /* images */
-.img-row {
+
+/* ===============================
+   IMAGES – FINAL (ONLY ONE)
+================================ */
+
+/* WORK 01–04 images – FINAL MATCH */
+.section.work .img-row {
   display: grid;
-  gap: 16px;
-  max-width: 750px;
-  margin: 40px auto 0;
+  gap: 20px;
+
+  max-width: 820px;   /* ⭐ 关键：剪到和参考版一模一样的存在感 */
+  margin: 32px 0 0;  /* 左对齐，不居中 */
 }
 
-.col-4 { grid-template-columns: repeat(4, 1fr); }
-.col-3 { grid-template-columns: repeat(3, 1fr); }
+.section.work .img-row.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section.work .img-row.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section.work .img-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-row.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.img-row.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .img-row img {
   width: 100%;
+  height: auto;
   display: block;
 }
+
 
 /* ===============================
    NEWS
@@ -876,4 +888,16 @@ body {
   .sp-vertical-label {
     display: flex;
   }
+}
+/* 🚑 强制修复：只让 img-row 里的图片等比 */
+.img-row img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+/* 🚫 防止其他 img 被拉成背景 */
+section img {
+  max-width: 100%;
+  height: auto;
 }
