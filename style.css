@@ -789,134 +789,166 @@ body {
    WORK 01–04 SPACING（定版）
 ================================ */
 
-/* 每个 work 模块自身的上下间距 */
+/* ===============================
+   WORK (01–04) – BASE
+================================ */
+
+.work-wrap {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 60px;
+}
+
+/* PC 左侧竖排标题 */
+.work-vertical {
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.work-vertical span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+}
+
+.work-vertical i {
+  width: 1px;
+  height: 140px;
+  background: #111;
+}
+
+/* 编号 */
+.section.work .num {
+  font-size: 64px;
+  font-weight: 300;
+  color: #e3e3e3;
+  margin-bottom: 24px;
+}
+
+/* 标题 / 正文 */
+.work-main h2 {
+  font-size: 19px;
+  margin-bottom: 32px;
+}
+
+.section.work p {
+  font-size: 13.5px;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
+}
+
+
+/* ===============================
+   WORK IMAGES – FINAL
+================================ */
+
+.section.work .img-row {
+  display: grid;
+  gap: 20px;
+  max-width: 820px;
+  margin: 32px 0 0;
+}
+
+.section.work .img-row.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section.work .img-row.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section.work .img-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ===============================
+   WORK SECTION SPACING
+================================ */
+
 .section.work {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-/* 第一个 01 保持原来的上边距 */
 .section.work:first-of-type {
   padding-top: 140px;
 }
 
-/* ===============================
-   GLOBAL BACKGROUND
-================================ */
-
-html,
-body {
-  background-color: #f2f2f2;
-}
-
-.section {
-  background-color: transparent;
-}
-
-/* ===============================
-   SECTION SPACING ADJUST
-================================ */
-
-.section.about {
-  padding-bottom: 100px;
-}
-
-.section.news {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.section.company {
-  padding-bottom: 90px;
-}
-
-.section.contact {
-  padding-top: 90px;
-}
-
-.section.greeting {
-  padding-bottom: 100px;
-}
-
-.simple-item-list {
-  margin-top: 80px;
-}
-
-/* ===============================
-   CATEGORY ITEM LABEL
-================================ */
-
-.simple-item {
-  text-align: center;
-}
-
-.simple-item .item-label {
-  margin-top: 14px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  color: #444;
-  font-weight: 500;
-}
 
 /* ===============================
    IMAGE SAFETY
 ================================ */
-
-.img-row img {
-  width: 100%;
-  max-width: none;
-  height: auto;
-}
 
 section img {
   max-width: 100%;
   height: auto;
 }
 
-/* WORK images width */
-.section.work .img-row {
-  max-width: 820px;
-  margin-left: 0;
-  margin-right: auto;
-}
 
 /* ===============================
-   WORK TITLE – PC / SP FINAL CONTROL
+   WORK TITLE – PC / SP FINAL (ONLY)
    ⭐ 唯一生效规则（定版）
 ================================ */
 
-/* PC：显示左侧竖排，隐藏手机用 */
+/* ===== PC ===== */
 @media screen and (min-width: 769px) {
+
+  /* PC：显示左侧竖排 */
   .work-vertical {
     display: flex;
   }
 
+  /* PC：隐藏手机用标题 */
   .sp-vertical-label {
+    display: none;
+  }
+
+  /* PC：不允许横向“私たちの仕事” */
+  .section.work > h2 {
     display: none;
   }
 }
 
-/* 手机：显示右侧竖排 + 竖线 */
+
+/* ===== SP / 手机 ===== */
 @media screen and (max-width: 768px) {
+
+  /* 手机：取消 grid，纵向排列 */
+  .work-wrap {
+    display: block;
+  }
+
+  /* 手机：隐藏 PC 左侧竖排 */
   .work-vertical {
     display: none;
   }
 
+  /* 手机：右侧竖排标题（字左，线右） */
   .sp-vertical-label {
-    display: flex;
-    writing-mode: vertical-rl;
-    align-items: center;
-    gap: 12px;
-
     position: absolute;
-    right: 24px;
-    top: 140px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: row-reverse; /* ⭐ 线在右 */
+    align-items: center;
+    gap: 10px;
+
+    writing-mode: vertical-rl;
 
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.32em;
     color: #111;
-    z-index: 10;
+    z-index: 20;
   }
 
   .sp-vertical-line {
@@ -924,5 +956,10 @@ section img {
     height: 96px;
     background: #111;
     display: block;
+  }
+
+  /* 手机：禁止任何横向标题 */
+  .section.work > h2 {
+    display: none;
   }
 }
