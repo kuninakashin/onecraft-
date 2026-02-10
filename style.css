@@ -785,9 +785,6 @@ body {
   line-height: 1.9;    /* 信息块专用行距 */
 }
    
-/* ===============================
-   WORK 01–04 SPACING（定版）
-================================ */
 
 /* ===============================
    WORK (01–04) – BASE
@@ -797,9 +794,10 @@ body {
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 60px;
+  position: relative; /* ⭐ 给手机标题一个定位基准 */
 }
 
-/* PC 左侧竖排标题 */
+/* ===== PC 左侧竖排标题 ===== */
 .work-vertical {
   writing-mode: vertical-rl;
   display: flex;
@@ -819,7 +817,7 @@ body {
   background: #111;
 }
 
-/* 编号 */
+/* ===== 编号 01 ===== */
 .section.work .num {
   font-size: 64px;
   font-weight: 300;
@@ -827,7 +825,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* 标题 / 正文 */
+/* ===== 标题 / 正文 ===== */
 .work-main h2 {
   font-size: 19px;
   margin-bottom: 32px;
@@ -843,7 +841,7 @@ body {
 
 
 /* ===============================
-   WORK IMAGES – FINAL
+   WORK IMAGES
 ================================ */
 
 .section.work .img-row {
@@ -893,36 +891,37 @@ section img {
 
 
 /* ===============================
-   WORK TITLE – PC / SP FINAL (ONLY)
-   ⭐ 唯一生效规则（定版）
+   WORK TITLE – PC / SP FINAL
+   ⭐ 只有这一组规则生效
 ================================ */
 
 /* ===== PC ===== */
 @media screen and (min-width: 769px) {
 
-  /* PC：显示左侧竖排 */
+  /* PC：左侧竖排显示 */
   .work-vertical {
     display: flex;
   }
 
-  /* PC：隐藏手机用标题 */
+  /* PC：彻底隐藏手机用标题 */
   .sp-vertical-label {
-    display: none;
+    display: none !important;
   }
 
-  /* PC：不允许横向“私たちの仕事” */
+  /* PC：禁止任何横向“私たちの仕事” */
   .section.work > h2 {
     display: none;
   }
 }
 
 
-/* ===== SP / 手机 ===== */
+/* ===== 手机 SP ===== */
 @media screen and (max-width: 768px) {
 
-  /* 手机：取消 grid，纵向排列 */
+  /* 手机：结构改为纵向 */
   .work-wrap {
     display: block;
+    position: relative;
   }
 
   /* 手机：隐藏 PC 左侧竖排 */
@@ -930,32 +929,22 @@ section img {
     display: none;
   }
 
-  /* 手机：右侧竖排标题（字左，线右） */
+  /* ⭐ 手机：标题放在「01 上方」，不再并排正文 */
   .sp-vertical-label {
-  position: absolute;
-  right: 16px;
+    display: flex;
+    flex-direction: row-reverse; /* 线在右 */
+    align-items: flex-start;
+    gap: 10px;
 
-  /* ❌ 不要用居中算法 */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
+    writing-mode: vertical-rl;
 
-  /* ✅ 用内容基准定位（像参考图那样） */
-  top: 180px;
+    margin-bottom: 24px; /* ⭐ 和 01 拉开距离 */
 
-  display: flex;
-  flex-direction: row-reverse; /* ⭐ 竖线在文字右边 */
-  align-items: flex-start;     /* ⭐ 竖线从文字顶部开始 */
-  gap: 10px;
-
-  writing-mode: vertical-rl;
-
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.32em;
-  color: #111;
-  z-index: 20;
-}
-
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #111;
+  }
 
   .sp-vertical-line {
     width: 1px;
@@ -964,7 +953,7 @@ section img {
     display: block;
   }
 
-  /* 手机：禁止任何横向标题 */
+  /* 手机：彻底禁止横向标题 */
   .section.work > h2 {
     display: none;
   }
