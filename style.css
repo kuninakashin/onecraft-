@@ -911,3 +911,47 @@ section img {
     display: none;
   }
 }
+/* ===============================
+   WORK – 标题显示的最终控制
+================================ */
+
+/* PC：显示左侧竖排，隐藏手机用的 */
+@media screen and (min-width: 769px) {
+  .work-vertical {
+    display: flex;
+  }
+
+  .sp-vertical-label {
+    display: none;
+  }
+}
+
+/* 手机：显示右侧竖排 + 竖线 */
+@media screen and (max-width: 768px) {
+  .work-vertical {
+    display: none;
+  }
+
+  .sp-vertical-label {
+    display: flex;
+    writing-mode: vertical-rl;
+    align-items: center;
+    gap: 12px;
+
+    position: absolute;
+    right: 24px;
+    top: 140px;   /* 可以微调 */
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #111;
+  }
+
+  .sp-vertical-line {
+    width: 1px;
+    height: 96px;
+    background: #111;
+    display: block;
+  }
+}
