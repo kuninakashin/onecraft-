@@ -901,3 +901,44 @@ section img {
   max-width: 100%;
   height: auto;
 }
+/* ===============================
+   WORK – SP FINAL FIX
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* 🔥 手机端：彻底禁止侧边竖排 */
+  .work-vertical {
+    display: none !important;
+  }
+
+  /* 🔥 禁止任何旧的 sp 竖排残留 */
+  .sp-vertical-label,
+  .sp-vertical-text,
+  .sp-vertical-line {
+    display: none !important;
+  }
+
+  /* ✅ 只允许 01 上方这一套 */
+  .sp-work-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .sp-work-text {
+    writing-mode: vertical-rl;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #111;
+    margin-bottom: 10px;
+  }
+
+  .sp-work-line {
+    width: 1px;
+    height: 80px;
+    background: #111;
+  }
+}
