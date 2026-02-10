@@ -205,8 +205,8 @@ body {
   padding-bottom: 56px;  /* 原 100 */
 }
 .section.work {
-  padding-top: 80px;
-  padding-bottom: 56px;
+  padding-top: 64px;
+  padding-bottom: 80px;
 }
 
 .section.work:first-of-type {
