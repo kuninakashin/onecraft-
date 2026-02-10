@@ -644,7 +644,14 @@ body {
   letter-spacing: 0.05em;
   color: #555;
 }
-
+/* ===============================
+   SAFETY FUSE – PC 不显示手机竖排
+   ⚠️ 必须在所有 media 外
+================================ */
+.sp-vertical-label,
+.sp-vertical-line {
+  display: none;
+}
 /* ===============================
    SP (FINAL / ONLY ONE)
 ================================ */
