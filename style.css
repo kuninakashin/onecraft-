@@ -425,19 +425,11 @@ body {
 }
 
 /* images */
-.img-row {
-  display: grid;
-  gap: 16px;
-  max-width: 750px;
-  margin: 40px auto 0;
-}
+
 
 .col-4 { grid-template-columns: repeat(4, 1fr); }
 .col-3 { grid-template-columns: repeat(3, 1fr); }
 
-.img-row img {
-  width: 100%;
-  display: block;
 }
 
 /* ===============================
