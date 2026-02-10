@@ -943,3 +943,14 @@ section img {
     background: #111;
   }
 }
+/* ===============================
+   ANCHOR OFFSET（修复导航跳转需刷新两次）
+================================ */
+
+#greeting,
+#work,
+#news,
+#company,
+#contact {
+  scroll-margin-top: 100px;
+}
