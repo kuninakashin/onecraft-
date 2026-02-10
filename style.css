@@ -233,9 +233,6 @@ body {
 }
 
 /* 标题 ↔ 正文 */
-.section.work h2 {
-  margin-bottom: 32px;
-}
 
 .greeting-wrap {
   display: grid;
@@ -387,19 +384,13 @@ body {
   margin-bottom: 24px;
 }
 
-.section.work h2 {
+.work-main h2 {
   font-size: 19px;
   margin-bottom: 32px;
 }
 
 .section.work p {
-  font-family:
-    "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  font-family: ...;
   font-size: 13.5px;
   line-height: 2.1;
   letter-spacing: 0.015em;
