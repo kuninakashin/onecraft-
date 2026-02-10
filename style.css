@@ -901,3 +901,9 @@ section img {
   max-width: 100%;
   height: auto;
 }
+/* ===== WORK 01–04 IMAGE FINAL FIX ===== */
+.section.work .img-row {
+  max-width: 820px !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
