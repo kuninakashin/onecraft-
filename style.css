@@ -225,6 +225,24 @@ body {
   padding-bottom: 56px;
 }
 /* ===============================
+   WORK 01–04 – FINAL TIGHT CONTROL
+================================ */
+/* 01–04 数字 ↔ 标题 */
+.section.work .num {
+  margin-bottom: 12px;
+}
+
+/* 标题 ↔ 正文 */
+.section.work h2 {
+  margin-bottom: 20px;
+}
+
+/* 正文 ↔ 图片 */
+.img-row {
+  margin-top: 28px;
+}
+
+/* ===============================
    GREETING
 ================================ */
 .section.greeting {
