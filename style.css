@@ -907,3 +907,11 @@ section img {
   margin-left: 0 !important;
   margin-right: auto !important;
 }
+/* PC：隐藏手机用的横向「私たちの仕事」标题 */
+@media screen and (min-width: 769px) {
+  .section.work .sp-vertical-label,
+  .section.work .work-title-sp,
+  .section.work > .work-title {
+    display: none;
+  }
+}
