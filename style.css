@@ -932,24 +932,30 @@ section img {
 
   /* 手机：右侧竖排标题（字左，线右） */
   .sp-vertical-label {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  right: 16px;
 
-    display: flex;
-    flex-direction: row-reverse; /* ⭐ 线在右 */
-    align-items: center;
-    gap: 10px;
+  /* ❌ 不要用居中算法 */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
 
-    writing-mode: vertical-rl;
+  /* ✅ 用内容基准定位（像参考图那样） */
+  top: 180px;
 
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    color: #111;
-    z-index: 20;
-  }
+  display: flex;
+  flex-direction: row-reverse; /* ⭐ 竖线在文字右边 */
+  align-items: flex-start;     /* ⭐ 竖线从文字顶部开始 */
+  gap: 10px;
+
+  writing-mode: vertical-rl;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: #111;
+  z-index: 20;
+}
+
 
   .sp-vertical-line {
     width: 1px;
