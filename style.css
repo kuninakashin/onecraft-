@@ -648,12 +648,38 @@ body {
 /* ===============================
    SP (FINAL / ONLY ONE)
 ================================ */
-@media screen and (max-width: 768px) {  
-   /* CATEGORY LABEL – SP */
-  .simple-item .item-label {
-    margin-top: 10px;
-    font-size: 12.5px;
+@/* ===== 手机：01 上方竖排标题（最终版） ===== */
+@media screen and (max-width: 768px) {
+
+  .sp-vertical-label {
+    position: relative;        /* 不再 absolute，避免乱飞 */
+    margin-bottom: 24px;       /* 和 01 拉开距离 */
+    display: inline-flex;
+    flex-direction: row-reverse; /* 线在右，字在左 */
+    align-items: flex-start;
+    gap: 10px;
+
+    writing-mode: vertical-rl;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #111;
   }
+
+  .sp-vertical-line {
+    width: 1px;
+    height: 72px;
+    background: #111;
+    display: block;
+  }
+
+  /* 确保 01 在它下面 */
+  .num.dot-gray {
+    margin-top: 0;
+  }
+}
+
 
   body {
     font-size: 14px;
