@@ -876,4 +876,15 @@ body {
     display: flex;
   }
 }
+/* 🚑 强制修复：只让 img-row 里的图片等比 */
+.img-row img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
 
+/* 🚫 防止其他 img 被拉成背景 */
+section img {
+  max-width: 100%;
+  height: auto;
+}
