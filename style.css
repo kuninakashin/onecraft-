@@ -545,6 +545,12 @@ body {
 /* ===============================
    CONTACT
 ================================ */
+/* PC：隐藏 work 区域里的横向标题 */
+@media screen and (min-width: 769px) {
+  .section.work > h2 {
+    display: none;
+  }
+}
 .section.contact {
   background: #f7f7f7;
 }
