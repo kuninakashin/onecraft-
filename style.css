@@ -712,7 +712,7 @@ body {
   position: absolute;
   left: 120px;   /* 控制左右位置 */
   top: 40px;     /* 控制上下位置 */
-
+background: red;
   writing-mode: vertical-rl;
   font-weight: 700;
 }
