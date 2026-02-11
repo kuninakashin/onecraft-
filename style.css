@@ -519,7 +519,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 220px;
   gap: 48px;
-  padding-left: 120px;
+  
 }
 
 .company-head {
@@ -787,29 +787,6 @@ body {
     padding-left: 120px; /* 给左侧竖排留空间 */
   }
 
-  /* PC 左侧竖排标题 */
-  .section.work > h2 {
-    position: absolute;
-    left: 40px;       /* 固定左侧 */
-    top: 120px;       /* 每个section内部往下120px */
-
-    writing-mode: vertical-rl;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.25em;
-    color: rgba(0,0,0,0.5);
-  }
-
-  /* 竖线 */
-  .section.work > h2::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 110px;
-    background: #111;
-    margin-left: 8px;
-  }
-
 }
 /* ===== PC 左侧竖排不占版面 ===== */
 @media screen and (min-width: 769px) {
@@ -857,4 +834,10 @@ html, body {
     display: block;
   }
 
+}
+/* ===== FINAL WORK FIX ===== */
+@media screen and (min-width: 769px) {
+  .section.work {
+    padding-left: 0 !important;
+  }
 }
