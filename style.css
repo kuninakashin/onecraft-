@@ -782,11 +782,11 @@ body {
 
   .section.work > h2 {
     position: absolute;
-    left: 0;
-    top: 120px;
+    left: 80px;          /* ⭐ 修正 01 位置 */
+    top: 200px;          /* ⭐ 往下移动一点 */
     writing-mode: vertical-rl;
-    font-size: 14px;
     font-weight: 700;
+    font-size: 14px;
     letter-spacing: 0.25em;
     color: rgba(0,0,0,0.5);
   }
@@ -795,35 +795,9 @@ body {
     content: "";
     display: block;
     width: 1px;
-    height: 100px;
+    height: 120px;       /* ⭐ 竖线拉长 */
     background: #111;
     margin-left: 8px;
   }
-/* 手机右侧竖排标题 + 竖线 */
-.sp-vertical-label {
-  position: absolute;
-  right: 16px;
-  top: 140px;
-  z-index: 20;
 
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  gap: 8px;
-
-  writing-mode: vertical-rl;
-}
-
-.sp-vertical-text {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.32em;
-  color: #111;
-}
-
-.sp-vertical-line {
-  width: 1px;
-  height: 100px;
-  background: #111;
-}
 }
