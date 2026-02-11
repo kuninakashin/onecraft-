@@ -984,3 +984,25 @@ html, body {
   height: 300px;
   background: #111;
 }
+/* ===== MAGAZINE TITLE SMALLER FIX ===== */
+.magazine-title {
+  writing-mode: vertical-rl;
+  font-weight: 700;
+
+  font-size: 20px;      /* 原来太大，现在收敛 */
+  letter-spacing: 0.15em;
+
+  line-height: 1.8;
+}
+
+.magazine-line {
+  width: 1px;
+  height: 80px;         /* 竖线也缩短 */
+  background: #111;
+  margin-top: 20px;
+}
+
+.magazine-num {
+  font-size: 60px;      /* 背景02缩小 */
+  opacity: 0.08;        /* 更淡 */
+}
