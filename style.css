@@ -770,3 +770,34 @@ body {
   }
 
 }
+/* =========================================
+   PC WORK VERTICAL RESTORE
+========================================= */
+
+@media screen and (min-width: 769px) {
+
+  .section.work {
+    position: relative;
+  }
+
+  .section.work > h2 {
+    position: absolute;
+    left: 0;
+    top: 120px;
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: rgba(0,0,0,0.5);
+  }
+
+  .section.work > h2::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background: #111;
+    margin-left: 8px;
+  }
+
+}
