@@ -799,5 +799,31 @@ body {
     background: #111;
     margin-left: 8px;
   }
+/* 手机右侧竖排标题 + 竖线 */
+.sp-vertical-label {
+  position: absolute;
+  right: 16px;
+  top: 140px;
+  z-index: 20;
 
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 8px;
+
+  writing-mode: vertical-rl;
+}
+
+.sp-vertical-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: #111;
+}
+
+.sp-vertical-line {
+  width: 1px;
+  height: 100px;
+  background: #111;
+}
 }
