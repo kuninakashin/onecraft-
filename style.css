@@ -709,21 +709,28 @@ body {
 
 
   /* 横向的「私たちの仕事」 */
+   .section.work {
+    position: relative;
+}
 .section.work > h2 {
-  display: block;
-  color: #111;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.08em;
-  font-family:
-    "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP",
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+    position: absolute;
+    left: 80px;   /* 控制横向位置 */
+    top: 120px;   /* 控制纵向位置 */
+
+    writing-mode: vertical-rl;
+    font-weight: 700;
+}
+.section.work > h2::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background: #111;
+    margin-left: 8px;
 }
 
+
+  
 /* ===============================
    WORK – SP RESET (01–04)
    关闭 PC 左侧竖结构
