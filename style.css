@@ -652,17 +652,19 @@ body {
    SP (FINAL CLEAN VERSION)
 ================================ */
 
+/* ==================================================
+   SP FINAL VERSION (ONLY ONE – CLEAN)
+================================================== */
+
 @media screen and (max-width: 768px) {
 
-  /* ===============================
-     HEADER (手机)
-  =============================== */
+  /* ========== HEADER ========== */
 
   .header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   }
 
   .header-inner {
@@ -674,9 +676,7 @@ body {
   }
 
   .nav,
-  .header-sns,
-  .pc-only,
-  .work-vertical {
+  .header-sns {
     display: none !important;
   }
 
@@ -699,50 +699,56 @@ body {
   .menu span:nth-child(3) { top: 16px; }
 
 
-  /* ===============================
-     SECTION 基础
-  =============================== */
-
-  body {
-    font-size: 14px;
-  }
+  /* ========== SECTION BASE ========== */
 
   .section {
     padding: 100px 24px;
   }
 
+  .work-wrap {
+    display: block;
+  }
 
-  /* ===============================
-     WORK 手机版竖排标题
-  =============================== */
+  .work-vertical {
+    display: none !important;
+  }
+
+
+  /* ========== RIGHT VERTICAL LABEL (01~04) ========== */
 
   .section.work {
     position: relative;
-    padding-top: 140px;
-    padding-bottom: 100px;
   }
 
-  .section.work > h2 {
+  .sp-vertical-label {
     position: absolute;
     right: 16px;
     top: 120px;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 8px;
+
     writing-mode: vertical-rl;
-    font-weight: 700;
   }
 
-  .section.work > h2::after {
-    content: "";
-    display: block;
+  .sp-vertical-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #111;
+  }
+
+  .sp-vertical-line {
     width: 1px;
     height: 96px;
     background: #111;
-    margin-left: 8px;
   }
 
 
-  /* ===============================
-     GRID RESET
-  =============================== */
+  /* ========== GRID RESET ========== */
 
   .greeting-wrap,
   .about-wrap,
@@ -753,20 +759,7 @@ body {
   }
 
 
-  /* ===============================
-     COMPANY
-  =============================== */
-
-  .section.company img {
-    max-width: 180px;
-    margin: 32px auto 0;
-    display: block;
-  }
-
-
-  /* ===============================
-     CONTACT
-  =============================== */
+  /* ========== CONTACT ========== */
 
   #contact-form {
     width: 100%;
@@ -776,94 +769,4 @@ body {
     box-sizing: border-box;
   }
 
-}
-
-
-/* ===============================
-   COMPANY INFO SPACING
-================================ */
-
-.company-info th,
-.company-info td {
-  padding: 10px 0;
-  line-height: 1.9;
-}
-
-
-/* ===============================
-   WORK SPACING
-================================ */
-
-.section.work {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.section.work:first-of-type {
-  padding-top: 140px;
-}
-
-
-/* ===============================
-   GLOBAL BACKGROUND
-================================ */
-
-html,
-body {
-  background-color: #f2f2f2;
-}
-
-.section {
-  background-color: transparent;
-}
-
-
-/* ===============================
-   OTHER SECTION SPACING
-================================ */
-
-.section.greeting { padding-bottom: 100px; }
-.section.about { padding-bottom: 100px; }
-.section.news { padding: 100px 0; }
-.section.company { padding-bottom: 90px; }
-.section.contact { padding-top: 90px; }
-
-
-/* ===============================
-   IMAGE SAFETY
-================================ */
-
-.img-row img,
-section img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* ===============================
-   ANCHOR OFFSET FIX
-================================ */
-
-html {
-  scroll-behavior: auto;
-}
-
-#greeting,
-#work,
-#news,
-#company,
-#contact {
-  scroll-margin-top: 100px;
-}
-
-#greeting::before,
-#work::before,
-#news::before,
-#company::before,
-#contact::before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin-top: -100px;
-  visibility: hidden;
 }
