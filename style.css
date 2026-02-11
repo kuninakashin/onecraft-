@@ -695,43 +695,41 @@ body {
 ================================ */
 @media screen and (max-width: 768px) {
 
+  /* PC隐藏 */
   .pc-only {
     display: none !important;
   }
 
+  /* 通用section间距 */
   .section {
     padding: 100px 24px;
   }
 
+  /* ===============================
+     WORK - 手机版
+  =============================== */
 
-  /* 横向的「私たちの仕事」 */
-   .section.work {
+  .section.work {
     position: relative;
-}
-.section.work > h2 {
-  position: absolute;
-  left: 120px;   /* 控制左右位置 */
-  top: 40px;     /* 控制上下位置 */
-.section.work > h2 {
-  position: absolute;
-  left: 120px;
-  top: 40px;
-  writing-mode: vertical-rl;
-  font-weight: 700;
-  background: red;
-}
+  }
 
-  writing-mode: vertical-rl;
-  font-weight: 700;
-}
+  .section.work > h2 {
+    position: absolute;
+    right: 24px;      /* 靠右边 */
+    top: 120px;       /* 上下位置 */
+    writing-mode: vertical-rl;
+    font-weight: 700;
+  }
 
-.section.work > h2::after {
+  .section.work > h2::after {
     content: "";
     display: block;
     width: 1px;
     height: 100px;
     background: #111;
     margin-left: 8px;
+  }
+
 }
 
 
