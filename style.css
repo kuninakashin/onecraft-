@@ -655,7 +655,7 @@ body {
 /* ===============================
    SP (FINAL / ONLY ONE)
 ================================ */
-@/* ===== 手机：01 上方竖排标题（最终版） ===== */
+
 @media screen and (max-width: 768px) {
 
   .sp-vertical-label {
@@ -729,13 +729,6 @@ body {
    关闭 PC 左侧竖结构
 ================================ */
 
-.work-wrap {
-  display: block;        /* 取消 grid */
-}
-
-.work-vertical {
-  display: none;         /* 直接隐藏竖标题 */
-}
   /* HEADER */
   .header {
     position: sticky;
@@ -807,14 +800,27 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-     .header {
+
+  .header {
     box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   }
+
   .section.company img {
     max-width: 180px;
     margin: 32px auto 0;
     display: block;
   }
+
+  .work-wrap {
+    display: block;
+  }
+
+  .work-vertical {
+    display: none;
+  }
+
+}
+
 
 /* ===============================
    COMPANY INFO – LINE SPACING TUNE
