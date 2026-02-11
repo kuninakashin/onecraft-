@@ -897,3 +897,47 @@ html, body {
 .work-magazine .magazine-right {
   padding-top: 40px;
 }
+/* ===============================
+   MAGAZINE LAYOUT 02–04
+================================ */
+
+.work-magazine .magazine-wrap {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.work-magazine .magazine-left {
+  position: relative;
+}
+
+.work-magazine .magazine-num {
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.05);
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.work-magazine .magazine-title {
+  writing-mode: vertical-rl;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  line-height: 2.2;
+  position: relative;
+  z-index: 2;
+}
+
+.work-magazine .magazine-line {
+  width: 1px;
+  height: 140px;
+  background: #111;
+  margin-top: 20px;
+}
+
+.work-magazine .magazine-right h2 {
+  display: none;
+}
