@@ -692,19 +692,19 @@ body {
     font-size: 14px;
   }
 
-  .pc-only {
-    display: none !important;
-  }
+  
 
-  .section {
-    padding: 100px 24px;
-  }
    /* ===============================
    SP：私たちの仕事（手机端标题修复）
 ================================ */
 @media screen and (max-width: 768px) {
-
-  /* 横向的「私たちの仕事」 */
+.pc-only {
+    display: none !important;
+  }
+  .section {
+    padding: 100px 24px;
+  }
+   /* 横向的「私たちの仕事」 */
   .section.work > h2 {
     display: block;
     color: #111;                 /* 黑色 */
