@@ -811,3 +811,17 @@ body {
   }
 
 }
+/* ===== PC 左侧竖排不占版面 ===== */
+@media screen and (min-width: 769px) {
+
+  .section.work {
+    position: relative;
+  }
+
+  .work-vertical {
+    position: absolute;
+    left: 0;
+    top: 160px;
+  }
+
+}
