@@ -825,3 +825,12 @@ body {
   }
 
 }
+/* ===============================
+   LOGO RESPONSIVE FIX
+================================ */
+
+.company-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
