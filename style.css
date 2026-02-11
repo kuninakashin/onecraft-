@@ -771,31 +771,32 @@ body {
 
 }
 /* =========================================
-   PC WORK VERTICAL – CLEAN FIX
+   PC WORK VERTICAL FIX (SAFE VERSION)
 ========================================= */
 
 @media screen and (min-width: 769px) {
 
-  /* 手机专用结构在PC隐藏 */
+  /* 手机竖排结构在PC隐藏 */
   .sp-vertical-label {
     display: none !important;
   }
 
-  /* work 区块建立定位基准 */
+  /* 让每个 work section 保持正常文档流 */
   .section.work {
     position: relative;
   }
 
-  /* 左侧竖排标题 */
+  /* PC 左侧竖排标题 */
   .section.work > h2 {
-    position: absolute;
-    left: 0;                 /* 永远贴左 */
-    top: 160px;              /* 统一高度 */
     writing-mode: vertical-rl;
-    font-size: 14px;
     font-weight: 700;
+    font-size: 14px;
     letter-spacing: 0.25em;
     color: rgba(0,0,0,0.5);
+
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   /* 竖线 */
