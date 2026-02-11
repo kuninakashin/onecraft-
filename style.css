@@ -941,3 +941,46 @@ html, body {
 .work-magazine .magazine-right h2 {
   display: none;
 }
+/* ===== MAGAZINE LAYOUT FIX ===== */
+
+.work-magazine {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.work-magazine .magazine-wrap {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.work-magazine .magazine-left {
+  position: relative;
+}
+
+.work-magazine .magazine-num {
+  font-size: 110px;
+  color: rgba(0,0,0,0.08);
+  font-weight: 700;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.work-magazine .magazine-title {
+  writing-mode: vertical-rl;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-left: 60px;
+}
+
+.work-magazine .magazine-line {
+  position: absolute;
+  left: 120px;
+  top: 120px;
+  width: 1px;
+  height: 300px;
+  background: #111;
+}
