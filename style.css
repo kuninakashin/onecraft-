@@ -784,24 +784,10 @@ body {
   /* 每个 work 区块 */
   .section.work {
     position: relative;
-    padding-left: 120px; /* 给左侧竖排留空间 */
   }
 
 }
-/* ===== PC 左侧竖排不占版面 ===== */
-@media screen and (min-width: 769px) {
 
-  .section.work {
-    position: relative;
-  }
-
-  .work-vertical {
-    position: absolute;
-    left: 0;
-    top: 160px;
-  }
-
-}
 /* ===============================
    LOGO RESPONSIVE FIX
 ================================ */
