@@ -989,10 +989,10 @@ html, body {
   writing-mode: vertical-rl;
   font-weight: 700;
 
-  font-size: 20px;      /* 原来太大，现在收敛 */
+  font-size: 17px;      /* 原来太大，现在收敛 */
   letter-spacing: 0.15em;
 
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .magazine-line {
