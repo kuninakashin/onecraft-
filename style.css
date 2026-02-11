@@ -649,101 +649,20 @@ body {
   display: none;
 }
 /* ===============================
-   SP (FINAL / ONLY ONE)
+   SP (FINAL CLEAN VERSION)
 ================================ */
 
 @media screen and (max-width: 768px) {
-
-  .sp-vertical-label {
-    position: relative;        /* 不再 absolute，避免乱飞 */
-    margin-bottom: 24px;       /* 和 01 拉开距离 */
-    display: inline-flex;
-    flex-direction: row-reverse; /* 线在右，字在左 */
-    align-items: flex-start;
-    gap: 10px;
-
-    writing-mode: vertical-rl;
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    color: #111;
-  }
-
-  .sp-vertical-line {
-    width: 1px;
-    height: 72px;
-    background: #111;
-    display: block;
-  }
-
-  /* 确保 01 在它下面 */
-  .num.dot-gray {
-    margin-top: 0;
-  }
-}
-
-
-  body {
-    font-size: 14px;
-  }
-
-  
-
-   /* ===============================
-   SP：私たちの仕事（手机端标题修复）
-================================ */
-@media screen and (max-width: 768px) {
-
-  /* PC隐藏 */
-  .pc-only {
-    display: none !important;
-  }
-
-  /* 通用section间距 */
-  .section {
-    padding: 100px 24px;
-  }
 
   /* ===============================
-     WORK - 手机版
+     HEADER (手机)
   =============================== */
 
-  .section.work {
-    position: relative;
-  }
-
-  .section.work > h2 {
-    position: absolute;
-    right: 24px;      /* 靠右边 */
-    top: 120px;       /* 上下位置 */
-    writing-mode: vertical-rl;
-    font-weight: 700;
-  }
-
-  .section.work > h2::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 100px;
-    background: #111;
-    margin-left: 8px;
-  }
-
-}
-
-
-  
-/* ===============================
-   WORK – SP RESET (01–04)
-   关闭 PC 左侧竖结构
-================================ */
-
-  /* HEADER */
   .header {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   }
 
   .header-inner {
@@ -755,7 +674,9 @@ body {
   }
 
   .nav,
-  .header-sns {
+  .header-sns,
+  .pc-only,
+  .work-vertical {
     display: none !important;
   }
 
@@ -777,7 +698,52 @@ body {
   .menu span:nth-child(2) { top: 9px; }
   .menu span:nth-child(3) { top: 16px; }
 
-  /* GRID RESET */
+
+  /* ===============================
+     SECTION 基础
+  =============================== */
+
+  body {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 100px 24px;
+  }
+
+
+  /* ===============================
+     WORK 手机版竖排标题
+  =============================== */
+
+  .section.work {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .section.work > h2 {
+    position: absolute;
+    right: 16px;
+    top: 120px;
+    writing-mode: vertical-rl;
+    font-weight: 700;
+  }
+
+  .section.work > h2::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 96px;
+    background: #111;
+    margin-left: 8px;
+  }
+
+
+  /* ===============================
+     GRID RESET
+  =============================== */
+
   .greeting-wrap,
   .about-wrap,
   .company-wrap,
@@ -786,34 +752,10 @@ body {
     padding-left: 0;
   }
 
-  /* CONTACT */
-  #contact-form {
-    width: 100%;
-    max-width: 100%;
-    padding: 48px 16px 56px;
-    margin: 0;
-    box-sizing: border-box;
-  }
-}
-/* ===============================
-   COMPANY ALIGN FIX（精准对齐主标题）
-================================ */
 
-.company-info table {
-  margin-left: 76px; /* 👈 关键数值 */
-}
-.section.company img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  margin-top: 24px;
-}
-
-@media screen and (max-width: 768px) {
-
-  .header {
-    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-  }
+  /* ===============================
+     COMPANY
+  =============================== */
 
   .section.company img {
     max-width: 180px;
@@ -821,42 +763,46 @@ body {
     display: block;
   }
 
-  .work-wrap {
-    display: block;
-  }
 
-  .work-vertical {
-    display: none;
+  /* ===============================
+     CONTACT
+  =============================== */
+
+  #contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 48px 16px 56px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
 }
 
 
 /* ===============================
-   COMPANY INFO – LINE SPACING TUNE
-   （仅收紧行距，不影响结构）
+   COMPANY INFO SPACING
 ================================ */
 
 .company-info th,
 .company-info td {
-  padding: 10px 0;     /* 原本视觉等效约 16px → 收紧 */
-  line-height: 1.9;    /* 信息块专用行距 */
+  padding: 10px 0;
+  line-height: 1.9;
 }
-   
+
+
 /* ===============================
-   WORK 01–04 SPACING
+   WORK SPACING
 ================================ */
 
-/* 每个 work 模块间距 */
 .section.work {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-/* 第一个 work 保持原来更大的上边距 */
 .section.work:first-of-type {
   padding-top: 140px;
 }
+
 
 /* ===============================
    GLOBAL BACKGROUND
@@ -871,104 +817,31 @@ body {
   background-color: transparent;
 }
 
+
 /* ===============================
    OTHER SECTION SPACING
 ================================ */
 
-.section.greeting {
-  padding-bottom: 100px;
-}
+.section.greeting { padding-bottom: 100px; }
+.section.about { padding-bottom: 100px; }
+.section.news { padding: 100px 0; }
+.section.company { padding-bottom: 90px; }
+.section.contact { padding-top: 90px; }
 
-.section.about {
-  padding-bottom: 100px;
-}
-
-.section.news {
-  padding: 100px 0;
-}
-
-.section.company {
-  padding-bottom: 90px;
-}
-
-.section.contact {
-  padding-top: 90px;
-}
-
-/* ===============================
-   CATEGORY ITEM
-================================ */
-
-.simple-item {
-  text-align: center;
-}
-
-.simple-item .item-label {
-  margin-top: 14px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  color: #444;
-  font-weight: 500;
-}
 
 /* ===============================
    IMAGE SAFETY
 ================================ */
 
-.img-row img {
-  width: 100%;
-  height: auto;
-}
-
+.img-row img,
 section img {
   max-width: 100%;
   height: auto;
 }
 
-/* ===============================
-   WORK – SP RIGHT VERTICAL LABEL
-   （01 上方，右侧）
-================================ */
-
-@media screen and (max-width: 768px) {
-
-  /* PC 左侧竖排彻底关闭 */
-  .work-vertical {
-    display: none !important;
-  }
-
-  /* 手机右侧竖排标题 */
-  .sp-vertical-label {
-    position: absolute;
-    right: 16px;
-    top: 140px;              /* ⭐ 在 01 上方 */
-    z-index: 20;
-
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 8px;
-
-    writing-mode: vertical-rl;
-  }
-
-  .sp-vertical-text {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    color: #111;
-  }
-
-  .sp-vertical-line {
-    width: 1px;
-    height: 96px;
-    background: #111;
-  }
-}
 
 /* ===============================
    ANCHOR OFFSET FIX
-   （导航点击不再需要刷新两次）
 ================================ */
 
 html {
