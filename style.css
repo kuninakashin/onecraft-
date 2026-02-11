@@ -771,7 +771,7 @@ body {
 
 }
 /* =========================================
-   PC WORK VERTICAL FIX (SAFE VERSION)
+   PC WORK VERTICAL FIX (FINAL STABLE)
 ========================================= */
 
 @media screen and (min-width: 769px) {
@@ -781,22 +781,23 @@ body {
     display: none !important;
   }
 
-  /* 让每个 work section 保持正常文档流 */
+  /* 每个 work 区块 */
   .section.work {
     position: relative;
+    padding-left: 120px; /* 给左侧竖排留空间 */
   }
 
   /* PC 左侧竖排标题 */
   .section.work > h2 {
+    position: absolute;
+    left: 40px;       /* 固定左侧 */
+    top: 120px;       /* 每个section内部往下120px */
+
     writing-mode: vertical-rl;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.25em;
     color: rgba(0,0,0,0.5);
-
-    position: absolute;
-    left: 0;
-    top: 0;
   }
 
   /* 竖线 */
@@ -804,7 +805,7 @@ body {
     content: "";
     display: block;
     width: 1px;
-    height: 100px;
+    height: 110px;
     background: #111;
     margin-left: 8px;
   }
