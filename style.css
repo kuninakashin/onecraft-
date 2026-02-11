@@ -569,11 +569,7 @@ body {
    CONTACT
 ================================ */
 /* PC：隐藏 work 区域里的横向标题 */
-@media screen and (min-width: 769px) {
-  .section.work > h2 {
-    display: none;
-  }
-}
+
 .section.contact {
   background: #f7f7f7;
 }
@@ -713,13 +709,14 @@ body {
     position: relative;
 }
 .section.work > h2 {
-    position: absolute;
-    left: 80px;   /* 控制横向位置 */
-    top: 120px;   /* 控制纵向位置 */
+  position: absolute;
+  left: 120px;   /* 控制左右位置 */
+  top: 40px;     /* 控制上下位置 */
 
-    writing-mode: vertical-rl;
-    font-weight: 700;
+  writing-mode: vertical-rl;
+  font-weight: 700;
 }
+
 .section.work > h2::after {
     content: "";
     display: block;
