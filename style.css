@@ -858,3 +858,42 @@ html, body {
   }
 
 }
+/* ===============================
+   02 MAGAZINE STYLE
+================================ */
+
+.work-magazine .magazine-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.work-magazine .magazine-left {
+  position: relative;
+}
+
+.work-magazine .magazine-num {
+  font-size: 80px;
+  color: rgba(0,0,0,0.08);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.work-magazine .magazine-title {
+  writing-mode: vertical-rl;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+.work-magazine .magazine-line {
+  width: 1px;
+  height: 120px;
+  background: #111;
+  margin-top: 30px;
+}
+
+.work-magazine .magazine-right {
+  padding-top: 40px;
+}
