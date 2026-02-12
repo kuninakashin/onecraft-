@@ -1026,3 +1026,26 @@ html, body {
   background: #111;
   margin-top: 16px;
 }
+/* ===== MAGAZINE LAYOUT BALANCE FIX ===== */
+
+.magazine-wrap {
+  display: grid;
+  grid-template-columns: 160px 1fr;  /* 左边固定宽度 */
+  gap: 60px;
+  align-items: start;
+}
+
+.magazine-left {
+  width: 160px;        /* 给标题真正站的空间 */
+  position: relative;
+}
+
+.magazine-title {
+  margin-left: 10px;   /* 让字离竖线一点点 */
+}
+
+.magazine-line {
+  position: absolute;
+  left: 0;
+  top: 140px;          /* 线从标题下面开始 */
+}
