@@ -1065,3 +1065,28 @@ html, body {
 .magazine-title {
   margin-bottom: 6px;
 }
+/* ===== FIX NUMBER LAYER (01 / 02 被盖住) ===== */
+.magazine-num {
+  position: absolute;
+  left: -10px;      /* 控制数字露出来的位置，可微调 */
+  top: -40px;
+
+  font-size: 72px;
+  font-weight: 700;
+  color: #111;
+  opacity: 0.06;    /* 杂志感的淡灰 */
+
+  z-index: 0;       /* 在最底层当“水印” */
+  pointer-events: none;
+}
+
+/* 让标题层级在数字之上 */
+.magazine-title {
+  position: relative;
+  z-index: 2;
+}
+
+/* 左侧容器必须成为定位基准 */
+.magazine-left {
+  position: relative;
+}
