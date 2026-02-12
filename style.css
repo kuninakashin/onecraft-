@@ -1076,13 +1076,13 @@ html, body {
 }
 /* ===== FINAL FIX : MAGAZINE NUMBER SIZE ===== */
 .work-magazine .magazine-num {
-  font-size: 68px !important;   /* 控制 01 / 02 大小 */
+  font-size: 56px !important;   /* 控制 01 / 02 大小 */
   opacity: 0.08;
   font-weight: 700;
 }
 /* ===== FINAL FIX : MAGAZINE NUMBER SHOW ===== */
 .work-magazine .magazine-num {
-  font-size: 56px !important;   /* 数字大小 */
+  font-size: 68px !important;   /* 数字大小 */
   opacity: 0.12;                /* 现在太淡了，调回来 */
   font-weight: 700;
 
