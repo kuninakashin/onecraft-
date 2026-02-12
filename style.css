@@ -858,292 +858,63 @@ html, body {
   }
 
 }
-/* ===============================
-   02 MAGAZINE STYLE
-================================ */
+/* =========================================
+   MAGAZINE — FINAL OVERRIDE (ONLY THIS WORKS)
+   放在 style.css 最底部，用来统一覆盖前面所有旧写法
+========================================= */
 
-.work-magazine .magazine-wrap {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.work-magazine .magazine-left {
-  position: relative;
-}
-
-.work-magazine .magazine-num {
-  font-size: 80px;
-  color: rgba(0,0,0,0.08);
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.work-magazine .magazine-title {
-  writing-mode: vertical-rl;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-}
-
-.work-magazine .magazine-line {
-  width: 1px;
-  height: 120px;
-  background: #111;
-  margin-top: 30px;
-}
-
-.work-magazine .magazine-right {
-  padding-top: 40px;
-}
-/* ===============================
-   WORK — MAGAZINE STYLE (FINAL)
-================================ */
-
-.work-magazine {
-  padding: 140px 0;
-}
-
-.work-magazine .magazine-wrap {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.work-magazine .magazine-left {
-  position: relative;
+/* 左侧容器必须成为定位基准 */
+.work-magazine .magazine-left{
+  position: relative !important;
   width: 160px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.work-magazine .magazine-num {
-  position: absolute;
-  top: -8px;
-  left: -6px;
+/* 01 / 02 / 03 / 04 数字（水印） */
+.work-magazine .magazine-num{
+  display: block !important;
 
-  font-size: 48px;
-  font-weight: 700;
-  color: rgba(0,0,0,0.08);
+  position: absolute !important;
+  top: 4px !important;
+  left: 4px !important;
 
-  z-index: 1;
+  font-size: 44px !important;     /* ← 要改数字大小只改这里 */
+  font-weight: 700 !important;
+
+  color: rgba(0,0,0,0.10) !important;  /* ← 水印透明度 */
+  line-height: 1;
+
+  z-index: 1 !important;
   pointer-events: none;
 }
 
-.work-magazine .magazine-title {
+/* 竖排标题 */
+.work-magazine .magazine-title{
   writing-mode: vertical-rl;
-  font-size: 15px;
+
+  font-size: 15px !important;
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1.7;
 
   position: relative;
-  z-index: 2;
+  z-index: 2;   /* 压在数字上面 */
 }
 
-.work-magazine .magazine-line {
+/* 竖线 */
+.work-magazine .magazine-line{
   width: 1px;
   height: 110px;
   background: #111;
   margin-top: 18px;
 }
 
-.work-magazine .magazine-right h2 {
-  display: none;
-}
-
-.work-magazine .magazine-line {
-  width: 1px;
-  height: 140px;
-  background: #111;
-  margin-top: 20px;
-}
-
-.work-magazine .magazine-right h2 {
-  display: none;
-}
-/* ===== MAGAZINE LAYOUT FIX ===== */
-
-.work-magazine {
-  padding-top: 140px;
-  padding-bottom: 140px;
-}
-
-.work-magazine .magazine-wrap {
+/* 布局稳定 */
+.work-magazine .magazine-wrap{
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 100px;
+  grid-template-columns: 160px 1fr;
+  gap: 64px;
   align-items: start;
-}
-
-.work-magazine .magazine-left {
-  position: relative;
-}
-
-.work-magazine .magazine-num {
-  font-size: 46px;              /* 数字大小，已经调成合适比例 */
-  color: rgba(0,0,0,0.08);
-  font-weight: 700;
-
-  position: absolute;
-  top: 2px;                     /* 原来 -40px 把它推飞了 */
-  left: 6px;                    /* 给一点安全距离，不要贴边 */
-
-  z-index: 1;                   /* 在标题下面当水印 */
-}
-
-
-.work-magazine .magazine-title {
-  writing-mode: vertical-rl;
-  font-size: 15px;      /* ← 从18降到15，立刻优雅 */
-  font-weight: 700;
-  letter-spacing: 0.15em; /* 字距收一点 */
-  margin-left: 48px;      /* 往左收，别离线太远 */
-}
-
-
-.work-magazine .magazine-line {
-  position: absolute;
-  left: 120px;
-  top: 120px;
-  width: 1px;
-  height: 300px;
-  background: #111;
-}
-/* ===== MAGAZINE TITLE SMALLER FIX ===== */
-.magazine-title {
-  writing-mode: vertical-rl;
-  font-weight: 700;
-
-  font-size: 17px;      /* 原来太大，现在收敛 */
-  letter-spacing: 0.15em;
-
-  line-height: 1.6;
-}
-
-.magazine-line {
-  width: 1px;
-  height: 80px;         /* 竖线也缩短 */
-  background: #111;
-  margin-top: 20px;
-}
-
-/* ===== MAGAZINE NUMBER POSITION FIX ===== */
-.magazine-left {
-  position: relative;
-}
-
-.mag
-/* ===== MAGAZINE LEFT LAYOUT FIX ===== */
-.magazine-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 竖线不要再乱跑 */
-.magazine-line {
-  width: 1px;
-  height: 120px;
-  background: #111;
-  margin-top: 16px;
-}
-/* ===== MAGAZINE LAYOUT BALANCE FIX ===== */
-
-.magazine-wrap {
-  display: grid;
-  grid-template-columns: 160px 1fr;  /* 左边固定宽度 */
-  gap: 60px;
-  align-items: start;
-}
-
-.magazine-left {
-  width: 160px;        /* 给标题真正站的空间 */
-  position: relative;
-}
-
-.magazine-title {
-  margin-left: 10px;   /* 让字离竖线一点点 */
-}
-
-
-/* ===== FIX MAGAZINE LINE OVERLAP (02 被压字修正) ===== */
-
-/* 让左侧整体变成真正的纵向排版容器 */
-.magazine-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;   /* 取消旧 absolute 参考系 */
-}
-
-/* 关键：彻底取消旧版 absolute 定位 */
-.magazine-line {
-  position: static !important;   /* ← 把线放回正常文档流 */
-  margin-top: 28px;
-}
-
-/* 给标题一点空间，避免贴线 */
-.magazine-title {
-  margin-bottom: 6px;
-}
-
-
-/* 让标题层级在数字之上 */
-.magazine-title {
-  position: relative;
-  z-index: 2;
-}
-
-/* 左侧容器必须成为定位基准 */
-.magazine-left {
-  position: relative;
-}
-
-
-/* ===== FINAL FIX : MAGAZINE NUMBER SHOW ===== */
-.work-magazine .magazine-num {
-  font-size: 52px !important;   /* ← 控制 01 / 02 大小，就改这里 */
-  opacity: 0.08;                /* ← 再淡一点，更像水印 */
-  font-weight: 700;
-
-  position: absolute;
-  left: -14px;                  /* ← 往右一点，避免太贴边 */
-  top: -6px;                    /* ← 微微往下，对齐标题起点 */
-
-  z-index: 1;
-}
-
-.work-magazine .magazine-title {
-  position: relative;
-  z-index: 2;                   /* 标题压在数字上面 */
-}
-/* ===== FORCE SHOW 01–04 NUMBER (FINAL FIX) ===== */
-.work-magazine .magazine-left {
-  position: relative;
-}
-
-.work-magazine .magazine-num {
-  display: block !important;
-
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-
-  font-size: 48px !important;     /* 数字大小在这里改 */
-  font-weight: 700;
-  color: rgba(0,0,0,0.12);        /* 透明度 */
-
-  z-index: 1 !important;
-  pointer-events: none;
-}
-
-/* 标题压在数字上面 */
-.work-magazine .magazine-title {
-  position: relative;
-  z-index: 2;
 }
