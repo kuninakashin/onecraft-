@@ -1080,3 +1080,20 @@ html, body {
   opacity: 0.08;
   font-weight: 700;
 }
+/* ===== FINAL FIX : MAGAZINE NUMBER SHOW ===== */
+.work-magazine .magazine-num {
+  font-size: 68px !important;   /* 数字大小 */
+  opacity: 0.12;                /* 现在太淡了，调回来 */
+  font-weight: 700;
+
+  position: absolute;
+  left: -20px;                  /* 让它露出来一点 */
+  top: -10px;
+
+  z-index: 1;                   /* 关键：放到标题下面那层 */
+}
+
+.work-magazine .magazine-title {
+  position: relative;
+  z-index: 2;                   /* 标题压在数字上面 */
+}
