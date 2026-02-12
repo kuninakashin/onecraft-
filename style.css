@@ -1044,11 +1044,7 @@ html, body {
   margin-left: 10px;   /* 让字离竖线一点点 */
 }
 
-.magazine-line {
-  position: absolute;
-  left: 0;
-  top: 140px;          /* 线从标题下面开始 */
-}
+
 /* ===== FIX MAGAZINE LINE OVERLAP (02 被压字修正) ===== */
 
 /* 让左侧整体变成真正的纵向排版容器 */
