@@ -985,13 +985,17 @@ html, body {
 }
 
 .work-magazine .magazine-num {
-  font-size: 72px;
+  font-size: 46px;              /* 数字大小，已经调成合适比例 */
   color: rgba(0,0,0,0.08);
   font-weight: 700;
+
   position: absolute;
-  top: -40px;
-  left: 0;
+  top: 2px;                     /* 原来 -40px 把它推飞了 */
+  left: 6px;                    /* 给一点安全距离，不要贴边 */
+
+  z-index: 1;                   /* 在标题下面当水印 */
 }
+
 
 .work-magazine .magazine-title {
   writing-mode: vertical-rl;
