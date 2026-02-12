@@ -960,7 +960,7 @@ html, body {
 }
 
 .work-magazine .magazine-num {
-  font-size: 110px;
+  font-size: 72px;
   color: rgba(0,0,0,0.08);
   font-weight: 700;
   position: absolute;
@@ -970,11 +970,12 @@ html, body {
 
 .work-magazine .magazine-title {
   writing-mode: vertical-rl;
-  font-size: 18px;
+  font-size: 15px;      /* ← 从18降到15，立刻优雅 */
   font-weight: 700;
-  letter-spacing: 0.2em;
-  margin-left: 60px;
+  letter-spacing: 0.15em; /* 字距收一点 */
+  margin-left: 48px;      /* 往左收，别离线太远 */
 }
+
 
 .work-magazine .magazine-line {
   position: absolute;
