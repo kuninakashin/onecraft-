@@ -1078,15 +1078,15 @@ html, body {
 
 /* ===== FINAL FIX : MAGAZINE NUMBER SHOW ===== */
 .work-magazine .magazine-num {
-  font-size: 56px !important;   /* 数字大小 */
-  opacity: 0.12;                /* 现在太淡了，调回来 */
+  font-size: 52px !important;   /* ← 控制 01 / 02 大小，就改这里 */
+  opacity: 0.08;                /* ← 再淡一点，更像水印 */
   font-weight: 700;
 
   position: absolute;
-  left: -20px;                  /* 让它露出来一点 */
-  top: -10px;
+  left: -14px;                  /* ← 往右一点，避免太贴边 */
+  top: -6px;                    /* ← 微微往下，对齐标题起点 */
 
-  z-index: 1;                   /* 关键：放到标题下面那层 */
+  z-index: 1;
 }
 
 .work-magazine .magazine-title {
