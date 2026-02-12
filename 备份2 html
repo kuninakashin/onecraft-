@@ -258,67 +258,69 @@
 </section>
 
 <!-- ========== 01 ========== -->
-<section class="section work" id="work" style="position: relative;">
+<section class="section work work-magazine">
 
-  <div class="work-wrap">
+  <div class="magazine-wrap">
 
-  <!-- PC 左侧竖排（不动） -->
-  <div class="work-vertical">
-    <span>私たちの仕事</span>
-    <i></i>
-  </div>
+    <div class="magazine-left">
+      <div class="magazine-num">01</div>
 
-  <!-- 右侧内容 -->
-  <div class="work-main">
+      <div class="magazine-title">
+        ワンクラフトのOEM生産の特徴
+      </div>
 
-    <!-- ✅ 手机专用：01 上面的竖排标题 -->
-    <div class="sp-vertical-label">
-      <span class="sp-vertical-text">私たちの仕事</span>
-      <span class="sp-vertical-line"></span>
+      <div class="magazine-line"></div>
     </div>
 
-    <!-- 01 -->
-   
-      <div class="num dot-gray">01</div>
-
-      <h2>ワンクラフトのOEM生産の特徴</h2>
+    <div class="magazine-right">
 
       <p>
         当社では、お客様のご要望に応じて、
-
-オリジナルグッズ（ライブコンサートグッズ・キャラクターグッズ）やノベルティ、販促品など、
-様々な商品をオーダーメイドで完全オリジナル製作の業務を行なっております。
- <p>
-製造は中国工場と直接取引をしているので激安です。
-中国のものづくりの三大拠点である深圳や東莞等の広東省、
-義烏や南通等の浙江省・江蘇省と高密や即墨等の山東省に構えています。
- <p>
-細かな仕様のご要望から小ロット生産の対応まで、自社工場ならではのオリジナルを行っております。「自社生産」、「工場直売」、中間業者を一切排除し、様々なノベルティや販促グッズを一貫して行なっているため、
-短納期、小ロット、圧倒的な安さで商品をお届けします。私たちはお客様のどうのようなニーズにもお答えできるように生産体制を整えて、日々精進してまいります。
-
+        オリジナルグッズ（ライブコンサートグッズ・キャラクターグッズ）やノベルティ、販促品など、
+        様々な商品をオーダーメイドで完全オリジナル製作の業務を行なっております。
       </p>
 
-        <div class="img-row col-4">
-     <div class="simple-item">
-  <img src="./images/6.jpg">
-</div>
-     <div class="simple-item">
-  <img src="./images/7.jpg">
-</div>
-     <div class="simple-item">
-  <img src="./images/11.jpg">
-</div>
-      <div class="simple-item">
-  <img src="./images/13.jpg">
-</div>
+      <p>
+        製造は中国工場と直接取引をしているので激安です。
+        中国のものづくりの三大拠点である深圳や東莞等の広東省、
+        義烏や南通等の浙江省・江蘇省と高密や即墨等の山東省に構えています。
+      </p>
 
-</div>
+      <p>
+        細かな仕様のご要望から小ロット生産の対応まで、自社工場ならではのオリジナルを行っております。
+        「自社生産」、「工場直売」、中間業者を一切排除し、
+        短納期、小ロット、圧倒的な安さで商品をお届けします。
+      </p>
+
+      <div class="img-row col-4">
+        <div class="simple-item"><img src="./images/6.jpg"></div>
+        <div class="simple-item"><img src="./images/7.jpg"></div>
+        <div class="simple-item"><img src="./images/11.jpg"></div>
+        <div class="simple-item"><img src="./images/13.jpg"></div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- ========== 02 ========== -->
-<section class="section work">
-  <div class="num dot-blue">02</div>
-  <h2>低価格、短納期、小ロットから対応できるその理由とは……</h2>
+<section class="section work work-magazine">
+  <div class="magazine-wrap">
+
+    <div class="magazine-left">
+      <div class="magazine-num">02</div>
+      <div class="magazine-title">
+  低価格、短納期、ロットから対応できる<br>
+  その理由とは……
+</div>
+
+      <div class="magazine-line"></div>
+    </div>
+
+    <div class="magazine-right">
+
 
   <p>
    通常ノベルティ業者の場合、多くの代理店や商社、貿易会社などを経由することにより、中間コストが大きく発生してしまいます。
