@@ -1118,3 +1118,28 @@ html, body {
   position: relative;
   z-index: 2;                   /* 标题压在数字上面 */
 }
+/* ===== FORCE SHOW 01–04 NUMBER (FINAL FIX) ===== */
+.work-magazine .magazine-left {
+  position: relative;
+}
+
+.work-magazine .magazine-num {
+  display: block !important;
+
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  font-size: 48px !important;     /* 数字大小在这里改 */
+  font-weight: 700;
+  color: rgba(0,0,0,0.12);        /* 透明度 */
+
+  z-index: 1 !important;
+  pointer-events: none;
+}
+
+/* 标题压在数字上面 */
+.work-magazine .magazine-title {
+  position: relative;
+  z-index: 2;
+}
