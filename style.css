@@ -1082,7 +1082,7 @@ html, body {
 }
 /* ===== FINAL FIX : MAGAZINE NUMBER SHOW ===== */
 .work-magazine .magazine-num {
-  font-size: 68px !important;   /* 数字大小 */
+  font-size: 56px !important;   /* 数字大小 */
   opacity: 0.12;                /* 现在太淡了，调回来 */
   font-weight: 700;
 
