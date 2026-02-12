@@ -1074,3 +1074,9 @@ html, body {
 .magazine-left {
   position: relative;
 }
+/* ===== FINAL FIX : MAGAZINE NUMBER SIZE ===== */
+.work-magazine .magazine-num {
+  font-size: 68px !important;   /* 控制 01 / 02 大小 */
+  opacity: 0.08;
+  font-weight: 700;
+}
