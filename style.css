@@ -918,3 +918,26 @@ html, body {
   gap: 64px;
   align-items: start;
 }
+/* ===============================
+   FIX 03–04 NUMBER LOOK LIKE 01–02
+   （只修字形，不动布局）
+================================ */
+
+/* 找到 03、04 里的数字 class（它们现在不是 magazine-num） */
+.work:nth-of-type(3) .work-num,
+.work:nth-of-type(4) .work-num {
+  font-weight: 700;                 /* 和01/02一致粗度 */
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    sans-serif;                     /* 强制同一字体栈 */
+
+  -webkit-font-smoothing: antialiased;  /* 关键：变圆润 */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  letter-spacing: 0.02em;           /* 微调，让它不显细 */
+}
