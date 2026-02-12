@@ -1002,10 +1002,6 @@ html, body {
   margin-top: 20px;
 }
 
-.magazine-num {
-  font-size: 60px;      /* 背景02缩小 */
-  opacity: 0.08;        /* 更淡 */
-}
 /* ===== MAGAZINE NUMBER POSITION FIX ===== */
 .magazine-left {
   position: relative;
