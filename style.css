@@ -1049,3 +1049,23 @@ html, body {
   left: 0;
   top: 140px;          /* 线从标题下面开始 */
 }
+/* ===== FIX MAGAZINE LINE OVERLAP (02 被压字修正) ===== */
+
+/* 让左侧整体变成真正的纵向排版容器 */
+.magazine-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;   /* 取消旧 absolute 参考系 */
+}
+
+/* 关键：彻底取消旧版 absolute 定位 */
+.magazine-line {
+  position: static !important;   /* ← 把线放回正常文档流 */
+  margin-top: 28px;
+}
+
+/* 给标题一点空间，避免贴线 */
+.magazine-title {
+  margin-bottom: 6px;
+}
