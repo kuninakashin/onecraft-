@@ -941,3 +941,24 @@ html, body {
 
   letter-spacing: 0.02em;           /* 微调，让它不显细 */
 }
+/* ===============================
+   FIX 03 / 04 NUMBER STYLE
+   让它和 01 / 02 字体质感完全一致
+================================ */
+
+.section.work .num {
+  font-weight: 700;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  letter-spacing: 0.02em;
+}
