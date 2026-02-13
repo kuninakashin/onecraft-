@@ -1023,3 +1023,11 @@ html, body {
   font-size: 15px;
   letter-spacing: 0.06em;
 }
+.company-lead {
+  font-size: 15px;
+  line-height: 2.2;
+  color: #333;
+  letter-spacing: 0.08em;
+  margin-bottom: 80px;
+  width: 520px;
+}
