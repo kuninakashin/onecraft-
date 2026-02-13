@@ -877,18 +877,27 @@ html, body {
   display: block !important;
 
   position: absolute !important;
-  top: 0px !important;      /* 原来是 -12px → 改成 0 */
-  left: 0px !important;     /* 原来是 4px → 改成 0 */
+  top: 0 !important;
+  left: 0 !important;
+
+  /* 和 01 完全统一 ↓↓↓ */
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
 
   font-size: 44px !important;
   font-weight: 700 !important;
 
   color: rgba(0,0,0,0.10) !important;
-  line-height: 1.2;         /* 原来是 1 → 改 1.2（很重要） */
+
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
 
   z-index: 1 !important;
   pointer-events: none;
 }
+
 
 
 /* 竖排标题 */
