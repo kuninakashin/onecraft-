@@ -1018,7 +1018,8 @@ html, body {
   margin: 0 26px;
 }
 .company-text {
-  width: 420px;
+  flex: 1;
+  width: auto;
   font-size: 15px;
   letter-spacing: 0.06em;
 }
