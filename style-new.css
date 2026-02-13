@@ -957,7 +957,7 @@ html, body {
     sans-serif !important;
 
   font-weight: 700 !important;
-  font-size: 70px !important;   /* ← 这里控制 01/02 大小 */
+  font-size: 44px !important;   /* ← 这里控制 01/02 大小 */
   color: rgba(0,0,0,0.10);
   letter-spacing: 0 !important;
 }
