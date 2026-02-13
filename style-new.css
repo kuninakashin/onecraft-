@@ -1121,3 +1121,14 @@ html, body {
   color: #222;
   line-height: 1.9;
 }
+/* 右侧 LOGO */
+.company::after {
+  content: "";
+  position: absolute;
+  right: 140px;
+  top: 260px;
+  width: 260px;
+  height: 260px;
+  background: url("../images/logo.png") no-repeat center/contain;
+  opacity: 1;
+}
