@@ -951,21 +951,19 @@ html, body {
 ================================ */
 
 .section.work .num {
-  font-weight: 700;
-
   font-family:
     "Helvetica Neue",
     Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP",
     sans-serif;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  font-weight: 700;
+  font-size: 48px;      /* ← 在这里调大小 */
 
-  letter-spacing: 0.02em;
+  color: rgba(0,0,0,0.10);
+
+  letter-spacing: 0;
 }
+
 /* =========================================
    FORCE 03 / 04 NUMBER SAME AS 01 / 02
    （最终锁定，不再被其它样式覆盖）
