@@ -970,7 +970,7 @@ html, body {
 }
 /* ===== WORK BACKGROUND (01–04 共用一张) ===== */
 .section.work {
-  background-image: url("./images/work 01background.jpg");
+  background-image: url("./images/workbackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
