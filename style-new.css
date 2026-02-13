@@ -970,14 +970,6 @@ html, body {
   background-position: center;
 }
 
-.section.work::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.88); /* 控制淡化程度 */
-  z-index: 0;
-}
-
 .section.work > * {
   position: relative;
   z-index: 1;
