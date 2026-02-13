@@ -985,4 +985,40 @@ html, body {
   background-repeat: no-repeat;
   background-attachment: fixed; /* 让它看起来像一整块 */
 }
-
+/* ===== COMPANY SECTION (和官网一致的灰背景) ===== */
+.section.company {
+  background: #f3f3f3;
+  padding: 140px 0;
+}
+.company-inner {
+  width: 880px;
+  margin: 0 auto;
+}
+.company-heading {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 60px;
+}
+.company-row {
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+}
+.company-label {
+  width: 140px;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 0.12em;
+}
+.company-line {
+  flex: 1;
+  height: 1px;
+  background: #dcdcdc;
+  margin: 0 26px;
+}
+.company-text {
+  width: 420px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
