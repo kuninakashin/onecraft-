@@ -961,4 +961,24 @@ html, body {
   color: rgba(0,0,0,0.10);
   letter-spacing: 0 !important;
 }
+/* ===== WORK BACKGROUND IMAGE ===== */
 
+.section.work {
+  position: relative;
+  background-image: url("./images/work-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section.work::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.88); /* 控制淡化程度 */
+  z-index: 0;
+}
+
+.section.work > * {
+  position: relative;
+  z-index: 1;
+}
