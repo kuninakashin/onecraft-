@@ -954,15 +954,14 @@ html, body {
   font-family:
     "Helvetica Neue",
     Arial,
-    sans-serif;
+    sans-serif !important;
 
-  font-weight: 700;
-  font-size: 44px;      /* ← 在这里调大小 */
-
+  font-weight: 700 !important;
+  font-size: 44px !important;   /* ← 这里控制 01/02 大小 */
   color: rgba(0,0,0,0.10);
-
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
+
 
 /* =========================================
    FORCE 03 / 04 NUMBER SAME AS 01 / 02
