@@ -967,3 +967,12 @@ html, body {
   position: relative;
   z-index: 1;
 }
+/* ===== WORK BACKGROUND (01–04 共用一张) ===== */
+.section.work {
+  background-image: url("./images/01-04background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 让它看起来像一整块 */
+}
+
