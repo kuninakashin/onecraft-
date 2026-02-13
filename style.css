@@ -987,4 +987,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
 }
-
+/* ===== FORCE WORK NUMBER SIZE (FINAL LOCK) ===== */
+.section.work .num {
+  font-size: 44px !important;
+}
