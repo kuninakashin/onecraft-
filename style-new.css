@@ -1031,61 +1031,93 @@ html, body {
   margin-bottom: 80px;
   width: 520px;
 }
-/* ===== FORCE SHOW COMPANY SIDE ===== */
-
-.section.company {
-  position: relative !important;
-}
-
-.company-side {
-  position: absolute !important;
-  left: 60px !important;
-  top: 120px !important;
-  z-index: 10 !important;
-}
-
-.company-side-text {
-  writing-mode: vertical-rl !important;
-  font-size: 18px !important;
-  letter-spacing: 0.25em !important;
-  color: #222 !important;
-  display: block !important;
-}
-
-.company-side-text::after {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  right: -16px !important;
-  width: 2px !important;
-  height: 120px !important;
-  background: #222 !important;
-}
-/* ===== COMPANY LAYOUT ===== */
+/* =========================================
+   COMPANY  —— 完全对齐参考站样式
+========================================= */
 
 .section.company {
   background: #f3f3f3;
-  padding: 140px 0;
+  padding: 160px 0;
+  position: relative;
 }
 
+/* 左侧竖排标题区域 */
+.company-side {
+  position: absolute;
+  left: 60px;
+  top: 200px;
+}
+
+.company-side-text {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: #222;
+  position: relative;
+}
+
+/* 竖线 */
+.company-side-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -22px;
+  width: 1px;
+  height: 120px;
+  background: #222;
+}
+
+/* 中央内容最大宽度（决定横线长度！） */
 .company-inner {
-  width: 1100px;
+  width: 960px;
   margin: 0 auto;
+}
+
+/* 标题 */
+.company-heading {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+}
+
+/* 说明文字 */
+.company-lead {
+  width: 520px;
+  font-size: 15px;
+  line-height: 2.2;
+  color: #444;
+  margin-bottom: 80px;
+}
+
+/* 每一行 = 三栏布局 */
+.company-row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding: 22px 0;
 }
 
-.company-content {
-  width: 620px;
+/* 左标签 */
+.company-label {
+  width: 140px;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 0.12em;
 }
 
-.company-visual {
+/* 中间横线 —— 自动撑满 */
+.company-line {
+  flex: 1;
+  height: 1px;
+  background: #dcdcdc;
+  margin: 0 30px;
+}
+
+/* 右内容 */
+.company-text {
   width: 360px;
-}
-
-.company-visual img {
-  width: 100%;
-  height: auto;
-  display: block;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #222;
+  line-height: 1.9;
 }
