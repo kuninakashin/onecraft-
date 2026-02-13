@@ -1061,3 +1061,31 @@ html, body {
   height: 120px !important;
   background: #222 !important;
 }
+/* ===== COMPANY LAYOUT ===== */
+
+.section.company {
+  background: #f3f3f3;
+  padding: 140px 0;
+}
+
+.company-inner {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.company-content {
+  width: 620px;
+}
+
+.company-visual {
+  width: 360px;
+}
+
+.company-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
