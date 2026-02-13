@@ -994,3 +994,9 @@ html, body {
 body {
   background: red !important;
 }
+/* ===== WORK NUMBER SIZE CONTROL ===== */
+.section.work .num {
+  font-size: 44px !important;   /* ← 在这里改成你想要的大小 */
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
