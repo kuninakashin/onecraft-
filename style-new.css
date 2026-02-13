@@ -963,13 +963,6 @@ html, body {
 }
 /* ===== WORK BACKGROUND IMAGE ===== */
 
-.section.work {
-  position: relative;
-  background-image: url("./images/01-04background.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
 .section.work > * {
   position: relative;
   z-index: 1;
