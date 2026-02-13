@@ -873,22 +873,23 @@ html, body {
 }
 
 /* 01 / 02 / 03 / 04 数字（水印） */
-.work-magazine .magazine-num{
+.work-magazine .magazine-num {
   display: block !important;
 
   position: absolute !important;
-  top: -12px !important;
-  left: 4px !important;
+  top: 0px !important;      /* 原来是 -12px → 改成 0 */
+  left: 0px !important;     /* 原来是 4px → 改成 0 */
 
-  font-size: 44px !important;     /* ← 要改数字大小只改这里 */
+  font-size: 44px !important;
   font-weight: 700 !important;
 
-  color: rgba(0,0,0,0.10) !important;  /* ← 水印透明度 */
-  line-height: 1;
+  color: rgba(0,0,0,0.10) !important;
+  line-height: 1.2;         /* 原来是 1 → 改 1.2（很重要） */
 
   z-index: 1 !important;
   pointer-events: none;
 }
+
 
 /* 竖排标题 */
 .work-magazine .magazine-title{
