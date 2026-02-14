@@ -961,11 +961,8 @@ html, body {
   color: rgba(0,0,0,0.10);
   letter-spacing: 0 !important;
 }
-/* ===== COMPANY 调整对齐 ===== */
-.company-info {
-  padding-left: 64px;
-}
+
 /* ===== COMPANY 强制对齐（最终版） ===== */
 .section.company .company-info {
-  padding-left: 64px !important;
+  padding-left: 72px !important;
 }
