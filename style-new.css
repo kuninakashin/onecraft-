@@ -1003,4 +1003,19 @@ html, body {
 
   margin-bottom: 48px;  /* ← 和下面 01 拉开距离 */
 }
+/* ===== 强制统一「私たちの仕事」样式（最终覆盖） ===== */
+.section.work-magazine .work-title {
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif !important;
 
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #111 !important;
+  letter-spacing: 0.06em !important;
+
+  margin-bottom: 48px !important;
+}
