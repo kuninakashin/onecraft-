@@ -964,7 +964,7 @@ html, body {
 
 /* ===== COMPANY：只移动公司信息内容，不动标题 ===== */
 .section.company .company-info table {
-  margin-left: 70px;
+  margin-left: 80px;
 }
 
 /* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
