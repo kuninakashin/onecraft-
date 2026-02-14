@@ -968,7 +968,7 @@ html, body {
 }
 /* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
 .section.company .company-logo img {
-  width: 160px;   /* 控制整体大小 */
+  width: 140px;   /* 控制整体大小 */
   height: auto;
 }
 /* ===== COMPANY：公司信息行距收紧 ===== */
