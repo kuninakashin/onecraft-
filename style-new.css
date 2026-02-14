@@ -971,4 +971,13 @@ html, body {
   width: 160px;   /* 控制整体大小 */
   height: auto;
 }
+/* ===== COMPANY：公司信息行距收紧 ===== */
+.section.company table {
+  border-collapse: collapse;   /* 去掉表格默认空隙 */
+}
 
+.section.company th,
+.section.company td {
+  padding: 8px 0;              /* 原来浏览器默认大约是16px，这里减半 */
+  line-height: 1.6;            /* 控制文字上下呼吸感 */
+}
