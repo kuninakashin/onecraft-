@@ -969,9 +969,10 @@ html, body {
 
 /* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
 .section.company .company-logo img {
-  width: 150px;   /* 控制整体大小 */
+  width: 185px;   /* 原来 150px → 增加约 35px = 大约 +1cm */
   height: auto;
 }
+
 /* ===== COMPANY：公司信息行距收紧 ===== */
 .section.company table {
   border-collapse: collapse;   /* 去掉表格默认空隙 */
