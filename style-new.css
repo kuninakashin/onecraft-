@@ -964,7 +964,7 @@ html, body {
 
 /* ===== COMPANY：信息块整体右移到标题正下方 ===== */
 .section.company .company-info {
-  margin-left: 104px;   /* 直接把整块往右搬 */
+  margin-left: 170px;   /* 直接把整块往右搬 */
 }
 /* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
 .section.company .company-logo img {
