@@ -1012,3 +1012,23 @@ html, body {
 
   margin: 0;              /* 防止被 section p 影响 */
 }
+/* ===============================
+   私たちの仕事 标题强化版
+================================ */
+.section-title {
+  font-size: 48px;          /* ← 字体放大（原来可能 32） */
+  font-weight: 700;         /* ← 粗体 */
+  color: #000;              /* ← 纯黑 */
+  letter-spacing: 0.08em;   /* ← 日文常用一点点字距，更高级 */
+
+  /* 圆润日文字体（关键就在这里！） */
+  font-family:
+    "Hiragino Maru Gothic ProN",  /* mac 最好看的圆体 */
+    "ヒラギノ丸ゴ ProN",
+    "Yu Round Gothic",            /* Windows 圆体 */
+    "游ゴシック体",
+    "Noto Sans JP",
+    sans-serif;
+
+  text-align: center;
+}
