@@ -1090,37 +1090,32 @@ html, body {
   margin-bottom: 80px;
 }
 
-/* 每一行 = 三栏布局 */
+/* ===== COMPANY LIST (和参考站完全同结构) ===== */
+
 .company-row {
   display: flex;
-  align-items: center;
-  padding: 22px 0;
+  align-items: flex-end;
+  gap: 42px;
+  padding: 26px 0 14px;
+  border-bottom: 1px solid #dcdcdc;
 }
 
-/* 左标签 */
 .company-label {
-  width: 140px;
-  font-size: 14px;
-  color: #666;
-  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: #222;
+  padding-right: 8px;
+  border-right: 1px solid #222;
 }
 
-/* 中间横线 —— 自动撑满 */
-.company-line {
-  flex: 1;
-  height: 1px;
-  background: #dcdcdc;
-  margin: 0 30px;
-}
-
-/* 右内容 */
 .company-text {
-  width: 360px;
   font-size: 15px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: #222;
   line-height: 1.9;
 }
+
 /* 右侧 LOGO */
 .company::after {
   content: "";
