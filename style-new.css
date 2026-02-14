@@ -987,21 +987,28 @@ html, body {
   line-height: 1.6;            /* 控制文字上下呼吸感 */
 }
 
-/* ===== 「私たちの仕事」区块标题 ===== */
-.work-title {
+/* ===============================
+   WORK MAIN TITLE（私たちの仕事）
+   只控制这一行
+================================ */
+.work-title{
   font-family:
+    "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
-    "Yu Gothic",
-    Meiryo,
+    "Noto Sans JP",
+    Arial,
     sans-serif;
 
-  font-size: 18px;      /* ← 和「会社情報」一致 */
-  font-weight: 700;     /* ← 粗体 */
-  color: #111;          /* ← 纯黑 */
+  font-size: 22px;        /* ← 字再大一点 */
+  font-weight: 700;       /* ← 粗体 */
+  color: #111;            /* ← 纯黑 */
+
   letter-spacing: 0.06em;
 
-  margin-bottom: 48px;  /* ← 和下面 01 拉开距离 */
+  /* 位置微调 */
+  transform: translate(120px, -40px);
+  /* 右 3cm ≈120px，上 1cm ≈40px */
+
+  margin: 0;              /* 防止被 section p 影响 */
 }
-
-
