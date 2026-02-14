@@ -965,3 +965,7 @@ html, body {
 .company-info {
   padding-left: 64px;
 }
+/* ===== COMPANY 强制对齐（最终版） ===== */
+.section.company .company-info {
+  padding-left: 64px !important;
+}
