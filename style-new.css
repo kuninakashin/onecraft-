@@ -962,7 +962,7 @@ html, body {
   letter-spacing: 0 !important;
 }
 
-/* ===== COMPANY 强制对齐（最终版） ===== */
+/* ===== COMPANY：信息块整体右移到标题正下方 ===== */
 .section.company .company-info {
-  padding-left: 72px !important;
+  margin-left: 96px;   /* 直接把整块往右搬 */
 }
