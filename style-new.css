@@ -989,42 +989,30 @@ html, body {
 
 /* ===============================
    WORK MAIN TITLE（私たちの仕事）
-   只控制这一行
+   最终版：大・圆润・黑・粗
 ================================ */
 .work-title{
   font-family:
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    Arial,
-    sans-serif;
-
-  font-size: 22px;        /* ← 字再大一点 */
-  font-weight: 700;       /* ← 粗体 */
-  color: #111;            /* ← 纯黑 */
-
-  letter-spacing: 0.06em;
-
-  /* 位置微调 */
-  transform: translate(120px, -40px);
-  /* 右 3cm ≈120px，上 1cm ≈40px */
-
-  margin: 0;              /* 防止被 section p 影响 */
-}
-
-/* ===== 强制覆盖：私たちの仕事 ===== */
-.section-title {
-  font-size: 52px !important;
-  font-weight: 700 !important;
-  color: #000 !important;
-  letter-spacing: 0.08em !important;
-
-  font-family:
-    "Hiragino Maru Gothic ProN",
+    "Hiragino Maru Gothic ProN",   /* 圆润日文字体（最关键） */
     "ヒラギノ丸ゴ ProN",
     "Yu Round Gothic",
     "游ゴシック体",
     "Noto Sans JP",
-    sans-serif !important;
+    sans-serif;
+
+  font-size: 40px;      /* ← 字体放大（需要再大可以改 44 / 48） */
+  font-weight: 800;     /* 粗体 */
+  color: #000;          /* 纯黑 */
+
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+
+  /* 位置微调（保持你现在版式） */
+  transform: translate(120px, -40px);
+
+  margin: 0;
+
+  /* 让字形更柔和（关键） */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
