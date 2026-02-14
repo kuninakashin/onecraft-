@@ -1032,7 +1032,7 @@ html, body {
   width: 520px;
 }
 /* =========================================
-   COMPANY  —— 完全对齐参考站样式
+   COMPANY  —— FINAL（唯一使用版本）
 ========================================= */
 
 .section.company {
@@ -1041,47 +1041,56 @@ html, body {
   position: relative;
 }
 
-/* 左侧竖排标题区域 */
+/* ===== 左侧竖排「会社情報」 ===== */
 .company-side {
   position: absolute;
-  left: 60px;
-  top: 200px;
+  left: -60px;
+  top: 6px;
 }
 
 .company-side-text {
   writing-mode: vertical-rl;
   font-size: 14px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: #222;
   position: relative;
 }
 
-/* 竖线 */
 .company-side-text::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -22px;
+  right: -14px;
   width: 1px;
-  height: 120px;
+  height: 72px;
   background: #222;
 }
 
-/* 中央内容最大宽度（决定横线长度！） */
+/* ===== 主体左右布局 ===== */
 .company-inner {
   width: 960px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
 }
 
-/* 标题 */
+/* 左侧内容宽度（关键！） */
+.company-main {
+  width: 560px;
+}
+
+/* ===== 标题 ===== */
 .company-heading {
   font-size: 28px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  color: #111;
   margin-bottom: 40px;
 }
 
-/* 说明文字 */
+/* ===== 说明文字 ===== */
 .company-lead {
   width: 520px;
   font-size: 15px;
@@ -1090,119 +1099,58 @@ html, body {
   margin-bottom: 80px;
 }
 
-/* ===== COMPANY LIST (和参考站完全同结构) ===== */
-
+/* ===== 每一行 ===== */
 .company-row {
   display: flex;
-  align-items: flex-end;
-  gap: 42px;
-  padding: 26px 0 14px;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-/* ===== COMPANY LAYOUT（最终版）===== */
-
-.section.company {
-  position: relative;
-  background: #f3f3f3;
-  padding: 160px 0;
-}
-
-/* 主体左右布局（左文字 + 右LOGO） */
-.company-inner {
-  width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 120px;
-  position: relative;
-}
-
-/* ===== 左侧竖排「会社情報」 ===== */
-.company-side {
-  position: absolute;
-  left: -80px;
-  top: 6px;
-}
-
-.company-side-text {
-  writing-mode: vertical-rl;
-  font-size: 14px;
-  letter-spacing: 0.25em;
-  color: #222;
-  padding-left: 14px;
-  border-left: 1px solid #222;
-}
-
-/* ===== 左侧文字区域 ===== */
-.company-content {
-  max-width: 620px;
-}
-
-/* 标题 */
-.company-heading {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: #111;
-  margin-bottom: 38px;
-}
-
-/* 说明文字 */
-.company-lead {
-  font-size: 15px;
-  line-height: 2.2;
-  color: #444;
-  margin-bottom: 90px;
-}
-
-/* ===== 表格区域（关键结构重写）===== */
-
-/* 每一行 */
-.company-row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  padding: 26px 0;
-  border-bottom: 1px solid #e2e2e2;
+  align-items: flex-start;
+  margin-bottom: 34px;
 }
 
 /* 左侧项目名 */
 .company-label {
+  width: 90px;
   font-size: 14px;
-  letter-spacing: 0.2em;
-  color: #444;
+  color: #555;
+  letter-spacing: 0.18em;
   position: relative;
-  padding-left: 18px;
 }
 
-/* 项目名前的短竖线（贴着字） */
-.company-label::before {
+/* 项目名右边短竖线 */
+.company-label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 5px;
+  top: 4px;
+  right: -18px;
   width: 1px;
   height: 18px;
   background: #222;
 }
 
+/* 中间横线 */
+.company-line {
+  width: 420px;
+  height: 1px;
+  background: #d8d8d8;
+  margin: 10px 40px 0 28px;
+}
+
 /* 右侧内容 */
 .company-text {
   font-size: 15px;
-  letter-spacing: 0.08em;
   color: #222;
-  line-height: 2;
+  line-height: 1.9;
+  width: 320px;
 }
 
 /* ===== 右侧 LOGO ===== */
 .company-visual {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 40px;
+  width: 320px;
+  flex-shrink: 0;
+  margin-top: 24px;
 }
 
 .company-visual img {
-  width: 320px;
+  width: 100%;
   height: auto;
+  display: block;
 }
