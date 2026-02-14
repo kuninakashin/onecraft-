@@ -966,7 +966,9 @@ html, body {
 .section.company .company-info {
   margin-left: 104px;   /* 直接把整块往右搬 */
 }
-/* ===== COMPANY：右侧 logo 往左移动 ===== */
-.section.company .company-logo {
-  transform: translateX(-80px);  /* 向左移动 */
+/* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
+.section.company .company-logo img {
+  width: 150px;   /* 控制整体大小 */
+  height: auto;
 }
+
