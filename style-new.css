@@ -507,132 +507,63 @@ body {
 }
 
 /* ===============================
-   COMPANY（重写为新版布局）
+   COMPANY
 ================================ */
-
 .section.company {
-  background: #f3f3f3;
   padding: 160px 0;
-  position: relative;
 }
 
-/* ===== 左侧竖排「会社情報」 ===== */
-.company-side {
-  position: absolute;
-  left: -60px;
-  top: 6px;
-}
-
-.company-side-text {
-  writing-mode: vertical-rl;
-  font-size: 14px;
-  letter-spacing: 0.22em;
-  color: #222;
-  position: relative;
-}
-
-/* 竖线 */
-.company-side-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -14px;
-  width: 1px;
-  height: 72px;
-  background: #222;
-}
-
-/* ===== 主体左右布局 ===== */
-.company-inner {
-  width: 960px;
+.company-wrap {
+  max-width: 980px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 48px;
+  
+}
+
+.company-head {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 80px;
+  gap: 48px;
+  margin-bottom: 32px; /* ← 原来 80px，收紧 */
 }
 
-/* 左侧主内容 */
-.company-main {
-  width: 560px;
-}
-
-/* 标题 */
-.company-heading {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: #111;
-  margin-bottom: 40px;
-}
-
-/* 说明文字 */
-.company-lead {
-  width: 520px;
-  font-size: 15px;
-  line-height: 2.2;
-  color: #444;
-  margin-bottom: 80px;
-}
-
-/* ===== 每一行资料 ===== */
-.company-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 34px;
-}
-
-/* 左侧项目名 */
-.company-row .company-label {
-  width: 90px;
-  font-size: 14px;
-  color: #555;
-  letter-spacing: 0.18em;
+.company-label {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  padding-right: 14px;
   position: relative;
-  writing-mode: horizontal-tb; /* 覆盖旧的 vertical */
-  padding-right: 0;
 }
 
-/* 项目名右边短竖线 */
-.company-row .company-label::after {
+.company-label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  right: -18px;
+  right: 0;
+  top: 0;
   width: 1px;
-  height: 18px;
-  background: #222;
+  height: 100%;
+  background: #111;
 }
 
-/* 中间横线 */
-.company-line {
-  width: 420px;
-  height: 1px;
-  background: #d8d8d8;
-  margin: 10px 40px 0 28px;
-}
+.section.company th,
+.section.company td {
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 13.5px;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  color: #444;
 
-/* 右侧内容 */
-.company-text {
-  font-size: 15px;
-  color: #222;
-  line-height: 1.9;
-  width: 320px;
+  padding: 22px 0;   /* 👈 就加这一行 */
 }
-
-/* ===== 右侧 LOGO ===== */
-.company-visual {
-  width: 320px;
-  flex-shrink: 0;
-  margin-top: 24px;
-}
-
-.company-visual img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 /* ===============================
    CONTACT
@@ -942,32 +873,22 @@ html, body {
 }
 
 /* 01 / 02 / 03 / 04 数字（水印） */
-.work-magazine .magazine-num {
+.work-magazine .magazine-num{
   display: block !important;
 
   position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+  top: -12px !important;
+  left: 4px !important;
 
-  /* 和 01 完全统一 ↓↓↓ */
-  font-family:
-    "Helvetica Neue",
-    Arial,
-    sans-serif !important;
-
-  font-size: 44px !important;
+  font-size: 44px !important;     /* ← 要改数字大小只改这里 */
   font-weight: 700 !important;
 
-  color: rgba(0,0,0,0.10) !important;
-
-  letter-spacing: 0 !important;
-  line-height: 1 !important;
+  color: rgba(0,0,0,0.10) !important;  /* ← 水印透明度 */
+  line-height: 1;
 
   z-index: 1 !important;
   pointer-events: none;
 }
-
-
 
 /* 竖排标题 */
 .work-magazine .magazine-title{
@@ -1039,187 +960,4 @@ html, body {
   font-size: 44px !important;   /* ← 这里控制 01/02 大小 */
   color: rgba(0,0,0,0.10);
   letter-spacing: 0 !important;
-}
-/* ===== WORK BACKGROUND IMAGE ===== */
-
-.section.work > * {
-  position: relative;
-  z-index: 1;
-}
-/* ===== WORK BACKGROUND (01–04 共用一张) ===== */
-.section.work {
-  background-image: url("./images/workbackground.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* 让它看起来像一整块 */
-}
-/* ===== COMPANY SECTION (和官网一致的灰背景) ===== */
-.section.company {
-  background: #f3f3f3;
-  padding: 140px 0;
-}
-.company-inner {
-  width: 880px;
-  margin: 0 auto;
-}
-.company-heading {
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  margin-bottom: 60px;
-}
-.company-row {
-  display: flex;
-  align-items: center;
-  padding: 22px 0;
-}
-.company-label {
-  width: 140px;
-  font-size: 14px;
-  color: #666;
-  letter-spacing: 0.12em;
-}
-.company-line {
-  flex: 1;
-  height: 1px;
-  background: #dcdcdc;
-  margin: 0 26px;
-}
-.company-text {
-  flex: 1;
-  width: auto;
-  font-size: 15px;
-  letter-spacing: 0.06em;
-}
-.company-lead {
-  font-size: 15px;
-  line-height: 2.2;
-  color: #333;
-  letter-spacing: 0.08em;
-  margin-bottom: 80px;
-  width: 520px;
-}
-/* =========================================
-   COMPANY  —— FINAL（唯一使用版本）
-========================================= */
-
-.section.company {
-  background: #f3f3f3;
-  padding: 160px 0;
-  position: relative;
-}
-
-/* ===== 左侧竖排「会社情報」 ===== */
-.company-side {
-  position: absolute;
-  left: -60px;
-  top: 6px;
-}
-
-.company-side-text {
-  writing-mode: vertical-rl;
-  font-size: 14px;
-  letter-spacing: 0.22em;
-  color: #222;
-  position: relative;
-}
-
-.company-side-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -14px;
-  width: 1px;
-  height: 72px;
-  background: #222;
-}
-
-/* ===== 主体左右布局 ===== */
-.company-inner {
-  width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 80px;
-}
-
-/* 左侧内容宽度（关键！） */
-.company-main {
-  width: 560px;
-}
-
-/* ===== 标题 ===== */
-.company-heading {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: #111;
-  margin-bottom: 40px;
-}
-
-/* ===== 说明文字 ===== */
-.company-lead {
-  width: 520px;
-  font-size: 15px;
-  line-height: 2.2;
-  color: #444;
-  margin-bottom: 80px;
-}
-
-/* ===== 每一行 ===== */
-.company-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 34px;
-}
-
-/* 左侧项目名 */
-.company-label {
-  width: 90px;
-  font-size: 14px;
-  color: #555;
-  letter-spacing: 0.18em;
-  position: relative;
-}
-
-/* 项目名右边短竖线 */
-.company-label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  right: -18px;
-  width: 1px;
-  height: 18px;
-  background: #222;
-}
-
-/* 中间横线 */
-.company-line {
-  width: 420px;
-  height: 1px;
-  background: #d8d8d8;
-  margin: 10px 40px 0 28px;
-}
-
-/* 右侧内容 */
-.company-text {
-  font-size: 15px;
-  color: #222;
-  line-height: 1.9;
-  width: 320px;
-}
-
-/* ===== 右侧 LOGO ===== */
-.company-visual {
-  width: 320px;
-  flex-shrink: 0;
-  margin-top: 24px;
-}
-
-.company-visual img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
