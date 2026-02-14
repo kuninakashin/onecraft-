@@ -964,5 +964,5 @@ html, body {
 
 /* ===== COMPANY：信息块整体右移到标题正下方 ===== */
 .section.company .company-info {
-  margin-left: 96px;   /* 直接把整块往右搬 */
+  margin-left: 104px;   /* 直接把整块往右搬 */
 }
