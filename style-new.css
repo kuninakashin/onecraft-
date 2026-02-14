@@ -530,12 +530,13 @@ body {
 
 .company-label {
   writing-mode: vertical-rl;
-  font-size: 12px;
+  font-size: 18px;        /* ← 从 12px 放大到 18px */
   font-weight: 700;
-  letter-spacing: 0.32em;
-  padding-right: 14px;
+  letter-spacing: 0.28em; /* 字变大后，间距稍微收一点更精致 */
+  padding-right: 18px;    /* 给右边那条线多一点呼吸空间 */
   position: relative;
 }
+
 
 .company-label::after {
   content: "";
