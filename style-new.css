@@ -982,3 +982,20 @@ html, body {
   padding: 8px 0;              /* 原来浏览器默认大约是16px，这里减半 */
   line-height: 1.6;            /* 控制文字上下呼吸感 */
 }
+/* ===== 「私たちの仕事」区块标题 ===== */
+.work-title {
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+
+  font-size: 22px;          /* 和右侧黑色正文接近大小 */
+  font-weight: 600;
+  color: #222;
+
+  margin-left: 170px;       /* 和下面内容左边对齐 */
+  margin-bottom: 40px;      /* 和 01 拉开距离 */
+
+  letter-spacing: 0.05em;
+}
