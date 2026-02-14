@@ -1100,30 +1100,105 @@ html, body {
   border-bottom: 1px solid #dcdcdc;
 }
 
-.company-label {
+/* ===== COMPANY LAYOUT ===== */
+
+.section.company {
+  position: relative;
+  background: #f3f3f3;
+  padding: 160px 0;
+}
+
+/* 中间内容宽度 */
+.company-inner {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ===== 左上「会社情報」 ===== */
+.company-side {
+  position: absolute;
+  left: -60px;   /* 控制靠左距离 */
+  top: 10px;
+}
+
+.company-side-text {
   writing-mode: vertical-rl;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  color: #222;
-  padding-right: 5px;
-  border-right: 1px solid #222;
+  font-size: 16px;       /* 设计稿就是小字 */
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #111;
+  position: relative;
 }
 
-.company-text {
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  color: #222;
-  line-height: 1.9;
-}
-
-/* 右侧 LOGO */
-.company::after {
+/* 这条才是真正的竖线（不是 border） */
+.company-side-text::after {
   content: "";
   position: absolute;
-  right: 140px;
-  top: 260px;
-  width: 260px;
-  height: 260px;
-  background: url("../images/logoname.png") no-repeat center/contain;
-  opacity: 1;
+  top: 0;
+  right: -14px;
+  width: 1px;
+  height: 72px;
+  background: #111;
 }
+
+/* ===== 标题 ===== */
+.company-heading {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 36px;
+}
+
+/* ===== 说明文字 ===== */
+.company-lead {
+  width: 520px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: #444;
+  margin-bottom: 80px;
+}
+
+/* ===== 每一行 ===== */
+.company-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 34px;
+}
+
+/* 左侧项目名 */
+.company-label {
+  width: 90px;
+  font-size: 14px;
+  color: #555;
+  letter-spacing: 0.18em;
+  position: relative;
+}
+
+/* 项目名右边那条竖线 */
+.company-label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -18px;
+  width: 1px;
+  height: 18px;
+  background: #222;
+}
+
+/* 中间那条横线 —— 从文字后开始 */
+.company-line {
+  width: 420px;
+  height: 1px;
+  background: #d8d8d8;
+  margin: 10px 40px 0 28px;
+}
+
+/* 右侧内容 */
+.company-text {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.9;
+  width: 320px;
+}
+
