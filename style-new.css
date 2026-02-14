@@ -962,10 +962,11 @@ html, body {
   letter-spacing: 0 !important;
 }
 
-/* ===== COMPANY：信息块整体右移到标题正下方 ===== */
-.section.company .company-info {
-  margin-left: 170px;   /* 直接把整块往右搬 */
+/* ===== COMPANY：只移动公司信息内容，不动标题 ===== */
+.section.company .company-info table {
+  margin-left: 70px;
 }
+
 /* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
 .section.company .company-logo img {
   width: 140px;   /* 控制整体大小 */
