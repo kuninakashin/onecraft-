@@ -968,5 +968,5 @@ html, body {
 }
 /* ===== COMPANY：右侧 logo 往左移动 ===== */
 .section.company .company-logo {
-  transform: translateX(-60px);  /* 向左移动 */
+  transform: translateX(-80px);  /* 向左移动 */
 }
