@@ -966,3 +966,7 @@ html, body {
 .section.company .company-info {
   margin-left: 104px;   /* 直接把整块往右搬 */
 }
+/* ===== COMPANY：右侧 logo 往左移动 ===== */
+.section.company .company-logo {
+  transform: translateX(-60px);  /* 向左移动 */
+}
