@@ -1018,4 +1018,6 @@ html, body {
   letter-spacing: 0.06em !important;
 
   margin-bottom: 48px !important;
+
+  transform: translate(70px, -35px) !important;
 }
