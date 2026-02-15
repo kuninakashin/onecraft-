@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  padding-top: 100px;   /* ← 新增这一行 */
+   padding-top: 80px;
   font-family:
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
@@ -71,10 +71,16 @@ body {
 /* ===============================
    HEADER (PC)
 ================================ */
-.header {
+header {
+  position: fixed;   /* 固定住 */
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #fff;
   border-bottom: 1px solid #eee;
+  z-index: 9999;
 }
+
 
 .header-inner {
   max-width: 1200px;
