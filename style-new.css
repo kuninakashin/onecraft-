@@ -149,7 +149,8 @@ body {
   background-color: #fff;
   background-image: url("./images/top.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 24px;
+
   background-repeat: no-repeat;
 
   display: flex;
