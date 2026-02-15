@@ -1199,3 +1199,20 @@ header::after{
   content: none !important;
   display: none !important;
 }
+/* ===== FIX LOGO UNDERLINE (覆盖旧样式) ===== */
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.header .logo::before,
+.header .logo::after {
+  content: none !important;
+  display: none !important;
+}
