@@ -70,7 +70,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -96,10 +95,6 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
-body {
-  padding-top: 72px;   /* 这个数值等于 header 高度 */
-}
-
 
 /* NAV */
 .nav {
