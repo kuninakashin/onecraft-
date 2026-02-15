@@ -1092,7 +1092,7 @@ html, body {
 ================================ */
 
 .work-bg{
-  background-image: url("./images/work 01background.jpg"); /* ← 这里换成你的图片名 */
+  background-image: url("./images/workbackground.jpg"); /* ← 这里换成你的图片名 */
   background-repeat: no-repeat;   /* 不平铺 */
   background-position: center top;
   background-size: cover;         /* 整张铺开 */
