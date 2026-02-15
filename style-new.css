@@ -1185,3 +1185,6 @@ header::before{
 .logo img {
   opacity: 0.2;
 }
+.logo {
+  background: red !important;
+}
