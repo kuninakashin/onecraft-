@@ -1016,3 +1016,18 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* ===============================
+   WORK 03 IMAGE SIZE FIX（只作用03）
+================================ */
+
+/* 只锁定第3个 work（03） */
+.section.work:nth-of-type(3) .img-row {
+  max-width: 600px;   /* ← 控制整组缩小（现在太大） */
+  gap: 16px;          /* 图之间间距也一起收一点 */
+}
+
+/* 图片本身稍微柔和一点比例 */
+.section.work:nth-of-type(3) .img-row img {
+  width: 100%;
+  height: auto;
+}
