@@ -1126,7 +1126,7 @@ html, body {
 }
 /* ===== WORK TITLE FORCE OVERRIDE ===== */
 .section.work .work-title{
-  font-size: 34px !important;
+  font-size: 32px !important;
   font-weight: 800 !important;
   color: #111 !important;
 
