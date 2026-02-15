@@ -1040,3 +1040,11 @@ html, body {
   max-width: 960px;   /* ← 让它比现在更展开 */
   gap: 24px;          /* 图之间间距同步放松一点 */
 }
+/* ===============================
+   FORCE OVERRIDE — WORK 02 ONLY
+   强制解除之前 820px 限制
+================================ */
+
+.section.work.work-magazine:nth-of-type(2) .img-row{
+  max-width: 960px !important;   /* 直接覆盖旧的 820px */
+}
