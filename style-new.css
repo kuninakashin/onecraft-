@@ -1056,3 +1056,25 @@ html, body {
   max-width: 960px;
   gap: 24px;
 }
+/* ===============================
+   WORK 02 / 03 — IMAGE WIDTH CONTROL
+   （覆盖之前所有限制，只精准作用02、03）
+================================ */
+
+/* 解除旧的 820px 全局限制 */
+.work-02 .img-row,
+.work-03 .img-row{
+  max-width: none;
+}
+
+/* 02：放大一点（流程展示型） */
+.work-02 .img-row{
+  width: 960px;      /* ← 这里决定02大小 */
+  gap: 24px;
+}
+
+/* 03：收紧一点（说明型） */
+.work-03 .img-row{
+  width: 560px;      /* ← 这里决定03大小 */
+  gap: 16px;
+}
