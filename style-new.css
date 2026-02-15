@@ -1151,3 +1151,12 @@ header ul{
 header li{
   list-style: none;
 }
+/* ===== REMOVE STRAY BAR UNDER LOGO ===== */
+header div{
+  background: none !important;
+  height: auto !important;
+}
+
+header hr{
+  display: none !important;
+}
