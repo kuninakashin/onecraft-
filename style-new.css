@@ -1075,9 +1075,11 @@ html, body {
 
 /* 03：收紧一点（说明型） */
 .work-03 .img-row{
-  width: 700px;      /* ← 这里决定03大小 */
+  width: 700px;
+  max-width: none;   /* ← 关键：解除之前遗留的限制 */
   gap: 16px;
 }
+
 /* ===============================
    FINAL FORCE — ONLY WORK 02
    把02从旧规则手里抢回来
