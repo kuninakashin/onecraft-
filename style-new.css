@@ -85,13 +85,6 @@ body {
   display: block;   /* ← 这一句就是专门杀这条“假灰线”的 */
 }
 
-
-.header .logo span {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
 /* NAV */
 .nav {
   display: flex;
