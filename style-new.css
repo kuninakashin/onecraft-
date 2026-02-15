@@ -697,12 +697,15 @@ body {
   }
 
   .header-inner {
-    height: 56px;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;   /* ← 必须加在这里才真正生效 */
+}
+
 
   .nav,
   .header-sns {
