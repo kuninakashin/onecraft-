@@ -1048,3 +1048,11 @@ html, body {
 .section.work.work-magazine:nth-of-type(2) .img-row{
   max-width: 960px !important;   /* 直接覆盖旧的 820px */
 }
+/* ===============================
+   WORK 02 — SIZE CONTROL（精准控制）
+================================ */
+
+.work-02 .img-row{
+  max-width: 960px;
+  gap: 24px;
+}
