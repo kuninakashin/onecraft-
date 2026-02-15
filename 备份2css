@@ -1141,3 +1141,27 @@ html, body {
     "Meiryo",
     sans-serif !important;
 }
+/* ===== HEADER LIST DOT REMOVE ===== */
+header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li{
+  list-style: none;
+}
+/* ===== REMOVE STRAY BAR UNDER LOGO ===== */
+header div{
+  background: none !important;
+  height: auto !important;
+}
+
+header hr{
+  display: none !important;
+}
+header::after,
+header::before{
+  display: none !important;
+  content: none !important;
+}
