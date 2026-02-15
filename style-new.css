@@ -595,7 +595,6 @@ body {
   padding: 22px 0;   /* 👈 就加这一行 */
 }
 
-
 /* ===============================
    CONTACT
 ================================ */
@@ -1165,67 +1164,4 @@ header::after,
 header::before{
   display: none !important;
   content: none !important;
-}
-/* ===== HAMBURGER / SP ELEMENT HIDE ON PC ===== */
-@media screen and (min-width: 768px){
-
-  .sp-menu-line,
-  .sp-nav,
-  .hamburger,
-  .drawer-bg{
-    display: none !important;
-  }
-
-}
-/* ===== FORCE CLEAN HEADER (REMOVE UNKNOWN BAR) ===== */
-header{
-  display: flex;
-  align-items: center;
-}
-
-/* 把 header 里多出来的空块全部压扁 */
-header > div:empty{
-  display: none !important;
-}
-
-/* 有些模板用这个制造灰条 */
-header span:empty,
-header p:empty{
-  display: none !important;
-}
-
-/* 防止伪元素画线 */
-header::before,
-header::after{
-  content: none !important;
-  display: none !important;
-}
-/* ===== FIX LOGO UNDERLINE (最终覆盖) ===== */
-.header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  background: none !important;
-  padding: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.header .logo::before,
-.header .logo::after {
-  content: none !important;
-  display: none !important;
-}
-/* ===== KILL UNKNOWN GREY BAR (ABSOLUTE FINAL) ===== */
-.header-inner {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.header-inner::before,
-.header-inner::after {
-  content: none !important;
-  display: none !important;
 }
