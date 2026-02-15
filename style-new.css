@@ -1167,3 +1167,12 @@ header::before{
   display: none !important;
   content: none !important;
 }
+/* ===== TEST: 检查灰块是否来自 logo 本身 ===== */
+.logo {
+  overflow: hidden;
+}
+
+.logo img {
+  display: block;
+  transform: translateY(-6px);
+}
