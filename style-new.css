@@ -1087,22 +1087,21 @@ html, body {
   width: 960px !important;
   max-width: 960px !important;
 }
+
 /* ===============================
-   WORK 01–04 BACKGROUND（单张、不重复）
+   WORK 01–04 BACKGROUND（固定背景版）
 ================================ */
 
 .work-bg{
-  background-image: url("./images/workbackground.jpg"); /* ← 这里换成你的图片名 */
-  background-repeat: no-repeat;   /* 不平铺 */
+  background-image: url("./images/workbackground.jpg"); /* 你的文件名 */
+  background-repeat: no-repeat;
   background-position: center top;
-  background-size: 1400px auto;  /* 控制背景真实尺寸 */
 
-
-  padding-top: 120px;             /* 让背景露出来 */
-  padding-bottom: 120px;
+  background-size: 1400px auto;   /* 保持清晰，不拉伸 */
+  background-attachment: fixed;   /* ← 关键：让01–04在同一张图上“滑动” */
 }
 
-/* 关键：让里面的 section 变透明，别挡住背景 */
+/* 让里面的section不要盖住背景 */
 .work-bg .section{
   background: transparent;
 }
