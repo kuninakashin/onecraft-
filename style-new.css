@@ -1165,3 +1165,14 @@ header::before{
   display: none !important;
   content: none !important;
 }
+/* ===== HAMBURGER / SP ELEMENT HIDE ON PC ===== */
+@media screen and (min-width: 768px){
+
+  .sp-menu-line,
+  .sp-nav,
+  .hamburger,
+  .drawer-bg{
+    display: none !important;
+  }
+
+}
