@@ -60,16 +60,9 @@ body {
    HEADER (PC)
 ================================ */
 .header {
-  position: fixed;   /* ← 关键：固定住 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;     /* 防止被图片盖住 */
-
   background: #fff;
   border-bottom: 1px solid #eee;
 }
-
 
 .header-inner {
   max-width: 1200px;
@@ -96,10 +89,6 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
-body {
-  padding-top: 72px;   /* 这个数值 = 你header实际高度 */
-}
-
 
 /* NAV */
 .nav {
