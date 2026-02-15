@@ -1075,7 +1075,7 @@ html, body {
 
 /* 03：收紧一点（说明型） */
 .work-03 .img-row{
-  width: 620px;      /* ← 这里决定03大小 */
+  width: 700px;      /* ← 这里决定03大小 */
   gap: 16px;
 }
 /* ===============================
@@ -1086,4 +1086,22 @@ html, body {
 .work-02 .img-row{
   width: 960px !important;
   max-width: 960px !important;
+}
+
+/* ===============================
+   WORK 01–04 BACKGROUND（固定背景版）
+================================ */
+
+.work-bg{
+  background-image: url("./images/workbackground.jpg"); /* 你的文件名 */
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  background-size: 1400px auto;   /* 保持清晰，不拉伸 */
+  background-attachment: fixed;   /* ← 关键：让01–04在同一张图上“滑动” */
+}
+
+/* 让里面的section不要盖住背景 */
+.work-bg .section{
+  background: transparent;
 }
