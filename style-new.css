@@ -60,9 +60,16 @@ body {
    HEADER (PC)
 ================================ */
 .header {
+  position: fixed;   /* 固定在顶部 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* 压在所有内容上面 */
+
   background: #fff;
   border-bottom: 1px solid #eee;
 }
+
 
 .header-inner {
   max-width: 1200px;
@@ -89,6 +96,10 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
+body {
+  padding-top: 72px;   /* 这个数值等于 header 高度 */
+}
+
 
 /* NAV */
 .nav {
