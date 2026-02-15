@@ -66,8 +66,8 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
-  border-bottom: 1px solid #eee;
   z-index: 9999;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
 }
 
 
