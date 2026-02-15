@@ -308,7 +308,8 @@
 </section>
 
 <!-- ========== 02 ========== -->
-<section class="section work work-magazine">
+<section class="section work work-magazine work-02">
+
   <div class="magazine-wrap">
 
     <div class="magazine-left">
@@ -348,7 +349,8 @@
 
 
 <!-- ========== 03 ========== -->
-<section class="section work work-magazine">
+<section class="section work work-magazine work-03">
+
   <div class="magazine-wrap">
 
     <div class="magazine-left">
@@ -400,7 +402,7 @@
       <div class="magazine-num">04</div>
 
       <div class="magazine-title">
-        他社との違い・小ロットから低価格で完全オリジナル製作
+        他社との違い・小ロットから価格で<br>オリジナル製作
       </div>
 
       <div class="magazine-line"></div>
