@@ -530,12 +530,13 @@ body {
 
 .company-label {
   writing-mode: vertical-rl;
-  font-size: 12px;
+  font-size: 18px;        /* ← 从 12px 放大到 18px */
   font-weight: 700;
-  letter-spacing: 0.32em;
-  padding-right: 14px;
+  letter-spacing: 0.28em; /* 字变大后，间距稍微收一点更精致 */
+  padding-right: 18px;    /* 给右边那条线多一点呼吸空间 */
   position: relative;
 }
+
 
 .company-label::after {
   content: "";
@@ -960,4 +961,58 @@ html, body {
   font-size: 44px !important;   /* ← 这里控制 01/02 大小 */
   color: rgba(0,0,0,0.10);
   letter-spacing: 0 !important;
+}
+
+/* ===== COMPANY：只移动公司信息内容，不动标题 ===== */
+.section.company .company-info table {
+  margin-left: 80px;
+}
+
+/* ===== COMPANY：缩小右侧 logo 尺寸 ===== */
+.section.company .company-logo img {
+  width: 200px;   /* 原来 150px → 增加约 35px = 大约 +1cm */
+  height: auto;
+}
+.section.company .company-logo {
+  transform: translateX(-110px);  /* 再向左约 35px ≈ 1cm */
+}
+/* ===== COMPANY：公司信息行距收紧 ===== */
+.section.company table {
+  border-collapse: collapse;   /* 去掉表格默认空隙 */
+}
+
+.section.company th,
+.section.company td {
+  padding: 8px 0;              /* 原来浏览器默认大约是16px，这里减半 */
+  line-height: 1.6;            /* 控制文字上下呼吸感 */
+}
+
+/* ===============================
+   WORK MAIN TITLE（私たちの仕事）
+   最终版：大・圆润・黑・粗
+================================ */
+.work-title{
+  font-family:
+    "Hiragino Maru Gothic ProN",   /* 圆润日文字体（最关键） */
+    "ヒラギノ丸ゴ ProN",
+    "Yu Round Gothic",
+    "游ゴシック体",
+    "Noto Sans JP",
+    sans-serif;
+
+  font-size: 40px;      /* ← 字体放大（需要再大可以改 44 / 48） */
+  font-weight: 800;     /* 粗体 */
+  color: #000;          /* 纯黑 */
+
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+
+  /* 位置微调（保持你现在版式） */
+  transform: translate(120px, -40px);
+
+  margin: 0;
+
+  /* 让字形更柔和（关键） */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
