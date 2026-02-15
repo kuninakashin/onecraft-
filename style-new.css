@@ -322,12 +322,16 @@ body {
    CATEGORY IMAGE UNIFY（只控制图片）
 ================================ */
 
-.simple-item .thumb{
-  aspect-ratio: 4 / 3;   /* 统一图片比例 */
+/* ===============================
+   CATEGORY ONLY（不要影响 NEWS）
+================================ */
+
+.simple-item-list .simple-item .thumb{
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
-.simple-item .thumb img{
+.simple-item-list .simple-item .thumb img{
   width: 100%;
   height: 100%;
   object-fit: cover;
