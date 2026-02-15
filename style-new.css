@@ -144,16 +144,19 @@ body {
 ================================ */
 .hero-ph {
   height: 80vh;
-  min-height: 520px;                 /* 👈 防止屏幕高时太扁 */
+  min-height: 520px;
   background-image: url("./images/top.jpg");
-  background-size: cover;            /* 👈 关键：铺满不变形 */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-top: -1px;   /* ← 这一行就是用来吃掉那条“视觉缝” */
 }
+
 
 .hero-ph h1 {
   font-size: 42px;
