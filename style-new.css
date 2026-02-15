@@ -1095,7 +1095,7 @@ html, body {
   background-image: url("./images/workbackground.jpg"); /* ← 这里换成你的图片名 */
   background-repeat: no-repeat;   /* 不平铺 */
   background-position: center top;
-  background-size: 1200px auto;  /* 控制背景真实尺寸 */
+  background-size: 1600px auto;  /* 控制背景真实尺寸 */
 
 
   padding-top: 120px;             /* 让背景露出来 */
