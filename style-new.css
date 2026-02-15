@@ -1178,4 +1178,10 @@ header::before{
   display: block;
   height: 38px;   /* ← 让图片稍微高一点，把灰底“藏”到下面 */
 }
+.logo {
+  background: red !important;
+}
 
+.logo img {
+  opacity: 0.2;
+}
