@@ -145,6 +145,8 @@ body {
 .hero-ph {
   height: 80vh;
   min-height: 520px;
+
+  background-color: #fff;
   background-image: url("./images/top.jpg");
   background-size: cover;
   background-position: center center;
@@ -154,7 +156,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  margin-top: -1px;   /* ← 这一行就是用来吃掉那条“视觉缝” */
+  margin-top: -1px;
 }
 
 
