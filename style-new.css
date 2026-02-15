@@ -1075,6 +1075,15 @@ html, body {
 
 /* 03：收紧一点（说明型） */
 .work-03 .img-row{
-  width: 560px;      /* ← 这里决定03大小 */
+  width: 620px;      /* ← 这里决定03大小 */
   gap: 16px;
+}
+/* ===============================
+   FINAL FORCE — ONLY WORK 02
+   把02从旧规则手里抢回来
+================================ */
+
+.work-02 .img-row{
+  width: 960px !important;
+  max-width: 960px !important;
 }
