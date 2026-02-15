@@ -1045,21 +1045,15 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* ===============================
-   WORK 03 IMAGE SIZE FIX（只作用03）
-================================ */
 
-/* 只锁定第3个 work（03） */
+/* WORK 03 IMAGE SIZE（只作用03）*/
 .section.work:nth-of-type(3) .img-row {
-  max-width: 540px;   /* ← 控制整组缩小（现在太大） */
-  gap: 16px;          /* 图之间间距也一起收一点 */
+  max-width: 820px;   /* ← 在这里控制03整体大小 */
+  width: 100%;
+  margin: 0 auto;
+  gap: 24px;
 }
 
-/* 图片本身稍微柔和一点比例 */
-.section.work:nth-of-type(3) .img-row img {
-  width: 100%;
-  height: auto;
-}
 /* ===============================
    WORK 02 IMAGE SIZE UP（只放大02）
 ================================ */
