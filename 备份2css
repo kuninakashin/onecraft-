@@ -1016,3 +1016,74 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* ===============================
+   WORK 03 IMAGE SIZE FIX（只作用03）
+================================ */
+
+/* 只锁定第3个 work（03） */
+.section.work:nth-of-type(3) .img-row {
+  max-width: 540px;   /* ← 控制整组缩小（现在太大） */
+  gap: 16px;          /* 图之间间距也一起收一点 */
+}
+
+/* 图片本身稍微柔和一点比例 */
+.section.work:nth-of-type(3) .img-row img {
+  width: 100%;
+  height: auto;
+}
+/* ===============================
+   WORK 02 IMAGE SIZE UP（只放大02）
+================================ */
+
+/* 锁定第2个 work（02） */
+.section.work:nth-of-type(2) .img-row {
+  max-width: 960px;   /* ← 让它比现在更展开 */
+  gap: 24px;          /* 图之间间距同步放松一点 */
+}
+/* ===============================
+   FORCE OVERRIDE — WORK 02 ONLY
+   强制解除之前 820px 限制
+================================ */
+
+.section.work.work-magazine:nth-of-type(2) .img-row{
+  max-width: 960px !important;   /* 直接覆盖旧的 820px */
+}
+/* ===============================
+   WORK 02 — SIZE CONTROL（精准控制）
+================================ */
+
+.work-02 .img-row{
+  max-width: 960px;
+  gap: 24px;
+}
+/* ===============================
+   WORK 02 / 03 — IMAGE WIDTH CONTROL
+   （覆盖之前所有限制，只精准作用02、03）
+================================ */
+
+/* 解除旧的 820px 全局限制 */
+.work-02 .img-row,
+.work-03 .img-row{
+  max-width: none;
+}
+
+/* 02：放大一点（流程展示型） */
+.work-02 .img-row{
+  width: 960px;      /* ← 这里决定02大小 */
+  gap: 24px;
+}
+
+/* 03：收紧一点（说明型） */
+.work-03 .img-row{
+  width: 620px;      /* ← 这里决定03大小 */
+  gap: 16px;
+}
+/* ===============================
+   FINAL FORCE — ONLY WORK 02
+   把02从旧规则手里抢回来
+================================ */
+
+.work-02 .img-row{
+  width: 960px !important;
+  max-width: 960px !important;
+}
