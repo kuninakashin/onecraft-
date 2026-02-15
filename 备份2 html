@@ -258,7 +258,10 @@
   </div>
 
 </section>
-
+  
+<!-- ===== WORK BACKGROUND WRAP ===== -->
+<div class="work-bg">
+  
 <!-- ========== 01 ========== -->
 <section class="section work work-magazine">
 <p class="work-title">私たちの仕事</p>
@@ -430,8 +433,11 @@
 
   </div>
 </section>
+      
+</div>
+<!-- ===== /WORK BACKGROUND WRAP ===== -->
 
-<!-- ========== COMPANY ========== -->
+    <!-- ========== COMPANY ========== -->
 <section class="section company" id="company">
 
   <div class="company-wrap">
