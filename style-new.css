@@ -312,17 +312,39 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
-/* ===== CATEGORY LINK RESET ===== */
+
+/* ===== CATEGORY LINK STYLE ===== */
 .simple-item a {
-  color: #111;              /* 保持原本黑色 */
-  text-decoration: none;    /* 去掉下划线 */
+  color: #000;                 /* 比现在更实一点 */
+  text-decoration: none;
   display: inline-block;
-  transition: opacity 0.3s ease;
+  position: relative;
+  cursor: pointer;             /* ← 鼠标变手型（很重要） */
+  transition: color 0.3s ease;
 }
 
-.simple-item a:hover {
-  opacity: 0.6;             /* hover 时轻微变化（和导航一致） */
+/* 底部细线（默认隐藏） */
+.simple-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s ease;
 }
+
+/* hover 时线慢慢展开 */
+.simple-item a:hover::after {
+  width: 100%;
+}
+
+/* hover 时颜色微变化 */
+.simple-item a:hover {
+  color: #444;
+}
+
 
 
 /* ===============================
