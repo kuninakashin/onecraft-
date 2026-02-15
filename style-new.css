@@ -20,10 +20,7 @@ body {
   letter-spacing: 0.04em;
   color: #111;
   background-color: #f7f7f7;
-
-  padding-top: 72px;   /* ← 新增这一行，别改别的 */
 }
-
 
 /* ===============================
    SIDE VERTICAL SCROLL (PC ONLY)
@@ -63,12 +60,6 @@ body {
    HEADER (PC)
 ================================ */
 .header {
-  position: fixed;   /* 固定在顶部 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;     /* 压在所有内容上面 */
-
   background: #fff;
   border-bottom: 1px solid #eee;
 }
