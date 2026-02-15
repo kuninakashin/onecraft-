@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+   padding-top: 72px;
   font-family:
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
@@ -59,10 +60,17 @@ body {
 /* ===============================
    HEADER (PC)
 ================================ */
-.header {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;        /* 明确写死高度 */
   background: #fff;
-  border-bottom: 1px solid #eee;
+  z-index: 9999;
 }
+
+
 
 .header-inner {
   max-width: 1200px;
@@ -128,17 +136,6 @@ body {
   opacity: 0.5;
 }
 
-/* ===============================
-   HEADER STICKY
-================================ */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-}
 
 /* ===============================
    HERO
