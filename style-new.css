@@ -595,6 +595,7 @@ body {
   padding: 22px 0;   /* 👈 就加这一行 */
 }
 
+
 /* ===============================
    CONTACT
 ================================ */
@@ -1199,7 +1200,7 @@ header::after{
   content: none !important;
   display: none !important;
 }
-/* ===== FIX LOGO UNDERLINE (覆盖旧样式) ===== */
+/* ===== FIX LOGO UNDERLINE (最终覆盖) ===== */
 .header .logo {
   display: flex;
   align-items: center;
@@ -1213,6 +1214,18 @@ header::after{
 
 .header .logo::before,
 .header .logo::after {
+  content: none !important;
+  display: none !important;
+}
+/* ===== KILL UNKNOWN GREY BAR (ABSOLUTE FINAL) ===== */
+.header-inner {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.header-inner::before,
+.header-inner::after {
   content: none !important;
   display: none !important;
 }
