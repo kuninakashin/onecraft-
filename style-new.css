@@ -1,4 +1,15 @@
 /* ===============================
+   固定顶部导航
+================================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9999;
+}
+/* ===============================
    BASE / GLOBAL
 ================================ */
 html {
@@ -8,6 +19,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: 100px;   /* ← 新增这一行 */
   font-family:
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
