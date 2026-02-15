@@ -1160,3 +1160,8 @@ header div{
 header hr{
   display: none !important;
 }
+header::after,
+header::before{
+  display: none !important;
+  content: none !important;
+}
