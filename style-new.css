@@ -1031,3 +1031,12 @@ html, body {
   width: 100%;
   height: auto;
 }
+/* ===============================
+   WORK 02 IMAGE SIZE UP（只放大02）
+================================ */
+
+/* 锁定第2个 work（02） */
+.section.work:nth-of-type(2) .img-row {
+  max-width: 920px;   /* ← 让它比现在更展开 */
+  gap: 24px;          /* 图之间间距同步放松一点 */
+}
