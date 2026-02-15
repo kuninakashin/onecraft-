@@ -1087,3 +1087,21 @@ html, body {
   width: 960px !important;
   max-width: 960px !important;
 }
+/* ===============================
+   WORK 01–04 BACKGROUND（单张、不重复）
+================================ */
+
+.work-bg{
+  background-image: url("./images/work-bg.jpg"); /* ← 这里换成你的图片名 */
+  background-repeat: no-repeat;   /* 不平铺 */
+  background-position: center top;
+  background-size: cover;         /* 整张铺开 */
+
+  padding-top: 120px;             /* 让背景露出来 */
+  padding-bottom: 120px;
+}
+
+/* 关键：让里面的 section 变透明，别挡住背景 */
+.work-bg .section{
+  background: transparent;
+}
