@@ -1020,30 +1020,24 @@ html, body {
    WORK MAIN TITLE（私たちの仕事）
    最终版：大・圆润・黑・粗
 ================================ */
+/* WORK 主标题 */
 .work-title{
+  font-size: 44px;              /* ← 控制大小 */
+  font-weight: 800;             /* 粗体 */
+  color: #111;                  /* 纯黑 */
+
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 80px;
+
+  /* 日文字体圆润感 */
   font-family:
-    "Hiragino Maru Gothic ProN",   /* 圆润日文字体（最关键） */
-    "ヒラギノ丸ゴ ProN",
-    "Yu Round Gothic",
-    "游ゴシック体",
-    "Noto Sans JP",
+    "Hiragino Maru Gothic ProN",
+    "Hiragino Maru Gothic Pro",
+    "Yu Gothic",
+    "Meiryo",
     sans-serif;
-
-  font-size: 40px;      /* ← 字体放大（需要再大可以改 44 / 48） */
-  font-weight: 800;     /* 粗体 */
-  color: #000;          /* 纯黑 */
-
-  letter-spacing: 0.06em;
-  line-height: 1.4;
-
-  /* 位置微调（保持你现在版式） */
-  transform: translate(120px, -40px);
-
-  margin: 0;
-
-  /* 让字形更柔和（关键） */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* WORK 03 IMAGE SIZE（只作用03）*/
