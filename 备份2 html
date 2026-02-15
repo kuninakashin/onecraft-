@@ -117,34 +117,47 @@
 
   <div class="simple-item-grid">
     <div class="simple-item">
-  <img src="./images/totebag.jpg">
+  <div class="thumb">
+    <img src="./images/totebag.jpg">
+  </div>
   <p class="item-label">バッグ・ポーチ</p>
 </div>
 
-    <div class="simple-item">
-  <img src="./images/pc.jpg">
-       <p class="item-label">生活雑貨・PC スマートフォン関連</p>
-    </div>
 
     <div class="simple-item">
-  <img src="./images/shirt2.jpg">
-      <p class="item-label">アパレル</p>
-    </div>
-
-    <div class="simple-item">
- <img src="./images/keyring.jpg">
- <p class="item-label">小物・アクセリア</p>
+  <div class="thumb">
+    <img src="./images/pc.jpg">
+  </div>
+  <p class="item-label">生活雑貨・プチスマートフォン関連</p>
 </div>
 
     <div class="simple-item">
-  <img src="./images/hoodie2.jpg">
-       <p class="item-label">パーカー</p>
-    </div>
+  <div class="thumb">
+    <img src="./images/shirt1.jpg">
+  </div>
+  <p class="item-label">Tシャツ</p>
+</div>
 
     <div class="simple-item">
- <img src="./images/towel.jpg">
-       <p class="item-label">タオル</p>
-    </div>
+  <div class="thumb">
+    <img src="./images/towel.jpg">
+  </div>
+  <p class="item-label">タオル</p>
+</div>
+
+    <div class="simple-item">
+  <div class="thumb">
+    <img src="./images/keyring.jpg">
+  </div>
+  <p class="item-label">小物・アクセリア</p>
+</div>
+
+    <div class="simple-item">
+  <div class="thumb">
+    <img src="./images/hoodie2.jpg">
+  </div>
+  <p class="item-label">パーカー</p>
+</div>
 
   </div>
 
@@ -204,9 +217,12 @@
 
     <!-- card 1 -->
     <article class="news-card">
-       <div class="simple-item">
-    <img src="./images/live2027.png" alt="">
-</div>
+  <div class="simple-item">
+    <div class="thumb">
+      <img src="./images/live2027.png" alt="">
+    </div>
+  </div>
+
       <span class="news-date">2027年1月27日-29日</span>
       <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）2027</h3>
       <p class="news-text">
@@ -223,10 +239,13 @@
     </article>
 
     <!-- card 2 -->
-   <article class="news-card">
-       <div class="simple-item">
-    <img src="./images/live2026.png" alt="">
-</div>
+  <article class="news-card">
+  <div class="simple-item">
+    <div class="thumb">
+      <img src="./images/live2026.png" alt="">
+    </div>
+  </div>
+
       <span class="news-date">2026年1月21日-23日</span>
       <h3 class="news-title">レジャー＆アミューズメントEXPO（AMLEX）2026</h3>
       <p class="news-text">
@@ -244,13 +263,16 @@
 
     <!-- card 3 -->
     <article class="news-card">
-       <div class="simple-item">
-    <img src="./images/calendar2026.jpg" alt="">
-</div>
-      <span class="news-date">2025年12月21日</span>
-      <h3 class="news-title">年末年始の営業について</h3>
+  <div class="simple-item">
+    <div class="thumb">
+      <img src="./images/calendar2026.jpg" alt="">
+    </div>
+  </div>
+
+      <span class="news-date">2026年（令和8年）</span>
+      <h3 class="news-title">営業について</h3>
       <p class="news-text">
-        年末年始の営業時間につきましてご案内いたします…
+        営業時間につきましてご案内いたします…
       </p>
       <a href="#" class="news-more">Read More</a>
     </article>
