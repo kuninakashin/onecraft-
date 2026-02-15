@@ -1167,12 +1167,15 @@ header::before{
   display: none !important;
   content: none !important;
 }
-/* ===== TEST: 检查灰块是否来自 logo 本身 ===== */
 .logo {
   overflow: hidden;
+  height: 32px;           /* ← 固定显示高度（和你 logo 原本高度一致） */
+  display: flex;
+  align-items: flex-start; /* ← 从上对齐，就不会裁上面 */
 }
 
 .logo img {
   display: block;
-  transform: translateY(-6px);
+  height: 38px;   /* ← 让图片稍微高一点，把灰底“藏”到下面 */
 }
+
