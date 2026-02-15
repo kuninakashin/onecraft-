@@ -82,7 +82,12 @@ body {
 
 .header .logo img {
   height: 32px;
-  display: block;   /* ← 这一句就是专门杀这条“假灰线”的 */
+}
+
+.header .logo span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 /* NAV */
@@ -132,9 +137,8 @@ body {
   top: 0;
   z-index: 1000;
   background: #fff;
-  box-shadow: none;   /* ← 关键！去掉那条灰线 */
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
 }
-
 
 /* ===============================
    HERO
@@ -144,22 +148,16 @@ body {
 ================================ */
 .hero-ph {
   height: 80vh;
-  min-height: 520px;
-
-  background-color: #fff;
+  min-height: 520px;                 /* 👈 防止屏幕高时太扁 */
   background-image: url("./images/top.jpg");
-  background-size: cover;
-  background-position: center 24px;
-
+  background-size: cover;            /* 👈 关键：铺满不变形 */
+  background-position: center center;
   background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-top: -1px;
 }
-
 
 .hero-ph h1 {
   font-size: 42px;
@@ -700,15 +698,12 @@ body {
   }
 
   .header-inner {
-  height: 56px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background: #fff;   /* ← 必须加在这里才真正生效 */
-}
-
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .nav,
   .header-sns {
@@ -1169,22 +1164,4 @@ header::after,
 header::before{
   display: none !important;
   content: none !important;
-}
-.logo {
-  overflow: hidden;
-  height: 32px;           /* ← 固定显示高度（和你 logo 原本高度一致） */
-  display: flex;
-  align-items: flex-start; /* ← 从上对齐，就不会裁上面 */
-}
-
-.logo img {
-  display: block;
-  height: 38px;   /* ← 让图片稍微高一点，把灰底“藏”到下面 */
-}
-
-.logo img {
-  opacity: 0.2;
-}
-.logo {
-  background: red !important;
 }
