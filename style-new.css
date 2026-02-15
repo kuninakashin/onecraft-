@@ -312,7 +312,17 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
+/* ===== CATEGORY LINK RESET ===== */
+.simple-item a {
+  color: #111;              /* 保持原本黑色 */
+  text-decoration: none;    /* 去掉下划线 */
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
 
+.simple-item a:hover {
+  opacity: 0.6;             /* hover 时轻微变化（和导航一致） */
+}
 
 
 /* ===============================
