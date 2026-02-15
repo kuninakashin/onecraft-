@@ -313,6 +313,57 @@ header {
   gap: 60px;
 }
 
+/* ===============================
+   CATEGORY LINK STYLE（最终版）
+================================ */
+.simple-item a {
+  color: #111;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* ✔ 关键：圆润 + 稍微有存在感 */
+  font-weight: 600;
+  letter-spacing: 0.06em;
+
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  /* ✔ 让日文字体更柔和（很多人不知道这个） */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   底部细线动画（高级感来源）
+================================ */
+.simple-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #111;
+  transition: width 0.35s ease;
+}
+
+/* hover：线展开 */
+.simple-item a:hover::after {
+  width: 100%;
+}
+
+/* hover：轻微变淡，而不是变蓝（更日系） */
+.simple-item a:hover {
+  color: #555;
+}
 
 
 /* ===============================
