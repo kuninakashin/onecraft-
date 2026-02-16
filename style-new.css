@@ -1362,3 +1362,16 @@ html, body {
   }
 
 }
+/* ===============================
+   FOOTER LOGO REAL MOBILE SIZE
+================================ */
+@media screen and (max-width: 767px) {
+
+  footer img {
+    width: 180px !important;
+    max-width: 80% !important;
+    margin: 40px auto !important;
+    display: block;
+  }
+
+}
