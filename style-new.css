@@ -82,17 +82,20 @@ header {
 }
 
 /* LOGO */
-.header .logo {
+header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.header .logo img {
+header .logo img {
   height: 32px;
+  width: auto;
+  display: block;
 }
 
-.header .logo span {
+
+header .logo span {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.04em;
