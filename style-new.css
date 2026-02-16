@@ -1371,3 +1371,16 @@ header::before{
   }
 
 }
+/* ===== iPhone SAFARI 专用修正：取消 PC 顶部补偿 ===== */
+@media screen and (max-width: 767px) {
+
+  body {
+    padding-top: 0 !important;
+  }
+
+  header {
+    position: relative !important;
+    height: auto !important;
+  }
+
+}
