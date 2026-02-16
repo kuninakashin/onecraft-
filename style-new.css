@@ -1480,3 +1480,104 @@ header::before{
     padding: 60px 0 !important;
   }
 }
+/* =====================================
+   MOBILE FINAL RESET（真正覆盖PC）
+===================================== */
+@media screen and (max-width: 767px) {
+
+
+/* ===== 强制关闭所有PC结构 ===== */
+.work-wrap,
+.company-wrap,
+.footer-inner {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+
+
+/* ===== Header 真正缩小 ===== */
+header {
+  height: auto !important;
+}
+
+.header-inner {
+  padding: 10px 16px !important;
+}
+
+.header .logo img {
+  height: 24px !important;
+}
+
+.header .logo span {
+  font-size: 14px !important;
+}
+
+
+/* ===== HERO 不允许再被裁切 ===== */
+.hero-ph {
+  height: auto !important;
+}
+
+
+/* ===== 01–04 全部改为手机阅读模式 ===== */
+
+.work-wrap {
+  padding: 0 20px !important;
+}
+
+.work-num {
+  font-size: 36px !important;
+  margin-bottom: 6px !important;
+}
+
+.work-title {
+  writing-mode: horizontal-tb !important;
+  font-size: 20px !important;
+  margin-bottom: 14px !important;
+}
+
+.work-text {
+  width: 100% !important;
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+}
+
+
+/* ===== 图片绝不允许被裁 ===== */
+.work-img img {
+  width: 100% !important;
+  height: auto !important;
+  margin-top: 18px !important;
+}
+
+
+/* ===== 公司信息单列 ===== */
+.company-wrap {
+  padding: 0 20px !important;
+}
+
+.company-table {
+  width: 100% !important;
+}
+
+
+/* ===== 底部logo修复 ===== */
+.footer-logo img {
+  width: 120px !important;
+  height: auto !important;
+}
+
+
+/* ===== section间距 ===== */
+section {
+  padding: 60px 0 !important;
+}
+
+
+/* ===== 只隐藏左右装饰，不影响别的 ===== */
+.side-fixed.left,
+.side-fixed.right {
+  display: none !important;
+}
+
+}
