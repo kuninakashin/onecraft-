@@ -1416,3 +1416,67 @@ header::before{
   }
 
 }
+/* =====================================
+   MOBILE FORCE OVERRIDE (FINAL FIX)
+===================================== */
+@media screen and (max-width: 767px) {
+
+  body {
+    padding-top: 60px;
+  }
+
+  /* 隐藏 PC 两侧竖排文字 */
+  .side-fixed {
+    display: none !important;
+  }
+
+  /* 01-04 整体改为手机阅读模式 */
+  .work-wrap {
+    display: block !important;
+    padding: 0 20px !important;
+  }
+
+  .work-num {
+    font-size: 36px !important;
+    margin-bottom: 12px !important;
+    color: #ccc;
+  }
+
+  .work-title {
+    writing-mode: horizontal-tb !important;
+    font-size: 20px !important;
+    margin-bottom: 14px !important;
+    letter-spacing: 0.08em;
+  }
+
+  .work-text {
+    width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.9 !important;
+  }
+
+  /* 图片不要再卡在右边 */
+  .work-img {
+    margin-top: 20px;
+  }
+
+  .work-img img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 公司信息改成单列 */
+  .company-wrap {
+    display: block !important;
+    padding: 0 20px !important;
+  }
+
+  /* Footer logo 不要巨大 */
+  .footer-logo img {
+    width: 140px !important;
+  }
+
+  section {
+    padding: 60px 0 !important;
+  }
+}
