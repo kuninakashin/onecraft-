@@ -1338,3 +1338,81 @@ header::before{
   }
 
 }
+/* =====================================
+   MOBILE FORCE OVERRIDE（真正生效层）
+===================================== */
+@media screen and (max-width: 767px) {
+
+  /* ===== 清掉 PC grid 结构 ===== */
+  .work-wrap,
+  .company-wrap {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+  }
+
+  /* ===== 左侧编号不要绝对定位 ===== */
+  .work-num {
+    position: static !important;
+    font-size: 42px !important;
+    color: #ccc !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* ===== 竖排标题 → 横排 ===== */
+  .work-title {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    font-size: 22px !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  /* ===== 正文宽度解除限制 ===== */
+  .work-text {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* ===== 那条装饰竖线手机不要 ===== */
+  .work-line,
+  .vertical-line {
+    display: none !important;
+  }
+
+  /* ===== 图片不要漂浮 ===== */
+  .work-img {
+    position: static !important;
+    margin-top: 20px !important;
+  }
+
+  .work-img img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ===== HERO 不要占满一整屏 ===== */
+  .hero-ph {
+    height: auto !important;
+  }
+
+  /* ===== Header 白条太高的问题 ===== */
+  header {
+    height: auto !important;
+  }
+
+  .header-inner {
+    padding: 12px 16px !important;
+  }
+
+  /* ===== PC 专用元素全部关闭 ===== */
+  .pc-only,
+  .side-fixed {
+    display: none !important;
+  }
+
+  /* ===== section 间距重新定义 ===== */
+  section {
+    padding: 50px 20px !important;
+  }
+
+}
