@@ -1375,3 +1375,21 @@ html, body {
   }
 
 }
+/* ===============================
+   DISABLE FLOATING LOGO ON MOBILE
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* PC 用来装饰的那个大 e */
+  .company-mark,
+  .bg-logo,
+  .floating-logo {
+    position: static !important;
+    width: 140px !important;
+    max-width: 40% !important;
+    margin: 20px auto !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+}
