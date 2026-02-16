@@ -1210,3 +1210,30 @@ header::before{
   }
 
 }
+/* ===============================
+   LOGO STYLE (for all pages)
+================================ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;   /* 去掉蓝色下划线 */
+  color: #111;             /* 不要浏览器默认蓝色 */
+}
+
+.logo img {
+  height: 48px;            /* 控制 logo 大小 ← 可调整 */
+  width: auto;
+  display: block;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* hover 时轻微变化（高级感） */
+.logo:hover {
+  opacity: 0.7;
+}
