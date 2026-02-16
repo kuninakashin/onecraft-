@@ -1294,3 +1294,37 @@ header::before{
   }
 
 }
+/* ===============================
+   FORCE FIX : WORK IMAGE (SP)
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* 取消 PC 的 grid */
+  .section .inner {
+    display: block !important;
+  }
+
+  /* 所有说明区图片统一手机尺寸 */
+  .section img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 24px 0;
+  }
+
+}
+/* ===============================
+   FORCE FIX : FOOTER LOGO (SP)
+================================ */
+@media screen and (max-width: 767px) {
+
+  footer img {
+    width: 160px !important;
+    max-width: 70% !important;
+    height: auto !important;
+    margin: 40px auto !important;
+    display: block;
+  }
+
+}
