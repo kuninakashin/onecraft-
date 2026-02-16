@@ -111,6 +111,7 @@
 
   <div class="simple-item-title">
     <span class="line"></span>
+    
     <h2>Category</h2>
     <p>Item List</p>
   </div>
@@ -120,7 +121,10 @@
   <div class="thumb">
     <img src="./images/totebag.jpg">
   </div>
-  <p class="item-label">バッグ・ポーチ</p>
+ <p>
+  <a href="category-bag.html">バッグ・ポーチ</a>
+</p>
+
 </div>
 
 
@@ -128,35 +132,45 @@
   <div class="thumb">
     <img src="./images/pc.jpg">
   </div>
-  <p class="item-label">生活雑貨・プチスマートフォン関連</p>
+      <p>
+  <a href="category-life.html">生活雑貨・プチスマートフォン関連</a>
+</p>
 </div>
 
     <div class="simple-item">
   <div class="thumb">
     <img src="./images/shirt1.jpg">
   </div>
-  <p class="item-label">Tシャツ</p>
+    <p>
+  <a href="category-tshirt.html">Tシャツ</a>
+</p>
 </div>
 
     <div class="simple-item">
   <div class="thumb">
     <img src="./images/towel.jpg">
   </div>
-  <p class="item-label">タオル</p>
+ <p>
+  <a href="category-towel.html">タオル</a>
+</p>
 </div>
 
     <div class="simple-item">
   <div class="thumb">
     <img src="./images/keyring.jpg">
   </div>
-  <p class="item-label">小物・アクセリア</p>
+<p>
+  <a href="category-accessory.html">小物・アクセリア</a>
+</p>      
 </div>
 
     <div class="simple-item">
   <div class="thumb">
     <img src="./images/hoodie2.jpg">
   </div>
-  <p class="item-label">パーカー</p>
+ <p>
+  <a href="category-parka.html">パーカー</a>
+</p>
 </div>
 
   </div>
@@ -171,21 +185,11 @@
       <h2>ABOUT</h2>
 
       <p>
-       コンサートグッズ・アーティストグッズ・イベントグッズを
-メインに事業を展開し海外工場と直取引。当社では、お客様
-のご要望に応じて、オリジナルグッズやノベルティ、販促品
-など、様々な商品をオーダーメイドで完全オリジナル製作の
-業務を行なっております。　製造は中国自社工場や協力工場と
-直接取引をしているので激安です。　中国のものづくりの三大
-拠点である深圳や東莞等の広東省、義烏や南通等の浙江省・
-江蘇省と高密や即墨等の山東省に構えています。　細かな仕様
-のご要望から小ロット生産の対応まで、自社工場ならではの
-オリジナルを行っております。　「自社生産」、「工場直
-売」、中間業者を一切排除し、様々なノベルティや販促グッ
-ズを一貫して行っているため、短納期、小ロット、圧倒的
-な安さで商品をお届けします。　私たちはお客様のどうの
-ようなニーズにもお答えできるように生産体制を整えて、
-日々精進してまいります。
+       コンサートグッズ・アーティストグッズ・イベントグッズをメインに事業を展開し海外工場と直取引。当社では、お客様のご要望に応じて、オリジナルグッズやノベルティ、販促品など、様々な商品をオーダーメイドで完全オリジナル製作の業務を行なっております。　
+        製造は中国自社工場や協力工場と直接取引をしているので激安です。　中国のものづくりの三大拠点である深圳や東莞等の広東省、義烏や南通等の浙江省・江蘇省と高密や即墨等の山東省に構えています。　
+細かな仕様のご要望から小ロット生産の対応まで、自社工場ならではのオリジナルを行っております。　
+        「自社生産」、「工場直売」、中間業者を一切排除し、様々なノベルティや販促グッズを一貫して行っているため、短納期、小ロット、圧倒的な安さで商品をお届けします。　
+        私たちはお客様のどうのようなニーズにもお答えできるように生産体制を整えて、日々精進してまいります。
 
       </p>
 
@@ -409,9 +413,9 @@
       </p>
 
       <div class="img-row col-3">
-        <div class="simple-item"><img src="./images/0401.png"></div>
-        <div class="simple-item"><img src="./images/0402.png"></div>
-        <div class="simple-item"><img src="./images/0403.png"></div>
+        <div class="simple-item"><img src="./images/factory1.png"></div>
+        <div class="simple-item"><img src="./images/factory2.png"></div>
+        <div class="simple-item"><img src="./images/factory3.png"></div>
       </div>
 
     </div>
@@ -488,7 +492,7 @@
 
     <!-- 右侧（logo必须放这里！！） -->
     <div class="company-logo">
-      <img src="images/logoname.png" alt="ワンクラフト ロゴ">
+      <img src="images/logoname2.png" alt="ワンクラフト ロゴ">
     </div>
 
 </section>
