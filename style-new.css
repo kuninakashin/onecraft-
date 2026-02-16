@@ -1393,3 +1393,20 @@ html, body {
   }
 
 }
+/* ===============================
+   FIX: FLOATING RED LOGO (REAL TARGET)
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* 抓到那个异常放大的图片 */
+  body > img:first-of-type {
+    position: static !important;
+    width: 150px !important;
+    max-width: 40% !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+}
