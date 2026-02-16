@@ -135,28 +135,7 @@ header {
 .header-sns a:hover svg {
   opacity: 0.5;
 }
-/* ===============================
-   LOGO SIZE (全页面统一)
-================================ */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
 
-.logo img {
-  width: 42px;   /* ← 控制图标大小 */
-  height: auto;
-  display: block;
-}
-
-.logo span {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #111;
-}
 
 /* ===============================
    HERO
