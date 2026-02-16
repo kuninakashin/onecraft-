@@ -1240,3 +1240,34 @@ header::before{
 .logo:hover {
   opacity: 0.7;
 }
+/* ===============================
+   MOBILE ONLY LAYOUT
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* 页面左右留出安全边距 */
+  .inner {
+    padding: 0 20px;
+  }
+
+  /* 原本 PC 两栏 → 手机改成一栏 */
+  .about-wrap,
+  .company-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* 所有图片在手机跟随容器，不允许乱飞 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 底部 LOGO 缩小 */
+  footer img {
+    width: 160px;
+    display: block;
+    margin: 40px auto;
+  }
+
+}
