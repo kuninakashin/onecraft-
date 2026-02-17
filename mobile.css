@@ -1,24 +1,41 @@
 @media screen and (max-width: 767px) {
 
-  /* ① 彻底移除 PC 两侧竖排（这是挤版心的元凶） */
+  /* ① 彻底关闭 PC 左右装饰（它们会撑开画布） */
   .side-fixed {
     display: none !important;
   }
 
-  /* ② 只修正文内容里的图片，不影响 header */
-  main img,
-  section img {
+  /* ② 解开 PC 写死的页面宽度（关键就在这里） */
+  body,
+  .wrap,
+  .inner,
+  .container {
+    width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
+    margin: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
   }
 
-  /* ③ 底部公司 logo 单独控制（不是顶部那个） */
+  /* ③ section 不再使用 PC 的横向排版 */
+  section {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ④ 内容图片才开始自适应（现在才轮到它） */
+  section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ⑤ 底部公司 logo 居中 */
   .company img {
-    max-width: 220px !important;
-    width: 60% !important;
     display: block;
-    margin: 40px auto !important;
+    margin: 40px auto;
+    max-width: 200px;
+    width: 60%;
   }
 
 }
-
