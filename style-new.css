@@ -1294,3 +1294,74 @@ header::before{
   }
 
 }
+/* =========================================
+   📱 MOBILE LAYOUT FINAL TUNE
+   真正让手机回到“单栏阅读结构”
+========================================= */
+@media screen and (max-width:768px){
+
+  /* ===== WORK 整体改为单栏 ===== */
+  .magazine-wrap{
+    display:block !important;
+  }
+
+  .magazine-left{
+    width:auto;
+    margin-bottom:24px;
+    align-items:flex-start;
+  }
+
+  .magazine-num{
+    position:static !important;
+    font-size:32px !important;
+    margin-bottom:8px;
+  }
+
+  .magazine-title{
+    writing-mode:horizontal-tb !important;
+    font-size:18px;
+    letter-spacing:0.08em;
+  }
+
+  .magazine-line{
+    display:none;
+  }
+
+  /* ===== 正文回到正常阅读宽度 ===== */
+  .magazine-right{
+    width:100%;
+  }
+
+  .section.work p{
+    font-size:14px;
+    line-height:2;
+  }
+
+  /* ===== 图片改为手机节奏（不要横排） ===== */
+  .img-row{
+    display:block !important;
+    margin-top:24px;
+  }
+
+  .img-row img{
+    width:100%;
+    margin-bottom:16px;
+  }
+
+  /* ===== COMPANY 不要再左右结构 ===== */
+  .company-wrap{
+    display:block !important;
+  }
+
+  .company-logo{
+    transform:none !important;
+    margin-top:32px;
+    text-align:center;
+  }
+
+  /* ===== CONTACT 上方留白压缩 ===== */
+  .section.contact{
+    padding-top:56px !important;
+  }
+
+}
