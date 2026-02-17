@@ -1274,3 +1274,4 @@ header::before{
 body {
   background: red !important;
 }
+body { background: red; }
