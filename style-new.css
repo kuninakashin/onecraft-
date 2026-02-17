@@ -1535,7 +1535,7 @@ header::before{
 }
 /* ===== Logo Clickable Fix ===== */
 .site-title {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
 
@@ -1548,4 +1548,7 @@ header::before{
 }
 .site-title img {
   display: block;
+  height: 42px;
+  width: auto;
 }
+
