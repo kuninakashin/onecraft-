@@ -147,7 +147,7 @@ header .logo span {
    HERO – MAIN VISUAL
 ================================ */
 .hero-ph {
-  height: 80vh;
+  height: 80svh;
   min-height: 520px;                 /* 👈 防止屏幕高时太扁 */
   background-image: url("./images/top.jpg");
   background-size: cover;            /* 👈 关键：铺满不变形 */
@@ -1248,6 +1248,36 @@ header::before{
   .side-fixed,
   .pc-only{
     display: none !important;
+  }
+
+}
+/* iOS 旧版本兼容 */
+@supports not (height: 100svh){
+  .hero-ph{
+    height: 80vh;
+  }
+}
+/* =========================================
+   ✅ MOBILE FINAL FIX（放在文件最后！）
+   专门修 iPhone 错位 / 留白 / 被PC布局影响
+========================================= */
+@media screen and (max-width:768px){
+
+  /* 关闭PC两侧滚动竖排 */
+  .side-fixed{
+    display:none !important;
+  }
+
+  /* WORK 区块取消 PC 的左侧让位 */
+  .section.work{
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+
+  /* 固定背景在手机必须关闭，否则会制造超大留白 */
+  .work-bg{
+    background-attachment:scroll !important;
+    background-size:cover;
   }
 
 }
