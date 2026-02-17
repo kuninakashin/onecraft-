@@ -1,43 +1,28 @@
-/* ===============================
-   MOBILE: RESET PC POSITIONING
-   只修手机错位，不动PC设计
-================================ */
+/* ===== Mobile small fixes only ===== */
 @media screen and (max-width: 767px) {
 
-  /* ① 所有区块恢复正常排列（取消 PC 偏移） */
-  section,
-  .section,
-  .inner,
-  .wrap,
-  .about-wrap,
-  .company-wrap {
-    position: static !important;
-    transform: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: auto !important;
-    max-width: 100% !important;
+  /* ① 关闭左右那两条 PC 装饰文字 */
+  .side-fixed.left,
+  .side-fixed.right {
+    display: none;
   }
 
-  /* ② 所有图片取消 PC 的绝对定位 */
-  img {
-    position: static !important;
-    transform: none !important;
-    margin: 20px auto !important;
+  /* ② 让 02 那张图回到正常流，不再被推偏 */
+  .work img,
+  .about img,
+  .section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  /* ③ 底部公司 LOGO 居中，而不是贴左 */
+  .company-logo img,
+  .company img:last-of-type {
     display: block;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* ③ 隐藏 PC 左右装饰文字（它们在手机只会挤版） */
-  .side-fixed {
-    display: none !important;
-  }
-
-  /* ④ 修正顶部那块被挤出来的空白 */
-  body {
-    margin: 0;
-    padding: 0;
+    margin: 40px auto;
+    max-width: 220px;
+    height: auto;
   }
 
 }
