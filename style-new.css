@@ -1090,8 +1090,8 @@ html, body {
 
 /* 锁定第2个 work（02） */
 .section.work:nth-of-type(2) .img-row {
-  max-width: 700px;   /* ← 让它比现在更展开 */
-  gap: 16px;          /* 图之间间距同步放松一点 */
+  max-width: 960px;   /* ← 让它比现在更展开 */
+  gap: 24px;          /* 图之间间距同步放松一点 */
 }
 /* ===============================
    FORCE OVERRIDE — WORK 02 ONLY
@@ -1099,15 +1099,15 @@ html, body {
 ================================ */
 
 .section.work.work-magazine:nth-of-type(2) .img-row{
-  max-width: 700px !important;   /* 直接覆盖旧的 820px */
+  max-width: 960px !important;   /* 直接覆盖旧的 820px */
 }
 /* ===============================
    WORK 02 — SIZE CONTROL（精准控制）
 ================================ */
 
 .work-02 .img-row{
-  max-width: 700px;
-  gap: 16px;
+  max-width: 960px;
+  gap: 24px;
 }
 /* ===============================
    WORK 02 / 03 — IMAGE WIDTH CONTROL
@@ -1122,8 +1122,8 @@ html, body {
 
 /* 02：放大一点（流程展示型） */
 .work-02 .img-row{
-  width: 700px;      /* ← 这里决定02大小 */
-  gap: 16px;
+  width: 960px;      /* ← 这里决定02大小 */
+  gap: 24px;
 }
 
 /* 03：收紧一点（说明型） */
@@ -1139,8 +1139,8 @@ html, body {
 ================================ */
 
 .work-02 .img-row{
-  width: 700px !important;
-  max-width: 700px !important;
+  width: 960px !important;
+  max-width: 960px !important;
 }
 
 /* ===============================
