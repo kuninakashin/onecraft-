@@ -1454,6 +1454,14 @@ header::before{
     margin:0 auto 18px;        /* 居中 + 下方留白 */
     display:block;
     border-radius:4px;         /* 微圆角，会柔和很多 */
+
+     .section.work .img-row img{
+  width:88% !important;
+  margin:0 auto 18px;
+  display:block;
+  border-radius:4px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
   }
 
 }
