@@ -1,45 +1,43 @@
 /* ===============================
-   MOBILE FORCE LAYOUT
-   不猜类名，直接控制手机版
+   MOBILE: RESET PC POSITIONING
+   只修手机错位，不动PC设计
 ================================ */
 @media screen and (max-width: 767px) {
 
-  /* 页面永远不允许横向滚动 */
-  html, body {
-    overflow-x: hidden;
-  }
-
-  /* 所有大区块改为手机单列 */
-  div[class*="wrap"],
-  div[class*="inner"] {
+  /* ① 所有区块恢复正常排列（取消 PC 偏移） */
+  section,
+  .section,
+  .inner,
+  .wrap,
+  .about-wrap,
+  .company-wrap {
+    position: static !important;
+    transform: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     width: auto !important;
     max-width: 100% !important;
-    display: block !important;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
-  /* 所有图片必须跟屏幕走 */
+  /* ② 所有图片取消 PC 的绝对定位 */
   img {
+    position: static !important;
+    transform: none !important;
+    margin: 20px auto !important;
+    display: block;
     max-width: 100% !important;
     height: auto !important;
   }
 
-  /* PC 专用的左右固定装饰，在手机直接关闭 */
+  /* ③ 隐藏 PC 左右装饰文字（它们在手机只会挤版） */
   .side-fixed {
     display: none !important;
   }
 
-  /* 防止 grid 把手机撑坏 */
-  * {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* 底部 logo 缩小 */
-  footer img {
-    width: 160px !important;
-    margin: 40px auto !important;
-    display: block;
+  /* ④ 修正顶部那块被挤出来的空白 */
+  body {
+    margin: 0;
+    padding: 0;
   }
 
 }
