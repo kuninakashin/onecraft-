@@ -1274,4 +1274,44 @@ header::before{
 body {
   background: red !important;
 }
-body { background: red; }
+/* ===============================
+   MOBILE RESPONSIVE FIX
+   （只在手机生效，不影响 PC）
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* 页面左右留白，防止内容贴边 */
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* PC 两栏布局 → 手机改成一栏 */
+  .about-wrap,
+  .company-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* 图片必须跟随屏幕宽度 */
+  .about-wrap img,
+  .company-wrap img,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 左右那两条 PC 专用竖排文字，手机隐藏 */
+  .pc-only {
+    display: none;
+  }
+
+  /* 底部 logo 在手机缩小并居中 */
+  footer img {
+    width: 160px;
+    max-width: 70%;
+    margin: 40px auto;
+    display: block;
+  }
+
+}
