@@ -1538,10 +1538,11 @@ header::before{
   display: flex;
   align-items: center;
   gap: 12px;
+
   text-decoration: none;
   color: inherit;
-}
 
-.site-title:hover {
-  opacity: 0.7;
+  /* 🔥 关键修复 */
+  position: relative;
+  z-index: 10;
 }
