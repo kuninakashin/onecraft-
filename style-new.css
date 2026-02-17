@@ -169,6 +169,11 @@ header .logo span {
   color: #fff;
 }
 
+.hero {
+  margin-top: calc(-72px - env(safe-area-inset-top));
+  padding-top: calc(72px + env(safe-area-inset-top));
+}
+
 /* ===============================
    SECTION BASE
 ================================ */
@@ -872,9 +877,7 @@ header .logo span {
 html, body {
   overflow-x: hidden;
 }
-html {
-  padding-top: env(safe-area-inset-top);
-}
+
 
 @media screen and (max-width: 768px) {
 
