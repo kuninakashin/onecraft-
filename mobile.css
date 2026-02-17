@@ -1,31 +1,24 @@
-/* =========================
-   MOBILE FORCE FIX
-   ========================= */
 @media screen and (max-width: 767px) {
 
-  /* ① 干掉左右固定竖排（它在第17行和第25行出现） */
-  div[class*="side-fixed"] {
+  /* ① 彻底移除 PC 两侧竖排（这是挤版心的元凶） */
+  .side-fixed {
     display: none !important;
   }
 
-  /* ② 所有 section 恢复满宽（解决整体被挤右） */
-  section,
-  div {
-    max-width: 100% !important;
-  }
-
-  /* ③ 所有图片按屏幕缩放（解决02图片偏右） */
-  img {
+  /* ② 只修正文内容里的图片，不影响 header */
+  main img,
+  section img {
     max-width: 100% !important;
     height: auto !important;
-    display: block;
   }
 
-  /* ④ 最下面公司LOGO单独限制大小并居中 */
-  section:last-of-type img:last-of-type {
-    width: 60% !important;
+  /* ③ 底部公司 logo 单独控制（不是顶部那个） */
+  .company img {
     max-width: 220px !important;
+    width: 60% !important;
+    display: block;
     margin: 40px auto !important;
   }
 
 }
+
