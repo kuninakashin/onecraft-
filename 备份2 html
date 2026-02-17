@@ -124,61 +124,54 @@
   </div>
 
   <div class="simple-item-grid">
-    <div class="simple-item">
+    <a href="category-bag.html" class="simple-item">
   <div class="thumb">
     <img src="./images/totebag.jpg">
   </div>
- <p>
-  <a href="category-bag.html">バッグ・ポーチ</a>
-</p>
-
-</div>
+  <p>バッグ・ポーチ</p>
+</a>
 
 
-    <div class="simple-item">
+
+    <a href="category-life.html" class="simple-item">
   <div class="thumb">
     <img src="./images/pc.jpg">
   </div>
-      <p>
-  <a href="category-life.html">生活雑貨・プチスマートフォン関連</a>
-</p>
-</div>
+  <p>生活雑貨・プチスマートフォン関連</p>
+</a>
 
-    <div class="simple-item">
+
+    <a href="category-tshirt.html" class="simple-item">
   <div class="thumb">
     <img src="./images/shirt1.jpg">
   </div>
-    <p>
-  <a href="category-tshirt.html">Tシャツ</a>
-</p>
-</div>
+  <p>Tシャツ</p>
+</a>
 
-    <div class="simple-item">
+
+    <a href="category-towel.html" class="simple-item">
   <div class="thumb">
     <img src="./images/towel.jpg">
   </div>
- <p>
-  <a href="category-towel.html">タオル</a>
-</p>
-</div>
+  <p>タオル</p>
+</a>
 
-    <div class="simple-item">
+
+    <a href="category-accessory.html" class="simple-item">
   <div class="thumb">
     <img src="./images/keyring.jpg">
   </div>
-<p>
-  <a href="category-accessory.html">小物・アクセリア</a>
-</p>      
-</div>
+  <p>小物・アクセリア</p>
+</a>
 
-    <div class="simple-item">
+
+    <a href="category-parka.html" class="simple-item">
   <div class="thumb">
     <img src="./images/hoodie2.jpg">
   </div>
- <p>
-  <a href="category-parka.html">パーカー</a>
-</p>
-</div>
+  <p>パーカー</p>
+</a>
+
 
   </div>
 
