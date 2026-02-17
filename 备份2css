@@ -147,7 +147,7 @@ header .logo span {
    HERO – MAIN VISUAL
 ================================ */
 .hero-ph {
-  height: 80vh;
+  height: 80svh;
   min-height: 520px;                 /* 👈 防止屏幕高时太扁 */
   background-image: url("./images/top.jpg");
   background-size: cover;            /* 👈 关键：铺满不变形 */
@@ -1239,4 +1239,229 @@ header::before{
 /* hover 时轻微变化（高级感） */
 .logo:hover {
   opacity: 0.7;
+}
+/* ===============================
+   SP：彻底关闭 PC 固定竖排（关键修复）
+================================ */
+@media screen and (max-width: 768px){
+
+  .side-fixed,
+  .pc-only{
+    display: none !important;
+  }
+
+}
+/* iOS 旧版本兼容 */
+@supports not (height: 100svh){
+  .hero-ph{
+    height: 80vh;
+  }
+}
+/* =========================================
+   ✅ MOBILE FINAL FIX（放在文件最后！）
+   专门修 iPhone 错位 / 留白 / 被PC布局影响
+========================================= */
+@media screen and (max-width:768px){
+
+  /* 关闭PC两侧滚动竖排 */
+  .side-fixed{
+    display:none !important;
+  }
+
+  /* WORK 区块取消 PC 的左侧让位 */
+  .section.work{
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+
+  /* 固定背景在手机必须关闭，否则会制造超大留白 */
+  .work-bg{
+    background-attachment:scroll !important;
+    background-size:cover;
+  }
+
+}
+/* =========================================
+   ✅ iPhone FIX — work-bg 在手机必须关闭 fixed
+   放在 CSS 最底部！！
+========================================= */
+@media screen and (max-width:768px){
+
+  .work-bg{
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center top;
+  }
+
+}
+/* =========================================
+   📱 MOBILE LAYOUT FINAL TUNE
+   真正让手机回到“单栏阅读结构”
+========================================= */
+@media screen and (max-width:768px){
+
+  /* ===== WORK 整体改为单栏 ===== */
+  .magazine-wrap{
+    display:block !important;
+  }
+
+  .magazine-left{
+    width:auto;
+    margin-bottom:24px;
+    align-items:flex-start;
+  }
+
+  .magazine-num{
+    position:static !important;
+    font-size:32px !important;
+    margin-bottom:8px;
+  }
+
+  .magazine-title{
+    writing-mode:horizontal-tb !important;
+    font-size:18px;
+    letter-spacing:0.08em;
+  }
+
+  .magazine-line{
+    display:none;
+  }
+
+  /* ===== 正文回到正常阅读宽度 ===== */
+  .magazine-right{
+    width:100%;
+  }
+
+  .section.work p{
+    font-size:14px;
+    line-height:2;
+  }
+
+  /* ===== 图片改为手机节奏（不要横排） ===== */
+  .img-row{
+    display:block !important;
+    margin-top:24px;
+  }
+
+  .img-row img{
+    width:100%;
+    margin-bottom:16px;
+  }
+
+  /* ===== COMPANY 不要再左右结构 ===== */
+  .company-wrap{
+    display:block !important;
+  }
+
+  .company-logo{
+    transform:none !important;
+    margin-top:32px;
+    text-align:center;
+  }
+
+  /* ===== CONTACT 上方留白压缩 ===== */
+  .section.contact{
+    padding-top:56px !important;
+  }
+
+}
+/* =========================================
+   🔥 REAL MOBILE RESET（把PC杂志布局彻底拆掉）
+========================================= */
+@media (max-width:768px){
+
+  /* 1️⃣ WORK 外层不要再用背景容器限制 */
+  .work-bg{
+    padding:0 !important;
+  }
+
+  /* 2️⃣ 取消 PC 的 grid 结构 */
+  .work-magazine .magazine-wrap{
+    display:block !important;
+  }
+
+  /* 3️⃣ 左侧标题区 取消所有定位 */
+  .work-magazine .magazine-left{
+    position:static !important;
+    width:auto !important;
+    margin-bottom:20px;
+    align-items:flex-start !important;
+  }
+
+  /* 4️⃣ 数字不要再 absolute */
+  .work-magazine .magazine-num{
+    position:static !important;
+    font-size:28px !important;
+    margin-bottom:6px;
+    color:#ccc;
+  }
+
+  /* 5️⃣ 竖排标题改回横排 */
+  .work-magazine .magazine-title{
+    writing-mode:horizontal-tb !important;
+    font-size:18px !important;
+    letter-spacing:.08em;
+    line-height:1.6;
+  }
+
+  /* 6️⃣ 竖线在手机不需要 */
+  .work-magazine .magazine-line{
+    display:none !important;
+  }
+
+  /* 7️⃣ 右侧内容恢复自然流 */
+  .work-magazine .magazine-right{
+    width:100% !important;
+  }
+
+  /* 8️⃣ 图片不要再横排 */
+  .section.work .img-row{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  .section.work .img-row img{
+    width:100% !important;
+    height:auto;
+    margin:0 0 14px 0;
+  }
+
+  /* 9️⃣ 把 PC 给 WORK 的左缩进彻底清掉 */
+  .section.work{
+    padding:60px 20px !important;
+  }
+
+  /* 🔟 COMPANY 也从双栏恢复 */
+  .company-wrap{
+    display:block !important;
+  }
+
+  .company-logo{
+    transform:none !important;
+    margin:24px 0 0;
+    text-align:center;
+  }
+
+}
+/* =========================================
+   📱 MOBILE IMAGE TUNE（让图片不要贴满屏）
+========================================= */
+@media (max-width:768px){
+
+  .section.work .img-row img{
+    width:82% !important;      /* 原来100% → 收一点 */
+    margin:0 auto 18px;        /* 居中 + 下方留白 */
+    display:block;
+    border-radius:4px;         /* 微圆角，会柔和很多 */
+
+     .section.work .img-row img{
+  width:88% !important;
+  margin:0 auto 18px;
+  display:block;
+  border-radius:4px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+  }
+
 }
