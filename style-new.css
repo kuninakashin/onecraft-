@@ -1556,4 +1556,11 @@ header::before{
   height: 34px;
   width: auto;
 }
-
+/* ===== Logo 右侧公司名 ===== */
+.site-title span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;  /* 圆润字体 */
+  font-weight: 700;                              /* 粗体 */
+  font-size: 20px;                               /* 稍微有存在感 */
+  letter-spacing: 0.04em;                         /* 微微拉开更日系 */
+  color: #111;                                   /* 深灰黑，不死黑 */
+}
