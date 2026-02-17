@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-   padding-top: 72px;
+  
   font-family:
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
@@ -65,10 +65,14 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 72px;        /* 明确写死高度 */
+
+  height: 72px;
+  padding-top: env(safe-area-inset-top);  /* ← 吃掉刘海 */
+
   background: #fff;
   z-index: 9999;
 }
+
 
 
 
@@ -163,6 +167,11 @@ header .logo span {
   font-size: 42px;
   letter-spacing: 4px;
   color: #fff;
+}
+
+.hero {
+  margin-top: calc(-72px - env(safe-area-inset-top));
+  padding-top: calc(72px + env(safe-area-inset-top));
 }
 
 /* ===============================
@@ -868,6 +877,7 @@ header .logo span {
 html, body {
   overflow-x: hidden;
 }
+
 
 @media screen and (max-width: 768px) {
 
