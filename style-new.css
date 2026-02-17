@@ -167,7 +167,11 @@ header .logo span {
   font-size: 42px;
   letter-spacing: 4px;
   color: #fff;
+
+  text-align: center;      /* 关键：每一行单独居中 */
+  line-height: 1.4;        /* 两行之间更自然 */
 }
+
 
 .hero {
   margin-top: calc(-72px - env(safe-area-inset-top));
