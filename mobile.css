@@ -1,33 +1,45 @@
 /* ===============================
-   MOBILE FIX FILE
-   手机专用样式（不会影响PC）
+   MOBILE FORCE LAYOUT
+   不猜类名，直接控制手机版
 ================================ */
 @media screen and (max-width: 767px) {
 
-  /* 页面左右留安全距离 */
-  .inner {
+  /* 页面永远不允许横向滚动 */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* 所有大区块改为手机单列 */
+  div[class*="wrap"],
+  div[class*="inner"] {
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* PC 两栏 → 手机单栏 */
-  .about-wrap,
-  .company-wrap {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  /* 所有图片必须跟随屏幕 */
+  /* 所有图片必须跟屏幕走 */
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    height: auto !important;
   }
 
-  /* 底部 logo 缩小并居中 */
+  /* PC 专用的左右固定装饰，在手机直接关闭 */
+  .side-fixed {
+    display: none !important;
+  }
+
+  /* 防止 grid 把手机撑坏 */
+  * {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 底部 logo 缩小 */
   footer img {
-    width: 160px;
+    width: 160px !important;
+    margin: 40px auto !important;
     display: block;
-    margin: 40px auto;
   }
 
 }
