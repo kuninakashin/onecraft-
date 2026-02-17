@@ -1365,3 +1365,82 @@ header::before{
   }
 
 }
+/* =========================================
+   🔥 REAL MOBILE RESET（把PC杂志布局彻底拆掉）
+========================================= */
+@media (max-width:768px){
+
+  /* 1️⃣ WORK 外层不要再用背景容器限制 */
+  .work-bg{
+    padding:0 !important;
+  }
+
+  /* 2️⃣ 取消 PC 的 grid 结构 */
+  .work-magazine .magazine-wrap{
+    display:block !important;
+  }
+
+  /* 3️⃣ 左侧标题区 取消所有定位 */
+  .work-magazine .magazine-left{
+    position:static !important;
+    width:auto !important;
+    margin-bottom:20px;
+    align-items:flex-start !important;
+  }
+
+  /* 4️⃣ 数字不要再 absolute */
+  .work-magazine .magazine-num{
+    position:static !important;
+    font-size:28px !important;
+    margin-bottom:6px;
+    color:#ccc;
+  }
+
+  /* 5️⃣ 竖排标题改回横排 */
+  .work-magazine .magazine-title{
+    writing-mode:horizontal-tb !important;
+    font-size:18px !important;
+    letter-spacing:.08em;
+    line-height:1.6;
+  }
+
+  /* 6️⃣ 竖线在手机不需要 */
+  .work-magazine .magazine-line{
+    display:none !important;
+  }
+
+  /* 7️⃣ 右侧内容恢复自然流 */
+  .work-magazine .magazine-right{
+    width:100% !important;
+  }
+
+  /* 8️⃣ 图片不要再横排 */
+  .section.work .img-row{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  .section.work .img-row img{
+    width:100% !important;
+    height:auto;
+    margin:0 0 14px 0;
+  }
+
+  /* 9️⃣ 把 PC 给 WORK 的左缩进彻底清掉 */
+  .section.work{
+    padding:60px 20px !important;
+  }
+
+  /* 🔟 COMPANY 也从双栏恢复 */
+  .company-wrap{
+    display:block !important;
+  }
+
+  .company-logo{
+    transform:none !important;
+    margin:24px 0 0;
+    text-align:center;
+  }
+
+}
