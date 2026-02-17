@@ -1475,3 +1475,22 @@ header::before{
   }
 
 }
+/* =========================================
+   📱 WORK 图片改为手机两列排版（01–03）
+========================================= */
+@media (max-width:768px){
+
+  .section.work .img-row{
+    display:grid !important;
+    grid-template-columns: 1fr 1fr;   /* 两列 */
+    gap:12px;                         /* 图片之间留一点空气 */
+  }
+
+  .section.work .img-row img{
+    width:100% !important;
+    margin:0 !important;
+    border-radius:4px;
+    display:block;
+  }
+
+}
