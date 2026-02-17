@@ -1,0 +1,33 @@
+/* ===============================
+   MOBILE FIX FILE
+   手机专用样式（不会影响PC）
+================================ */
+@media screen and (max-width: 767px) {
+
+  /* 页面左右留安全距离 */
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* PC 两栏 → 手机单栏 */
+  .about-wrap,
+  .company-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* 所有图片必须跟随屏幕 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 底部 logo 缩小并居中 */
+  footer img {
+    width: 160px;
+    display: block;
+    margin: 40px auto;
+  }
+
+}
