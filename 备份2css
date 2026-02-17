@@ -716,9 +716,10 @@ header .logo span {
 ================================ */
 .footer-credit {
   background: #f7f7f7;
-  padding: 60px 0 50px;
+  padding: 24px 0;   /* ← 关键：收紧高度 */
   text-align: center;
 }
+
 
 .footer-logo img {
   height: 48px;
@@ -726,10 +727,12 @@ header .logo span {
 }
 
 .footer-copy {
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: #555;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #777;
+  margin: 0;           /* ← 防止浏览器默认撑高 */
 }
+
 /* ===============================
    SAFETY FUSE – PC 不显示手机竖排
    ⚠️ 必须在所有 media 外
