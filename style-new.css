@@ -1546,3 +1546,6 @@ header::before{
   position: relative;
   z-index: 10;
 }
+.site-title img {
+  display: block;
+}
