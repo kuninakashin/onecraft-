@@ -1,41 +1,31 @@
+/* =========================
+   MOBILE FORCE FIX
+   ========================= */
 @media screen and (max-width: 767px) {
 
-  /* ❗ 真正把 PC 两侧浮动从布局里删除 */
-  .side-fixed {
-    position: static !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  /* ① 干掉左右固定竖排（它在第17行和第25行出现） */
+  div[class*="side-fixed"] {
+    display: none !important;
   }
 
-  /* 让所有 section 回到满宽 */
-  .inner,
-  .wrap,
-  .container {
-    width: 100% !important;
+  /* ② 所有 section 恢复满宽（解决整体被挤右） */
+  section,
+  div {
     max-width: 100% !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box;
   }
 
-  /* 修正 02 那张被压缩的图片 */
-  .work img {
-    width: 100% !important;
+  /* ③ 所有图片按屏幕缩放（解决02图片偏右） */
+  img {
+    max-width: 100% !important;
     height: auto !important;
     display: block;
-    margin: 20px 0;
   }
 
-  /* 底部 logo 居中 */
-  .company img {
-    display: block;
-    margin: 40px auto;
-    max-width: 200px;
-    width: 60%;
-    height: auto;
+  /* ④ 最下面公司LOGO单独限制大小并居中 */
+  section:last-of-type img:last-of-type {
+    width: 60% !important;
+    max-width: 220px !important;
+    margin: 40px auto !important;
   }
 
 }
