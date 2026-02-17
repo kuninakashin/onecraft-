@@ -114,12 +114,17 @@ header .logo span {
 
 .nav a {
   margin: 0 18px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: #111;
+  font-size: 15px;
+
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;   /* ← 700 太硬，600 才是日站常用 */
+
+  letter-spacing: 0.06em;  /* ← 稍微放松一点更圆润 */
+  color: #222;  /* ← 不用纯黑，柔一点更高级 */
   text-decoration: none;
 }
+
+
 
 .nav a:hover {
   opacity: 0.6;
@@ -1548,7 +1553,7 @@ header::before{
 }
 .site-title img {
   display: block;
-  height: 42px;
+  height: 38px;
   width: auto;
 }
 
