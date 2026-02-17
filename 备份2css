@@ -1509,3 +1509,21 @@ header::before{
   justify-content: center;
   line-height: 1.4;
 }
+/* ===== Category 卡片整块可点击 ===== */
+.simple-item-grid a.simple-item{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+/* 让 hover 效果作用在整块 */
+.simple-item-grid a.simple-item:hover{
+  opacity:0.85;
+  transition:0.3s;
+}
+
+/* 防止图片自己挡住点击 */
+.simple-item-grid a.simple-item img{
+  pointer-events:none;
+  display:block;
+}
