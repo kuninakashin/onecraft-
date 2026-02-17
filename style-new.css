@@ -1281,3 +1281,16 @@ header::before{
   }
 
 }
+/* =========================================
+   ✅ iPhone FIX — work-bg 在手机必须关闭 fixed
+   放在 CSS 最底部！！
+========================================= */
+@media screen and (max-width:768px){
+
+  .work-bg{
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center top;
+  }
+
+}
