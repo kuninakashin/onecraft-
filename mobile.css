@@ -1,27 +1,40 @@
-/* ===== Mobile small fixes only ===== */
 @media screen and (max-width: 767px) {
 
-  /* ① 关闭左右那两条 PC 装饰文字 */
-  .side-fixed.left,
-  .side-fixed.right {
-    display: none;
+  /* ❗ 真正把 PC 两侧浮动从布局里删除 */
+  .side-fixed {
+    position: static !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* ② 让 02 那张图回到正常流，不再被推偏 */
-  .work img,
-  .about img,
-  .section img {
-    max-width: 100%;
-    height: auto;
+  /* 让所有 section 回到满宽 */
+  .inner,
+  .wrap,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+  }
+
+  /* 修正 02 那张被压缩的图片 */
+  .work img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
     margin: 20px 0;
   }
 
-  /* ③ 底部公司 LOGO 居中，而不是贴左 */
-  .company-logo img,
-  .company img:last-of-type {
+  /* 底部 logo 居中 */
+  .company img {
     display: block;
     margin: 40px auto;
-    max-width: 220px;
+    max-width: 200px;
+    width: 60%;
     height: auto;
   }
 
