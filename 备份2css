@@ -114,12 +114,17 @@ header .logo span {
 
 .nav a {
   margin: 0 18px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: #111;
+  font-size: 15px;
+
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;   /* ← 700 太硬，600 才是日站常用 */
+
+  letter-spacing: 0.06em;  /* ← 稍微放松一点更圆润 */
+  color: #222;  /* ← 不用纯黑，柔一点更高级 */
   text-decoration: none;
 }
+
+
 
 .nav a:hover {
   opacity: 0.6;
@@ -1532,4 +1537,30 @@ header::before{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight:500;
   letter-spacing:0.04em;
+}
+/* ===== Logo Clickable Fix ===== */
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: inherit;
+
+  /* 🔥 关键修复 */
+  position: relative;
+  z-index: 10;
+}
+.site-title img {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+/* ===== Logo 右侧公司名 ===== */
+.site-title span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;  /* 圆润字体 */
+  font-weight: 700;                              /* 粗体 */
+  font-size: 20px;                               /* 稍微有存在感 */
+  letter-spacing: 0.04em;                         /* 微微拉开更日系 */
+  color: #111;                                   /* 深灰黑，不死黑 */
 }
