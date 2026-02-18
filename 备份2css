@@ -123,7 +123,13 @@ header .logo span {
   color: #222;  /* ← 不用纯黑，柔一点更高级 */
   text-decoration: none;
 }
-
+/* ===== Category 页强制继承首页导航样式 ===== */
+.header .nav a {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #222;
+}
 
 
 .nav a:hover {
@@ -1563,4 +1569,38 @@ header::before{
   font-size: 20px;                               /* 稍微有存在感 */
   letter-spacing: 0.04em;                         /* 微微拉开更日系 */
   color: #111;                                   /* 深灰黑，不死黑 */
+}
+/* 图片点击不出现蓝框 */
+.thumb a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumb a img {
+  display: block;
+}
+/* ===== 全站 Header 字体统一 ===== */
+
+/* LOGO 右边的 OneCraft Inc. */
+.site-title span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #222;
+}
+
+/* 导航文字统一 */
+.nav a {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #222;
+}
+
+/* 防止子页面被别的样式覆盖 */
+header,
+.header,
+.header-inner {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
