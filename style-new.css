@@ -1580,3 +1580,27 @@ header::before{
 .thumb a img {
   display: block;
 }
+/* ===== 全站 Header 字体统一 ===== */
+
+/* LOGO 右边的 OneCraft Inc. */
+.site-title span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #222;
+}
+
+/* 导航文字统一 */
+.nav a {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #222;
+}
+
+/* 防止子页面被别的样式覆盖 */
+header,
+.header,
+.header-inner {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
