@@ -1570,3 +1570,13 @@ header::before{
   letter-spacing: 0.04em;                         /* 微微拉开更日系 */
   color: #111;                                   /* 深灰黑，不死黑 */
 }
+/* 图片点击不出现蓝框 */
+.thumb a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumb a img {
+  display: block;
+}
