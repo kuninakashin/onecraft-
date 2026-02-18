@@ -123,7 +123,13 @@ header .logo span {
   color: #222;  /* ← 不用纯黑，柔一点更高级 */
   text-decoration: none;
 }
-
+/* ===== Category 页强制继承首页导航样式 ===== */
+.header .nav a {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #222;
+}
 
 
 .nav a:hover {
