@@ -1604,3 +1604,29 @@ header,
 .header-inner {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+/* ===============================
+   CATEGORY GRID IMAGE FIX（统一分类图片尺寸）
+================================ */
+
+/* 每一个分类卡片 */
+.category-item {
+  width: 100%;
+}
+
+/* 图片外层：做一个固定比例的展示框 */
+.category-item .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;      /* 统一成 4:3 比例（最适合你现在这批图） */
+  background: #f4f4f4;      /* 图片没铺满时的底色 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 真正的图片 */
+.category-item .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* 关键！完整显示，不裁切、不变形 */
+}
