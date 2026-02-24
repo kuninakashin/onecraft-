@@ -1604,3 +1604,33 @@ header,
 .header-inner {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+/* ===============================
+   COMPANY TABLE ALIGN FIX
+================================ */
+
+/* 让表格变成固定布局 */
+.company table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* 左边标题列固定宽度 → 对齐关键 */
+.company th {
+  width: 140px;
+  text-align: left;
+  font-weight: 600;
+  vertical-align: top;
+  padding: 12px 0;
+}
+
+/* 右侧内容自动排 */
+.company td {
+  vertical-align: top;
+  padding: 12px 0;
+}
+
+/* 去掉 th 自带加粗过重 */
+.company th {
+  font-weight: 500;
+}
