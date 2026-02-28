@@ -1634,3 +1634,28 @@ header,
 .company th {
   font-weight: 500;
 }
+/* ===============================
+   COMPANY – SP版防止内容溢出
+================================ */
+@media (max-width: 768px) {
+
+  .company-wrap {
+    grid-template-columns: 1fr;   /* ← 改成单列 */
+  }
+
+  .company-info {
+    display: block;               /* ← 不再横排 */
+  }
+
+  .company-info dt {
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .company-info dd {
+    margin-bottom: 18px;
+    word-break: break-all;        /* ← 关键：允许日文地址强制换行 */
+    overflow-wrap: anywhere;      /* ← 防止撑出屏幕 */
+  }
+
+}
