@@ -1662,5 +1662,25 @@ header,
     word-break: break-word;
     overflow-wrap: anywhere;
   }
+   /* ===== 关键修复：解除 table 固定布局 ===== */
 
+.company table {
+  table-layout: auto;   /* 让浏览器重新按内容计算宽度 */
+}
+
+.company th {
+  width: auto;          /* 不要再锁死 140px */
+  display: block;
+  padding-bottom: 4px;
+}
+
+.company tr {
+  display: block;       /* 每一行变成上下结构 */
+  margin-bottom: 16px;
+}
+
+.company td {
+  display: block;
+  width: 100%;
+}
 }
